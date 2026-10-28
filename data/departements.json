@@ -1,0 +1,1016 @@
+{
+ "id": "departements",
+ "titre": "Départements français",
+ "items": [
+  {
+   "code": "01",
+   "nom": "Ain",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "02",
+   "nom": "Aisne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "03",
+   "nom": "Allier",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "04",
+   "nom": "Alpes-de-Haute-Provence",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "05",
+   "nom": "Hautes-Alpes",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "06",
+   "nom": "Alpes-Maritimes",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "07",
+   "nom": "Ardèche",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "08",
+   "nom": "Ardennes",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "09",
+   "nom": "Ariège",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "10",
+   "nom": "Aube",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "11",
+   "nom": "Aude",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "12",
+   "nom": "Aveyron",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "13",
+   "nom": "Bouches-du-Rhône",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "14",
+   "nom": "Calvados",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "15",
+   "nom": "Cantal",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "16",
+   "nom": "Charente",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "17",
+   "nom": "Charente-Maritime",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "18",
+   "nom": "Cher",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "19",
+   "nom": "Corrèze",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "2A",
+   "nom": "Corse-du-Sud",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "2B",
+   "nom": "Haute-Corse",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "21",
+   "nom": "Côte-d'Or",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "22",
+   "nom": "Côtes-d'Armor",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "23",
+   "nom": "Creuse",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "24",
+   "nom": "Dordogne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "25",
+   "nom": "Doubs",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "26",
+   "nom": "Drôme",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "27",
+   "nom": "Eure",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "28",
+   "nom": "Eure-et-Loir",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "29",
+   "nom": "Finistère",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "30",
+   "nom": "Gard",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "31",
+   "nom": "Haute-Garonne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "32",
+   "nom": "Gers",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "33",
+   "nom": "Gironde",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "34",
+   "nom": "Hérault",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "35",
+   "nom": "Ille-et-Vilaine",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "36",
+   "nom": "Indre",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "37",
+   "nom": "Indre-et-Loire",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "38",
+   "nom": "Isère",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "39",
+   "nom": "Jura",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "40",
+   "nom": "Landes",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "41",
+   "nom": "Loir-et-Cher",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "42",
+   "nom": "Loire",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "43",
+   "nom": "Haute-Loire",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "44",
+   "nom": "Loire-Atlantique",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "45",
+   "nom": "Loiret",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "46",
+   "nom": "Lot",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "47",
+   "nom": "Lot-et-Garonne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "48",
+   "nom": "Lozère",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "49",
+   "nom": "Maine-et-Loire",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "50",
+   "nom": "Manche",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "51",
+   "nom": "Marne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "52",
+   "nom": "Haute-Marne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "53",
+   "nom": "Mayenne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "54",
+   "nom": "Meurthe-et-Moselle",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "55",
+   "nom": "Meuse",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "56",
+   "nom": "Morbihan",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "57",
+   "nom": "Moselle",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "58",
+   "nom": "Nièvre",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "59",
+   "nom": "Nord",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "60",
+   "nom": "Oise",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "61",
+   "nom": "Orne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "62",
+   "nom": "Pas-de-Calais",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "63",
+   "nom": "Puy-de-Dôme",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "64",
+   "nom": "Pyrénées-Atlantiques",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "65",
+   "nom": "Hautes-Pyrénées",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "66",
+   "nom": "Pyrénées-Orientales",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "67",
+   "nom": "Bas-Rhin",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "68",
+   "nom": "Haut-Rhin",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "69",
+   "nom": "Rhône",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "70",
+   "nom": "Haute-Saône",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "71",
+   "nom": "Saône-et-Loire",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "72",
+   "nom": "Sarthe",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "73",
+   "nom": "Savoie",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "74",
+   "nom": "Haute-Savoie",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "75",
+   "nom": "Paris",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "76",
+   "nom": "Seine-Maritime",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "77",
+   "nom": "Seine-et-Marne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "78",
+   "nom": "Yvelines",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "79",
+   "nom": "Deux-Sèvres",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "80",
+   "nom": "Somme",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "81",
+   "nom": "Tarn",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "82",
+   "nom": "Tarn-et-Garonne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "83",
+   "nom": "Var",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "84",
+   "nom": "Vaucluse",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "85",
+   "nom": "Vendée",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "86",
+   "nom": "Vienne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "87",
+   "nom": "Haute-Vienne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "88",
+   "nom": "Vosges",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "89",
+   "nom": "Yonne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "90",
+   "nom": "Territoire de Belfort",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "91",
+   "nom": "Essonne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "92",
+   "nom": "Hauts-de-Seine",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "93",
+   "nom": "Seine-Saint-Denis",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "94",
+   "nom": "Val-de-Marne",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "95",
+   "nom": "Val-d'Oise",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "métropole",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "971",
+   "nom": "Guadeloupe",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "outre-mer",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "972",
+   "nom": "Martinique",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "outre-mer",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "973",
+   "nom": "Guyane",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "outre-mer",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "974",
+   "nom": "La Réunion",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "outre-mer",
+    "categorie": "departement"
+   }
+  },
+  {
+   "code": "976",
+   "nom": "Mayotte",
+   "alias": [],
+   "tags": {
+    "pays": "FR",
+    "zone": "outre-mer",
+    "categorie": "departement"
+   }
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<title>Géo-quiz</title>
+<meta name="description" content="Réviser la géographie tous les jours : départements, numéros, cartes.">
+<meta name="theme-color" content="#0b2a4f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Figtree:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main id="home">
+  <header class="hero">
+    <h1><b>Géo-quiz</b> · Départements</h1>
+    <p>Les 101 départements français et leurs numéros, outre-mer compris.</p>
+    <div class="count"><div><b id="h-att">0</b>tentatives</div><div><b id="h-today">0</b>aujourd'hui</div></div>
+  </header>
+
+  <h2>Quiz</h2>
+  <div class="cards" id="presets"></div>
+
+  <h2>Quiz personnalisé</h2>
+  <section class="builder" id="builder"></section>
+
+  <h2>Réglages</h2>
+  <section class="panel">
+    <div class="field"><span>Pauses par partie</span>
+      <div class="stepper"><button id="p-minus" aria-label="Une pause de moins">−</button><b class="num" id="p-val">3</b><button id="p-plus" aria-label="Une pause de plus">+</button></div>
+    </div>
+  </section>
+
+  <h2>Sauvegarde</h2>
+  <section class="panel">
+    <p>Vos tentatives restent sur cet appareil. Exportez-les régulièrement : vider les données du navigateur efface l'historique. Le même fichier sert à passer du téléphone au PC.</p>
+    <div class="row">
+      <button class="btn small" id="exp">Exporter un fichier</button>
+      <label class="btn small ghost file">Importer un fichier<input type="file" id="imp-file" accept=".json,application/json"></label>
+    </div>
+    <details>
+      <summary class="note">Importer depuis le prototype (texte copié)</summary>
+      <div class="paste">
+        <textarea id="io" aria-label="Texte de sauvegarde" placeholder="Collez ici le texte copié depuis le prototype"></textarea>
+        <button class="btn small ghost" id="imp-text">Importer le texte collé</button>
+      </div>
+    </details>
+    <div class="note" id="io-msg" role="status"></div>
+  </section>
+</main>
+
+<section id="game" hidden>
+  <div class="bar">
+    <div class="title" id="g-title"></div>
+    <div class="score num" id="g-score"></div>
+    <div class="clock num" id="g-clock"></div>
+    <button class="x" id="g-close" hidden>Fermer</button>
+  </div>
+  <div class="board" id="board"></div>
+  <div class="prompt" id="g-prompt" hidden><div class="q" id="g-q"></div><div class="hint" id="g-hint"></div><button class="btn small ghost" id="g-skip">Passer</button></div>
+  <div class="input" id="g-input">
+    <input id="answer" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" aria-label="Réponse">
+    <button class="btn ghost" id="g-pause">Pause</button>
+    <button class="btn" id="g-stop">Terminer</button>
+  </div>
+</section>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

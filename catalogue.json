@@ -1,0 +1,17 @@
+{
+ "jeux": {
+  "departements": {
+   "fichier": "data/departements.json",
+   "carte": "maps/france-departements.svg",
+   "prefixe": "dep",
+   "sens": { "code": "Numéro → nom", "nom": "Nom → numéro" }
+  }
+ },
+ "quiz": [
+  { "nom": "Quiz du jour", "jeu": "departements", "support": "map", "mecanique": "clue", "demande": "code", "n": 20, "chrono": 0 },
+  { "nom": "Les 101 numéros", "jeu": "departements", "support": "grid", "mecanique": "all", "n": 0, "chrono": 600 },
+  { "nom": "Toucher le numéro", "jeu": "departements", "support": "grid", "mecanique": "tap", "n": 20, "chrono": 0 },
+  { "nom": "Les 101 sur la carte", "jeu": "departements", "support": "map", "mecanique": "all", "n": 0, "chrono": 600 }
+ ],
+ "personnalise": { "jeu": "departements" }
+}
