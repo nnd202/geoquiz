@@ -17,40 +17,48 @@
 <body>
 <main id="home">
   <header class="hero">
-    <h1><b>Géo-quiz</b> · Départements</h1>
-    <p>Les 101 départements français et leurs numéros, outre-mer compris.</p>
+    <h1><b>Géo-quiz</b></h1>
+    <p>Réviser le monde tous les jours, comme on fait ses gammes.</p>
     <div class="count"><div><b id="h-att">0</b>tentatives</div><div><b id="h-today">0</b>aujourd'hui</div></div>
   </header>
 
-  <h2>Quiz</h2>
-  <div class="cards" id="presets"></div>
-
-  <h2>Quiz personnalisé</h2>
-  <section class="builder" id="builder"></section>
-
-  <h2>Réglages</h2>
-  <section class="panel">
-    <div class="field"><span>Pauses par partie</span>
-      <div class="stepper"><button id="p-minus" aria-label="Une pause de moins">−</button><b class="num" id="p-val">3</b><button id="p-plus" aria-label="Une pause de plus">+</button></div>
-    </div>
+  <section id="recent-wrap" hidden>
+    <h2>Récents</h2>
+    <div class="chips" id="recent"></div>
   </section>
 
-  <h2>Sauvegarde</h2>
-  <section class="panel">
-    <p>Vos tentatives restent sur cet appareil. Exportez-les régulièrement : vider les données du navigateur efface l'historique. Le même fichier sert à passer du téléphone au PC.</p>
-    <div class="row">
-      <button class="btn small" id="exp">Exporter un fichier</button>
-      <label class="btn small ghost file">Importer un fichier<input type="file" id="imp-file" accept=".json,application/json"></label>
+  <div id="sections"></div>
+
+  <details class="section">
+    <summary><span class="sec-title">Quiz personnalisé</span></summary>
+    <section class="builder" id="builder"></section>
+  </details>
+
+  <details class="section">
+    <summary><span class="sec-title">Réglages et sauvegarde</span></summary>
+    <div class="settings">
+      <section class="panel">
+        <div class="field"><span>Pauses par partie</span>
+          <div class="stepper"><button id="p-minus" aria-label="Une pause de moins">−</button><b class="num" id="p-val">3</b><button id="p-plus" aria-label="Une pause de plus">+</button></div>
+        </div>
+      </section>
+      <section class="panel">
+        <p>Vos tentatives restent sur cet appareil. Exportez-les régulièrement : vider les données du navigateur efface l'historique. Le même fichier sert à passer du téléphone au PC.</p>
+        <div class="row">
+          <button class="btn small" id="exp">Exporter un fichier</button>
+          <label class="btn small ghost file">Importer un fichier<input type="file" id="imp-file" accept=".json,application/json"></label>
+        </div>
+        <details>
+          <summary class="note">Importer depuis le prototype (texte copié)</summary>
+          <div class="paste">
+            <textarea id="io" aria-label="Texte de sauvegarde" placeholder="Collez ici le texte copié depuis le prototype"></textarea>
+            <button class="btn small ghost" id="imp-text">Importer le texte collé</button>
+          </div>
+        </details>
+        <div class="note" id="io-msg" role="status"></div>
+      </section>
     </div>
-    <details>
-      <summary class="note">Importer depuis le prototype (texte copié)</summary>
-      <div class="paste">
-        <textarea id="io" aria-label="Texte de sauvegarde" placeholder="Collez ici le texte copié depuis le prototype"></textarea>
-        <button class="btn small ghost" id="imp-text">Importer le texte collé</button>
-      </div>
-    </details>
-    <div class="note" id="io-msg" role="status"></div>
-  </section>
+  </details>
 </main>
 
 <section id="game" hidden>

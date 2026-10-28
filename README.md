@@ -41,15 +41,37 @@ node tools/check.mjs
 
 Liste les homonymes et les préfixes ambigus (réponses qui commencent comme une autre, validées après une courte pause de frappe), et vérifie que chaque élément existe sur la carte.
 
-## Régénérer la carte des départements
+## Régénérer les cartes
 
-Source : [france-geojson](https://github.com/gregoiredavid/france-geojson) (données IGN / INSEE, licence ouverte).
+Outils : [mapshaper](https://github.com/mbloch/mapshaper) et Python 3. Les scripts sont dans `tools/` ; `mapkit.py` contient la projection, les encarts et l'écriture des SVG.
+
+**France** (`maps/france.svg`, `maps/france-regions.svg`, données des départements, régions, préfectures et sous-préfectures)
+
+Sources : communes de [france-geojson](https://github.com/gregoiredavid/france-geojson) et référentiel [@etalab/decoupage-administratif](https://www.npmjs.com/package/@etalab/decoupage-administratif) (chefs-lieux à jour). Les arrondissements sont recalculés en fusionnant les communes, puis départements et régions en sont déduits, pour que tous les traits coïncident.
 
 ```
-mapshaper departements-avec-outre-mer.geojson -simplify 4% keep-shapes -clean -o dep-simpl.geojson precision=0.0001
-mapshaper departements-avec-outre-mer.geojson -filter '["75","92","93","94"].indexOf(code)>-1' -simplify 25% keep-shapes -o idf.geojson precision=0.00001
-python3 tools/build_map.py dep-simpl.geojson idf.geojson map.json
-python3 tools/export_assets.py map.json .
+mapshaper communes-arr.geojson -dissolve2 arr copy-fields=dep,reg -simplify 2% keep-shapes -clean -o arr.geojson precision=0.0001
+mapshaper arr.geojson -dissolve dep copy-fields=reg -o dep.geojson
+mapshaper arr.geojson -innerlines where='A.dep == B.dep' -o arrlines.geojson
+mapshaper dep.geojson -dissolve reg -o reg.geojson
+mapshaper communes-arr.geojson -filter '["75","92","93","94"].indexOf(dep)>-1' -dissolve2 arr copy-fields=dep -simplify 20% keep-shapes -clean -o idf-arr.geojson precision=0.00001
+mapshaper idf-arr.geojson -dissolve dep -o idf-dep.geojson
+mapshaper idf-arr.geojson -innerlines where='A.dep == B.dep' -o idf-lines.geojson
+python3 tools/build_france.py <dossier des sources> .
 ```
 
-Projection conique conforme de Lambert pour la métropole ; encarts pour la petite couronne et l'outre-mer.
+**États-Unis et Canada** (`maps/etats-unis.svg`, `maps/canada.svg` et leurs capitales)
+
+Source : [Natural Earth](https://www.naturalearthdata.com/) (domaine public), `ne_50m_admin_1_states_provinces` et `ne_10m_populated_places_simple`.
+
+```
+mapshaper ne_50m_admin_1_states_provinces.geojson -filter 'adm0_a3=="USA"' -filter-fields name,name_fr,postal -simplify 30% keep-shapes -clean -o us.geojson precision=0.0001
+mapshaper ne_50m_admin_1_states_provinces.geojson -filter 'adm0_a3=="CAN"' -filter-fields name,name_fr,postal -filter-islands min-area=150km2 -simplify 12% keep-shapes -clean -o ca.geojson precision=0.0001
+python3 tools/build_na.py <dossier des sources> .
+```
+
+## Contrat des cartes
+
+Chaque SVG regroupe ses éléments en calques `<g data-layer="…">` : zones `path.zone`, traits de sous-division `path.sub`, points `circle.pt` (`pref` pour un point principal). Les éléments jouables portent un `data-code` identique à celui des données.
+
+Dans un quiz, les zones hors du jeu de données deviennent du décor ; les points hors du jeu sont masqués, sauf si leur calque figure dans `calques` (ils deviennent alors des repères) ; les traits ne s'affichent que si leur calque est demandé.

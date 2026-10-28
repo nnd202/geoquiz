@@ -24,7 +24,7 @@ export default {
       g.board.mark(cur.code, 'missed');
       g.board.reveal(cur.code, cur.nom);
       g.board.flash(cur.code);
-      g.toast(`C'était le ${cur.code}`);
+      g.toast(g.def.etiquette === 'code' ? `C'était le ${cur.code}` : 'La bonne réponse est en orange');
       g.queue.shift();
       next(g, show(g));
     }

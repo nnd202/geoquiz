@@ -1,16 +1,38 @@
 // Validation instantanée sans bouton « OK », qui ne valide jamais une réponse non visée.
-import { keysOf, dist, allowedTypos } from './text.js';
+import { keysOf, toks, dist, allowedTypos } from './text.js';
+
+// Ordre fixe quand rien d'autre ne départage deux homonymes : zones, puis villes, puis éléments physiques.
+const DOMAIN_ORDER = { zone: 0, ville: 1, physique: 2 };
+
+const sq = v => v * v;
+function km(a, b) { // distance approximative entre deux [lon, lat]
+  const k = Math.cos(((a[1] + b[1]) / 2) * Math.PI / 180);
+  return Math.sqrt(sq((a[0] - b[0]) * k) + sq(a[1] - b[1]));
+}
+
+/**
+ * Homonymes : une saisie valide un seul élément.
+ * 1. le domaine de la réponse précédente ; 2. le plus proche d'elle ; 3. ordre fixe des domaines.
+ */
+export function pickHomonym(list, last) {
+  if (list.length === 1) return list[0];
+  let pool = list;
+  if (last) {
+    const same = list.filter(d => d.domaine === last.domaine);
+    if (same.length) pool = same;
+    if (last.geo && pool.every(d => d.geo)) return pool.slice().sort((a, b) => km(a.geo, last.geo) - km(b.geo, last.geo))[0];
+  }
+  return pool.slice().sort((a, b) => (DOMAIN_ORDER[a.domaine] ?? 9) - (DOMAIN_ORDER[b.domaine] ?? 9))[0];
+}
 
 /**
  * Juge une saisie de nom.
  * @param raw        texte du champ (comparé en entier, jamais un morceau)
  * @param candidates réponses encore attendues
- * @param all        toutes les réponses du jeu de données
- * @param found      Set des codes déjà trouvés
- * @param notes      afficher « Déjà trouvé » ou non
+ * @param ctx        { all, found, last, notes }
  * @returns null, {note}, ou {item, when: 'now' | 'wait'}
  */
-export function judgeName(raw, candidates, all, found, notes = true) {
+export function judgeName(raw, candidates, { all, found, last = null, notes = true }) {
   const k = keysOf(raw);
   const ins = [...new Set([k.full, k.lite])].filter(Boolean);
   if (!ins.length) return null;
@@ -19,8 +41,8 @@ export function judgeName(raw, candidates, all, found, notes = true) {
   // 1. Correspondance exacte ; attente si c'est aussi le début d'une autre réponse (Loire / Loiret).
   const exact = candidates.filter(hit);
   if (exact.length) {
-    const item = exact[0];
-    const longer = candidates.some(d => d !== item &&
+    const item = pickHomonym(exact, last);
+    const longer = candidates.some(d => !exact.includes(d) &&
       d.keys.some(x => ins.some(i => x.length > i.length && x.startsWith(i))));
     return { item, when: longer ? 'wait' : 'now' };
   }
@@ -39,11 +61,26 @@ export function judgeName(raw, candidates, all, found, notes = true) {
   return near.length === 1 ? { item: near[0], when: 'wait' } : null;
 }
 
-// Saisie d'un code (numéro de département) : « 1 » = « 01 », « 2a » = « 2A ».
-export function judgeCode(raw, item) {
-  let s = String(raw).trim().toLowerCase().replace(/\s/g, '');
-  if (/^\d$/.test(s)) s = '0' + s;
-  return s === item.code.toLowerCase() ? { item, when: 'now' } : null;
+// Saisie d'un code (numéro de département…) : « 1 » = « 01 », « 2a » = « 2A ».
+export function normCode(s) {
+  let v = String(s).trim().toLowerCase().replace(/\s/g, '');
+  if (/^\d$/.test(v)) v = '0' + v;
+  return v;
+}
+export function judgeCode(raw, item, field = 'code') {
+  return normCode(raw) === normCode(item[field]) ? { item, when: 'now' } : null;
+}
+
+// Saisie d'un texte rattaché à l'élément (ex. : l'État d'une capitale), mêmes tolérances que les noms.
+export function judgeText(raw, item, field) {
+  const want = keysOf(item[field]);
+  const k = keysOf(raw);
+  const ins = [k.full, k.lite];
+  const keys = [want.full, want.lite];
+  if (ins.some(i => i && keys.includes(i))) return { item, when: 'now' };
+  if (keys.some(x => ins.some(i => i && x.startsWith(i)))) return null;
+  const max = allowedTypos(k.lite.length);
+  return max && keys.some(x => dist(k.lite, x, max) <= max) ? { item, when: 'wait' } : null;
 }
 
 // Script de vérification : réponses qui commencent comme une autre (validation différée).
@@ -64,3 +101,5 @@ export function homonyms(items) {
   }
   return [...by.entries()].filter(([, s]) => s.size > 1).map(([k, s]) => [k, [...s]]);
 }
+
+export { toks };

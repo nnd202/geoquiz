@@ -10,6 +10,7 @@
   --ink-soft: #5a6f88;
   --land: #c4d4e5;       /* départements non trouvés : bleu-gris doux */
   --land-off: #e3ebf3;   /* hors sélection */
+  --pt: #2f6aab;         /* points (villes) non trouvés */
   --border-land: #ffffff;
   --sea: #e3eef9;
   --found: #2e9a68;
@@ -25,7 +26,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --abyss: #dbe9f8; --ocean: #4f93d8; --lagoon: #7db4ea; --sky: #24456c; --mist: #07162a;
-    --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #2d4b70; --land-off: #172e4c;
+    --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #2d4b70; --land-off: #172e4c; --pt: #9cc4ec;
     --border-land: #0c1f3a; --sea: #0b1c34; --found: #3fbf86; --found-soft: #123b31;
     --missed: #ec9d48; --missed-soft: #3b2a17; --wrong: #e6766b;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.35); color-scheme: dark;
@@ -33,7 +34,7 @@
 }
 :root[data-theme="dark"] {
   --abyss: #dbe9f8; --ocean: #4f93d8; --lagoon: #7db4ea; --sky: #24456c; --mist: #07162a;
-  --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #2d4b70; --land-off: #172e4c;
+  --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #2d4b70; --land-off: #172e4c; --pt: #9cc4ec;
   --border-land: #0c1f3a; --sea: #0b1c34; --found: #3fbf86; --found-soft: #123b31;
   --missed: #ec9d48; --missed-soft: #3b2a17; --wrong: #e6766b;
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.35); color-scheme: dark;
@@ -159,3 +160,56 @@ body { margin: 0; }
 .btn.file input { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
 details summary { cursor: pointer; }
 .paste { display: grid; gap: 8px; margin-top: 8px; }
+
+/* ---------- Accueil compact : récents, sections, lignes, panneau ---------- */
+.chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.chip { flex: 0 0 auto; display: grid; gap: 2px; text-align: left; border: 0; border-radius: 14px; padding: 10px 14px; background: var(--panel); box-shadow: var(--shadow); max-width: 220px; }
+.chip-name { font-family: var(--f-display); font-weight: 500; color: var(--abyss); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chip-score { font-size: 12px; color: var(--ink-soft); }
+details.section { margin-top: 22px; }
+details.section > summary { list-style: none; display: flex; align-items: baseline; gap: 10px; cursor: pointer; padding: 4px 0 10px; }
+details.section > summary::-webkit-details-marker { display: none; }
+details.section > summary::after { content: ""; width: 8px; height: 8px; border-right: 1.5px solid var(--ink-soft); border-bottom: 1.5px solid var(--ink-soft); transform: rotate(-45deg); margin-left: auto; align-self: center; transition: transform .2s; }
+details.section[open] > summary::after { transform: rotate(45deg); }
+.sec-title { font-family: var(--f-display); font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); }
+.sec-count { font-size: 12px; color: var(--ink-soft); background: var(--panel); border-radius: 999px; padding: 0 8px; }
+.rows { background: var(--panel); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+.qrow { display: flex; align-items: center; gap: 10px; padding: 8px 12px 8px 4px; }
+.qrow + .qrow { border-top: 1px solid var(--sky); }
+.qmain { flex: 1; min-width: 0; border: 0; background: transparent; text-align: left; display: grid; gap: 1px; padding: 6px 10px; border-radius: 10px; }
+.qmain:hover { background: var(--mist); }
+.qname { font-weight: 600; color: var(--abyss); }
+.qmeta { font-size: 12px; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.qscore { font-size: 13px; color: var(--ink-soft); min-width: 3.5em; text-align: right; }
+.settings { display: grid; gap: 12px; }
+.veil { position: fixed; inset: 0; background: rgba(6, 22, 42, .45); z-index: 30; display: flex; align-items: flex-end; justify-content: center; }
+.qsheet { width: 100%; max-width: 640px; max-height: 85%; overflow-y: auto; box-sizing: border-box; background: var(--panel); border-radius: 20px 20px 0 0; padding: 20px max(16px, env(safe-area-inset-right, 0px)) calc(20px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 14px; box-shadow: 0 -8px 28px rgba(10,34,64,.2); }
+.qsheet h3 { margin: 0; font-family: var(--f-display); font-weight: 500; font-size: 21px; color: var(--abyss); }
+
+/* ---------- Carte : décor, traits, points, indices ---------- */
+.zone { fill: var(--land); stroke: var(--border-land); stroke-width: .9; vector-effect: non-scaling-stroke; transition: fill .25s; }
+.zone.deco { fill: var(--land); }
+.zone.off { fill: var(--land-off); }
+.zone.found { fill: var(--found); }
+.zone.missed { fill: var(--missed); }
+.zone.wrong { fill: var(--wrong); }
+.zone.sel { stroke: var(--abyss); stroke-width: 2.2; }
+.zone.flash { animation: flash .6s ease; }
+.zone.asked { fill: var(--lagoon); animation: pulse 1.4s ease-in-out infinite; }
+.sub { fill: none; stroke: var(--border-land); stroke-width: .6; stroke-dasharray: 2 2; vector-effect: non-scaling-stroke; opacity: .9; }
+.pt { --r: 3.2; r: calc(var(--r) * var(--k, 1) * 1px); fill: var(--pt); stroke: var(--panel); stroke-width: 1; vector-effect: non-scaling-stroke; transition: fill .25s; }
+.pt.pref { --r: 4.6; fill: var(--abyss); stroke-width: 1.4; }
+.pt.ref { --r: 3.6; fill: var(--panel); stroke: var(--abyss); stroke-width: 1.4; pointer-events: none; }
+.pt.off { opacity: .3; }
+.pt.found { fill: var(--found); }
+.pt.missed { fill: var(--missed); }
+.pt.wrong { fill: var(--wrong); }
+.pt.sel { stroke: var(--lagoon); stroke-width: 3; }
+.pt.asked { --r: 7; fill: var(--lagoon); stroke: var(--panel); stroke-width: 2.5; animation: pulse 1.4s ease-in-out infinite; }
+.pt.flash { animation: flash .6s ease; }
+@keyframes pulse { 50% { opacity: .55; } }
+.lbl { font-size: calc(11px * var(--k, 1)); }
+.lbl.side { text-anchor: start; dominant-baseline: central; transform: translateX(calc(6px * var(--k, 1))); font-family: var(--f-body); }
+.infobar { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; }
+.infobar .detail { font-size: 12px; color: var(--ink-soft); }
+@media (prefers-reduced-motion: reduce) { .zone, .pt { animation: none !important; transition: none; } }

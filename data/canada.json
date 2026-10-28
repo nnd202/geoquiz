@@ -1,0 +1,149 @@
+{
+ "id": "canada",
+ "titre": "Provinces et territoires du Canada",
+ "items": [
+  {
+   "code": "AB",
+   "nom": "Alberta",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -114.5084,
+    55.1679
+   ],
+   "detail": "Capitale : Edmonton"
+  },
+  {
+   "code": "BC",
+   "nom": "Colombie-Britannique",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -124.6273,
+    54.9504
+   ],
+   "detail": "Capitale : Victoria"
+  },
+  {
+   "code": "MB",
+   "nom": "Manitoba",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -97.4311,
+    54.9221
+   ],
+   "detail": "Capitale : Winnipeg"
+  },
+  {
+   "code": "NB",
+   "nom": "Nouveau-Brunswick",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -66.3992,
+    46.6235
+   ],
+   "detail": "Capitale : Fredericton"
+  },
+  {
+   "code": "NS",
+   "nom": "Nouvelle-Écosse",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -63.9552,
+    44.9348
+   ],
+   "detail": "Capitale : Halifax"
+  },
+  {
+   "code": "NU",
+   "nom": "Nunavut",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -98.5745,
+    65.9178
+   ],
+   "detail": "Capitale : Iqaluit"
+  },
+  {
+   "code": "ON",
+   "nom": "Ontario",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -85.8311,
+    50.0687
+   ],
+   "detail": "Capitale : Toronto"
+  },
+  {
+   "code": "QC",
+   "nom": "Québec",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -71.9536,
+    53.7423
+   ],
+   "detail": "Capitale : Québec"
+  },
+  {
+   "code": "SK",
+   "nom": "Saskatchewan",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -105.8992,
+    54.4196
+   ],
+   "detail": "Capitale : Regina"
+  },
+  {
+   "code": "NL",
+   "nom": "Terre-Neuve-et-Labrador",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -61.9291,
+    54.3064
+   ],
+   "detail": "Capitale : St. John's"
+  },
+  {
+   "code": "NT",
+   "nom": "Territoires du Nord-Ouest",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -119.6692,
+    64.3817
+   ],
+   "detail": "Capitale : Yellowknife"
+  },
+  {
+   "code": "YT",
+   "nom": "Yukon",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -135.5329,
+    63.6384
+   ],
+   "detail": "Capitale : Whitehorse"
+  },
+  {
+   "code": "PE",
+   "nom": "Île-du-Prince-Édouard",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -63.0258,
+    46.2897
+   ],
+   "detail": "Capitale : Charlottetown"
+  }
+ ]
+}

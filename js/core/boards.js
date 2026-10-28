@@ -2,8 +2,8 @@
 import { el } from './dom.js';
 
 const NS = 'http://www.w3.org/2000/svg';
+const TAP_PX = 24; // rayon de toucher d'un point, en pixels d'écran
 
-// Interface commune : { root, nodes, mark, flash, reveal, showLabels, select }
 function common(nodes, root) {
   return {
     root, nodes,
@@ -34,47 +34,89 @@ export function buildGrid(container, items, inPlay, onTap) {
   b.reveal = (code, name) => (nodes[code] || []).forEach(c => { c.querySelector('.nm').textContent = name; });
   b.showLabels = list => list.forEach(it => b.reveal(it.code, it.nom));
   b.select = () => {};
+  b.ask = () => {};
   return b;
 }
 
-/* ---------- Carte ---------- */
-export function buildMap(container, svgText, inPlay, onTap, opts = {}) {
+/* ---------- Carte ----------
+ * Contrat du SVG : groupes [data-layer] ; zones path.zone, traits path.sub, points circle.pt, avec data-code.
+ * - éléments du jeu de données : jouables ;
+ * - zones hors jeu : décor ; traits : affichés si le calque est demandé ;
+ * - points hors jeu : repères si leur calque est demandé, sinon masqués.
+ */
+export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap, label, tapNeedsSingle }) {
   const wrap = el('div', 'mapwrap');
-  const svg = new DOMParser().parseFromString(svgText, 'image/svg+xml').documentElement;
-  const map = document.importNode(svg, true);
+  const parsed = new DOMParser().parseFromString(svgText, 'image/svg+xml').documentElement;
+  const map = document.importNode(parsed, true);
   map.setAttribute('role', 'img');
-  map.setAttribute('aria-label', opts.label || 'Carte');
+  map.setAttribute('aria-label', label || 'Carte');
   const nodes = {};
-  map.querySelectorAll('[data-code]').forEach(p => {
-    const code = p.dataset.code;
-    if (!inPlay.has(code)) p.classList.add('off');
-    (nodes[code] ||= []).push(p);
+  const points = [];
+
+  map.querySelectorAll('g[data-layer]').forEach(g => {
+    const name = g.dataset.layer;
+    const wanted = layers.includes(name);
+    const playable = [...g.querySelectorAll('[data-code]')].some(n => codes.has(n.dataset.code));
+    if (g.querySelector('.sub') && !wanted) g.remove();
+    else if (g.querySelector('.pt') && !wanted && !playable) g.remove();
+  });
+  map.querySelectorAll('[data-code]').forEach(n => {
+    const code = n.dataset.code;
+    if (!codes.has(code)) {
+      n.classList.add(n.classList.contains('pt') ? 'ref' : 'deco');
+      n.removeAttribute('data-code');
+      return;
+    }
+    if (!inPlay.has(code)) n.classList.add('off');
+    (nodes[code] ||= []).push(n);
+    if (n.classList.contains('pt')) points.push(n);
   });
   const labels = document.createElementNS(NS, 'g');
+  labels.setAttribute('class', 'labels');
   map.append(labels);
   wrap.append(map);
   container.append(wrap);
 
-  const pz = panZoom(map, onTap, opts.tapNeedsSingle);
+  // Toucher : le point jouable le plus proche (zone de toucher élargie), sinon la zone sous le doigt.
+  const pick = (cx, cy, svgXY, scale) => {
+    if (points.length) {
+      let best = null, bd = TAP_PX / scale;
+      for (const p of points) {
+        if (p.classList.contains('off')) continue;
+        const d = Math.hypot(+p.getAttribute('cx') - svgXY[0], +p.getAttribute('cy') - svgXY[1]);
+        if (d < bd) { bd = d; best = p; }
+      }
+      if (best) return best.dataset.code;
+    }
+    return document.elementFromPoint(cx, cy)?.closest?.('[data-code]')?.dataset.code || null;
+  };
+  const pz = panZoom(map, pick, onTap, tapNeedsSingle);
   const z = el('div', 'zoom');
   [['+', 'Zoomer', () => pz.zoomBy(1.6)], ['−', 'Dézoomer', () => pz.zoomBy(1 / 1.6)], ['⤢', "Vue d'ensemble", pz.reset]]
-    .forEach(([t, a, f]) => { const b = el('button', null, t); b.setAttribute('aria-label', a); b.addEventListener('click', f); z.append(b); });
+    .forEach(([t, a, f]) => { const bt = el('button', null, t); bt.setAttribute('aria-label', a); bt.addEventListener('click', f); z.append(bt); });
   container.append(z);
 
   const b = common(nodes, wrap);
   b.reveal = () => {};
-  // Mode étude et bilan : codes posés au centre de chaque zone (pas dans la métropole pour les zones en encart).
-  b.showLabels = list => {
+  // Étiquettes du mode étude et du bilan : code ou nom, au centre des zones, à droite des points.
+  b.showLabels = (list, mode = 'code') => {
+    labels.textContent = '';
     const inInset = new Set([...map.querySelectorAll('[data-inset][data-code]')].map(p => p.dataset.code));
     for (const it of list) {
-      for (const p of nodes[it.code] || []) {
-        if (inInset.has(it.code) && !p.dataset.inset) continue;
-        const bb = p.getBBox();
+      for (const n of nodes[it.code] || []) {
+        if (inInset.has(it.code) && !n.dataset.inset) continue;
         const t = document.createElementNS(NS, 'text');
-        t.setAttribute('x', bb.x + bb.width / 2);
-        t.setAttribute('y', bb.y + bb.height / 2);
-        t.setAttribute('class', 'lbl');
-        t.textContent = it.code;
+        if (n.classList.contains('pt')) {
+          t.setAttribute('x', +n.getAttribute('cx'));
+          t.setAttribute('y', +n.getAttribute('cy'));
+          t.setAttribute('class', 'lbl side');
+        } else {
+          const bb = n.getBBox();
+          t.setAttribute('x', bb.x + bb.width / 2);
+          t.setAttribute('y', bb.y + bb.height / 2);
+          t.setAttribute('class', 'lbl');
+        }
+        t.textContent = mode === 'code' ? it.code : it.nom;
         labels.append(t);
       }
     }
@@ -83,18 +125,27 @@ export function buildMap(container, svgText, inPlay, onTap, opts = {}) {
     map.querySelectorAll('.sel').forEach(n => n.classList.remove('sel'));
     b.mark(code, 'sel');
   };
+  // Indice « zone surlignée » : l'élément demandé est mis en évidence, sans son nom.
+  b.ask = code => {
+    map.querySelectorAll('.asked').forEach(n => n.classList.remove('asked'));
+    if (code) b.mark(code, 'asked');
+  };
   return b;
 }
 
 // Pincer pour zoomer, glisser à un doigt, double toucher, molette sur PC. Le zoom agit sur la carte seule.
-function panZoom(svg, onTap, tapNeedsSingle) {
+function panZoom(svg, pick, onTap, tapNeedsSingle) {
   const BASE = svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
   let view;
-  const setVB = () => svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`);
+  // --k garde points et étiquettes à taille constante à l'écran quel que soit le zoom.
+  const setVB = () => {
+    svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`);
+    svg.style.setProperty('--k', String(Math.pow(view.w / BASE[2], 0.8)));
+  };
   const reset = () => { view = { x: BASE[0], y: BASE[1], w: BASE[2], h: BASE[3] }; setVB(); };
   const info = () => {
     const r = svg.getBoundingClientRect();
-    const s = Math.min(r.width / view.w, r.height / view.h);
+    const s = Math.min(r.width / view.w, r.height / view.h) || 1;
     return { r, s, ox: (r.width - view.w * s) / 2, oy: (r.height - view.h * s) / 2 };
   };
   const toSvg = (cx, cy) => { const { r, s, ox, oy } = info(); return [view.x + (cx - r.left - ox) / s, view.y + (cy - r.top - oy) / s]; };
@@ -103,7 +154,7 @@ function panZoom(svg, onTap, tapNeedsSingle) {
     view.y = Math.min(Math.max(view.y, BASE[1] - view.h / 2), BASE[1] + BASE[3] - view.h / 2);
   };
   const zoomAt = (px, py, f) => {
-    const nw = Math.min(BASE[2], Math.max(BASE[2] / 14, view.w / f));
+    const nw = Math.min(BASE[2], Math.max(BASE[2] / 20, view.w / f));
     const k = nw / view.w;
     view.x = px - (px - view.x) * k; view.y = py - (py - view.y) * k;
     view.w = nw; view.h *= k;
@@ -153,10 +204,11 @@ function panZoom(svg, onTap, tapNeedsSingle) {
     const now = performance.now();
     const dbl = now - lastTap.t < 320 && Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 30;
     lastTap = { t: now, x: e.clientX, y: e.clientY };
+    const xy = toSvg(e.clientX, e.clientY);
     // En mode « Nom → toucher », un toucher répond : pas de double toucher pour zoomer.
-    if (dbl && !(tapNeedsSingle && tapNeedsSingle())) { const [px, py] = toSvg(e.clientX, e.clientY); zoomAt(px, py, 2); return; }
-    const hit = document.elementFromPoint(e.clientX, e.clientY)?.closest?.('[data-code]');
-    if (hit) onTap(hit.dataset.code);
+    if (dbl && !(tapNeedsSingle && tapNeedsSingle())) { zoomAt(xy[0], xy[1], 2); return; }
+    const code = pick(e.clientX, e.clientY, xy, info().s);
+    if (code) onTap(code);
   };
   svg.addEventListener('pointerup', up);
   svg.addEventListener('pointercancel', up);

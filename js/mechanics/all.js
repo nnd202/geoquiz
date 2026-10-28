@@ -7,7 +7,7 @@ export default {
   hasPrompt: false,
   start() {},
   judge(g, raw) {
-    return judgeName(raw, g.items.filter(d => !g.found.has(d.code)), g.all, g.found);
+    return judgeName(raw, g.items.filter(d => !g.found.has(d.code)), { all: g.all, found: g.found, last: g.last });
   },
   validated(g) {
     if (g.found.size === g.items.length) g.finish('all');

@@ -1,0 +1,3268 @@
+{
+ "id": "sous-prefectures",
+ "titre": "Sous-préfectures",
+ "items": [
+  {
+   "code": "01034",
+   "nom": "Belley",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.6838,
+    45.7498
+   ],
+   "dep": "01",
+   "depNom": "Ain",
+   "detail": "Sous-préfecture · Ain (01)"
+  },
+  {
+   "code": "01173",
+   "nom": "Gex",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.0463,
+    46.3472
+   ],
+   "dep": "01",
+   "depNom": "Ain",
+   "detail": "Sous-préfecture · Ain (01)"
+  },
+  {
+   "code": "01269",
+   "nom": "Nantua",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.6133,
+    46.1539
+   ],
+   "dep": "01",
+   "depNom": "Ain",
+   "detail": "Sous-préfecture · Ain (01)"
+  },
+  {
+   "code": "02168",
+   "nom": "Château-Thierry",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.3815,
+    49.0564
+   ],
+   "dep": "02",
+   "depNom": "Aisne",
+   "detail": "Sous-préfecture · Aisne (02)"
+  },
+  {
+   "code": "02691",
+   "nom": "Saint-Quentin",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.2777,
+    49.8474
+   ],
+   "dep": "02",
+   "depNom": "Aisne",
+   "detail": "Sous-préfecture · Aisne (02)"
+  },
+  {
+   "code": "02722",
+   "nom": "Soissons",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.3246,
+    49.3795
+   ],
+   "dep": "02",
+   "depNom": "Aisne",
+   "detail": "Sous-préfecture · Aisne (02)"
+  },
+  {
+   "code": "02789",
+   "nom": "Vervins",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.9253,
+    49.8353
+   ],
+   "dep": "02",
+   "depNom": "Aisne",
+   "detail": "Sous-préfecture · Aisne (02)"
+  },
+  {
+   "code": "03185",
+   "nom": "Montluçon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.6035,
+    46.339
+   ],
+   "dep": "03",
+   "depNom": "Allier",
+   "detail": "Sous-préfecture · Allier (03)"
+  },
+  {
+   "code": "03310",
+   "nom": "Vichy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.4245,
+    46.1298
+   ],
+   "dep": "03",
+   "depNom": "Allier",
+   "detail": "Sous-préfecture · Allier (03)"
+  },
+  {
+   "code": "04019",
+   "nom": "Barcelonnette",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.6517,
+    44.379
+   ],
+   "dep": "04",
+   "depNom": "Alpes-de-Haute-Provence",
+   "detail": "Sous-préfecture · Alpes-de-Haute-Provence (04)"
+  },
+  {
+   "code": "04039",
+   "nom": "Castellane",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.4902,
+    43.8449
+   ],
+   "dep": "04",
+   "depNom": "Alpes-de-Haute-Provence",
+   "detail": "Sous-préfecture · Alpes-de-Haute-Provence (04)"
+  },
+  {
+   "code": "04088",
+   "nom": "Forcalquier",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.7882,
+    43.9603
+   ],
+   "dep": "04",
+   "depNom": "Alpes-de-Haute-Provence",
+   "detail": "Sous-préfecture · Alpes-de-Haute-Provence (04)"
+  },
+  {
+   "code": "05023",
+   "nom": "Briançon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.6493,
+    44.8994
+   ],
+   "dep": "05",
+   "depNom": "Hautes-Alpes",
+   "detail": "Sous-préfecture · Hautes-Alpes (05)"
+  },
+  {
+   "code": "06069",
+   "nom": "Grasse",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.932,
+    43.6559
+   ],
+   "dep": "06",
+   "depNom": "Alpes-Maritimes",
+   "detail": "Sous-préfecture · Alpes-Maritimes (06)"
+  },
+  {
+   "code": "07132",
+   "nom": "Largentière",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.3011,
+    44.5334
+   ],
+   "dep": "07",
+   "depNom": "Ardèche",
+   "detail": "Sous-préfecture · Ardèche (07)"
+  },
+  {
+   "code": "07324",
+   "nom": "Tournon-sur-Rhône",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.8152,
+    45.0537
+   ],
+   "dep": "07",
+   "depNom": "Ardèche",
+   "detail": "Sous-préfecture · Ardèche (07)"
+  },
+  {
+   "code": "08362",
+   "nom": "Rethel",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.3838,
+    49.5138
+   ],
+   "dep": "08",
+   "depNom": "Ardennes",
+   "detail": "Sous-préfecture · Ardennes (08)"
+  },
+  {
+   "code": "08409",
+   "nom": "Sedan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.9297,
+    49.6968
+   ],
+   "dep": "08",
+   "depNom": "Ardennes",
+   "detail": "Sous-préfecture · Ardennes (08)"
+  },
+  {
+   "code": "08490",
+   "nom": "Vouziers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.6968,
+    49.4149
+   ],
+   "dep": "08",
+   "depNom": "Ardennes",
+   "detail": "Sous-préfecture · Ardennes (08)"
+  },
+  {
+   "code": "09225",
+   "nom": "Pamiers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.6156,
+    43.1236
+   ],
+   "dep": "09",
+   "depNom": "Ariège",
+   "detail": "Sous-préfecture · Ariège (09)"
+  },
+  {
+   "code": "09261",
+   "nom": "Saint-Girons",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.1534,
+    42.9758
+   ],
+   "dep": "09",
+   "depNom": "Ariège",
+   "detail": "Sous-préfecture · Ariège (09)"
+  },
+  {
+   "code": "10033",
+   "nom": "Bar-sur-Aube",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.7157,
+    48.2341
+   ],
+   "dep": "10",
+   "depNom": "Aube",
+   "detail": "Sous-préfecture · Aube (10)"
+  },
+  {
+   "code": "10268",
+   "nom": "Nogent-sur-Seine",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.4998,
+    48.4965
+   ],
+   "dep": "10",
+   "depNom": "Aube",
+   "detail": "Sous-préfecture · Aube (10)"
+  },
+  {
+   "code": "11206",
+   "nom": "Limoux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2394,
+    43.0499
+   ],
+   "dep": "11",
+   "depNom": "Aude",
+   "detail": "Sous-préfecture · Aude (11)"
+  },
+  {
+   "code": "11262",
+   "nom": "Narbonne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.0203,
+    43.1651
+   ],
+   "dep": "11",
+   "depNom": "Aude",
+   "detail": "Sous-préfecture · Aude (11)"
+  },
+  {
+   "code": "12145",
+   "nom": "Millau",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.1174,
+    44.0973
+   ],
+   "dep": "12",
+   "depNom": "Aveyron",
+   "detail": "Sous-préfecture · Aveyron (12)"
+  },
+  {
+   "code": "12300",
+   "nom": "Villefranche-de-Rouergue",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.0311,
+    44.3498
+   ],
+   "dep": "12",
+   "depNom": "Aveyron",
+   "detail": "Sous-préfecture · Aveyron (12)"
+  },
+  {
+   "code": "13001",
+   "nom": "Aix-en-Provence",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.3986,
+    43.5361
+   ],
+   "dep": "13",
+   "depNom": "Bouches-du-Rhône",
+   "detail": "Sous-préfecture · Bouches-du-Rhône (13)"
+  },
+  {
+   "code": "13004",
+   "nom": "Arles",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.6618,
+    43.5469
+   ],
+   "dep": "13",
+   "depNom": "Bouches-du-Rhône",
+   "detail": "Sous-préfecture · Bouches-du-Rhône (13)"
+  },
+  {
+   "code": "13047",
+   "nom": "Istres",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.9508,
+    43.5504
+   ],
+   "dep": "13",
+   "depNom": "Bouches-du-Rhône",
+   "detail": "Sous-préfecture · Bouches-du-Rhône (13)"
+  },
+  {
+   "code": "14047",
+   "nom": "Bayeux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.7051,
+    49.2779
+   ],
+   "dep": "14",
+   "depNom": "Calvados",
+   "detail": "Sous-préfecture · Calvados (14)"
+  },
+  {
+   "code": "14366",
+   "nom": "Lisieux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.2383,
+    49.1469
+   ],
+   "dep": "14",
+   "depNom": "Calvados",
+   "detail": "Sous-préfecture · Calvados (14)"
+  },
+  {
+   "code": "14762",
+   "nom": "Vire Normandie",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.8731,
+    48.8186
+   ],
+   "dep": "14",
+   "depNom": "Calvados",
+   "detail": "Sous-préfecture · Calvados (14)"
+  },
+  {
+   "code": "15120",
+   "nom": "Mauriac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.3168,
+    45.2186
+   ],
+   "dep": "15",
+   "depNom": "Cantal",
+   "detail": "Sous-préfecture · Cantal (15)"
+  },
+  {
+   "code": "15187",
+   "nom": "Saint-Flour",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.083,
+    45.0286
+   ],
+   "dep": "15",
+   "depNom": "Cantal",
+   "detail": "Sous-préfecture · Cantal (15)"
+  },
+  {
+   "code": "16102",
+   "nom": "Cognac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.3352,
+    45.6963
+   ],
+   "dep": "16",
+   "depNom": "Charente",
+   "detail": "Sous-préfecture · Charente (16)"
+  },
+  {
+   "code": "16106",
+   "nom": "Confolens",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.6623,
+    46.0247
+   ],
+   "dep": "16",
+   "depNom": "Charente",
+   "detail": "Sous-préfecture · Charente (16)"
+  },
+  {
+   "code": "17197",
+   "nom": "Jonzac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.4271,
+    45.4418
+   ],
+   "dep": "17",
+   "depNom": "Charente-Maritime",
+   "detail": "Sous-préfecture · Charente-Maritime (17)"
+  },
+  {
+   "code": "17299",
+   "nom": "Rochefort",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.9722,
+    45.9428
+   ],
+   "dep": "17",
+   "depNom": "Charente-Maritime",
+   "detail": "Sous-préfecture · Charente-Maritime (17)"
+  },
+  {
+   "code": "17347",
+   "nom": "Saint-Jean-d'Angély",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.5201,
+    45.9426
+   ],
+   "dep": "17",
+   "depNom": "Charente-Maritime",
+   "detail": "Sous-préfecture · Charente-Maritime (17)"
+  },
+  {
+   "code": "17415",
+   "nom": "Saintes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.6498,
+    45.7421
+   ],
+   "dep": "17",
+   "depNom": "Charente-Maritime",
+   "detail": "Sous-préfecture · Charente-Maritime (17)"
+  },
+  {
+   "code": "18197",
+   "nom": "Saint-Amand-Montrond",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.52,
+    46.7262
+   ],
+   "dep": "18",
+   "depNom": "Cher",
+   "detail": "Sous-préfecture · Cher (18)"
+  },
+  {
+   "code": "18279",
+   "nom": "Vierzon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.0788,
+    47.2369
+   ],
+   "dep": "18",
+   "depNom": "Cher",
+   "detail": "Sous-préfecture · Cher (18)"
+  },
+  {
+   "code": "19031",
+   "nom": "Brive-la-Gaillarde",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.5192,
+    45.1434
+   ],
+   "dep": "19",
+   "depNom": "Corrèze",
+   "detail": "Sous-préfecture · Corrèze (19)"
+  },
+  {
+   "code": "19275",
+   "nom": "Ussel",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.3048,
+    45.55
+   ],
+   "dep": "19",
+   "depNom": "Corrèze",
+   "detail": "Sous-préfecture · Corrèze (19)"
+  },
+  {
+   "code": "2A272",
+   "nom": "Sartène",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    8.9362,
+    41.5722
+   ],
+   "dep": "2A",
+   "depNom": "Corse-du-Sud",
+   "detail": "Sous-préfecture · Corse-du-Sud (2A)"
+  },
+  {
+   "code": "2B050",
+   "nom": "Calvi",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    8.7599,
+    42.5451
+   ],
+   "dep": "2B",
+   "depNom": "Haute-Corse",
+   "detail": "Sous-préfecture · Haute-Corse (2B)"
+  },
+  {
+   "code": "2B096",
+   "nom": "Corte",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    9.0831,
+    42.2702
+   ],
+   "dep": "2B",
+   "depNom": "Haute-Corse",
+   "detail": "Sous-préfecture · Haute-Corse (2B)"
+  },
+  {
+   "code": "21054",
+   "nom": "Beaune",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.8373,
+    47.0255
+   ],
+   "dep": "21",
+   "depNom": "Côte-d'Or",
+   "detail": "Sous-préfecture · Côte-d'Or (21)"
+  },
+  {
+   "code": "21425",
+   "nom": "Montbard",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.3498,
+    47.6574
+   ],
+   "dep": "21",
+   "depNom": "Côte-d'Or",
+   "detail": "Sous-préfecture · Côte-d'Or (21)"
+  },
+  {
+   "code": "22050",
+   "nom": "Dinan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -2.0512,
+    48.4462
+   ],
+   "dep": "22",
+   "depNom": "Côtes-d'Armor",
+   "detail": "Sous-préfecture · Côtes-d'Armor (22)"
+  },
+  {
+   "code": "22070",
+   "nom": "Guingamp",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -3.1534,
+    48.5605
+   ],
+   "dep": "22",
+   "depNom": "Côtes-d'Armor",
+   "detail": "Sous-préfecture · Côtes-d'Armor (22)"
+  },
+  {
+   "code": "22113",
+   "nom": "Lannion",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -3.4624,
+    48.7434
+   ],
+   "dep": "22",
+   "depNom": "Côtes-d'Armor",
+   "detail": "Sous-préfecture · Côtes-d'Armor (22)"
+  },
+  {
+   "code": "23008",
+   "nom": "Aubusson",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.1665,
+    45.9507
+   ],
+   "dep": "23",
+   "depNom": "Creuse",
+   "detail": "Sous-préfecture · Creuse (23)"
+  },
+  {
+   "code": "24037",
+   "nom": "Bergerac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.4864,
+    44.8543
+   ],
+   "dep": "24",
+   "depNom": "Dordogne",
+   "detail": "Sous-préfecture · Dordogne (24)"
+  },
+  {
+   "code": "24311",
+   "nom": "Nontron",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.6844,
+    45.5297
+   ],
+   "dep": "24",
+   "depNom": "Dordogne",
+   "detail": "Sous-préfecture · Dordogne (24)"
+  },
+  {
+   "code": "24520",
+   "nom": "Sarlat-la-Canéda",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.2067,
+    44.8983
+   ],
+   "dep": "24",
+   "depNom": "Dordogne",
+   "detail": "Sous-préfecture · Dordogne (24)"
+  },
+  {
+   "code": "25388",
+   "nom": "Montbéliard",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.7917,
+    47.5157
+   ],
+   "dep": "25",
+   "depNom": "Doubs",
+   "detail": "Sous-préfecture · Doubs (25)"
+  },
+  {
+   "code": "25462",
+   "nom": "Pontarlier",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.3892,
+    46.912
+   ],
+   "dep": "25",
+   "depNom": "Doubs",
+   "detail": "Sous-préfecture · Doubs (25)"
+  },
+  {
+   "code": "26113",
+   "nom": "Die",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.3769,
+    44.7481
+   ],
+   "dep": "26",
+   "depNom": "Drôme",
+   "detail": "Sous-préfecture · Drôme (26)"
+  },
+  {
+   "code": "26220",
+   "nom": "Nyons",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.1289,
+    44.3565
+   ],
+   "dep": "26",
+   "depNom": "Drôme",
+   "detail": "Sous-préfecture · Drôme (26)"
+  },
+  {
+   "code": "27056",
+   "nom": "Bernay",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.589,
+    49.0925
+   ],
+   "dep": "27",
+   "depNom": "Eure",
+   "detail": "Sous-préfecture · Eure (27)"
+  },
+  {
+   "code": "27016",
+   "nom": "Les Andelys",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.4284,
+    49.2456
+   ],
+   "dep": "27",
+   "depNom": "Eure",
+   "detail": "Sous-préfecture · Eure (27)"
+  },
+  {
+   "code": "28088",
+   "nom": "Châteaudun",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.3264,
+    48.0766
+   ],
+   "dep": "28",
+   "depNom": "Eure-et-Loir",
+   "detail": "Sous-préfecture · Eure-et-Loir (28)"
+  },
+  {
+   "code": "28134",
+   "nom": "Dreux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.3596,
+    48.7487
+   ],
+   "dep": "28",
+   "depNom": "Eure-et-Loir",
+   "detail": "Sous-préfecture · Eure-et-Loir (28)"
+  },
+  {
+   "code": "28280",
+   "nom": "Nogent-le-Rotrou",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.8041,
+    48.3173
+   ],
+   "dep": "28",
+   "depNom": "Eure-et-Loir",
+   "detail": "Sous-préfecture · Eure-et-Loir (28)"
+  },
+  {
+   "code": "29019",
+   "nom": "Brest",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -4.5026,
+    48.4003
+   ],
+   "dep": "29",
+   "depNom": "Finistère",
+   "detail": "Sous-préfecture · Finistère (29)"
+  },
+  {
+   "code": "29026",
+   "nom": "Châteaulin",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -4.0737,
+    48.203
+   ],
+   "dep": "29",
+   "depNom": "Finistère",
+   "detail": "Sous-préfecture · Finistère (29)"
+  },
+  {
+   "code": "29151",
+   "nom": "Morlaix",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -3.8202,
+    48.5999
+   ],
+   "dep": "29",
+   "depNom": "Finistère",
+   "detail": "Sous-préfecture · Finistère (29)"
+  },
+  {
+   "code": "30007",
+   "nom": "Alès",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.0885,
+    44.1252
+   ],
+   "dep": "30",
+   "depNom": "Gard",
+   "detail": "Sous-préfecture · Gard (30)"
+  },
+  {
+   "code": "30350",
+   "nom": "Le Vigan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.625,
+    43.9889
+   ],
+   "dep": "30",
+   "depNom": "Gard",
+   "detail": "Sous-préfecture · Gard (30)"
+  },
+  {
+   "code": "31395",
+   "nom": "Muret",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.3087,
+    43.4489
+   ],
+   "dep": "31",
+   "depNom": "Haute-Garonne",
+   "detail": "Sous-préfecture · Haute-Garonne (31)"
+  },
+  {
+   "code": "31483",
+   "nom": "Saint-Gaudens",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.7266,
+    43.1197
+   ],
+   "dep": "31",
+   "depNom": "Haute-Garonne",
+   "detail": "Sous-préfecture · Haute-Garonne (31)"
+  },
+  {
+   "code": "32107",
+   "nom": "Condom",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.3742,
+    43.9717
+   ],
+   "dep": "32",
+   "depNom": "Gers",
+   "detail": "Sous-préfecture · Gers (32)"
+  },
+  {
+   "code": "32256",
+   "nom": "Mirande",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.4105,
+    43.5187
+   ],
+   "dep": "32",
+   "depNom": "Gers",
+   "detail": "Sous-préfecture · Gers (32)"
+  },
+  {
+   "code": "33009",
+   "nom": "Arcachon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.1747,
+    44.6533
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "Sous-préfecture · Gironde (33)"
+  },
+  {
+   "code": "33058",
+   "nom": "Blaye",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.6697,
+    45.1277
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "Sous-préfecture · Gironde (33)"
+  },
+  {
+   "code": "33227",
+   "nom": "Langon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.2412,
+    44.5371
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "Sous-préfecture · Gironde (33)"
+  },
+  {
+   "code": "33240",
+   "nom": "Lesparre-Médoc",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.9347,
+    45.2816
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "Sous-préfecture · Gironde (33)"
+  },
+  {
+   "code": "33243",
+   "nom": "Libourne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.2348,
+    44.9129
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "Sous-préfecture · Gironde (33)"
+  },
+  {
+   "code": "34032",
+   "nom": "Béziers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.2307,
+    43.3475
+   ],
+   "dep": "34",
+   "depNom": "Hérault",
+   "detail": "Sous-préfecture · Hérault (34)"
+  },
+  {
+   "code": "34142",
+   "nom": "Lodève",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.3058,
+    43.7306
+   ],
+   "dep": "34",
+   "depNom": "Hérault",
+   "detail": "Sous-préfecture · Hérault (34)"
+  },
+  {
+   "code": "35115",
+   "nom": "Fougères",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.1945,
+    48.3528
+   ],
+   "dep": "35",
+   "depNom": "Ille-et-Vilaine",
+   "detail": "Sous-préfecture · Ille-et-Vilaine (35)"
+  },
+  {
+   "code": "35236",
+   "nom": "Redon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -2.0803,
+    47.6611
+   ],
+   "dep": "35",
+   "depNom": "Ille-et-Vilaine",
+   "detail": "Sous-préfecture · Ille-et-Vilaine (35)"
+  },
+  {
+   "code": "35288",
+   "nom": "Saint-Malo",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.9806,
+    48.6398
+   ],
+   "dep": "35",
+   "depNom": "Ille-et-Vilaine",
+   "detail": "Sous-préfecture · Ille-et-Vilaine (35)"
+  },
+  {
+   "code": "36088",
+   "nom": "Issoudun",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.0,
+    46.9486
+   ],
+   "dep": "36",
+   "depNom": "Indre",
+   "detail": "Sous-préfecture · Indre (36)"
+  },
+  {
+   "code": "36046",
+   "nom": "La Châtre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.9911,
+    46.5741
+   ],
+   "dep": "36",
+   "depNom": "Indre",
+   "detail": "Sous-préfecture · Indre (36)"
+  },
+  {
+   "code": "36018",
+   "nom": "Le Blanc",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.1001,
+    46.6348
+   ],
+   "dep": "36",
+   "depNom": "Indre",
+   "detail": "Sous-préfecture · Indre (36)"
+  },
+  {
+   "code": "37072",
+   "nom": "Chinon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.2451,
+    47.1721
+   ],
+   "dep": "37",
+   "depNom": "Indre-et-Loire",
+   "detail": "Sous-préfecture · Indre-et-Loire (37)"
+  },
+  {
+   "code": "37132",
+   "nom": "Loches",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.9742,
+    47.1204
+   ],
+   "dep": "37",
+   "depNom": "Indre-et-Loire",
+   "detail": "Sous-préfecture · Indre-et-Loire (37)"
+  },
+  {
+   "code": "38509",
+   "nom": "La Tour-du-Pin",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.4452,
+    45.5734
+   ],
+   "dep": "38",
+   "depNom": "Isère",
+   "detail": "Sous-préfecture · Isère (38)"
+  },
+  {
+   "code": "38544",
+   "nom": "Vienne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.8807,
+    45.5208
+   ],
+   "dep": "38",
+   "depNom": "Isère",
+   "detail": "Sous-préfecture · Isère (38)"
+  },
+  {
+   "code": "39198",
+   "nom": "Dole",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.5009,
+    47.0754
+   ],
+   "dep": "39",
+   "depNom": "Jura",
+   "detail": "Sous-préfecture · Jura (39)"
+  },
+  {
+   "code": "39478",
+   "nom": "Saint-Claude",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.8761,
+    46.4086
+   ],
+   "dep": "39",
+   "depNom": "Jura",
+   "detail": "Sous-préfecture · Jura (39)"
+  },
+  {
+   "code": "40088",
+   "nom": "Dax",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.0595,
+    43.7009
+   ],
+   "dep": "40",
+   "depNom": "Landes",
+   "detail": "Sous-préfecture · Landes (40)"
+  },
+  {
+   "code": "41194",
+   "nom": "Romorantin-Lanthenay",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.7444,
+    47.3746
+   ],
+   "dep": "41",
+   "depNom": "Loir-et-Cher",
+   "detail": "Sous-préfecture · Loir-et-Cher (41)"
+  },
+  {
+   "code": "41269",
+   "nom": "Vendôme",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.0611,
+    47.8014
+   ],
+   "dep": "41",
+   "depNom": "Loir-et-Cher",
+   "detail": "Sous-préfecture · Loir-et-Cher (41)"
+  },
+  {
+   "code": "42147",
+   "nom": "Montbrison",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.072,
+    45.6007
+   ],
+   "dep": "42",
+   "depNom": "Loire",
+   "detail": "Sous-préfecture · Loire (42)"
+  },
+  {
+   "code": "42187",
+   "nom": "Roanne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.08,
+    46.0452
+   ],
+   "dep": "42",
+   "depNom": "Loire",
+   "detail": "Sous-préfecture · Loire (42)"
+  },
+  {
+   "code": "43040",
+   "nom": "Brioude",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.3856,
+    45.2962
+   ],
+   "dep": "43",
+   "depNom": "Haute-Loire",
+   "detail": "Sous-préfecture · Haute-Loire (43)"
+  },
+  {
+   "code": "43268",
+   "nom": "Yssingeaux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.1312,
+    45.1394
+   ],
+   "dep": "43",
+   "depNom": "Haute-Loire",
+   "detail": "Sous-préfecture · Haute-Loire (43)"
+  },
+  {
+   "code": "44036",
+   "nom": "Châteaubriant",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.3869,
+    47.7221
+   ],
+   "dep": "44",
+   "depNom": "Loire-Atlantique",
+   "detail": "Sous-préfecture · Loire-Atlantique (44)"
+  },
+  {
+   "code": "44184",
+   "nom": "Saint-Nazaire",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -2.251,
+    47.2803
+   ],
+   "dep": "44",
+   "depNom": "Loire-Atlantique",
+   "detail": "Sous-préfecture · Loire-Atlantique (44)"
+  },
+  {
+   "code": "45208",
+   "nom": "Montargis",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.7373,
+    47.9991
+   ],
+   "dep": "45",
+   "depNom": "Loiret",
+   "detail": "Sous-préfecture · Loiret (45)"
+  },
+  {
+   "code": "45252",
+   "nom": "Pithiviers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2494,
+    48.1802
+   ],
+   "dep": "45",
+   "depNom": "Loiret",
+   "detail": "Sous-préfecture · Loiret (45)"
+  },
+  {
+   "code": "46102",
+   "nom": "Figeac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.0254,
+    44.6053
+   ],
+   "dep": "46",
+   "depNom": "Lot",
+   "detail": "Sous-préfecture · Lot (46)"
+  },
+  {
+   "code": "46127",
+   "nom": "Gourdon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.3769,
+    44.7348
+   ],
+   "dep": "46",
+   "depNom": "Lot",
+   "detail": "Sous-préfecture · Lot (46)"
+  },
+  {
+   "code": "47157",
+   "nom": "Marmande",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.1723,
+    44.5053
+   ],
+   "dep": "47",
+   "depNom": "Lot-et-Garonne",
+   "detail": "Sous-préfecture · Lot-et-Garonne (47)"
+  },
+  {
+   "code": "47195",
+   "nom": "Nérac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.3435,
+    44.1319
+   ],
+   "dep": "47",
+   "depNom": "Lot-et-Garonne",
+   "detail": "Sous-préfecture · Lot-et-Garonne (47)"
+  },
+  {
+   "code": "47323",
+   "nom": "Villeneuve-sur-Lot",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.7421,
+    44.4248
+   ],
+   "dep": "47",
+   "depNom": "Lot-et-Garonne",
+   "detail": "Sous-préfecture · Lot-et-Garonne (47)"
+  },
+  {
+   "code": "48061",
+   "nom": "Florac Trois Rivières",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.6054,
+    44.3174
+   ],
+   "dep": "48",
+   "depNom": "Lozère",
+   "detail": "Sous-préfecture · Lozère (48)"
+  },
+  {
+   "code": "49099",
+   "nom": "Cholet",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.8775,
+    47.0456
+   ],
+   "dep": "49",
+   "depNom": "Maine-et-Loire",
+   "detail": "Sous-préfecture · Maine-et-Loire (49)"
+  },
+  {
+   "code": "49328",
+   "nom": "Saumur",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.083,
+    47.2674
+   ],
+   "dep": "49",
+   "depNom": "Maine-et-Loire",
+   "detail": "Sous-préfecture · Maine-et-Loire (49)"
+  },
+  {
+   "code": "49331",
+   "nom": "Segré-en-Anjou Bleu",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.8614,
+    47.7062
+   ],
+   "dep": "49",
+   "depNom": "Maine-et-Loire",
+   "detail": "Sous-préfecture · Maine-et-Loire (49)"
+  },
+  {
+   "code": "50025",
+   "nom": "Avranches",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.3568,
+    48.6882
+   ],
+   "dep": "50",
+   "depNom": "Manche",
+   "detail": "Sous-préfecture · Manche (50)"
+  },
+  {
+   "code": "50129",
+   "nom": "Cherbourg-en-Cotentin",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.6209,
+    49.6318
+   ],
+   "dep": "50",
+   "depNom": "Manche",
+   "detail": "Sous-préfecture · Manche (50)"
+  },
+  {
+   "code": "50147",
+   "nom": "Coutances",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.443,
+    49.057
+   ],
+   "dep": "50",
+   "depNom": "Manche",
+   "detail": "Sous-préfecture · Manche (50)"
+  },
+  {
+   "code": "51454",
+   "nom": "Reims",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.0401,
+    49.2517
+   ],
+   "dep": "51",
+   "depNom": "Marne",
+   "detail": "Sous-préfecture · Marne (51)"
+  },
+  {
+   "code": "51649",
+   "nom": "Vitry-le-François",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.5926,
+    48.7279
+   ],
+   "dep": "51",
+   "depNom": "Marne",
+   "detail": "Sous-préfecture · Marne (51)"
+  },
+  {
+   "code": "51230",
+   "nom": "Épernay",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.9315,
+    49.0369
+   ],
+   "dep": "51",
+   "depNom": "Marne",
+   "detail": "Sous-préfecture · Marne (51)"
+  },
+  {
+   "code": "52269",
+   "nom": "Langres",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.3393,
+    47.859
+   ],
+   "dep": "52",
+   "depNom": "Haute-Marne",
+   "detail": "Sous-préfecture · Haute-Marne (52)"
+  },
+  {
+   "code": "52448",
+   "nom": "Saint-Dizier",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.9493,
+    48.6282
+   ],
+   "dep": "52",
+   "depNom": "Haute-Marne",
+   "detail": "Sous-préfecture · Haute-Marne (52)"
+  },
+  {
+   "code": "53062",
+   "nom": "Château-Gontier-sur-Mayenne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.7387,
+    47.8292
+   ],
+   "dep": "53",
+   "depNom": "Mayenne",
+   "detail": "Sous-préfecture · Mayenne (53)"
+  },
+  {
+   "code": "53147",
+   "nom": "Mayenne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.6147,
+    48.3073
+   ],
+   "dep": "53",
+   "depNom": "Mayenne",
+   "detail": "Sous-préfecture · Mayenne (53)"
+  },
+  {
+   "code": "54329",
+   "nom": "Lunéville",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.499,
+    48.5917
+   ],
+   "dep": "54",
+   "depNom": "Meurthe-et-Moselle",
+   "detail": "Sous-préfecture · Meurthe-et-Moselle (54)"
+  },
+  {
+   "code": "54528",
+   "nom": "Toul",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.8948,
+    48.6866
+   ],
+   "dep": "54",
+   "depNom": "Meurthe-et-Moselle",
+   "detail": "Sous-préfecture · Meurthe-et-Moselle (54)"
+  },
+  {
+   "code": "54099",
+   "nom": "Val de Briey",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.9528,
+    49.2621
+   ],
+   "dep": "54",
+   "depNom": "Meurthe-et-Moselle",
+   "detail": "Sous-préfecture · Meurthe-et-Moselle (54)"
+  },
+  {
+   "code": "55122",
+   "nom": "Commercy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.5559,
+    48.7462
+   ],
+   "dep": "55",
+   "depNom": "Meuse",
+   "detail": "Sous-préfecture · Meuse (55)"
+  },
+  {
+   "code": "55545",
+   "nom": "Verdun",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.3628,
+    49.1455
+   ],
+   "dep": "55",
+   "depNom": "Meuse",
+   "detail": "Sous-préfecture · Meuse (55)"
+  },
+  {
+   "code": "56121",
+   "nom": "Lorient",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -3.379,
+    47.7505
+   ],
+   "dep": "56",
+   "depNom": "Morbihan",
+   "detail": "Sous-préfecture · Morbihan (56)"
+  },
+  {
+   "code": "56178",
+   "nom": "Pontivy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -2.9705,
+    48.0731
+   ],
+   "dep": "56",
+   "depNom": "Morbihan",
+   "detail": "Sous-préfecture · Morbihan (56)"
+  },
+  {
+   "code": "57227",
+   "nom": "Forbach",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.8926,
+    49.1916
+   ],
+   "dep": "57",
+   "depNom": "Moselle",
+   "detail": "Sous-préfecture · Moselle (57)"
+  },
+  {
+   "code": "57630",
+   "nom": "Sarrebourg",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.0471,
+    48.7383
+   ],
+   "dep": "57",
+   "depNom": "Moselle",
+   "detail": "Sous-préfecture · Moselle (57)"
+  },
+  {
+   "code": "57631",
+   "nom": "Sarreguemines",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.0704,
+    49.109
+   ],
+   "dep": "57",
+   "depNom": "Moselle",
+   "detail": "Sous-préfecture · Moselle (57)"
+  },
+  {
+   "code": "57672",
+   "nom": "Thionville",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.1167,
+    49.3719
+   ],
+   "dep": "57",
+   "depNom": "Moselle",
+   "detail": "Sous-préfecture · Moselle (57)"
+  },
+  {
+   "code": "58062",
+   "nom": "Château-Chinon (Ville)",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.9276,
+    47.0627
+   ],
+   "dep": "58",
+   "depNom": "Nièvre",
+   "detail": "Sous-préfecture · Nièvre (58)"
+  },
+  {
+   "code": "58079",
+   "nom": "Clamecy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.5109,
+    47.4613
+   ],
+   "dep": "58",
+   "depNom": "Nièvre",
+   "detail": "Sous-préfecture · Nièvre (58)"
+  },
+  {
+   "code": "58086",
+   "nom": "Cosne-Cours-sur-Loire",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.9427,
+    47.4029
+   ],
+   "dep": "58",
+   "depNom": "Nièvre",
+   "detail": "Sous-préfecture · Nièvre (58)"
+  },
+  {
+   "code": "59036",
+   "nom": "Avesnes-sur-Helpe",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.9269,
+    50.1243
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "Sous-préfecture · Nord (59)"
+  },
+  {
+   "code": "59122",
+   "nom": "Cambrai",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.2423,
+    50.1703
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "Sous-préfecture · Nord (59)"
+  },
+  {
+   "code": "59178",
+   "nom": "Douai",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.0907,
+    50.3817
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "Sous-préfecture · Nord (59)"
+  },
+  {
+   "code": "59183",
+   "nom": "Dunkerque",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.356,
+    51.0341
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "Sous-préfecture · Nord (59)"
+  },
+  {
+   "code": "59606",
+   "nom": "Valenciennes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.5163,
+    50.3591
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "Sous-préfecture · Nord (59)"
+  },
+  {
+   "code": "60157",
+   "nom": "Clermont",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.409,
+    49.3782
+   ],
+   "dep": "60",
+   "depNom": "Oise",
+   "detail": "Sous-préfecture · Oise (60)"
+  },
+  {
+   "code": "60159",
+   "nom": "Compiègne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.8529,
+    49.3991
+   ],
+   "dep": "60",
+   "depNom": "Oise",
+   "detail": "Sous-préfecture · Oise (60)"
+  },
+  {
+   "code": "60612",
+   "nom": "Senlis",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.5857,
+    49.2119
+   ],
+   "dep": "60",
+   "depNom": "Oise",
+   "detail": "Sous-préfecture · Oise (60)"
+  },
+  {
+   "code": "61006",
+   "nom": "Argentan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.0135,
+    48.7324
+   ],
+   "dep": "61",
+   "depNom": "Orne",
+   "detail": "Sous-préfecture · Orne (61)"
+  },
+  {
+   "code": "61293",
+   "nom": "Mortagne-au-Perche",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.561,
+    48.5207
+   ],
+   "dep": "61",
+   "depNom": "Orne",
+   "detail": "Sous-préfecture · Orne (61)"
+  },
+  {
+   "code": "62160",
+   "nom": "Boulogne-sur-Mer",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.6072,
+    50.7268
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "Sous-préfecture · Pas-de-Calais (62)"
+  },
+  {
+   "code": "62119",
+   "nom": "Béthune",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.643,
+    50.529
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "Sous-préfecture · Pas-de-Calais (62)"
+  },
+  {
+   "code": "62193",
+   "nom": "Calais",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.8759,
+    50.9501
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "Sous-préfecture · Pas-de-Calais (62)"
+  },
+  {
+   "code": "62498",
+   "nom": "Lens",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.8211,
+    50.4376
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "Sous-préfecture · Pas-de-Calais (62)"
+  },
+  {
+   "code": "62588",
+   "nom": "Montreuil-sur-Mer",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.7719,
+    50.4657
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "Sous-préfecture · Pas-de-Calais (62)"
+  },
+  {
+   "code": "62765",
+   "nom": "Saint-Omer",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2635,
+    50.7678
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "Sous-préfecture · Pas-de-Calais (62)"
+  },
+  {
+   "code": "63003",
+   "nom": "Ambert",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.7569,
+    45.5557
+   ],
+   "dep": "63",
+   "depNom": "Puy-de-Dôme",
+   "detail": "Sous-préfecture · Puy-de-Dôme (63)"
+  },
+  {
+   "code": "63178",
+   "nom": "Issoire",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.2448,
+    45.5455
+   ],
+   "dep": "63",
+   "depNom": "Puy-de-Dôme",
+   "detail": "Sous-préfecture · Puy-de-Dôme (63)"
+  },
+  {
+   "code": "63300",
+   "nom": "Riom",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.1327,
+    45.8943
+   ],
+   "dep": "63",
+   "depNom": "Puy-de-Dôme",
+   "detail": "Sous-préfecture · Puy-de-Dôme (63)"
+  },
+  {
+   "code": "63430",
+   "nom": "Thiers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.5397,
+    45.8618
+   ],
+   "dep": "63",
+   "depNom": "Puy-de-Dôme",
+   "detail": "Sous-préfecture · Puy-de-Dôme (63)"
+  },
+  {
+   "code": "64102",
+   "nom": "Bayonne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.4659,
+    43.4924
+   ],
+   "dep": "64",
+   "depNom": "Pyrénées-Atlantiques",
+   "detail": "Sous-préfecture · Pyrénées-Atlantiques (64)"
+  },
+  {
+   "code": "64422",
+   "nom": "Oloron-Sainte-Marie",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.5874,
+    43.1561
+   ],
+   "dep": "64",
+   "depNom": "Pyrénées-Atlantiques",
+   "detail": "Sous-préfecture · Pyrénées-Atlantiques (64)"
+  },
+  {
+   "code": "65025",
+   "nom": "Argelès-Gazost",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.0956,
+    43.0054
+   ],
+   "dep": "65",
+   "depNom": "Hautes-Pyrénées",
+   "detail": "Sous-préfecture · Hautes-Pyrénées (65)"
+  },
+  {
+   "code": "65059",
+   "nom": "Bagnères-de-Bigorre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.1328,
+    42.9749
+   ],
+   "dep": "65",
+   "depNom": "Hautes-Pyrénées",
+   "detail": "Sous-préfecture · Hautes-Pyrénées (65)"
+  },
+  {
+   "code": "66049",
+   "nom": "Céret",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.7526,
+    42.4742
+   ],
+   "dep": "66",
+   "depNom": "Pyrénées-Orientales",
+   "detail": "Sous-préfecture · Pyrénées-Orientales (66)"
+  },
+  {
+   "code": "66149",
+   "nom": "Prades",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.4306,
+    42.6148
+   ],
+   "dep": "66",
+   "depNom": "Pyrénées-Orientales",
+   "detail": "Sous-préfecture · Pyrénées-Orientales (66)"
+  },
+  {
+   "code": "67180",
+   "nom": "Haguenau",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.8304,
+    48.8419
+   ],
+   "dep": "67",
+   "depNom": "Bas-Rhin",
+   "detail": "Sous-préfecture · Bas-Rhin (67)"
+  },
+  {
+   "code": "67300",
+   "nom": "Molsheim",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.4999,
+    48.5445
+   ],
+   "dep": "67",
+   "depNom": "Bas-Rhin",
+   "detail": "Sous-préfecture · Bas-Rhin (67)"
+  },
+  {
+   "code": "67437",
+   "nom": "Saverne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.3417,
+    48.7399
+   ],
+   "dep": "67",
+   "depNom": "Bas-Rhin",
+   "detail": "Sous-préfecture · Bas-Rhin (67)"
+  },
+  {
+   "code": "67462",
+   "nom": "Sélestat",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.4622,
+    48.248
+   ],
+   "dep": "67",
+   "depNom": "Bas-Rhin",
+   "detail": "Sous-préfecture · Bas-Rhin (67)"
+  },
+  {
+   "code": "68004",
+   "nom": "Altkirch",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.2445,
+    47.6209
+   ],
+   "dep": "68",
+   "depNom": "Haut-Rhin",
+   "detail": "Sous-préfecture · Haut-Rhin (68)"
+  },
+  {
+   "code": "68224",
+   "nom": "Mulhouse",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.3253,
+    47.7489
+   ],
+   "dep": "68",
+   "depNom": "Haut-Rhin",
+   "detail": "Sous-préfecture · Haut-Rhin (68)"
+  },
+  {
+   "code": "68334",
+   "nom": "Thann",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    7.0946,
+    47.814
+   ],
+   "dep": "68",
+   "depNom": "Haut-Rhin",
+   "detail": "Sous-préfecture · Haut-Rhin (68)"
+  },
+  {
+   "code": "69264",
+   "nom": "Villefranche-sur-Saône",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.7308,
+    45.9872
+   ],
+   "dep": "69",
+   "depNom": "Rhône",
+   "detail": "Sous-préfecture · Rhône (69)"
+  },
+  {
+   "code": "70310",
+   "nom": "Lure",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.4965,
+    47.6853
+   ],
+   "dep": "70",
+   "depNom": "Haute-Saône",
+   "detail": "Sous-préfecture · Haute-Saône (70)"
+  },
+  {
+   "code": "71014",
+   "nom": "Autun",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.3107,
+    46.946
+   ],
+   "dep": "71",
+   "depNom": "Saône-et-Loire",
+   "detail": "Sous-préfecture · Saône-et-Loire (71)"
+  },
+  {
+   "code": "71076",
+   "nom": "Chalon-sur-Saône",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.8523,
+    46.7898
+   ],
+   "dep": "71",
+   "depNom": "Saône-et-Loire",
+   "detail": "Sous-préfecture · Saône-et-Loire (71)"
+  },
+  {
+   "code": "71106",
+   "nom": "Charolles",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    4.2801,
+    46.4471
+   ],
+   "dep": "71",
+   "depNom": "Saône-et-Loire",
+   "detail": "Sous-préfecture · Saône-et-Loire (71)"
+  },
+  {
+   "code": "71263",
+   "nom": "Louhans-Châteaurenaud",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.238,
+    46.6353
+   ],
+   "dep": "71",
+   "depNom": "Saône-et-Loire",
+   "detail": "Sous-préfecture · Saône-et-Loire (71)"
+  },
+  {
+   "code": "72154",
+   "nom": "La Flèche",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.0648,
+    47.6892
+   ],
+   "dep": "72",
+   "depNom": "Sarthe",
+   "detail": "Sous-préfecture · Sarthe (72)"
+  },
+  {
+   "code": "72180",
+   "nom": "Mamers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.3711,
+    48.3545
+   ],
+   "dep": "72",
+   "depNom": "Sarthe",
+   "detail": "Sous-préfecture · Sarthe (72)"
+  },
+  {
+   "code": "73011",
+   "nom": "Albertville",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.4042,
+    45.6683
+   ],
+   "dep": "73",
+   "depNom": "Savoie",
+   "detail": "Sous-préfecture · Savoie (73)"
+  },
+  {
+   "code": "73248",
+   "nom": "Saint-Jean-de-Maurienne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.3458,
+    45.2719
+   ],
+   "dep": "73",
+   "depNom": "Savoie",
+   "detail": "Sous-préfecture · Savoie (73)"
+  },
+  {
+   "code": "74042",
+   "nom": "Bonneville",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.4084,
+    46.0737
+   ],
+   "dep": "74",
+   "depNom": "Haute-Savoie",
+   "detail": "Sous-préfecture · Haute-Savoie (74)"
+  },
+  {
+   "code": "74243",
+   "nom": "Saint-Julien-en-Genevois",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.0786,
+    46.1393
+   ],
+   "dep": "74",
+   "depNom": "Haute-Savoie",
+   "detail": "Sous-préfecture · Haute-Savoie (74)"
+  },
+  {
+   "code": "74281",
+   "nom": "Thonon-les-Bains",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.482,
+    46.3711
+   ],
+   "dep": "74",
+   "depNom": "Haute-Savoie",
+   "detail": "Sous-préfecture · Haute-Savoie (74)"
+  },
+  {
+   "code": "76217",
+   "nom": "Dieppe",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.0872,
+    49.922
+   ],
+   "dep": "76",
+   "depNom": "Seine-Maritime",
+   "detail": "Sous-préfecture · Seine-Maritime (76)"
+  },
+  {
+   "code": "76351",
+   "nom": "Le Havre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.1402,
+    49.4966
+   ],
+   "dep": "76",
+   "depNom": "Seine-Maritime",
+   "detail": "Sous-préfecture · Seine-Maritime (76)"
+  },
+  {
+   "code": "77186",
+   "nom": "Fontainebleau",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.6809,
+    48.4065
+   ],
+   "dep": "77",
+   "depNom": "Seine-et-Marne",
+   "detail": "Sous-préfecture · Seine-et-Marne (77)"
+  },
+  {
+   "code": "77284",
+   "nom": "Meaux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.8999,
+    48.9569
+   ],
+   "dep": "77",
+   "depNom": "Seine-et-Marne",
+   "detail": "Sous-préfecture · Seine-et-Marne (77)"
+  },
+  {
+   "code": "77379",
+   "nom": "Provins",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.2878,
+    48.563
+   ],
+   "dep": "77",
+   "depNom": "Seine-et-Marne",
+   "detail": "Sous-préfecture · Seine-et-Marne (77)"
+  },
+  {
+   "code": "77468",
+   "nom": "Torcy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.6507,
+    48.8539
+   ],
+   "dep": "77",
+   "depNom": "Seine-et-Marne",
+   "detail": "Sous-préfecture · Seine-et-Marne (77)"
+  },
+  {
+   "code": "78361",
+   "nom": "Mantes-la-Jolie",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.6941,
+    48.9983
+   ],
+   "dep": "78",
+   "depNom": "Yvelines",
+   "detail": "Sous-préfecture · Yvelines (78)"
+  },
+  {
+   "code": "78517",
+   "nom": "Rambouillet",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.8264,
+    48.6535
+   ],
+   "dep": "78",
+   "depNom": "Yvelines",
+   "detail": "Sous-préfecture · Yvelines (78)"
+  },
+  {
+   "code": "78551",
+   "nom": "Saint-Germain-en-Laye",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.0993,
+    48.9411
+   ],
+   "dep": "78",
+   "depNom": "Yvelines",
+   "detail": "Sous-préfecture · Yvelines (78)"
+  },
+  {
+   "code": "79049",
+   "nom": "Bressuire",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.4795,
+    46.8546
+   ],
+   "dep": "79",
+   "depNom": "Deux-Sèvres",
+   "detail": "Sous-préfecture · Deux-Sèvres (79)"
+  },
+  {
+   "code": "79202",
+   "nom": "Parthenay",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.2336,
+    46.6454
+   ],
+   "dep": "79",
+   "depNom": "Deux-Sèvres",
+   "detail": "Sous-préfecture · Deux-Sèvres (79)"
+  },
+  {
+   "code": "80001",
+   "nom": "Abbeville",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.8322,
+    50.1084
+   ],
+   "dep": "80",
+   "depNom": "Somme",
+   "detail": "Sous-préfecture · Somme (80)"
+  },
+  {
+   "code": "80561",
+   "nom": "Montdidier",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.5683,
+    49.648
+   ],
+   "dep": "80",
+   "depNom": "Somme",
+   "detail": "Sous-préfecture · Somme (80)"
+  },
+  {
+   "code": "80620",
+   "nom": "Péronne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.9291,
+    49.9282
+   ],
+   "dep": "80",
+   "depNom": "Somme",
+   "detail": "Sous-préfecture · Somme (80)"
+  },
+  {
+   "code": "81065",
+   "nom": "Castres",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2382,
+    43.6156
+   ],
+   "dep": "81",
+   "depNom": "Tarn",
+   "detail": "Sous-préfecture · Tarn (81)"
+  },
+  {
+   "code": "82033",
+   "nom": "Castelsarrasin",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.1238,
+    44.0488
+   ],
+   "dep": "82",
+   "depNom": "Tarn-et-Garonne",
+   "detail": "Sous-préfecture · Tarn-et-Garonne (82)"
+  },
+  {
+   "code": "83023",
+   "nom": "Brignoles",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.0773,
+    43.3994
+   ],
+   "dep": "83",
+   "depNom": "Var",
+   "detail": "Sous-préfecture · Var (83)"
+  },
+  {
+   "code": "83050",
+   "nom": "Draguignan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.4546,
+    43.5359
+   ],
+   "dep": "83",
+   "depNom": "Var",
+   "detail": "Sous-préfecture · Var (83)"
+  },
+  {
+   "code": "84003",
+   "nom": "Apt",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.3885,
+    43.879
+   ],
+   "dep": "84",
+   "depNom": "Vaucluse",
+   "detail": "Sous-préfecture · Vaucluse (84)"
+  },
+  {
+   "code": "84031",
+   "nom": "Carpentras",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.0615,
+    44.0593
+   ],
+   "dep": "84",
+   "depNom": "Vaucluse",
+   "detail": "Sous-préfecture · Vaucluse (84)"
+  },
+  {
+   "code": "85092",
+   "nom": "Fontenay-le-Comte",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -0.7931,
+    46.4563
+   ],
+   "dep": "85",
+   "depNom": "Vendée",
+   "detail": "Sous-préfecture · Vendée (85)"
+  },
+  {
+   "code": "85194",
+   "nom": "Les Sables-d'Olonne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -1.793,
+    46.501
+   ],
+   "dep": "85",
+   "depNom": "Vendée",
+   "detail": "Sous-préfecture · Vendée (85)"
+  },
+  {
+   "code": "86066",
+   "nom": "Châtellerault",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.5528,
+    46.8156
+   ],
+   "dep": "86",
+   "depNom": "Vienne",
+   "detail": "Sous-préfecture · Vienne (86)"
+  },
+  {
+   "code": "86165",
+   "nom": "Montmorillon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.8958,
+    46.4264
+   ],
+   "dep": "86",
+   "depNom": "Vienne",
+   "detail": "Sous-préfecture · Vienne (86)"
+  },
+  {
+   "code": "87011",
+   "nom": "Bellac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    1.0413,
+    46.1045
+   ],
+   "dep": "87",
+   "depNom": "Haute-Vienne",
+   "detail": "Sous-préfecture · Haute-Vienne (87)"
+  },
+  {
+   "code": "87126",
+   "nom": "Rochechouart",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    0.8427,
+    45.8232
+   ],
+   "dep": "87",
+   "depNom": "Haute-Vienne",
+   "detail": "Sous-préfecture · Haute-Vienne (87)"
+  },
+  {
+   "code": "88321",
+   "nom": "Neufchâteau",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    5.6916,
+    48.3567
+   ],
+   "dep": "88",
+   "depNom": "Vosges",
+   "detail": "Sous-préfecture · Vosges (88)"
+  },
+  {
+   "code": "88413",
+   "nom": "Saint-Dié-des-Vosges",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    6.9379,
+    48.2968
+   ],
+   "dep": "88",
+   "depNom": "Vosges",
+   "detail": "Sous-préfecture · Vosges (88)"
+  },
+  {
+   "code": "89025",
+   "nom": "Avallon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.9163,
+    47.4824
+   ],
+   "dep": "89",
+   "depNom": "Yonne",
+   "detail": "Sous-préfecture · Yonne (89)"
+  },
+  {
+   "code": "89387",
+   "nom": "Sens",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    3.2977,
+    48.1957
+   ],
+   "dep": "89",
+   "depNom": "Yonne",
+   "detail": "Sous-préfecture · Yonne (89)"
+  },
+  {
+   "code": "91477",
+   "nom": "Palaiseau",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2287,
+    48.7148
+   ],
+   "dep": "91",
+   "depNom": "Essonne",
+   "detail": "Sous-préfecture · Essonne (91)"
+  },
+  {
+   "code": "91223",
+   "nom": "Étampes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.1378,
+    48.4219
+   ],
+   "dep": "91",
+   "depNom": "Essonne",
+   "detail": "Sous-préfecture · Essonne (91)"
+  },
+  {
+   "code": "92002",
+   "nom": "Antony",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2991,
+    48.75
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "Sous-préfecture · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "92012",
+   "nom": "Boulogne-Billancourt",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2391,
+    48.8364
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "Sous-préfecture · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "93062",
+   "nom": "Le Raincy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.5195,
+    48.8968
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "Sous-préfecture · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "93066",
+   "nom": "Saint-Denis",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.3593,
+    48.9296
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "Sous-préfecture · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "94038",
+   "nom": "L'Haÿ-les-Roses",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.3377,
+    48.7762
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "Sous-préfecture · Val-de-Marne (94)"
+  },
+  {
+   "code": "94052",
+   "nom": "Nogent-sur-Marne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.4817,
+    48.8366
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "Sous-préfecture · Val-de-Marne (94)"
+  },
+  {
+   "code": "95018",
+   "nom": "Argenteuil",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.2403,
+    48.9515
+   ],
+   "dep": "95",
+   "depNom": "Val-d'Oise",
+   "detail": "Sous-préfecture · Val-d'Oise (95)"
+  },
+  {
+   "code": "95585",
+   "nom": "Sarcelles",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    2.3812,
+    48.9902
+   ],
+   "dep": "95",
+   "depNom": "Val-d'Oise",
+   "detail": "Sous-préfecture · Val-d'Oise (95)"
+  },
+  {
+   "code": "97120",
+   "nom": "Pointe-à-Pitre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -61.5361,
+    16.2397
+   ],
+   "dep": "971",
+   "depNom": "Guadeloupe",
+   "detail": "Sous-préfecture · Guadeloupe (971)"
+  },
+  {
+   "code": "97230",
+   "nom": "La Trinité",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -60.9505,
+    14.7384
+   ],
+   "dep": "972",
+   "depNom": "Martinique",
+   "detail": "Sous-préfecture · Martinique (972)"
+  },
+  {
+   "code": "97217",
+   "nom": "Le Marin",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -60.8576,
+    14.484
+   ],
+   "dep": "972",
+   "depNom": "Martinique",
+   "detail": "Sous-préfecture · Martinique (972)"
+  },
+  {
+   "code": "97225",
+   "nom": "Saint-Pierre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -61.1724,
+    14.7752
+   ],
+   "dep": "972",
+   "depNom": "Martinique",
+   "detail": "Sous-préfecture · Martinique (972)"
+  },
+  {
+   "code": "97308",
+   "nom": "Saint-Georges",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -52.1326,
+    3.7418
+   ],
+   "dep": "973",
+   "depNom": "Guyane",
+   "detail": "Sous-préfecture · Guyane (973)"
+  },
+  {
+   "code": "97311",
+   "nom": "Saint-Laurent-du-Maroni",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    -53.978,
+    4.9464
+   ],
+   "dep": "973",
+   "depNom": "Guyane",
+   "detail": "Sous-préfecture · Guyane (973)"
+  },
+  {
+   "code": "97410",
+   "nom": "Saint-Benoît",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    55.6493,
+    -21.0919
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "Sous-préfecture · La Réunion (974)"
+  },
+  {
+   "code": "97415",
+   "nom": "Saint-Paul",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    55.3224,
+    -21.0446
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "Sous-préfecture · La Réunion (974)"
+  },
+  {
+   "code": "97416",
+   "nom": "Saint-Pierre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "sous-prefecture",
+   "geo": [
+    55.4939,
+    -21.3123
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "Sous-préfecture · La Réunion (974)"
+  }
+ ]
+}

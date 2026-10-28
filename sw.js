@@ -1,12 +1,14 @@
 // Hors ligne : réseau d'abord (l'app est toujours à jour quand le téléphone est connecté),
 // cache en secours (l'app marche sans réseau). Changer VERSION force un nettoyage du cache.
-const VERSION = 'geoquiz-1';
+const VERSION = 'geoquiz-2';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest', 'catalogue.json', 'css/app.css',
   'js/app.js', 'js/core/dom.js', 'js/core/text.js', 'js/core/validate.js', 'js/core/store.js',
   'js/core/boards.js', 'js/core/game.js',
   'js/mechanics/index.js', 'js/mechanics/all.js', 'js/mechanics/clue.js', 'js/mechanics/tap.js', 'js/mechanics/queue.js',
-  'data/departements.json', 'maps/france-departements.svg',
+  'data/departements.json', 'data/regions.json', 'data/prefectures.json', 'data/sous-prefectures.json', 'data/chefs-lieux.json',
+  'data/etats-unis.json', 'data/capitales-etats-unis.json', 'data/canada.json', 'data/capitales-canada.json',
+  'maps/france.svg', 'maps/france-regions.svg', 'maps/etats-unis.svg', 'maps/canada.svg',
   'icons/icon-192.png', 'icons/icon-512.png',
 ];
 

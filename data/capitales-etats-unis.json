@@ -1,0 +1,656 @@
+{
+ "id": "capitales-etats-unis",
+ "titre": "Capitales des États américains",
+ "items": [
+  {
+   "code": "c-AL",
+   "nom": "Montgomery",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Alabama",
+   "etatCode": "AL",
+   "geo": [
+    -86.2792,
+    32.3616
+   ],
+   "detail": "Capitale · Alabama"
+  },
+  {
+   "code": "c-AK",
+   "nom": "Juneau",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Alaska",
+   "etatCode": "AK",
+   "geo": [
+    -134.4007,
+    58.3034
+   ],
+   "detail": "Capitale · Alaska"
+  },
+  {
+   "code": "c-AZ",
+   "nom": "Phoenix",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Arizona",
+   "etatCode": "AZ",
+   "geo": [
+    -112.0674,
+    33.4483
+   ],
+   "detail": "Capitale · Arizona"
+  },
+  {
+   "code": "c-AR",
+   "nom": "Little Rock",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Arkansas",
+   "etatCode": "AR",
+   "geo": [
+    -92.3311,
+    34.7361
+   ],
+   "detail": "Capitale · Arkansas"
+  },
+  {
+   "code": "c-CA",
+   "nom": "Sacramento",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "geo": [
+    -121.472,
+    38.577
+   ],
+   "detail": "Capitale · Californie"
+  },
+  {
+   "code": "c-NC",
+   "nom": "Raleigh",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Caroline du Nord",
+   "etatCode": "NC",
+   "geo": [
+    -78.647,
+    35.7727
+   ],
+   "detail": "Capitale · Caroline du Nord"
+  },
+  {
+   "code": "c-SC",
+   "nom": "Columbia",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Caroline du Sud",
+   "etatCode": "SC",
+   "geo": [
+    -81.0313,
+    33.9969
+   ],
+   "detail": "Capitale · Caroline du Sud"
+  },
+  {
+   "code": "c-CO",
+   "nom": "Denver",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Colorado",
+   "etatCode": "CO",
+   "geo": [
+    -104.986,
+    39.7411
+   ],
+   "detail": "Capitale · Colorado"
+  },
+  {
+   "code": "c-CT",
+   "nom": "Hartford",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Connecticut",
+   "etatCode": "CT",
+   "geo": [
+    -72.6819,
+    41.772
+   ],
+   "detail": "Capitale · Connecticut"
+  },
+  {
+   "code": "c-ND",
+   "nom": "Bismarck",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Dakota du Nord",
+   "etatCode": "ND",
+   "geo": [
+    -100.7833,
+    46.8083
+   ],
+   "detail": "Capitale · Dakota du Nord"
+  },
+  {
+   "code": "c-SD",
+   "nom": "Pierre",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Dakota du Sud",
+   "etatCode": "SD",
+   "geo": [
+    -100.3506,
+    44.3683
+   ],
+   "detail": "Capitale · Dakota du Sud"
+  },
+  {
+   "code": "c-DE",
+   "nom": "Dover",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Delaware",
+   "etatCode": "DE",
+   "geo": [
+    -75.5247,
+    39.1581
+   ],
+   "detail": "Capitale · Delaware"
+  },
+  {
+   "code": "c-FL",
+   "nom": "Tallahassee",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "geo": [
+    -84.28,
+    30.45
+   ],
+   "detail": "Capitale · Floride"
+  },
+  {
+   "code": "c-GA",
+   "nom": "Atlanta",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Géorgie",
+   "etatCode": "GA",
+   "geo": [
+    -84.3676,
+    33.7395
+   ],
+   "detail": "Capitale · Géorgie"
+  },
+  {
+   "code": "c-HI",
+   "nom": "Honolulu",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Hawaï",
+   "etatCode": "HI",
+   "geo": [
+    -157.8583,
+    21.3034
+   ],
+   "detail": "Capitale · Hawaï"
+  },
+  {
+   "code": "c-ID",
+   "nom": "Boise",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Idaho",
+   "etatCode": "ID",
+   "geo": [
+    -116.2275,
+    43.6086
+   ],
+   "detail": "Capitale · Idaho"
+  },
+  {
+   "code": "c-IL",
+   "nom": "Springfield",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Illinois",
+   "etatCode": "IL",
+   "geo": [
+    -89.6371,
+    39.7882
+   ],
+   "detail": "Capitale · Illinois"
+  },
+  {
+   "code": "c-IN",
+   "nom": "Indianapolis",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Indiana",
+   "etatCode": "IN",
+   "geo": [
+    -86.172,
+    39.7519
+   ],
+   "detail": "Capitale · Indiana"
+  },
+  {
+   "code": "c-IA",
+   "nom": "Des Moines",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Iowa",
+   "etatCode": "IA",
+   "geo": [
+    -93.62,
+    41.58
+   ],
+   "detail": "Capitale · Iowa"
+  },
+  {
+   "code": "c-KS",
+   "nom": "Topeka",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Kansas",
+   "etatCode": "KS",
+   "geo": [
+    -95.67,
+    39.05
+   ],
+   "detail": "Capitale · Kansas"
+  },
+  {
+   "code": "c-KY",
+   "nom": "Frankfort",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Kentucky",
+   "etatCode": "KY",
+   "geo": [
+    -84.8734,
+    38.2008
+   ],
+   "detail": "Capitale · Kentucky"
+  },
+  {
+   "code": "c-LA",
+   "nom": "Baton Rouge",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Louisiane",
+   "etatCode": "LA",
+   "geo": [
+    -91.1402,
+    30.4579
+   ],
+   "detail": "Capitale · Louisiane"
+  },
+  {
+   "code": "c-ME",
+   "nom": "Augusta",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Maine",
+   "etatCode": "ME",
+   "geo": [
+    -69.78,
+    44.3106
+   ],
+   "detail": "Capitale · Maine"
+  },
+  {
+   "code": "c-MD",
+   "nom": "Annapolis",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Maryland",
+   "etatCode": "MD",
+   "geo": [
+    -76.4925,
+    38.9783
+   ],
+   "detail": "Capitale · Maryland"
+  },
+  {
+   "code": "c-MA",
+   "nom": "Boston",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Massachusetts",
+   "etatCode": "MA",
+   "geo": [
+    -71.072,
+    42.3319
+   ],
+   "detail": "Capitale · Massachusetts"
+  },
+  {
+   "code": "c-MI",
+   "nom": "Lansing",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Michigan",
+   "etatCode": "MI",
+   "geo": [
+    -84.5467,
+    42.7335
+   ],
+   "detail": "Capitale · Michigan"
+  },
+  {
+   "code": "c-MN",
+   "nom": "Saint Paul",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Minnesota",
+   "etatCode": "MN",
+   "geo": [
+    -93.085,
+    44.944
+   ],
+   "detail": "Capitale · Minnesota"
+  },
+  {
+   "code": "c-MS",
+   "nom": "Jackson",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Mississippi",
+   "etatCode": "MS",
+   "geo": [
+    -90.185,
+    32.2988
+   ],
+   "detail": "Capitale · Mississippi"
+  },
+  {
+   "code": "c-MO",
+   "nom": "Jefferson City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Missouri",
+   "etatCode": "MO",
+   "geo": [
+    -92.1733,
+    38.5766
+   ],
+   "detail": "Capitale · Missouri"
+  },
+  {
+   "code": "c-MT",
+   "nom": "Helena",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Montana",
+   "etatCode": "MT",
+   "geo": [
+    -112.0353,
+    46.5927
+   ],
+   "detail": "Capitale · Montana"
+  },
+  {
+   "code": "c-NE",
+   "nom": "Lincoln",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nebraska",
+   "etatCode": "NE",
+   "geo": [
+    -96.68,
+    40.82
+   ],
+   "detail": "Capitale · Nebraska"
+  },
+  {
+   "code": "c-NV",
+   "nom": "Carson City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nevada",
+   "etatCode": "NV",
+   "geo": [
+    -119.7664,
+    39.1638
+   ],
+   "detail": "Capitale · Nevada"
+  },
+  {
+   "code": "c-NH",
+   "nom": "Concord",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New Hampshire",
+   "etatCode": "NH",
+   "geo": [
+    -71.538,
+    43.2081
+   ],
+   "detail": "Capitale · New Hampshire"
+  },
+  {
+   "code": "c-NJ",
+   "nom": "Trenton",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New Jersey",
+   "etatCode": "NJ",
+   "geo": [
+    -74.7434,
+    40.217
+   ],
+   "detail": "Capitale · New Jersey"
+  },
+  {
+   "code": "c-NY",
+   "nom": "Albany",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New York",
+   "etatCode": "NY",
+   "geo": [
+    -73.7576,
+    42.6537
+   ],
+   "detail": "Capitale · New York"
+  },
+  {
+   "code": "c-NM",
+   "nom": "Santa Fe",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nouveau-Mexique",
+   "etatCode": "NM",
+   "geo": [
+    -105.9372,
+    35.6869
+   ],
+   "detail": "Capitale · Nouveau-Mexique"
+  },
+  {
+   "code": "c-OH",
+   "nom": "Columbus",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Ohio",
+   "etatCode": "OH",
+   "geo": [
+    -82.992,
+    39.9819
+   ],
+   "detail": "Capitale · Ohio"
+  },
+  {
+   "code": "c-OK",
+   "nom": "Oklahoma City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Oklahoma",
+   "etatCode": "OK",
+   "geo": [
+    -97.5206,
+    35.472
+   ],
+   "detail": "Capitale · Oklahoma"
+  },
+  {
+   "code": "c-OR",
+   "nom": "Salem",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Oregon",
+   "etatCode": "OR",
+   "geo": [
+    -123.0239,
+    44.9281
+   ],
+   "detail": "Capitale · Oregon"
+  },
+  {
+   "code": "c-PA",
+   "nom": "Harrisburg",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Pennsylvanie",
+   "etatCode": "PA",
+   "geo": [
+    -76.8847,
+    40.2736
+   ],
+   "detail": "Capitale · Pennsylvanie"
+  },
+  {
+   "code": "c-RI",
+   "nom": "Providence",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Rhode Island",
+   "etatCode": "RI",
+   "geo": [
+    -71.4169,
+    41.823
+   ],
+   "detail": "Capitale · Rhode Island"
+  },
+  {
+   "code": "c-TN",
+   "nom": "Nashville",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Tennessee",
+   "etatCode": "TN",
+   "geo": [
+    -86.7819,
+    36.1719
+   ],
+   "detail": "Capitale · Tennessee"
+  },
+  {
+   "code": "c-TX",
+   "nom": "Austin",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "geo": [
+    -97.7447,
+    30.2689
+   ],
+   "detail": "Capitale · Texas"
+  },
+  {
+   "code": "c-UT",
+   "nom": "Salt Lake City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Utah",
+   "etatCode": "UT",
+   "geo": [
+    -111.932,
+    40.777
+   ],
+   "detail": "Capitale · Utah"
+  },
+  {
+   "code": "c-VT",
+   "nom": "Montpelier",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Vermont",
+   "etatCode": "VT",
+   "geo": [
+    -72.5758,
+    44.26
+   ],
+   "detail": "Capitale · Vermont"
+  },
+  {
+   "code": "c-VA",
+   "nom": "Richmond",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Virginie",
+   "etatCode": "VA",
+   "geo": [
+    -77.4519,
+    37.552
+   ],
+   "detail": "Capitale · Virginie"
+  },
+  {
+   "code": "c-WV",
+   "nom": "Charleston",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Virginie-Occidentale",
+   "etatCode": "WV",
+   "geo": [
+    -81.6327,
+    38.3497
+   ],
+   "detail": "Capitale · Virginie-Occidentale"
+  },
+  {
+   "code": "c-WA",
+   "nom": "Olympia",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Washington",
+   "etatCode": "WA",
+   "geo": [
+    -122.8994,
+    47.038
+   ],
+   "detail": "Capitale · Washington"
+  },
+  {
+   "code": "c-WI",
+   "nom": "Madison",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Wisconsin",
+   "etatCode": "WI",
+   "geo": [
+    -89.4011,
+    43.073
+   ],
+   "detail": "Capitale · Wisconsin"
+  },
+  {
+   "code": "c-WY",
+   "nom": "Cheyenne",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Wyoming",
+   "etatCode": "WY",
+   "geo": [
+    -104.8197,
+    41.14
+   ],
+   "detail": "Capitale · Wyoming"
+  }
+ ]
+}

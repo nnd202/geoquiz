@@ -1,0 +1,560 @@
+{
+ "id": "etats-unis",
+ "titre": "États des États-Unis",
+ "items": [
+  {
+   "code": "AL",
+   "nom": "Alabama",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -86.8288,
+    32.793
+   ],
+   "detail": "Capitale : Montgomery"
+  },
+  {
+   "code": "AK",
+   "nom": "Alaska",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -152.7127,
+    64.5675
+   ],
+   "detail": "Capitale : Juneau"
+  },
+  {
+   "code": "AZ",
+   "nom": "Arizona",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -111.6596,
+    34.2903
+   ],
+   "detail": "Capitale : Phoenix"
+  },
+  {
+   "code": "AR",
+   "nom": "Arkansas",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -92.4434,
+    34.9047
+   ],
+   "detail": "Capitale : Little Rock"
+  },
+  {
+   "code": "CA",
+   "nom": "Californie",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -119.6096,
+    37.2513
+   ],
+   "detail": "Capitale : Sacramento"
+  },
+  {
+   "code": "NC",
+   "nom": "Caroline du Nord",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -79.4017,
+    35.5556
+   ],
+   "detail": "Capitale : Raleigh"
+  },
+  {
+   "code": "SC",
+   "nom": "Caroline du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -80.897,
+    33.9153
+   ],
+   "detail": "Capitale : Columbia"
+  },
+  {
+   "code": "CO",
+   "nom": "Colorado",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -105.5334,
+    39.0002
+   ],
+   "detail": "Capitale : Denver"
+  },
+  {
+   "code": "CT",
+   "nom": "Connecticut",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -72.7276,
+    41.6238
+   ],
+   "detail": "Capitale : Hartford"
+  },
+  {
+   "code": "ND",
+   "nom": "Dakota du Nord",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -100.4583,
+    47.4451
+   ],
+   "detail": "Capitale : Bismarck"
+  },
+  {
+   "code": "SD",
+   "nom": "Dakota du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -100.2221,
+    44.4414
+   ],
+   "detail": "Capitale : Pierre"
+  },
+  {
+   "code": "DE",
+   "nom": "Delaware",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -75.5092,
+    38.9918
+   ],
+   "detail": "Capitale : Dover"
+  },
+  {
+   "code": "FL",
+   "nom": "Floride",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -82.4894,
+    28.6641
+   ],
+   "detail": "Capitale : Tallahassee"
+  },
+  {
+   "code": "GA",
+   "nom": "Géorgie",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -83.4561,
+    32.6615
+   ],
+   "detail": "Capitale : Atlanta"
+  },
+  {
+   "code": "HI",
+   "nom": "Hawaï",
+   "alias": [
+    "Hawaii"
+   ],
+   "domaine": "zone",
+   "geo": [
+    -155.5134,
+    19.6142
+   ],
+   "detail": "Capitale : Honolulu"
+  },
+  {
+   "code": "ID",
+   "nom": "Idaho",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -114.6519,
+    44.3921
+   ],
+   "detail": "Capitale : Boise"
+  },
+  {
+   "code": "IL",
+   "nom": "Illinois",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -89.1522,
+    40.1277
+   ],
+   "detail": "Capitale : Springfield"
+  },
+  {
+   "code": "IN",
+   "nom": "Indiana",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -86.2773,
+    39.9226
+   ],
+   "detail": "Capitale : Indianapolis"
+  },
+  {
+   "code": "IA",
+   "nom": "Iowa",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -93.4987,
+    42.0884
+   ],
+   "detail": "Capitale : Des Moines"
+  },
+  {
+   "code": "KS",
+   "nom": "Kansas",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -98.3684,
+    38.4853
+   ],
+   "detail": "Capitale : Topeka"
+  },
+  {
+   "code": "KY",
+   "nom": "Kentucky",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -85.2891,
+    37.53
+   ],
+   "detail": "Capitale : Frankfort"
+  },
+  {
+   "code": "LA",
+   "nom": "Louisiane",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -92.0234,
+    31.089
+   ],
+   "detail": "Capitale : Baton Rouge"
+  },
+  {
+   "code": "ME",
+   "nom": "Maine",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -69.2413,
+    45.4007
+   ],
+   "detail": "Capitale : Augusta"
+  },
+  {
+   "code": "MD",
+   "nom": "Maryland",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -76.7794,
+    39.0701
+   ],
+   "detail": "Capitale : Annapolis"
+  },
+  {
+   "code": "MA",
+   "nom": "Massachusetts",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -71.8388,
+    42.272
+   ],
+   "detail": "Capitale : Boston"
+  },
+  {
+   "code": "MI",
+   "nom": "Michigan",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -85.7418,
+    44.8747
+   ],
+   "detail": "Capitale : Lansing"
+  },
+  {
+   "code": "MN",
+   "nom": "Minnesota",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -94.1983,
+    46.3449
+   ],
+   "detail": "Capitale : Saint Paul"
+  },
+  {
+   "code": "MS",
+   "nom": "Mississippi",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -89.6713,
+    32.7661
+   ],
+   "detail": "Capitale : Jackson"
+  },
+  {
+   "code": "MO",
+   "nom": "Missouri",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -92.4893,
+    38.385
+   ],
+   "detail": "Capitale : Jefferson City"
+  },
+  {
+   "code": "MT",
+   "nom": "Montana",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -109.6262,
+    47.031
+   ],
+   "detail": "Capitale : Helena"
+  },
+  {
+   "code": "NE",
+   "nom": "Nebraska",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -99.7912,
+    41.5316
+   ],
+   "detail": "Capitale : Lincoln"
+  },
+  {
+   "code": "NV",
+   "nom": "Nevada",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -116.651,
+    39.3536
+   ],
+   "detail": "Capitale : Carson City"
+  },
+  {
+   "code": "NH",
+   "nom": "New Hampshire",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -71.5783,
+    43.6923
+   ],
+   "detail": "Capitale : Concord"
+  },
+  {
+   "code": "NJ",
+   "nom": "New Jersey",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -74.6609,
+    40.2064
+   ],
+   "detail": "Capitale : Trenton"
+  },
+  {
+   "code": "NY",
+   "nom": "New York",
+   "alias": [
+    "État de New York"
+   ],
+   "domaine": "zone",
+   "geo": [
+    -75.7586,
+    43.0489
+   ],
+   "detail": "Capitale : Albany"
+  },
+  {
+   "code": "NM",
+   "nom": "Nouveau-Mexique",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -106.1108,
+    34.4218
+   ],
+   "detail": "Capitale : Santa Fe"
+  },
+  {
+   "code": "OH",
+   "nom": "Ohio",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -82.7125,
+    40.4205
+   ],
+   "detail": "Capitale : Columbus"
+  },
+  {
+   "code": "OK",
+   "nom": "Oklahoma",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -97.5131,
+    35.5896
+   ],
+   "detail": "Capitale : Oklahoma City"
+  },
+  {
+   "code": "OR",
+   "nom": "Oregon",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -120.5418,
+    43.94
+   ],
+   "detail": "Capitale : Salem"
+  },
+  {
+   "code": "PA",
+   "nom": "Pennsylvanie",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -77.8393,
+    40.8989
+   ],
+   "detail": "Capitale : Harrisburg"
+  },
+  {
+   "code": "RI",
+   "nom": "Rhode Island",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -71.5937,
+    41.7093
+   ],
+   "detail": "Capitale : Providence"
+  },
+  {
+   "code": "TN",
+   "nom": "Tennessee",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -86.337,
+    35.8523
+   ],
+   "detail": "Capitale : Nashville"
+  },
+  {
+   "code": "TX",
+   "nom": "Texas",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -99.3516,
+    31.5011
+   ],
+   "detail": "Capitale : Austin"
+  },
+  {
+   "code": "UT",
+   "nom": "Utah",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -111.6742,
+    39.3275
+   ],
+   "detail": "Capitale : Salt Lake City"
+  },
+  {
+   "code": "VT",
+   "nom": "Vermont",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -72.6698,
+    44.0768
+   ],
+   "detail": "Capitale : Montpelier"
+  },
+  {
+   "code": "VA",
+   "nom": "Virginie",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -78.8524,
+    37.5247
+   ],
+   "detail": "Capitale : Richmond"
+  },
+  {
+   "code": "WV",
+   "nom": "Virginie-Occidentale",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -80.6082,
+    38.6523
+   ],
+   "detail": "Capitale : Charleston"
+  },
+  {
+   "code": "WA",
+   "nom": "Washington",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -120.4174,
+    47.375
+   ],
+   "detail": "Capitale : Olympia"
+  },
+  {
+   "code": "WI",
+   "nom": "Wisconsin",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -89.7399,
+    44.6463
+   ],
+   "detail": "Capitale : Madison"
+  },
+  {
+   "code": "WY",
+   "nom": "Wyoming",
+   "alias": [],
+   "domaine": "zone",
+   "geo": [
+    -107.5399,
+    43.0003
+   ],
+   "detail": "Capitale : Cheyenne"
+  }
+ ]
+}

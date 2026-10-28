@@ -1,0 +1,179 @@
+{
+ "id": "capitales-canada",
+ "titre": "Capitales provinciales et territoriales",
+ "items": [
+  {
+   "code": "c-AB",
+   "nom": "Edmonton",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Alberta",
+   "etatCode": "AB",
+   "geo": [
+    -113.5019,
+    53.552
+   ],
+   "detail": "Capitale · Alberta"
+  },
+  {
+   "code": "c-BC",
+   "nom": "Victoria",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Colombie-Britannique",
+   "etatCode": "BC",
+   "geo": [
+    -123.35,
+    48.4333
+   ],
+   "detail": "Capitale · Colombie-Britannique"
+  },
+  {
+   "code": "c-MB",
+   "nom": "Winnipeg",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Manitoba",
+   "etatCode": "MB",
+   "geo": [
+    -97.166,
+    49.883
+   ],
+   "detail": "Capitale · Manitoba"
+  },
+  {
+   "code": "c-NB",
+   "nom": "Fredericton",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nouveau-Brunswick",
+   "etatCode": "NB",
+   "geo": [
+    -66.6333,
+    45.95
+   ],
+   "detail": "Capitale · Nouveau-Brunswick"
+  },
+  {
+   "code": "c-NS",
+   "nom": "Halifax",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nouvelle-Écosse",
+   "etatCode": "NS",
+   "geo": [
+    -63.6,
+    44.65
+   ],
+   "detail": "Capitale · Nouvelle-Écosse"
+  },
+  {
+   "code": "c-NU",
+   "nom": "Iqaluit",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nunavut",
+   "etatCode": "NU",
+   "geo": [
+    -68.5002,
+    63.7505
+   ],
+   "detail": "Capitale · Nunavut"
+  },
+  {
+   "code": "c-ON",
+   "nom": "Toronto",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Ontario",
+   "etatCode": "ON",
+   "geo": [
+    -79.3895,
+    43.6646
+   ],
+   "detail": "Capitale · Ontario"
+  },
+  {
+   "code": "c-QC",
+   "nom": "Québec",
+   "alias": [
+    "Ville de Québec"
+   ],
+   "domaine": "ville",
+   "etat": "Québec",
+   "etatCode": "QC",
+   "geo": [
+    -71.2456,
+    46.84
+   ],
+   "detail": "Capitale · Québec"
+  },
+  {
+   "code": "c-SK",
+   "nom": "Regina",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Saskatchewan",
+   "etatCode": "SK",
+   "geo": [
+    -104.617,
+    50.45
+   ],
+   "detail": "Capitale · Saskatchewan"
+  },
+  {
+   "code": "c-NL",
+   "nom": "St. John's",
+   "alias": [
+    "Saint-Jean de Terre-Neuve"
+   ],
+   "domaine": "ville",
+   "etat": "Terre-Neuve-et-Labrador",
+   "etatCode": "NL",
+   "geo": [
+    -52.681,
+    47.585
+   ],
+   "detail": "Capitale · Terre-Neuve-et-Labrador"
+  },
+  {
+   "code": "c-NT",
+   "nom": "Yellowknife",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Territoires du Nord-Ouest",
+   "etatCode": "NT",
+   "geo": [
+    -114.397,
+    62.442
+   ],
+   "detail": "Capitale · Territoires du Nord-Ouest"
+  },
+  {
+   "code": "c-YT",
+   "nom": "Whitehorse",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Yukon",
+   "etatCode": "YT",
+   "geo": [
+    -135.05,
+    60.7167
+   ],
+   "detail": "Capitale · Yukon"
+  },
+  {
+   "code": "c-PE",
+   "nom": "Charlottetown",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Île-du-Prince-Édouard",
+   "etatCode": "PE",
+   "geo": [
+    -63.1313,
+    46.2493
+   ],
+   "detail": "Capitale · Île-du-Prince-Édouard"
+  }
+ ]
+}

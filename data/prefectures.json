@@ -1,0 +1,1420 @@
+{
+ "id": "prefectures",
+ "titre": "Préfectures",
+ "items": [
+  {
+   "code": "01053",
+   "nom": "Bourg-en-Bresse",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.2456,
+    46.205
+   ],
+   "dep": "01",
+   "depNom": "Ain",
+   "detail": "Préfecture · Ain (01)"
+  },
+  {
+   "code": "02408",
+   "nom": "Laon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.6212,
+    49.5679
+   ],
+   "dep": "02",
+   "depNom": "Aisne",
+   "detail": "Préfecture · Aisne (02)"
+  },
+  {
+   "code": "03190",
+   "nom": "Moulins",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.3267,
+    46.5626
+   ],
+   "dep": "03",
+   "depNom": "Allier",
+   "detail": "Préfecture · Allier (03)"
+  },
+  {
+   "code": "04070",
+   "nom": "Digne-les-Bains",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.2358,
+    44.0907
+   ],
+   "dep": "04",
+   "depNom": "Alpes-de-Haute-Provence",
+   "detail": "Préfecture · Alpes-de-Haute-Provence (04)"
+  },
+  {
+   "code": "05061",
+   "nom": "Gap",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.0649,
+    44.5802
+   ],
+   "dep": "05",
+   "depNom": "Hautes-Alpes",
+   "detail": "Préfecture · Hautes-Alpes (05)"
+  },
+  {
+   "code": "06088",
+   "nom": "Nice",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    7.2378,
+    43.7123
+   ],
+   "dep": "06",
+   "depNom": "Alpes-Maritimes",
+   "detail": "Préfecture · Alpes-Maritimes (06)"
+  },
+  {
+   "code": "07186",
+   "nom": "Privas",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.5941,
+    44.7224
+   ],
+   "dep": "07",
+   "depNom": "Ardèche",
+   "detail": "Préfecture · Ardèche (07)"
+  },
+  {
+   "code": "08105",
+   "nom": "Charleville-Mézières",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.7171,
+    49.7751
+   ],
+   "dep": "08",
+   "depNom": "Ardennes",
+   "detail": "Préfecture · Ardennes (08)"
+  },
+  {
+   "code": "09122",
+   "nom": "Foix",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.6102,
+    42.9655
+   ],
+   "dep": "09",
+   "depNom": "Ariège",
+   "detail": "Préfecture · Ariège (09)"
+  },
+  {
+   "code": "10387",
+   "nom": "Troyes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.0785,
+    48.2968
+   ],
+   "dep": "10",
+   "depNom": "Aube",
+   "detail": "Préfecture · Aube (10)"
+  },
+  {
+   "code": "11069",
+   "nom": "Carcassonne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.3435,
+    43.2093
+   ],
+   "dep": "11",
+   "depNom": "Aude",
+   "detail": "Préfecture · Aude (11)"
+  },
+  {
+   "code": "12202",
+   "nom": "Rodez",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.5669,
+    44.3586
+   ],
+   "dep": "12",
+   "depNom": "Aveyron",
+   "detail": "Préfecture · Aveyron (12)"
+  },
+  {
+   "code": "13055",
+   "nom": "Marseille",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.4219,
+    43.2924
+   ],
+   "dep": "13",
+   "depNom": "Bouches-du-Rhône",
+   "detail": "Préfecture · Bouches-du-Rhône (13)"
+  },
+  {
+   "code": "14118",
+   "nom": "Caen",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -0.3699,
+    49.185
+   ],
+   "dep": "14",
+   "depNom": "Calvados",
+   "detail": "Préfecture · Calvados (14)"
+  },
+  {
+   "code": "15014",
+   "nom": "Aurillac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.4416,
+    44.9245
+   ],
+   "dep": "15",
+   "depNom": "Cantal",
+   "detail": "Préfecture · Cantal (15)"
+  },
+  {
+   "code": "16015",
+   "nom": "Angoulême",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.1452,
+    45.6474
+   ],
+   "dep": "16",
+   "depNom": "Charente",
+   "detail": "Préfecture · Charente (16)"
+  },
+  {
+   "code": "17300",
+   "nom": "La Rochelle",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -1.175,
+    46.1619
+   ],
+   "dep": "17",
+   "depNom": "Charente-Maritime",
+   "detail": "Préfecture · Charente-Maritime (17)"
+  },
+  {
+   "code": "18033",
+   "nom": "Bourges",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.4048,
+    47.0749
+   ],
+   "dep": "18",
+   "depNom": "Cher",
+   "detail": "Préfecture · Cher (18)"
+  },
+  {
+   "code": "19272",
+   "nom": "Tulle",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.7631,
+    45.2731
+   ],
+   "dep": "19",
+   "depNom": "Corrèze",
+   "detail": "Préfecture · Corrèze (19)"
+  },
+  {
+   "code": "2A004",
+   "nom": "Ajaccio",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    8.7011,
+    41.9349
+   ],
+   "dep": "2A",
+   "depNom": "Corse-du-Sud",
+   "detail": "Préfecture · Corse-du-Sud (2A)"
+  },
+  {
+   "code": "2B033",
+   "nom": "Bastia",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    9.425,
+    42.6864
+   ],
+   "dep": "2B",
+   "depNom": "Haute-Corse",
+   "detail": "Préfecture · Haute-Corse (2B)"
+  },
+  {
+   "code": "21231",
+   "nom": "Dijon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.0375,
+    47.3229
+   ],
+   "dep": "21",
+   "depNom": "Côte-d'Or",
+   "detail": "Préfecture · Côte-d'Or (21)"
+  },
+  {
+   "code": "22278",
+   "nom": "Saint-Brieuc",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -2.763,
+    48.5149
+   ],
+   "dep": "22",
+   "depNom": "Côtes-d'Armor",
+   "detail": "Préfecture · Côtes-d'Armor (22)"
+  },
+  {
+   "code": "23096",
+   "nom": "Guéret",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.8709,
+    46.1627
+   ],
+   "dep": "23",
+   "depNom": "Creuse",
+   "detail": "Préfecture · Creuse (23)"
+  },
+  {
+   "code": "24322",
+   "nom": "Périgueux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.712,
+    45.1917
+   ],
+   "dep": "24",
+   "depNom": "Dordogne",
+   "detail": "Préfecture · Dordogne (24)"
+  },
+  {
+   "code": "25056",
+   "nom": "Besançon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.0194,
+    47.2552
+   ],
+   "dep": "25",
+   "depNom": "Doubs",
+   "detail": "Préfecture · Doubs (25)"
+  },
+  {
+   "code": "26362",
+   "nom": "Valence",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.9136,
+    44.9225
+   ],
+   "dep": "26",
+   "depNom": "Drôme",
+   "detail": "Préfecture · Drôme (26)"
+  },
+  {
+   "code": "27229",
+   "nom": "Évreux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.1415,
+    49.0199
+   ],
+   "dep": "27",
+   "depNom": "Eure",
+   "detail": "Préfecture · Eure (27)"
+  },
+  {
+   "code": "28085",
+   "nom": "Chartres",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.5057,
+    48.447
+   ],
+   "dep": "28",
+   "depNom": "Eure-et-Loir",
+   "detail": "Préfecture · Eure-et-Loir (28)"
+  },
+  {
+   "code": "29232",
+   "nom": "Quimper",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -4.091,
+    47.997
+   ],
+   "dep": "29",
+   "depNom": "Finistère",
+   "detail": "Préfecture · Finistère (29)"
+  },
+  {
+   "code": "30189",
+   "nom": "Nîmes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.3476,
+    43.8446
+   ],
+   "dep": "30",
+   "depNom": "Gard",
+   "detail": "Préfecture · Gard (30)"
+  },
+  {
+   "code": "31555",
+   "nom": "Toulouse",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.4321,
+    43.596
+   ],
+   "dep": "31",
+   "depNom": "Haute-Garonne",
+   "detail": "Préfecture · Haute-Garonne (31)"
+  },
+  {
+   "code": "32013",
+   "nom": "Auch",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.575,
+    43.6533
+   ],
+   "dep": "32",
+   "depNom": "Gers",
+   "detail": "Préfecture · Gers (32)"
+  },
+  {
+   "code": "33063",
+   "nom": "Bordeaux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -0.5734,
+    44.8576
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "Préfecture · Gironde (33)"
+  },
+  {
+   "code": "34172",
+   "nom": "Montpellier",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.8692,
+    43.6134
+   ],
+   "dep": "34",
+   "depNom": "Hérault",
+   "detail": "Préfecture · Hérault (34)"
+  },
+  {
+   "code": "35238",
+   "nom": "Rennes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -1.6819,
+    48.1116
+   ],
+   "dep": "35",
+   "depNom": "Ille-et-Vilaine",
+   "detail": "Préfecture · Ille-et-Vilaine (35)"
+  },
+  {
+   "code": "36044",
+   "nom": "Châteauroux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.6938,
+    46.8032
+   ],
+   "dep": "36",
+   "depNom": "Indre",
+   "detail": "Préfecture · Indre (36)"
+  },
+  {
+   "code": "37261",
+   "nom": "Tours",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.6962,
+    47.3983
+   ],
+   "dep": "37",
+   "depNom": "Indre-et-Loire",
+   "detail": "Préfecture · Indre-et-Loire (37)"
+  },
+  {
+   "code": "38185",
+   "nom": "Grenoble",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.7211,
+    45.1822
+   ],
+   "dep": "38",
+   "depNom": "Isère",
+   "detail": "Préfecture · Isère (38)"
+  },
+  {
+   "code": "39300",
+   "nom": "Lons-le-Saunier",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.5576,
+    46.6747
+   ],
+   "dep": "39",
+   "depNom": "Jura",
+   "detail": "Préfecture · Jura (39)"
+  },
+  {
+   "code": "40192",
+   "nom": "Mont-de-Marsan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -0.4907,
+    43.8996
+   ],
+   "dep": "40",
+   "depNom": "Landes",
+   "detail": "Préfecture · Landes (40)"
+  },
+  {
+   "code": "41018",
+   "nom": "Blois",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.3061,
+    47.5814
+   ],
+   "dep": "41",
+   "depNom": "Loir-et-Cher",
+   "detail": "Préfecture · Loir-et-Cher (41)"
+  },
+  {
+   "code": "42218",
+   "nom": "Saint-Étienne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.4178,
+    45.4267
+   ],
+   "dep": "42",
+   "depNom": "Loire",
+   "detail": "Préfecture · Loire (42)"
+  },
+  {
+   "code": "43157",
+   "nom": "Le Puy-en-Velay",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.8955,
+    45.0278
+   ],
+   "dep": "43",
+   "depNom": "Haute-Loire",
+   "detail": "Préfecture · Haute-Loire (43)"
+  },
+  {
+   "code": "44109",
+   "nom": "Nantes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -1.5482,
+    47.232
+   ],
+   "dep": "44",
+   "depNom": "Loire-Atlantique",
+   "detail": "Préfecture · Loire-Atlantique (44)"
+  },
+  {
+   "code": "45234",
+   "nom": "Orléans",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.9166,
+    47.8822
+   ],
+   "dep": "45",
+   "depNom": "Loiret",
+   "detail": "Préfecture · Loiret (45)"
+  },
+  {
+   "code": "46042",
+   "nom": "Cahors",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.4406,
+    44.4507
+   ],
+   "dep": "46",
+   "depNom": "Lot",
+   "detail": "Préfecture · Lot (46)"
+  },
+  {
+   "code": "47001",
+   "nom": "Agen",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.6258,
+    44.2028
+   ],
+   "dep": "47",
+   "depNom": "Lot-et-Garonne",
+   "detail": "Préfecture · Lot-et-Garonne (47)"
+  },
+  {
+   "code": "48095",
+   "nom": "Mende",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.4811,
+    44.5292
+   ],
+   "dep": "48",
+   "depNom": "Lozère",
+   "detail": "Préfecture · Lozère (48)"
+  },
+  {
+   "code": "49007",
+   "nom": "Angers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -0.5562,
+    47.4766
+   ],
+   "dep": "49",
+   "depNom": "Maine-et-Loire",
+   "detail": "Préfecture · Maine-et-Loire (49)"
+  },
+  {
+   "code": "50502",
+   "nom": "Saint-Lô",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -1.0774,
+    49.1098
+   ],
+   "dep": "50",
+   "depNom": "Manche",
+   "detail": "Préfecture · Manche (50)"
+  },
+  {
+   "code": "51108",
+   "nom": "Châlons-en-Champagne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.3785,
+    48.9643
+   ],
+   "dep": "51",
+   "depNom": "Marne",
+   "detail": "Préfecture · Marne (51)"
+  },
+  {
+   "code": "52121",
+   "nom": "Chaumont",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.1398,
+    48.0979
+   ],
+   "dep": "52",
+   "depNom": "Haute-Marne",
+   "detail": "Préfecture · Haute-Marne (52)"
+  },
+  {
+   "code": "53130",
+   "nom": "Laval",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -0.7658,
+    48.061
+   ],
+   "dep": "53",
+   "depNom": "Mayenne",
+   "detail": "Préfecture · Mayenne (53)"
+  },
+  {
+   "code": "54395",
+   "nom": "Nancy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.1753,
+    48.69
+   ],
+   "dep": "54",
+   "depNom": "Meurthe-et-Moselle",
+   "detail": "Préfecture · Meurthe-et-Moselle (54)"
+  },
+  {
+   "code": "55029",
+   "nom": "Bar-le-Duc",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.1633,
+    48.7641
+   ],
+   "dep": "55",
+   "depNom": "Meuse",
+   "detail": "Préfecture · Meuse (55)"
+  },
+  {
+   "code": "56260",
+   "nom": "Vannes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -2.7568,
+    47.66
+   ],
+   "dep": "56",
+   "depNom": "Morbihan",
+   "detail": "Préfecture · Morbihan (56)"
+  },
+  {
+   "code": "57463",
+   "nom": "Metz",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.1959,
+    49.1081
+   ],
+   "dep": "57",
+   "depNom": "Moselle",
+   "detail": "Préfecture · Moselle (57)"
+  },
+  {
+   "code": "58194",
+   "nom": "Nevers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.157,
+    46.9881
+   ],
+   "dep": "58",
+   "depNom": "Nièvre",
+   "detail": "Préfecture · Nièvre (58)"
+  },
+  {
+   "code": "59350",
+   "nom": "Lille",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.0471,
+    50.6318
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "Préfecture · Nord (59)"
+  },
+  {
+   "code": "60057",
+   "nom": "Beauvais",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.0863,
+    49.4362
+   ],
+   "dep": "60",
+   "depNom": "Oise",
+   "detail": "Préfecture · Oise (60)"
+  },
+  {
+   "code": "61001",
+   "nom": "Alençon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.0916,
+    48.4315
+   ],
+   "dep": "61",
+   "depNom": "Orne",
+   "detail": "Préfecture · Orne (61)"
+  },
+  {
+   "code": "62041",
+   "nom": "Arras",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.7663,
+    50.2899
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "Préfecture · Pas-de-Calais (62)"
+  },
+  {
+   "code": "63113",
+   "nom": "Clermont-Ferrand",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.1155,
+    45.7859
+   ],
+   "dep": "63",
+   "depNom": "Puy-de-Dôme",
+   "detail": "Préfecture · Puy-de-Dôme (63)"
+  },
+  {
+   "code": "64445",
+   "nom": "Pau",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -0.35,
+    43.32
+   ],
+   "dep": "64",
+   "depNom": "Pyrénées-Atlantiques",
+   "detail": "Préfecture · Pyrénées-Atlantiques (64)"
+  },
+  {
+   "code": "65440",
+   "nom": "Tarbes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.0662,
+    43.2346
+   ],
+   "dep": "65",
+   "depNom": "Hautes-Pyrénées",
+   "detail": "Préfecture · Hautes-Pyrénées (65)"
+  },
+  {
+   "code": "66136",
+   "nom": "Perpignan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.8991,
+    42.6964
+   ],
+   "dep": "66",
+   "depNom": "Pyrénées-Orientales",
+   "detail": "Préfecture · Pyrénées-Orientales (66)"
+  },
+  {
+   "code": "67482",
+   "nom": "Strasbourg",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    7.7676,
+    48.5714
+   ],
+   "dep": "67",
+   "depNom": "Bas-Rhin",
+   "detail": "Préfecture · Bas-Rhin (67)"
+  },
+  {
+   "code": "68066",
+   "nom": "Colmar",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    7.3848,
+    48.1099
+   ],
+   "dep": "68",
+   "depNom": "Haut-Rhin",
+   "detail": "Préfecture · Haut-Rhin (68)"
+  },
+  {
+   "code": "69123",
+   "nom": "Lyon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.8364,
+    45.7549
+   ],
+   "dep": "69",
+   "depNom": "Rhône",
+   "detail": "Préfecture · Rhône (69)"
+  },
+  {
+   "code": "70550",
+   "nom": "Vesoul",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.155,
+    47.6318
+   ],
+   "dep": "70",
+   "depNom": "Haute-Saône",
+   "detail": "Préfecture · Haute-Saône (70)"
+  },
+  {
+   "code": "71270",
+   "nom": "Mâcon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.8123,
+    46.3013
+   ],
+   "dep": "71",
+   "depNom": "Saône-et-Loire",
+   "detail": "Préfecture · Saône-et-Loire (71)"
+  },
+  {
+   "code": "72181",
+   "nom": "Le Mans",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.2,
+    47.9887
+   ],
+   "dep": "72",
+   "depNom": "Sarthe",
+   "detail": "Préfecture · Sarthe (72)"
+  },
+  {
+   "code": "73065",
+   "nom": "Chambéry",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.9089,
+    45.5836
+   ],
+   "dep": "73",
+   "depNom": "Savoie",
+   "detail": "Préfecture · Savoie (73)"
+  },
+  {
+   "code": "74010",
+   "nom": "Annecy",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.1182,
+    45.9017
+   ],
+   "dep": "74",
+   "depNom": "Haute-Savoie",
+   "detail": "Préfecture · Haute-Savoie (74)"
+  },
+  {
+   "code": "75056",
+   "nom": "Paris",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.3428,
+    48.8566
+   ],
+   "dep": "75",
+   "depNom": "Paris",
+   "detail": "Préfecture · Paris (75)"
+  },
+  {
+   "code": "76540",
+   "nom": "Rouen",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.0937,
+    49.4416
+   ],
+   "dep": "76",
+   "depNom": "Seine-Maritime",
+   "detail": "Préfecture · Seine-Maritime (76)"
+  },
+  {
+   "code": "77288",
+   "nom": "Melun",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.658,
+    48.5443
+   ],
+   "dep": "77",
+   "depNom": "Seine-et-Marne",
+   "detail": "Préfecture · Seine-et-Marne (77)"
+  },
+  {
+   "code": "78646",
+   "nom": "Versailles",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.1175,
+    48.8023
+   ],
+   "dep": "78",
+   "depNom": "Yvelines",
+   "detail": "Préfecture · Yvelines (78)"
+  },
+  {
+   "code": "79191",
+   "nom": "Niort",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -0.4652,
+    46.3284
+   ],
+   "dep": "79",
+   "depNom": "Deux-Sèvres",
+   "detail": "Préfecture · Deux-Sèvres (79)"
+  },
+  {
+   "code": "80021",
+   "nom": "Amiens",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.2899,
+    49.9004
+   ],
+   "dep": "80",
+   "depNom": "Somme",
+   "detail": "Préfecture · Somme (80)"
+  },
+  {
+   "code": "81004",
+   "nom": "Albi",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.1474,
+    43.9258
+   ],
+   "dep": "81",
+   "depNom": "Tarn",
+   "detail": "Préfecture · Tarn (81)"
+  },
+  {
+   "code": "82121",
+   "nom": "Montauban",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.364,
+    44.0223
+   ],
+   "dep": "82",
+   "depNom": "Tarn-et-Garonne",
+   "detail": "Préfecture · Tarn-et-Garonne (82)"
+  },
+  {
+   "code": "83137",
+   "nom": "Toulon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    5.9327,
+    43.1365
+   ],
+   "dep": "83",
+   "depNom": "Var",
+   "detail": "Préfecture · Var (83)"
+  },
+  {
+   "code": "84007",
+   "nom": "Avignon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    4.8409,
+    43.9354
+   ],
+   "dep": "84",
+   "depNom": "Vaucluse",
+   "detail": "Préfecture · Vaucluse (84)"
+  },
+  {
+   "code": "85191",
+   "nom": "La Roche-sur-Yon",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -1.4079,
+    46.6676
+   ],
+   "dep": "85",
+   "depNom": "Vendée",
+   "detail": "Préfecture · Vendée (85)"
+  },
+  {
+   "code": "86194",
+   "nom": "Poitiers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    0.3597,
+    46.5836
+   ],
+   "dep": "86",
+   "depNom": "Vienne",
+   "detail": "Préfecture · Vienne (86)"
+  },
+  {
+   "code": "87085",
+   "nom": "Limoges",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    1.249,
+    45.8543
+   ],
+   "dep": "87",
+   "depNom": "Haute-Vienne",
+   "detail": "Préfecture · Haute-Vienne (87)"
+  },
+  {
+   "code": "88160",
+   "nom": "Épinal",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.4797,
+    48.1631
+   ],
+   "dep": "88",
+   "depNom": "Vosges",
+   "detail": "Préfecture · Vosges (88)"
+  },
+  {
+   "code": "89024",
+   "nom": "Auxerre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    3.5817,
+    47.7937
+   ],
+   "dep": "89",
+   "depNom": "Yonne",
+   "detail": "Préfecture · Yonne (89)"
+  },
+  {
+   "code": "90010",
+   "nom": "Belfort",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    6.845,
+    47.6469
+   ],
+   "dep": "90",
+   "depNom": "Territoire de Belfort",
+   "detail": "Préfecture · Territoire de Belfort (90)"
+  },
+  {
+   "code": "91228",
+   "nom": "Évry-Courcouronnes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.4398,
+    48.6295
+   ],
+   "dep": "91",
+   "depNom": "Essonne",
+   "detail": "Préfecture · Essonne (91)"
+  },
+  {
+   "code": "92050",
+   "nom": "Nanterre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.2071,
+    48.8962
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "Préfecture · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "93008",
+   "nom": "Bobigny",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.4398,
+    48.9074
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "Préfecture · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "94028",
+   "nom": "Créteil",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.4547,
+    48.7837
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "Préfecture · Val-de-Marne (94)"
+  },
+  {
+   "code": "95500",
+   "nom": "Pontoise",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    2.0945,
+    49.0515
+   ],
+   "dep": "95",
+   "depNom": "Val-d'Oise",
+   "detail": "Préfecture · Val-d'Oise (95)"
+  },
+  {
+   "code": "97105",
+   "nom": "Basse-Terre",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -61.7285,
+    16.0002
+   ],
+   "dep": "971",
+   "depNom": "Guadeloupe",
+   "detail": "Préfecture · Guadeloupe (971)"
+  },
+  {
+   "code": "97209",
+   "nom": "Fort-de-France",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -61.069,
+    14.6406
+   ],
+   "dep": "972",
+   "depNom": "Martinique",
+   "detail": "Préfecture · Martinique (972)"
+  },
+  {
+   "code": "97302",
+   "nom": "Cayenne",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    -52.3157,
+    4.9248
+   ],
+   "dep": "973",
+   "depNom": "Guyane",
+   "detail": "Préfecture · Guyane (973)"
+  },
+  {
+   "code": "97411",
+   "nom": "Saint-Denis",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    55.447,
+    -20.9331
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "Préfecture · La Réunion (974)"
+  },
+  {
+   "code": "97611",
+   "nom": "Mamoudzou",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "prefecture",
+   "geo": [
+    45.1939,
+    -12.7898
+   ],
+   "dep": "976",
+   "depNom": "Mayotte",
+   "detail": "Préfecture · Mayotte (976)"
+  }
+ ]
+}

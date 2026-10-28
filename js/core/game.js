@@ -12,10 +12,12 @@ let onLeave = () => {};
 export function onHome(f) { onLeave = f; }
 
 export class Game {
-  constructor({ cfg, name, id, data, mapSvg, study }) {
-    this.cfg = cfg; this.name = name; this.id = id; this.study = study;
+  constructor({ cfg, name, id, def, data, mapSvg, study }) {
+    this.cfg = cfg; this.name = name; this.id = id; this.study = study; this.def = def;
+    this.last = null; // réponse précédente (départage des homonymes)
     this.all = data.items;
-    this.items = cfg.n ? shuffle(this.all.slice()).slice(0, cfg.n) : this.all.slice();
+    // En mode étude, tout est montré, même pour un quiz « N au hasard ».
+    this.items = cfg.n && !study ? shuffle(this.all.slice()).slice(0, cfg.n) : this.all.slice();
     this.inPlay = new Set(this.items.map(d => d.code));
     this.found = new Set(); this.missed = new Set();
     this.queue = shuffle(this.items.slice());
@@ -47,7 +49,7 @@ export class Game {
     $('g-prompt').style.visibility = '';
     $('g-skip').hidden = !mech.skip;
     fitViewport();
-    if (study) { this.board.showLabels(this.items); return; }
+    if (study) { this.board.showLabels(this.items, this.def.etiquette); return; }
     this.resumeAt = performance.now();
     mech.start(this);
     this.tick();
@@ -62,8 +64,9 @@ export class Game {
     const tap = code => this.onTap(code);
     this.board = this.cfg.support === 'grid'
       ? buildGrid(host, this.all, this.inPlay, tap)
-      : buildMap(host, this.mapSvg, this.inPlay, tap, {
-        label: 'Carte des départements',
+      : buildMap(host, this.mapSvg, {
+        codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
+        onTap: tap, label: this.def.titre,
         tapNeedsSingle: () => this.cfg.mech === 'tap' && !this.over && !this.study,
       });
     this.toastEl = el('div', 'toast');
@@ -116,6 +119,7 @@ export class Game {
 
   validate(item) {
     this.found.add(item.code);
+    this.last = item;
     this.board.mark(item.code, 'found');
     this.board.flash(item.code);
     this.board.reveal(item.code, item.nom);
@@ -215,7 +219,10 @@ export class Game {
       s.append(el('h2', null, `Manqués · ${att.missed.length}`));
       const ml = el('div', 'missed-list');
       att.missed.slice().sort((a, b) => order.get(a) - order.get(b)).forEach(c => {
-        const sp = el('span'); sp.append(el('b', null, c), document.createTextNode(byCode[c].nom)); ml.append(sp);
+        const sp = el('span');
+        if (this.def.etiquette === 'code') sp.append(el('b', null, c));
+        sp.append(document.createTextNode(byCode[c].nom));
+        ml.append(sp);
       });
       s.append(ml);
     }
@@ -248,7 +255,7 @@ export class Game {
   }
 
   replay() {
-    new Game({ cfg: this.cfg, name: this.name, id: this.id, data: { items: this.all }, mapSvg: this.mapSvg, study: false }).start();
+    new Game({ cfg: this.cfg, name: this.name, id: this.id, def: this.def, data: { items: this.all }, mapSvg: this.mapSvg, study: false }).start();
   }
 
   /* --- Étude et bilan : toucher un élément affiche son code et son nom --- */
@@ -259,7 +266,9 @@ export class Game {
     let ib = $('info');
     if (!ib) { ib = el('div', 'infobar'); ib.id = 'info'; $('board').append(ib); }
     ib.textContent = '';
-    ib.append(el('span', 'num', code), document.createTextNode(it.nom));
+    if (this.def.etiquette === 'code') ib.append(el('span', 'num', code));
+    ib.append(el('b', null, it.nom));
+    if (it.detail) ib.append(el('span', 'detail', it.detail));
     if (this.over) $('sheet')?.classList.add('min');
   }
 }
