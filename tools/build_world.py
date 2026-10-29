@@ -240,6 +240,42 @@ def geoms(doc):
 sea_feats = J("world-seas.geojson")["features"]
 assert len(sea_feats) == 101 and all(f["properties"]["NAME"] in SEAS for f in sea_feats)
 land_d = "".join(path_d(g, tf, 0.05) for g in geoms(J("world-land.geojson")))
+
+# Les côtes des zones OHI disponibles sont grossières et ne suivent pas le tracé des terres (Natural Earth).
+# On garde les frontières officielles entre mers, et l'on fait épouser aux mers le tracé des terres :
+# espace marin = monde − terres ; chaque interstice (mer non couverte, ou terre OHI qui est en fait de la mer)
+# est rattaché à la zone voisine avec laquelle il partage le plus de frontière. Les étendues fermées qui ne
+# touchent aucune zone (mer Caspienne, grands lacs) restent hors du quiz.
+from shapely.geometry import shape, box, mapping
+from shapely.ops import unary_union
+from shapely.strtree import STRtree
+
+land = unary_union([shape(g).buffer(0) for g in geoms(J("world-land.geojson"))])
+ocean = box(-180, -90, 180, 90).difference(land)
+zone_geom = {}
+for f in sea_feats:
+    zone_geom.setdefault(SEAS[f["properties"]["NAME"]][0], []).append(shape(f["geometry"]).buffer(0))
+names = sorted(zone_geom)
+cores = [unary_union(zone_geom[n]).intersection(ocean) for n in names]
+gaps = ocean.difference(unary_union(cores))
+tree = STRtree(cores)
+extra = {n: [] for n in names}
+lakes = []
+for piece in getattr(gaps, "geoms", [gaps]):
+    if piece.area < 1e-6:
+        continue
+    near = piece.buffer(0.05)
+    best, score = None, 0
+    for i in tree.query(near):
+        s = near.intersection(cores[i]).area
+        if s > score:
+            best, score = i, s
+    if best is None:
+        lakes.append(piece)
+    else:
+        extra[names[best]].append(piece)
+fitted = {n: unary_union([c, *extra[n]]) for n, c in zip(names, cores)}
+print("interstices rattachés :", sum(len(v) for v in extra.values()), "· étendues fermées hors quiz :", len(lakes))
 seas, body = [], ['<g data-layer="mers">']
 # Un élément par nom français : les zones regroupées partagent un code et sont dessinées en plusieurs morceaux.
 groups = {}
@@ -255,10 +291,10 @@ for i, (nom, feats) in enumerate(sorted(groups.items(), key=lambda kv: kv[0])):
     seas.append({"code": code, "nom": nom, "alias": alias, "domaine": "physique", "categorie": kind, "gen": gen,
                  "geo": [round(v, 2) for v in centroid(big["geometry"])],
                  "detail": "OHI : " + " + ".join(f["properties"]["NAME"] for f in feats)})
-    for f in feats:
-        body.append(f'<path class="zone sea" data-code="{code}" d="{path_d(f["geometry"], tf, 0.02)}"/>')
-# Les terres passent au-dessus des zones OHI, dont le trait de côte est grossier.
-body.append('</g><g data-layer="terres"><path class="land" d="' + land_d + '"/></g>')
+    body.append(f'<path class="zone sea" data-code="{code}" d="{path_d(mapping(fitted[nom]), tf, 0.02)}"/>')
+# Terres par-dessus (trait de côte net), et étendues fermées (Caspienne…) en décor.
+lake_d = "".join(path_d(mapping(l), tf, 0.02) for l in lakes)
+body.append('</g><g data-layer="terres"><path class="lake" d="' + lake_d + '"/><path class="land" d="' + land_d + '"/></g>')
 open(f"{root}/maps/mers.svg", "w").write(svg_doc(VIEW, [], body))
 dump("mers", "Mers et océans (OHI)", seas)
 for n in ("monde", "mers"):

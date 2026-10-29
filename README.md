@@ -48,7 +48,7 @@ Outils : [mapshaper](https://github.com/mbloch/mapshaper), Python 3 et [shapely]
 **Monde** (`maps/monde.svg`, `maps/mers.svg`) · `tools/build_world.py`
 
 - Pays et capitales : [Natural Earth](https://www.naturalearthdata.com/) (domaine public). 197 pays : les 193 membres de l'ONU, plus Vatican, Palestine, Kosovo et Taïwan. Somaliland, Chypre du Nord, Hong Kong, Macao et Åland sont fusionnés avec leur pays.
-- Mers et océans : zones maritimes de l’OHI, version 3 (Atlantique Nord et Sud, Pacifique Nord et Sud et les deux bassins de la Méditerranée regroupés : 98 éléments), [Marine Regions](https://www.marineregions.org/) (CC-BY 4.0), via le paquet npm `oceans-seas.geojson`. Noms traduits en français dans le script.
+- Mers et océans : zones maritimes de l’OHI, version 3 (Atlantique Nord et Sud, Pacifique Nord et Sud et les deux bassins de la Méditerranée regroupés : 98 éléments), [Marine Regions](https://www.marineregions.org/) (CC-BY 4.0), via le paquet npm `oceans-seas.geojson`. Noms traduits en français dans le script. Les côtes OHI disponibles étant grossières, le script fait épouser aux mers le tracé des terres : frontières officielles entre mers conservées, interstices rattachés à la mer voisine (shapely).
 
 ```
 mapshaper ne_50m_admin_0_countries.geojson -each "code = ({SOL:'SOM',CYN:'CYP',HKG:'CHN',MAC:'CHN',ALD:'FIN'})[ADM0_A3] || ADM0_A3" -dissolve2 code -simplify 14% keep-shapes -clean -o world-countries.geojson precision=0.001

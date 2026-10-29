@@ -226,6 +226,7 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .mer .zone.off { fill: #dbe8f5; }
 .mer .zone.found { fill: var(--found); }
 .mer .zone.missed { fill: var(--missed); }
+.mer .lake { fill: #cfe0f0; pointer-events: none; }
 .mer .land { fill: #e4e9ee; stroke: #c9d3dd; stroke-width: .6; vector-effect: non-scaling-stroke; pointer-events: none; }
 
 /* ---------- Ciel : fond de nuit fixe, quel que soit le thème ---------- */
