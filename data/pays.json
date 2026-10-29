@@ -1,0 +1,2636 @@
+{
+ "id": "pays",
+ "titre": "Pays du monde",
+ "items": [
+  {
+   "code": "AFG",
+   "nom": "Afghanistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    66.497,
+    34.164
+   ],
+   "capitale": "Kaboul",
+   "detail": "Asie · capitale : Kaboul"
+  },
+  {
+   "code": "ZAF",
+   "nom": "Afrique du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    23.666,
+    -29.709
+   ],
+   "capitale": "Pretoria",
+   "detail": "Afrique · capitale : Pretoria"
+  },
+  {
+   "code": "ALB",
+   "nom": "Albanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    20.114,
+    40.655
+   ],
+   "capitale": "Tirana",
+   "detail": "Europe · capitale : Tirana"
+  },
+  {
+   "code": "DZA",
+   "nom": "Algérie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    2.808,
+    27.397
+   ],
+   "capitale": "Alger",
+   "detail": "Afrique · capitale : Alger"
+  },
+  {
+   "code": "DEU",
+   "nom": "Allemagne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.678,
+    50.962
+   ],
+   "capitale": "Berlin",
+   "detail": "Europe · capitale : Berlin"
+  },
+  {
+   "code": "AND",
+   "nom": "Andorre",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    1.539,
+    42.548
+   ],
+   "capitale": "Andorre-la-Vieille",
+   "detail": "Europe · capitale : Andorre-la-Vieille"
+  },
+  {
+   "code": "AGO",
+   "nom": "Angola",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    17.984,
+    -12.183
+   ],
+   "capitale": "Luanda",
+   "detail": "Afrique · capitale : Luanda"
+  },
+  {
+   "code": "ATG",
+   "nom": "Antigua-et-Barbuda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.791,
+    17.352
+   ],
+   "capitale": "Saint John's",
+   "detail": "Amérique du Nord · capitale : Saint John's"
+  },
+  {
+   "code": "SAU",
+   "nom": "Arabie saoudite",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    44.7,
+    23.807
+   ],
+   "capitale": "Riyad",
+   "detail": "Asie · capitale : Riyad"
+  },
+  {
+   "code": "ARG",
+   "nom": "Argentine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -64.173,
+    -33.501
+   ],
+   "capitale": "Buenos Aires",
+   "detail": "Amérique du Sud · capitale : Buenos Aires"
+  },
+  {
+   "code": "ARM",
+   "nom": "Arménie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    44.801,
+    40.459
+   ],
+   "capitale": "Erevan",
+   "detail": "Asie · capitale : Erevan"
+  },
+  {
+   "code": "AUS",
+   "nom": "Australie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    134.05,
+    -24.13
+   ],
+   "capitale": "Canberra",
+   "detail": "Océanie · capitale : Canberra"
+  },
+  {
+   "code": "AUT",
+   "nom": "Autriche",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    14.131,
+    47.519
+   ],
+   "capitale": "Vienne",
+   "detail": "Europe · capitale : Vienne"
+  },
+  {
+   "code": "AZE",
+   "nom": "Azerbaïdjan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    47.211,
+    40.402
+   ],
+   "capitale": "Bakou",
+   "detail": "Asie · capitale : Bakou"
+  },
+  {
+   "code": "BHS",
+   "nom": "Bahamas",
+   "alias": [
+    "Les Bahamas"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -77.147,
+    26.402
+   ],
+   "capitale": "Nassau",
+   "detail": "Amérique du Nord · capitale : Nassau"
+  },
+  {
+   "code": "BHR",
+   "nom": "Bahreïn",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    50.555,
+    26.056
+   ],
+   "capitale": "Manama",
+   "detail": "Asie · capitale : Manama"
+  },
+  {
+   "code": "BGD",
+   "nom": "Bangladesh",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    89.685,
+    24.215
+   ],
+   "capitale": "Dacca",
+   "detail": "Asie · capitale : Dacca"
+  },
+  {
+   "code": "BRB",
+   "nom": "Barbade",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -59.569,
+    13.164
+   ],
+   "capitale": "Bridgetown",
+   "detail": "Amérique du Nord · capitale : Bridgetown"
+  },
+  {
+   "code": "BEL",
+   "nom": "Belgique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    4.8,
+    50.785
+   ],
+   "capitale": "Bruxelles",
+   "detail": "Europe · capitale : Bruxelles"
+  },
+  {
+   "code": "BLZ",
+   "nom": "Belize",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -88.713,
+    17.202
+   ],
+   "capitale": "Belmopan",
+   "detail": "Amérique du Nord · capitale : Belmopan"
+  },
+  {
+   "code": "BTN",
+   "nom": "Bhoutan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    90.04,
+    27.537
+   ],
+   "capitale": "Thimphou",
+   "detail": "Asie · capitale : Thimphou"
+  },
+  {
+   "code": "MMR",
+   "nom": "Birmanie",
+   "alias": [
+    "Myanmar"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    95.804,
+    21.574
+   ],
+   "capitale": "Naypyidaw",
+   "detail": "Asie · capitale : Naypyidaw"
+  },
+  {
+   "code": "BLR",
+   "nom": "Biélorussie",
+   "alias": [
+    "Bélarus"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    28.418,
+    53.822
+   ],
+   "capitale": "Minsk",
+   "detail": "Europe · capitale : Minsk"
+  },
+  {
+   "code": "BOL",
+   "nom": "Bolivie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -64.593,
+    -16.666
+   ],
+   "capitale": "Sucre",
+   "detail": "Amérique du Sud · capitale : Sucre"
+  },
+  {
+   "code": "BIH",
+   "nom": "Bosnie-Herzégovine",
+   "alias": [
+    "Bosnie"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    18.068,
+    44.091
+   ],
+   "capitale": "Sarajevo",
+   "detail": "Europe · capitale : Sarajevo"
+  },
+  {
+   "code": "BWA",
+   "nom": "Botswana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    24.179,
+    -22.103
+   ],
+   "capitale": "Gaborone",
+   "detail": "Afrique · capitale : Gaborone"
+  },
+  {
+   "code": "BRN",
+   "nom": "Brunei",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    114.552,
+    4.448
+   ],
+   "capitale": "Bandar Seri Begawan",
+   "detail": "Asie · capitale : Bandar Seri Begawan"
+  },
+  {
+   "code": "BRA",
+   "nom": "Brésil",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -49.559,
+    -12.099
+   ],
+   "capitale": "Brasilia",
+   "detail": "Amérique du Sud · capitale : Brasilia"
+  },
+  {
+   "code": "BGR",
+   "nom": "Bulgarie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    25.157,
+    42.509
+   ],
+   "capitale": "Sofia",
+   "detail": "Europe · capitale : Sofia"
+  },
+  {
+   "code": "BFA",
+   "nom": "Burkina Faso",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -1.364,
+    12.673
+   ],
+   "capitale": "Ouagadougou",
+   "detail": "Afrique · capitale : Ouagadougou"
+  },
+  {
+   "code": "BDI",
+   "nom": "Burundi",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.917,
+    -3.333
+   ],
+   "capitale": "Gitega",
+   "detail": "Afrique · capitale : Gitega"
+  },
+  {
+   "code": "BEN",
+   "nom": "Bénin",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    2.352,
+    10.325
+   ],
+   "capitale": "Porto-Novo",
+   "detail": "Afrique · capitale : Porto-Novo"
+  },
+  {
+   "code": "KHM",
+   "nom": "Cambodge",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    104.505,
+    12.648
+   ],
+   "capitale": "Phnom Penh",
+   "detail": "Asie · capitale : Phnom Penh"
+  },
+  {
+   "code": "CMR",
+   "nom": "Cameroun",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    12.473,
+    4.585
+   ],
+   "capitale": "Yaoundé",
+   "detail": "Afrique · capitale : Yaoundé"
+  },
+  {
+   "code": "CAN",
+   "nom": "Canada",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -101.911,
+    60.324
+   ],
+   "capitale": "Ottawa",
+   "detail": "Amérique du Nord · capitale : Ottawa"
+  },
+  {
+   "code": "CPV",
+   "nom": "Cap-Vert",
+   "alias": [
+    "Cabo Verde"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -23.639,
+    15.075
+   ],
+   "capitale": "Praia",
+   "detail": "Afrique · capitale : Praia"
+  },
+  {
+   "code": "CHL",
+   "nom": "Chili",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -72.319,
+    -38.152
+   ],
+   "capitale": "Santiago",
+   "detail": "Amérique du Sud · capitale : Santiago"
+  },
+  {
+   "code": "CHN",
+   "nom": "Chine",
+   "alias": [
+    "République populaire de Chine"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    106.337,
+    32.498
+   ],
+   "capitale": "Pékin",
+   "detail": "Asie · capitale : Pékin"
+  },
+  {
+   "code": "CYP",
+   "nom": "Chypre",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    33.084,
+    34.913
+   ],
+   "capitale": "Nicosie",
+   "detail": "Asie · capitale : Nicosie"
+  },
+  {
+   "code": "COL",
+   "nom": "Colombie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -73.174,
+    3.373
+   ],
+   "capitale": "Bogota",
+   "detail": "Amérique du Sud · capitale : Bogota"
+  },
+  {
+   "code": "COM",
+   "nom": "Comores",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    43.318,
+    -11.728
+   ],
+   "capitale": "Moroni",
+   "detail": "Afrique · capitale : Moroni"
+  },
+  {
+   "code": "COG",
+   "nom": "Congo",
+   "alias": [
+    "Congo-Brazzaville",
+    "République du Congo"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    15.9,
+    0.142
+   ],
+   "capitale": "Brazzaville",
+   "detail": "Afrique · capitale : Brazzaville"
+  },
+  {
+   "code": "PRK",
+   "nom": "Corée du Nord",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    126.445,
+    39.885
+   ],
+   "capitale": "Pyongyang",
+   "detail": "Asie · capitale : Pyongyang"
+  },
+  {
+   "code": "KOR",
+   "nom": "Corée du Sud",
+   "alias": [
+    "Corée"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    128.13,
+    36.385
+   ],
+   "capitale": "Séoul",
+   "detail": "Asie · capitale : Séoul"
+  },
+  {
+   "code": "CRI",
+   "nom": "Costa Rica",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -84.078,
+    10.065
+   ],
+   "capitale": "San José",
+   "detail": "Amérique du Nord · capitale : San José"
+  },
+  {
+   "code": "HRV",
+   "nom": "Croatie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    16.372,
+    45.806
+   ],
+   "capitale": "Zagreb",
+   "detail": "Europe · capitale : Zagreb"
+  },
+  {
+   "code": "CUB",
+   "nom": "Cuba",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -77.976,
+    21.334
+   ],
+   "capitale": "La Havane",
+   "detail": "Amérique du Nord · capitale : La Havane"
+  },
+  {
+   "code": "CIV",
+   "nom": "Côte d'Ivoire",
+   "alias": [
+    "Ivory Coast"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -5.569,
+    7.491
+   ],
+   "capitale": "Yamoussoukro",
+   "detail": "Afrique · capitale : Yamoussoukro"
+  },
+  {
+   "code": "DNK",
+   "nom": "Danemark",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.018,
+    55.967
+   ],
+   "capitale": "Copenhague",
+   "detail": "Europe · capitale : Copenhague"
+  },
+  {
+   "code": "DJI",
+   "nom": "Djibouti",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    42.499,
+    11.976
+   ],
+   "capitale": "Djibouti",
+   "detail": "Afrique · capitale : Djibouti"
+  },
+  {
+   "code": "DMA",
+   "nom": "Dominique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.345,
+    15.459
+   ],
+   "capitale": "Roseau",
+   "detail": "Amérique du Nord · capitale : Roseau"
+  },
+  {
+   "code": "ESP",
+   "nom": "Espagne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -3.465,
+    40.091
+   ],
+   "capitale": "Madrid",
+   "detail": "Europe · capitale : Madrid"
+  },
+  {
+   "code": "EST",
+   "nom": "Estonie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    25.867,
+    58.725
+   ],
+   "capitale": "Tallinn",
+   "detail": "Europe · capitale : Tallinn"
+  },
+  {
+   "code": "SWZ",
+   "nom": "Eswatini",
+   "alias": [
+    "Swaziland"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    31.467,
+    -26.534
+   ],
+   "capitale": "Mbabane",
+   "detail": "Afrique · capitale : Mbabane"
+  },
+  {
+   "code": "FJI",
+   "nom": "Fidji",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    177.975,
+    -17.826
+   ],
+   "capitale": "Suva",
+   "detail": "Océanie · capitale : Suva"
+  },
+  {
+   "code": "FIN",
+   "nom": "Finlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    27.276,
+    63.252
+   ],
+   "capitale": "Helsinki",
+   "detail": "Europe · capitale : Helsinki"
+  },
+  {
+   "code": "FRA",
+   "nom": "France",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    2.552,
+    46.696
+   ],
+   "capitale": "Paris",
+   "detail": "Europe · capitale : Paris"
+  },
+  {
+   "code": "GAB",
+   "nom": "Gabon",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    11.836,
+    -0.438
+   ],
+   "capitale": "Libreville",
+   "detail": "Afrique · capitale : Libreville"
+  },
+  {
+   "code": "GMB",
+   "nom": "Gambie",
+   "alias": [
+    "La Gambie"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -14.998,
+    13.642
+   ],
+   "capitale": "Banjul",
+   "detail": "Afrique · capitale : Banjul"
+  },
+  {
+   "code": "GHA",
+   "nom": "Ghana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -1.037,
+    7.718
+   ],
+   "capitale": "Accra",
+   "detail": "Afrique · capitale : Accra"
+  },
+  {
+   "code": "GRD",
+   "nom": "Grenade",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.68,
+    12.113
+   ],
+   "capitale": "Saint-Georges",
+   "detail": "Amérique du Nord · capitale : Saint-Georges"
+  },
+  {
+   "code": "GRC",
+   "nom": "Grèce",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    21.726,
+    39.493
+   ],
+   "capitale": "Athènes",
+   "detail": "Europe · capitale : Athènes"
+  },
+  {
+   "code": "GTM",
+   "nom": "Guatemala",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -90.497,
+    14.982
+   ],
+   "capitale": "Guatemala",
+   "detail": "Amérique du Nord · capitale : Guatemala"
+  },
+  {
+   "code": "GIN",
+   "nom": "Guinée",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -10.016,
+    10.619
+   ],
+   "capitale": "Conakry",
+   "detail": "Afrique · capitale : Conakry"
+  },
+  {
+   "code": "GNQ",
+   "nom": "Guinée équatoriale",
+   "alias": [
+    "Guinée-Équatoriale"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    8.99,
+    2.333
+   ],
+   "capitale": "Malabo",
+   "detail": "Afrique · capitale : Malabo"
+  },
+  {
+   "code": "GNB",
+   "nom": "Guinée-Bissau",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -14.524,
+    12.164
+   ],
+   "capitale": "Bissau",
+   "detail": "Afrique · capitale : Bissau"
+  },
+  {
+   "code": "GUY",
+   "nom": "Guyana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -58.943,
+    5.124
+   ],
+   "capitale": "Georgetown",
+   "detail": "Amérique du Sud · capitale : Georgetown"
+  },
+  {
+   "code": "GEO",
+   "nom": "Géorgie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    43.736,
+    41.87
+   ],
+   "capitale": "Tbilissi",
+   "detail": "Asie · capitale : Tbilissi"
+  },
+  {
+   "code": "HTI",
+   "nom": "Haïti",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -72.224,
+    19.264
+   ],
+   "capitale": "Port-au-Prince",
+   "detail": "Amérique du Nord · capitale : Port-au-Prince"
+  },
+  {
+   "code": "HND",
+   "nom": "Honduras",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -86.888,
+    14.795
+   ],
+   "capitale": "Tegucigalpa",
+   "detail": "Amérique du Nord · capitale : Tegucigalpa"
+  },
+  {
+   "code": "HUN",
+   "nom": "Hongrie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.448,
+    47.087
+   ],
+   "capitale": "Budapest",
+   "detail": "Europe · capitale : Budapest"
+  },
+  {
+   "code": "IND",
+   "nom": "Inde",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    79.358,
+    22.687
+   ],
+   "capitale": "New Delhi",
+   "detail": "Asie · capitale : New Delhi"
+  },
+  {
+   "code": "IDN",
+   "nom": "Indonésie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    101.893,
+    -0.954
+   ],
+   "capitale": "Jakarta",
+   "detail": "Asie · capitale : Jakarta"
+  },
+  {
+   "code": "IRQ",
+   "nom": "Irak",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    43.262,
+    33.094
+   ],
+   "capitale": "Bagdad",
+   "detail": "Asie · capitale : Bagdad"
+  },
+  {
+   "code": "IRN",
+   "nom": "Iran",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    54.931,
+    32.166
+   ],
+   "capitale": "Téhéran",
+   "detail": "Asie · capitale : Téhéran"
+  },
+  {
+   "code": "IRL",
+   "nom": "Irlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -7.799,
+    53.079
+   ],
+   "capitale": "Dublin",
+   "detail": "Europe · capitale : Dublin"
+  },
+  {
+   "code": "ISL",
+   "nom": "Islande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -18.674,
+    64.779
+   ],
+   "capitale": "Reykjavik",
+   "detail": "Europe · capitale : Reykjavik"
+  },
+  {
+   "code": "ISR",
+   "nom": "Israël",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    34.848,
+    30.911
+   ],
+   "capitale": "Jérusalem",
+   "detail": "Asie · capitale : Jérusalem"
+  },
+  {
+   "code": "ITA",
+   "nom": "Italie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    11.077,
+    44.732
+   ],
+   "capitale": "Rome",
+   "detail": "Europe · capitale : Rome"
+  },
+  {
+   "code": "JAM",
+   "nom": "Jamaïque",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -77.319,
+    18.137
+   ],
+   "capitale": "Kingston",
+   "detail": "Amérique du Nord · capitale : Kingston"
+  },
+  {
+   "code": "JPN",
+   "nom": "Japon",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    138.442,
+    36.143
+   ],
+   "capitale": "Tokyo",
+   "detail": "Asie · capitale : Tokyo"
+  },
+  {
+   "code": "JOR",
+   "nom": "Jordanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    36.376,
+    30.805
+   ],
+   "capitale": "Amman",
+   "detail": "Asie · capitale : Amman"
+  },
+  {
+   "code": "KAZ",
+   "nom": "Kazakhstan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    68.686,
+    49.054
+   ],
+   "capitale": "Astana",
+   "detail": "Asie · capitale : Astana"
+  },
+  {
+   "code": "KEN",
+   "nom": "Kenya",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    37.908,
+    0.549
+   ],
+   "capitale": "Nairobi",
+   "detail": "Afrique · capitale : Nairobi"
+  },
+  {
+   "code": "KGZ",
+   "nom": "Kirghizistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    74.533,
+    41.669
+   ],
+   "capitale": "Bichkek",
+   "detail": "Asie · capitale : Bichkek"
+  },
+  {
+   "code": "KIR",
+   "nom": "Kiribati",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -157.385,
+    1.82
+   ],
+   "capitale": "Tarawa-Sud",
+   "detail": "Océanie · capitale : Tarawa-Sud"
+  },
+  {
+   "code": "KOS",
+   "nom": "Kosovo",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    20.861,
+    42.594
+   ],
+   "capitale": "Pristina",
+   "detail": "Europe · capitale : Pristina"
+  },
+  {
+   "code": "KWT",
+   "nom": "Koweït",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    47.314,
+    29.414
+   ],
+   "capitale": "Koweït",
+   "detail": "Asie · capitale : Koweït"
+  },
+  {
+   "code": "LAO",
+   "nom": "Laos",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    102.534,
+    19.432
+   ],
+   "capitale": "Vientiane",
+   "detail": "Asie · capitale : Vientiane"
+  },
+  {
+   "code": "LSO",
+   "nom": "Lesotho",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    28.247,
+    -29.48
+   ],
+   "capitale": "Maseru",
+   "detail": "Afrique · capitale : Maseru"
+  },
+  {
+   "code": "LVA",
+   "nom": "Lettonie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    25.459,
+    57.067
+   ],
+   "capitale": "Riga",
+   "detail": "Europe · capitale : Riga"
+  },
+  {
+   "code": "LBN",
+   "nom": "Liban",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    35.993,
+    34.133
+   ],
+   "capitale": "Beyrouth",
+   "detail": "Asie · capitale : Beyrouth"
+  },
+  {
+   "code": "LBR",
+   "nom": "Liberia",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -9.46,
+    6.447
+   ],
+   "capitale": "Monrovia",
+   "detail": "Afrique · capitale : Monrovia"
+  },
+  {
+   "code": "LBY",
+   "nom": "Libye",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    18.011,
+    26.639
+   ],
+   "capitale": "Tripoli",
+   "detail": "Afrique · capitale : Tripoli"
+  },
+  {
+   "code": "LIE",
+   "nom": "Liechtenstein",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.559,
+    47.111
+   ],
+   "capitale": "Vaduz",
+   "detail": "Europe · capitale : Vaduz"
+  },
+  {
+   "code": "LTU",
+   "nom": "Lituanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    24.09,
+    55.104
+   ],
+   "capitale": "Vilnius",
+   "detail": "Europe · capitale : Vilnius"
+  },
+  {
+   "code": "LUX",
+   "nom": "Luxembourg",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    6.078,
+    49.734
+   ],
+   "capitale": "Luxembourg",
+   "detail": "Europe · capitale : Luxembourg"
+  },
+  {
+   "code": "MKD",
+   "nom": "Macédoine du Nord",
+   "alias": [
+    "Macédoine"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    21.556,
+    41.558
+   ],
+   "capitale": "Skopje",
+   "detail": "Europe · capitale : Skopje"
+  },
+  {
+   "code": "MDG",
+   "nom": "Madagascar",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    46.704,
+    -18.628
+   ],
+   "capitale": "Antananarivo",
+   "detail": "Afrique · capitale : Antananarivo"
+  },
+  {
+   "code": "MYS",
+   "nom": "Malaisie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    113.837,
+    2.529
+   ],
+   "capitale": "Kuala Lumpur",
+   "detail": "Asie · capitale : Kuala Lumpur"
+  },
+  {
+   "code": "MWI",
+   "nom": "Malawi",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    33.608,
+    -13.387
+   ],
+   "capitale": "Lilongwe",
+   "detail": "Afrique · capitale : Lilongwe"
+  },
+  {
+   "code": "MDV",
+   "nom": "Maldives",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    73.508,
+    4.174
+   ],
+   "capitale": "Malé",
+   "detail": "Océanie · capitale : Malé"
+  },
+  {
+   "code": "MLI",
+   "nom": "Mali",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -2.038,
+    18.693
+   ],
+   "capitale": "Bamako",
+   "detail": "Afrique · capitale : Bamako"
+  },
+  {
+   "code": "MLT",
+   "nom": "Malte",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    14.433,
+    35.893
+   ],
+   "capitale": "La Valette",
+   "detail": "Europe · capitale : La Valette"
+  },
+  {
+   "code": "MAR",
+   "nom": "Maroc",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -7.187,
+    31.651
+   ],
+   "capitale": "Rabat",
+   "detail": "Afrique · capitale : Rabat"
+  },
+  {
+   "code": "MUS",
+   "nom": "Maurice",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    57.566,
+    -20.3
+   ],
+   "capitale": "Port-Louis",
+   "detail": "Océanie · capitale : Port-Louis"
+  },
+  {
+   "code": "MRT",
+   "nom": "Mauritanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -9.74,
+    19.587
+   ],
+   "capitale": "Nouakchott",
+   "detail": "Afrique · capitale : Nouakchott"
+  },
+  {
+   "code": "MEX",
+   "nom": "Mexique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -102.289,
+    23.92
+   ],
+   "capitale": "Mexico",
+   "detail": "Amérique du Nord · capitale : Mexico"
+  },
+  {
+   "code": "FSM",
+   "nom": "Micronésie",
+   "alias": [
+    "États fédérés de Micronésie"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    158.234,
+    6.888
+   ],
+   "capitale": "Palikir",
+   "detail": "Océanie · capitale : Palikir"
+  },
+  {
+   "code": "MDA",
+   "nom": "Moldavie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    28.488,
+    47.435
+   ],
+   "capitale": "Chișinău",
+   "detail": "Europe · capitale : Chișinău"
+  },
+  {
+   "code": "MCO",
+   "nom": "Monaco",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    7.398,
+    43.74
+   ],
+   "capitale": "Monaco",
+   "detail": "Europe · capitale : Monaco"
+  },
+  {
+   "code": "MNG",
+   "nom": "Mongolie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    104.15,
+    45.997
+   ],
+   "capitale": "Oulan-Bator",
+   "detail": "Asie · capitale : Oulan-Bator"
+  },
+  {
+   "code": "MNE",
+   "nom": "Monténégro",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.144,
+    42.803
+   ],
+   "capitale": "Podgorica",
+   "detail": "Europe · capitale : Podgorica"
+  },
+  {
+   "code": "MOZ",
+   "nom": "Mozambique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    37.838,
+    -13.943
+   ],
+   "capitale": "Maputo",
+   "detail": "Afrique · capitale : Maputo"
+  },
+  {
+   "code": "NAM",
+   "nom": "Namibie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    17.108,
+    -20.575
+   ],
+   "capitale": "Windhoek",
+   "detail": "Afrique · capitale : Windhoek"
+  },
+  {
+   "code": "NRU",
+   "nom": "Nauru",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    166.933,
+    -0.52
+   ],
+   "capitale": "Yaren",
+   "detail": "Océanie · capitale : Yaren"
+  },
+  {
+   "code": "NIC",
+   "nom": "Nicaragua",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -85.069,
+    12.671
+   ],
+   "capitale": "Managua",
+   "detail": "Amérique du Nord · capitale : Managua"
+  },
+  {
+   "code": "NER",
+   "nom": "Niger",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    9.504,
+    17.446
+   ],
+   "capitale": "Niamey",
+   "detail": "Afrique · capitale : Niamey"
+  },
+  {
+   "code": "NGA",
+   "nom": "Nigeria",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    7.503,
+    9.44
+   ],
+   "capitale": "Abuja",
+   "detail": "Afrique · capitale : Abuja"
+  },
+  {
+   "code": "NOR",
+   "nom": "Norvège",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.68,
+    61.357
+   ],
+   "capitale": "Oslo",
+   "detail": "Europe · capitale : Oslo"
+  },
+  {
+   "code": "NZL",
+   "nom": "Nouvelle-Zélande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    172.787,
+    -39.759
+   ],
+   "capitale": "Wellington",
+   "detail": "Océanie · capitale : Wellington"
+  },
+  {
+   "code": "NPL",
+   "nom": "Népal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    83.64,
+    28.298
+   ],
+   "capitale": "Katmandou",
+   "detail": "Asie · capitale : Katmandou"
+  },
+  {
+   "code": "OMN",
+   "nom": "Oman",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    57.337,
+    22.12
+   ],
+   "capitale": "Mascate",
+   "detail": "Asie · capitale : Mascate"
+  },
+  {
+   "code": "UGA",
+   "nom": "Ouganda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    32.949,
+    1.973
+   ],
+   "capitale": "Kampala",
+   "detail": "Afrique · capitale : Kampala"
+  },
+  {
+   "code": "UZB",
+   "nom": "Ouzbékistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    64.005,
+    41.694
+   ],
+   "capitale": "Tachkent",
+   "detail": "Asie · capitale : Tachkent"
+  },
+  {
+   "code": "PAK",
+   "nom": "Pakistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    68.546,
+    29.328
+   ],
+   "capitale": "Islamabad",
+   "detail": "Asie · capitale : Islamabad"
+  },
+  {
+   "code": "PLW",
+   "nom": "Palaos",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    134.58,
+    7.518
+   ],
+   "capitale": "Ngerulmud",
+   "detail": "Océanie · capitale : Ngerulmud"
+  },
+  {
+   "code": "PSX",
+   "nom": "Palestine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    35.291,
+    32.047
+   ],
+   "capitale": "Ramallah",
+   "detail": "Asie · capitale : Ramallah"
+  },
+  {
+   "code": "PAN",
+   "nom": "Panama",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -80.352,
+    8.722
+   ],
+   "capitale": "Panama",
+   "detail": "Amérique du Nord · capitale : Panama"
+  },
+  {
+   "code": "PNG",
+   "nom": "Papouasie-Nouvelle-Guinée",
+   "alias": [
+    "Papouasie"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    143.91,
+    -5.695
+   ],
+   "capitale": "Port Moresby",
+   "detail": "Océanie · capitale : Port Moresby"
+  },
+  {
+   "code": "PRY",
+   "nom": "Paraguay",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -60.146,
+    -21.675
+   ],
+   "capitale": "Asuncion",
+   "detail": "Amérique du Sud · capitale : Asuncion"
+  },
+  {
+   "code": "NLD",
+   "nom": "Pays-Bas",
+   "alias": [
+    "Hollande"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    5.611,
+    52.422
+   ],
+   "capitale": "Amsterdam",
+   "detail": "Europe · capitale : Amsterdam"
+  },
+  {
+   "code": "PHL",
+   "nom": "Philippines",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    122.465,
+    11.198
+   ],
+   "capitale": "Manille",
+   "detail": "Asie · capitale : Manille"
+  },
+  {
+   "code": "POL",
+   "nom": "Pologne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.49,
+    51.99
+   ],
+   "capitale": "Varsovie",
+   "detail": "Europe · capitale : Varsovie"
+  },
+  {
+   "code": "PRT",
+   "nom": "Portugal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -8.272,
+    39.607
+   ],
+   "capitale": "Lisbonne",
+   "detail": "Europe · capitale : Lisbonne"
+  },
+  {
+   "code": "PER",
+   "nom": "Pérou",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -72.9,
+    -12.977
+   ],
+   "capitale": "Lima",
+   "detail": "Amérique du Sud · capitale : Lima"
+  },
+  {
+   "code": "QAT",
+   "nom": "Qatar",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    51.144,
+    25.237
+   ],
+   "capitale": "Doha",
+   "detail": "Asie · capitale : Doha"
+  },
+  {
+   "code": "ROU",
+   "nom": "Roumanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    24.973,
+    45.733
+   ],
+   "capitale": "Bucarest",
+   "detail": "Europe · capitale : Bucarest"
+  },
+  {
+   "code": "GBR",
+   "nom": "Royaume-Uni",
+   "alias": [
+    "Angleterre"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -2.116,
+    54.403
+   ],
+   "capitale": "Londres",
+   "detail": "Europe · capitale : Londres"
+  },
+  {
+   "code": "RUS",
+   "nom": "Russie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    44.686,
+    58.249
+   ],
+   "capitale": "Moscou",
+   "detail": "Europe · capitale : Moscou"
+  },
+  {
+   "code": "RWA",
+   "nom": "Rwanda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    30.104,
+    -1.897
+   ],
+   "capitale": "Kigali",
+   "detail": "Afrique · capitale : Kigali"
+  },
+  {
+   "code": "CAF",
+   "nom": "République centrafricaine",
+   "alias": [
+    "Centrafrique"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    20.907,
+    6.99
+   ],
+   "capitale": "Bangui",
+   "detail": "Afrique · capitale : Bangui"
+  },
+  {
+   "code": "DOM",
+   "nom": "République dominicaine",
+   "alias": [
+    "Dominicaine"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -70.654,
+    19.104
+   ],
+   "capitale": "Saint-Domingue",
+   "detail": "Amérique du Nord · capitale : Saint-Domingue"
+  },
+  {
+   "code": "COD",
+   "nom": "République démocratique du Congo",
+   "alias": [
+    "RDC",
+    "Congo-Kinshasa"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    23.459,
+    -1.858
+   ],
+   "capitale": "Kinshasa",
+   "detail": "Afrique · capitale : Kinshasa"
+  },
+  {
+   "code": "KNA",
+   "nom": "Saint-Christophe-et-Niévès",
+   "alias": [
+    "Saint-Kitts-et-Nevis"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -62.758,
+    17.337
+   ],
+   "capitale": "Basseterre",
+   "detail": "Amérique du Nord · capitale : Basseterre"
+  },
+  {
+   "code": "SMR",
+   "nom": "Saint-Marin",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    12.441,
+    43.934
+   ],
+   "capitale": "Saint-Marin",
+   "detail": "Europe · capitale : Saint-Marin"
+  },
+  {
+   "code": "VCT",
+   "nom": "Saint-Vincent-et-les-Grenadines",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.336,
+    13.088
+   ],
+   "capitale": "Kingstown",
+   "detail": "Amérique du Nord · capitale : Kingstown"
+  },
+  {
+   "code": "LCA",
+   "nom": "Sainte-Lucie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -60.98,
+    13.892
+   ],
+   "capitale": "Castries",
+   "detail": "Amérique du Nord · capitale : Castries"
+  },
+  {
+   "code": "SLV",
+   "nom": "Salvador",
+   "alias": [
+    "El Salvador"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -88.89,
+    13.685
+   ],
+   "capitale": "San Salvador",
+   "detail": "Amérique du Nord · capitale : San Salvador"
+  },
+  {
+   "code": "WSM",
+   "nom": "Samoa",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -172.438,
+    -13.639
+   ],
+   "capitale": "Apia",
+   "detail": "Océanie · capitale : Apia"
+  },
+  {
+   "code": "STP",
+   "nom": "Sao Tomé-et-Principe",
+   "alias": [
+    "São Tomé-et-Príncipe"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    7.021,
+    0.971
+   ],
+   "capitale": "São Tomé",
+   "detail": "Afrique · capitale : São Tomé"
+  },
+  {
+   "code": "SRB",
+   "nom": "Serbie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    20.788,
+    44.19
+   ],
+   "capitale": "Belgrade",
+   "detail": "Europe · capitale : Belgrade"
+  },
+  {
+   "code": "SYC",
+   "nom": "Seychelles",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    55.48,
+    -4.677
+   ],
+   "capitale": "Victoria",
+   "detail": "Océanie · capitale : Victoria"
+  },
+  {
+   "code": "SLE",
+   "nom": "Sierra Leone",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -11.764,
+    8.617
+   ],
+   "capitale": "Freetown",
+   "detail": "Afrique · capitale : Freetown"
+  },
+  {
+   "code": "SGP",
+   "nom": "Singapour",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    103.817,
+    1.367
+   ],
+   "capitale": "Singapour",
+   "detail": "Asie · capitale : Singapour"
+  },
+  {
+   "code": "SVK",
+   "nom": "Slovaquie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.05,
+    48.734
+   ],
+   "capitale": "Bratislava",
+   "detail": "Europe · capitale : Bratislava"
+  },
+  {
+   "code": "SVN",
+   "nom": "Slovénie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    14.915,
+    46.061
+   ],
+   "capitale": "Ljubljana",
+   "detail": "Europe · capitale : Ljubljana"
+  },
+  {
+   "code": "SOM",
+   "nom": "Somalie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    45.192,
+    3.569
+   ],
+   "capitale": "Mogadiscio",
+   "detail": "Afrique · capitale : Mogadiscio"
+  },
+  {
+   "code": "SDN",
+   "nom": "Soudan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.261,
+    16.331
+   ],
+   "capitale": "Khartoum",
+   "detail": "Afrique · capitale : Khartoum"
+  },
+  {
+   "code": "SDS",
+   "nom": "Soudan du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    30.39,
+    7.23
+   ],
+   "capitale": "Djouba",
+   "detail": "Afrique · capitale : Djouba"
+  },
+  {
+   "code": "LKA",
+   "nom": "Sri Lanka",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    80.705,
+    7.581
+   ],
+   "capitale": "Sri Jayawardenapura-Kotte",
+   "detail": "Asie · capitale : Sri Jayawardenapura-Kotte"
+  },
+  {
+   "code": "CHE",
+   "nom": "Suisse",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    7.464,
+    46.719
+   ],
+   "capitale": "Berne",
+   "detail": "Europe · capitale : Berne"
+  },
+  {
+   "code": "SUR",
+   "nom": "Suriname",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -55.911,
+    4.144
+   ],
+   "capitale": "Paramaribo",
+   "detail": "Amérique du Sud · capitale : Paramaribo"
+  },
+  {
+   "code": "SWE",
+   "nom": "Suède",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.017,
+    65.859
+   ],
+   "capitale": "Stockholm",
+   "detail": "Europe · capitale : Stockholm"
+  },
+  {
+   "code": "SYR",
+   "nom": "Syrie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    38.278,
+    35.007
+   ],
+   "capitale": "Damas",
+   "detail": "Asie · capitale : Damas"
+  },
+  {
+   "code": "SEN",
+   "nom": "Sénégal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -14.779,
+    15.138
+   ],
+   "capitale": "Dakar",
+   "detail": "Afrique · capitale : Dakar"
+  },
+  {
+   "code": "TJK",
+   "nom": "Tadjikistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    72.587,
+    38.2
+   ],
+   "capitale": "Douchanbé",
+   "detail": "Asie · capitale : Douchanbé"
+  },
+  {
+   "code": "TZA",
+   "nom": "Tanzanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    34.959,
+    -6.052
+   ],
+   "capitale": "Dodoma",
+   "detail": "Afrique · capitale : Dodoma"
+  },
+  {
+   "code": "TWN",
+   "nom": "Taïwan",
+   "alias": [
+    "Formose"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    120.868,
+    23.652
+   ],
+   "capitale": "Taipei",
+   "detail": "Asie · capitale : Taipei"
+  },
+  {
+   "code": "TCD",
+   "nom": "Tchad",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    18.645,
+    15.143
+   ],
+   "capitale": "N'Djaména",
+   "detail": "Afrique · capitale : N'Djaména"
+  },
+  {
+   "code": "CZE",
+   "nom": "Tchéquie",
+   "alias": [
+    "République tchèque"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    15.378,
+    49.882
+   ],
+   "capitale": "Prague",
+   "detail": "Europe · capitale : Prague"
+  },
+  {
+   "code": "THA",
+   "nom": "Thaïlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    101.073,
+    15.46
+   ],
+   "capitale": "Bangkok",
+   "detail": "Asie · capitale : Bangkok"
+  },
+  {
+   "code": "TLS",
+   "nom": "Timor oriental",
+   "alias": [
+    "Timor-Leste"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    125.855,
+    -8.804
+   ],
+   "capitale": "Dili",
+   "detail": "Asie · capitale : Dili"
+  },
+  {
+   "code": "TGO",
+   "nom": "Togo",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    1.058,
+    8.807
+   ],
+   "capitale": "Lomé",
+   "detail": "Afrique · capitale : Lomé"
+  },
+  {
+   "code": "TON",
+   "nom": "Tonga",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -175.163,
+    -21.21
+   ],
+   "capitale": "Nukuʻalofa",
+   "detail": "Océanie · capitale : Nukuʻalofa"
+  },
+  {
+   "code": "TTO",
+   "nom": "Trinité-et-Tobago",
+   "alias": [
+    "Trinidad-et-Tobago"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -60.918,
+    10.999
+   ],
+   "capitale": "Port-d'Espagne",
+   "detail": "Amérique du Nord · capitale : Port-d'Espagne"
+  },
+  {
+   "code": "TUN",
+   "nom": "Tunisie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    9.008,
+    33.687
+   ],
+   "capitale": "Tunis",
+   "detail": "Afrique · capitale : Tunis"
+  },
+  {
+   "code": "TKM",
+   "nom": "Turkménistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    58.677,
+    39.855
+   ],
+   "capitale": "Achgabat",
+   "detail": "Asie · capitale : Achgabat"
+  },
+  {
+   "code": "TUR",
+   "nom": "Turquie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    34.508,
+    39.345
+   ],
+   "capitale": "Ankara",
+   "detail": "Asie · capitale : Ankara"
+  },
+  {
+   "code": "TUV",
+   "nom": "Tuvalu",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    179.21,
+    -8.514
+   ],
+   "capitale": "Funafuti",
+   "detail": "Océanie · capitale : Funafuti"
+  },
+  {
+   "code": "UKR",
+   "nom": "Ukraine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    32.141,
+    49.725
+   ],
+   "capitale": "Kiev",
+   "detail": "Europe · capitale : Kiev"
+  },
+  {
+   "code": "URY",
+   "nom": "Uruguay",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -55.967,
+    -32.961
+   ],
+   "capitale": "Montevideo",
+   "detail": "Amérique du Sud · capitale : Montevideo"
+  },
+  {
+   "code": "VUT",
+   "nom": "Vanuatu",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    166.909,
+    -15.372
+   ],
+   "capitale": "Port-Vila",
+   "detail": "Océanie · capitale : Port-Vila"
+  },
+  {
+   "code": "VAT",
+   "nom": "Vatican",
+   "alias": [
+    "Cité du Vatican",
+    "Saint-Siège"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    12.453,
+    41.903
+   ],
+   "capitale": "Vatican",
+   "detail": "Europe · capitale : Vatican"
+  },
+  {
+   "code": "VEN",
+   "nom": "Venezuela",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -64.599,
+    7.182
+   ],
+   "capitale": "Caracas",
+   "detail": "Amérique du Sud · capitale : Caracas"
+  },
+  {
+   "code": "VNM",
+   "nom": "Viêt Nam",
+   "alias": [
+    "Vietnam"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    105.387,
+    21.715
+   ],
+   "capitale": "Hanoï",
+   "detail": "Asie · capitale : Hanoï"
+  },
+  {
+   "code": "YEM",
+   "nom": "Yémen",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    45.874,
+    15.328
+   ],
+   "capitale": "Sanaa",
+   "detail": "Asie · capitale : Sanaa"
+  },
+  {
+   "code": "ZMB",
+   "nom": "Zambie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    26.395,
+    -14.661
+   ],
+   "capitale": "Lusaka",
+   "detail": "Afrique · capitale : Lusaka"
+  },
+  {
+   "code": "ZWE",
+   "nom": "Zimbabwe",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.925,
+    -18.912
+   ],
+   "capitale": "Harare",
+   "detail": "Afrique · capitale : Harare"
+  },
+  {
+   "code": "EGY",
+   "nom": "Égypte",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.446,
+    26.186
+   ],
+   "capitale": "Le Caire",
+   "detail": "Afrique · capitale : Le Caire"
+  },
+  {
+   "code": "ARE",
+   "nom": "Émirats arabes unis",
+   "alias": [
+    "Émirats"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    54.547,
+    23.466
+   ],
+   "capitale": "Abou Dabi",
+   "detail": "Asie · capitale : Abou Dabi"
+  },
+  {
+   "code": "ECU",
+   "nom": "Équateur",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -78.188,
+    -1.259
+   ],
+   "capitale": "Quito",
+   "detail": "Amérique du Sud · capitale : Quito"
+  },
+  {
+   "code": "ERI",
+   "nom": "Érythrée",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    38.286,
+    15.787
+   ],
+   "capitale": "Asmara",
+   "detail": "Afrique · capitale : Asmara"
+  },
+  {
+   "code": "USA",
+   "nom": "États-Unis",
+   "alias": [
+    "USA"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -97.483,
+    39.538
+   ],
+   "capitale": "Washington",
+   "detail": "Amérique du Nord · capitale : Washington"
+  },
+  {
+   "code": "ETH",
+   "nom": "Éthiopie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    39.089,
+    8.033
+   ],
+   "capitale": "Addis-Abeba",
+   "detail": "Afrique · capitale : Addis-Abeba"
+  },
+  {
+   "code": "MHL",
+   "nom": "Îles Marshall",
+   "alias": [
+    "Marshall"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    171.194,
+    7.083
+   ],
+   "capitale": "Majuro",
+   "detail": "Océanie · capitale : Majuro"
+  },
+  {
+   "code": "SLB",
+   "nom": "Îles Salomon",
+   "alias": [
+    "Salomon"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    159.17,
+    -8.03
+   ],
+   "capitale": "Honiara",
+   "detail": "Océanie · capitale : Honiara"
+  }
+ ]
+}

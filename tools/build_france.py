@@ -12,7 +12,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mapkit import lcc, equi, fit, path_d, line_d, centroid, svg_doc, rings, esc  # noqa: E402
+from mapkit import lcc, equi, fit, path_d, line_d, centroid, svg_doc, rings, esc, marker  # noqa: E402
 
 src, root = sys.argv[1:3]
 J = lambda name: json.load(open(os.path.join(src, name)))
@@ -114,24 +114,48 @@ sub.append(line_d({"type": "MultiLineString", "coordinates": idf_lines}, tfs["id
 body.append(f'<g data-layer="arrondissements"><path class="sub" d="{"".join(sub)}"/></g>')
 
 
-def point_tags(code, cls, layer):
+region_cl = {r["chefLieu"] for r in regs.values()}
+
+
+def point_tags(code, shape, cls):
     lon, lat = geo[code]
     dep = communes[code]["departement"]
-    out = []
     tf = tfs[dep] if dep in DOM else metro_tf
-    x, y = tf(lon, lat)
-    out.append(f'<circle class="pt {cls}" r="3" data-code="{code}" cx="{x:.1f}" cy="{y:.1f}"/>')
+    out = [marker(*tf(lon, lat), shape, cls, code)]
     if dep in IDF:
         x, y = tfs["idf"](lon, lat)
-        out.append(f'<circle class="pt {cls}" r="3" data-code="{code}" data-inset="idf" cx="{x:.1f}" cy="{y:.1f}"/>')
+        out.append(marker(x, y, shape, cls, code, ' data-inset="idf"'))
     return out
 
 
-for layer, codes, cls in (("sous-prefectures", sp_codes, "sp"), ("prefectures", pref_codes, "pref")):
-    body.append(f'<g data-layer="{layer}">')
-    for c in sorted(codes):
-        body.extend(point_tags(c, cls, layer))
-    body.append('</g>')
+# Trois rôles, trois formes : étoile (préfecture de région), carré (préfecture), rond (sous-préfecture).
+body.append('<g data-layer="sous-prefectures">')
+for c in sorted(sp_codes):
+    body.extend(point_tags(c, "rond", "sp"))
+body.append('</g><g data-layer="prefectures">')
+for c in sorted(pref_codes - region_cl):
+    body.extend(point_tags(c, "carre", "pref"))
+for c in sorted(region_cl):
+    body.extend(point_tags(c, "etoile", "preg"))
+body.append('</g>')
+
+# 100 communes les plus peuplées (population municipale INSEE)
+top = sorted((c for c in communes.values() if c.get("population") and c["departement"] in deps),
+             key=lambda c: -c["population"])[:100]
+need_v = {c["code"] for c in top} - set(geo)
+for f in J("communes-arr.geojson")["features"]:
+    if f["properties"]["code"] in need_v:
+        geo[f["properties"]["code"]] = centroid(f["geometry"])
+body.append('<g data-layer="villes">')
+for c in top:
+    lon, lat = geo[c["code"]]
+    d = c["departement"]
+    tf = tfs[d] if d in DOM else metro_tf
+    body.append(marker(*tf(lon, lat), "rond", "ville", f'v-{c["code"]}'))
+    if d in IDF:
+        x, y = tfs["idf"](lon, lat)
+        body.append(marker(x, y, "rond", "ville", f'v-{c["code"]}', ' data-inset="idf"'))
+body.append('</g>')
 
 open(f"{root}/maps/france.svg", "w").write(svg_doc(f"0 0 {W} {H}", boxes, body))
 
@@ -173,16 +197,28 @@ dump("regions", "Régions françaises", [
 def city(code, kind):
     co = communes[code]
     d = co["departement"]
+    if kind == "prefecture" and code in region_cl:
+        role = f'Préfecture de région ({regs[co["region"]]["nom"]})'
+    else:
+        role = "Préfecture" if kind == "prefecture" else "Sous-préfecture"
     return {"code": code, "nom": co["nom"], "alias": [], "domaine": "ville", "categorie": kind,
             "geo": [round(v, 4) for v in geo[code]], "dep": d, "depNom": deps[d]["nom"],
-            "detail": f'{"Préfecture" if kind == "prefecture" else "Sous-préfecture"} · {deps[d]["nom"]} ({d})'}
+            "detail": f'{role} · {deps[d]["nom"]} ({d})'}
 
 
 prefs = sorted((city(c, "prefecture") for c in pref_codes), key=lambda x: order(x["dep"]))
 sps = sorted((city(c, "sous-prefecture") for c in sp_codes), key=lambda x: (order(x["dep"]), x["nom"]))
 dump("prefectures", "Préfectures", prefs)
-dump("sous-prefectures", "Sous-préfectures", sps)
 dump("chefs-lieux", "Préfectures et sous-préfectures", sorted(prefs + sps, key=lambda x: (order(x["dep"]), x["categorie"] != "prefecture", x["nom"])))
+def fmt_pop(n):
+    return f"{n:,}".replace(",", " ")
+
+
+dump("villes-france", "100 villes de France", [
+    {"code": f'v-{c["code"]}', "nom": c["nom"], "alias": [], "domaine": "ville", "rang": i + 1,
+     "geo": [round(v, 4) for v in geo[c["code"]]], "dep": c["departement"], "depNom": deps[c["departement"]]["nom"],
+     "detail": f'{i + 1}e ville · {fmt_pop(c["population"])} hab. · {deps[c["departement"]]["nom"]} ({c["departement"]})'}
+    for i, c in enumerate(top)])
 print(f"départements {len(deps)} · régions {len(reg_feats)} · préfectures {len(prefs)} · sous-préfectures {len(sps)}")
 for f in ("france.svg", "france-regions.svg"):
     print(f, os.path.getsize(f"{root}/maps/{f}"), "octets")

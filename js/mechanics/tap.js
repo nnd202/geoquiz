@@ -1,10 +1,11 @@
 // Nom → toucher : un nom s'affiche, on touche l'élément. Trois erreurs : la réponse est montrée et comptée manquée.
 import { next, skip } from './queue.js';
 
-const show = g => cur => g.setPrompt(cur.nom, false, '');
+// Le nom est précisé quand un autre élément du quiz porte le même (Saint-Denis, Saint-Pierre…).
+const show = g => cur => g.setPrompt(g.label(cur), false, '');
 
 export default {
-  label: 'Nom → toucher',
+  label: 'Clic',
   typing: false,
   hasPrompt: true,
   start(g) { next(g, show(g)); },

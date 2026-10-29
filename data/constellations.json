@@ -1,0 +1,795 @@
+{
+ "id": "constellations",
+ "titre": "Les 88 constellations",
+ "items": [
+  {
+   "code": "Aql",
+   "nom": "Aigle",
+   "alias": [
+    "Aquila"
+   ],
+   "domaine": "ciel",
+   "detail": "Aquila · étoile la plus brillante : Altair"
+  },
+  {
+   "code": "And",
+   "nom": "Andromède",
+   "alias": [
+    "Andromeda"
+   ],
+   "domaine": "ciel",
+   "detail": "Andromeda · étoile la plus brillante : Alpheratz"
+  },
+  {
+   "code": "Ara",
+   "nom": "Autel",
+   "alias": [
+    "Ara"
+   ],
+   "domaine": "ciel",
+   "detail": "Ara · étoile la plus brillante : β Arae"
+  },
+  {
+   "code": "Lib",
+   "nom": "Balance",
+   "alias": [
+    "Libra"
+   ],
+   "domaine": "ciel",
+   "detail": "Libra · étoile la plus brillante : Zubeneschamali"
+  },
+  {
+   "code": "Cet",
+   "nom": "Baleine",
+   "alias": [
+    "Cetus"
+   ],
+   "domaine": "ciel",
+   "detail": "Cetus · étoile la plus brillante : Diphda"
+  },
+  {
+   "code": "Pyx",
+   "nom": "Boussole",
+   "alias": [
+    "Pyxis"
+   ],
+   "domaine": "ciel",
+   "detail": "Pyxis · étoile la plus brillante : α Pyxidis"
+  },
+  {
+   "code": "Boo",
+   "nom": "Bouvier",
+   "alias": [
+    "Boötes"
+   ],
+   "domaine": "ciel",
+   "detail": "Boötes · étoile la plus brillante : Arcturus"
+  },
+  {
+   "code": "Cae",
+   "nom": "Burin",
+   "alias": [
+    "Caelum"
+   ],
+   "domaine": "ciel",
+   "detail": "Caelum · étoile la plus brillante : α Caeli"
+  },
+  {
+   "code": "Ari",
+   "nom": "Bélier",
+   "alias": [
+    "Aries"
+   ],
+   "domaine": "ciel",
+   "detail": "Aries · étoile la plus brillante : Hamal"
+  },
+  {
+   "code": "Cha",
+   "nom": "Caméléon",
+   "alias": [
+    "Chamaeleon"
+   ],
+   "domaine": "ciel",
+   "detail": "Chamaeleon · étoile la plus brillante : α Chamaeleontis"
+  },
+  {
+   "code": "Cnc",
+   "nom": "Cancer",
+   "alias": [],
+   "domaine": "ciel",
+   "detail": "Cancer · étoile la plus brillante : Tarf"
+  },
+  {
+   "code": "Cap",
+   "nom": "Capricorne",
+   "alias": [
+    "Capricornus"
+   ],
+   "domaine": "ciel",
+   "detail": "Capricornus · étoile la plus brillante : Deneb Algedi"
+  },
+  {
+   "code": "Car",
+   "nom": "Carène",
+   "alias": [
+    "Carina"
+   ],
+   "domaine": "ciel",
+   "detail": "Carina · étoile la plus brillante : Canopus"
+  },
+  {
+   "code": "Cas",
+   "nom": "Cassiopée",
+   "alias": [
+    "Cassiopeia"
+   ],
+   "domaine": "ciel",
+   "detail": "Cassiopeia · étoile la plus brillante : Navi"
+  },
+  {
+   "code": "Cen",
+   "nom": "Centaure",
+   "alias": [
+    "Centaurus"
+   ],
+   "domaine": "ciel",
+   "detail": "Centaurus · étoile la plus brillante : Rigil Kentaurus"
+  },
+  {
+   "code": "Com",
+   "nom": "Chevelure de Bérénice",
+   "alias": [
+    "Coma Berenices"
+   ],
+   "domaine": "ciel",
+   "detail": "Coma Berenices · étoile la plus brillante : β Comae Berenices"
+  },
+  {
+   "code": "CVn",
+   "nom": "Chiens de chasse",
+   "alias": [
+    "Canes Venatici"
+   ],
+   "domaine": "ciel",
+   "detail": "Canes Venatici · étoile la plus brillante : Cor Caroli"
+  },
+  {
+   "code": "Aur",
+   "nom": "Cocher",
+   "alias": [
+    "Auriga"
+   ],
+   "domaine": "ciel",
+   "detail": "Auriga · étoile la plus brillante : Capella"
+  },
+  {
+   "code": "Col",
+   "nom": "Colombe",
+   "alias": [
+    "Columba"
+   ],
+   "domaine": "ciel",
+   "detail": "Columba · étoile la plus brillante : Phact"
+  },
+  {
+   "code": "Cir",
+   "nom": "Compas",
+   "alias": [
+    "Circinus"
+   ],
+   "domaine": "ciel",
+   "detail": "Circinus · étoile la plus brillante : α Circini"
+  },
+  {
+   "code": "Crv",
+   "nom": "Corbeau",
+   "alias": [
+    "Corvus"
+   ],
+   "domaine": "ciel",
+   "detail": "Corvus · étoile la plus brillante : Gienah"
+  },
+  {
+   "code": "Crt",
+   "nom": "Coupe",
+   "alias": [
+    "Crater"
+   ],
+   "domaine": "ciel",
+   "detail": "Crater · étoile la plus brillante : Labr"
+  },
+  {
+   "code": "CrA",
+   "nom": "Couronne australe",
+   "alias": [
+    "Corona Austrina"
+   ],
+   "domaine": "ciel",
+   "detail": "Corona Austrina · étoile la plus brillante : β Coronae Austrini"
+  },
+  {
+   "code": "CrB",
+   "nom": "Couronne boréale",
+   "alias": [
+    "Corona Borealis"
+   ],
+   "domaine": "ciel",
+   "detail": "Corona Borealis · étoile la plus brillante : Alphecca"
+  },
+  {
+   "code": "Cru",
+   "nom": "Croix du Sud",
+   "alias": [
+    "Crux",
+    "Croix"
+   ],
+   "domaine": "ciel",
+   "detail": "Crux · étoile la plus brillante : Acrux"
+  },
+  {
+   "code": "Cyg",
+   "nom": "Cygne",
+   "alias": [
+    "Cygnus"
+   ],
+   "domaine": "ciel",
+   "detail": "Cygnus · étoile la plus brillante : Deneb"
+  },
+  {
+   "code": "Cep",
+   "nom": "Céphée",
+   "alias": [
+    "Cepheus"
+   ],
+   "domaine": "ciel",
+   "detail": "Cepheus · étoile la plus brillante : Alderamin"
+  },
+  {
+   "code": "Del",
+   "nom": "Dauphin",
+   "alias": [
+    "Delphinus"
+   ],
+   "domaine": "ciel",
+   "detail": "Delphinus · étoile la plus brillante : Rotanev"
+  },
+  {
+   "code": "Dor",
+   "nom": "Dorade",
+   "alias": [
+    "Dorado"
+   ],
+   "domaine": "ciel",
+   "detail": "Dorado · étoile la plus brillante : α Doradus"
+  },
+  {
+   "code": "Dra",
+   "nom": "Dragon",
+   "alias": [
+    "Draco"
+   ],
+   "domaine": "ciel",
+   "detail": "Draco · étoile la plus brillante : Eltanin"
+  },
+  {
+   "code": "Sge",
+   "nom": "Flèche",
+   "alias": [
+    "Sagitta"
+   ],
+   "domaine": "ciel",
+   "detail": "Sagitta · étoile la plus brillante : γ Sagittae"
+  },
+  {
+   "code": "For",
+   "nom": "Fourneau",
+   "alias": [
+    "Fornax"
+   ],
+   "domaine": "ciel",
+   "detail": "Fornax · étoile la plus brillante : Dalim"
+  },
+  {
+   "code": "Cam",
+   "nom": "Girafe",
+   "alias": [
+    "Camelopardalis"
+   ],
+   "domaine": "ciel",
+   "detail": "Camelopardalis · étoile la plus brillante : β Camelopardalis"
+  },
+  {
+   "code": "CMa",
+   "nom": "Grand Chien",
+   "alias": [
+    "Canis Major"
+   ],
+   "domaine": "ciel",
+   "detail": "Canis Major · étoile la plus brillante : Sirius"
+  },
+  {
+   "code": "UMa",
+   "nom": "Grande Ourse",
+   "alias": [
+    "Ursa Major"
+   ],
+   "domaine": "ciel",
+   "detail": "Ursa Major · étoile la plus brillante : Alioth"
+  },
+  {
+   "code": "Gru",
+   "nom": "Grue",
+   "alias": [
+    "Grus"
+   ],
+   "domaine": "ciel",
+   "detail": "Grus · étoile la plus brillante : Alnair"
+  },
+  {
+   "code": "Gem",
+   "nom": "Gémeaux",
+   "alias": [
+    "Gemini"
+   ],
+   "domaine": "ciel",
+   "detail": "Gemini · étoile la plus brillante : Pollux"
+  },
+  {
+   "code": "Her",
+   "nom": "Hercule",
+   "alias": [
+    "Hercules"
+   ],
+   "domaine": "ciel",
+   "detail": "Hercules · étoile la plus brillante : Kornephoros"
+  },
+  {
+   "code": "Hor",
+   "nom": "Horloge",
+   "alias": [
+    "Horologium"
+   ],
+   "domaine": "ciel",
+   "detail": "Horologium · étoile la plus brillante : α Horologii"
+  },
+  {
+   "code": "Hya",
+   "nom": "Hydre",
+   "alias": [
+    "Hydra",
+    "Hydre femelle"
+   ],
+   "domaine": "ciel",
+   "detail": "Hydra · étoile la plus brillante : Alphard"
+  },
+  {
+   "code": "Hyi",
+   "nom": "Hydre mâle",
+   "alias": [
+    "Hydrus"
+   ],
+   "domaine": "ciel",
+   "detail": "Hydrus · étoile la plus brillante : β Hydri"
+  },
+  {
+   "code": "Ind",
+   "nom": "Indien",
+   "alias": [
+    "Indus"
+   ],
+   "domaine": "ciel",
+   "detail": "Indus · étoile la plus brillante : α Indi"
+  },
+  {
+   "code": "Mon",
+   "nom": "Licorne",
+   "alias": [
+    "Monoceros"
+   ],
+   "domaine": "ciel",
+   "detail": "Monoceros · étoile la plus brillante : β Monocerotis"
+  },
+  {
+   "code": "Leo",
+   "nom": "Lion",
+   "alias": [
+    "Leo"
+   ],
+   "domaine": "ciel",
+   "detail": "Leo · étoile la plus brillante : Regulus"
+  },
+  {
+   "code": "Lep",
+   "nom": "Lièvre",
+   "alias": [
+    "Lepus"
+   ],
+   "domaine": "ciel",
+   "detail": "Lepus · étoile la plus brillante : Arneb"
+  },
+  {
+   "code": "Lup",
+   "nom": "Loup",
+   "alias": [
+    "Lupus"
+   ],
+   "domaine": "ciel",
+   "detail": "Lupus · étoile la plus brillante : α Lupi"
+  },
+  {
+   "code": "Lyn",
+   "nom": "Lynx",
+   "alias": [],
+   "domaine": "ciel",
+   "detail": "Lynx · étoile la plus brillante : α Lyncis"
+  },
+  {
+   "code": "Lyr",
+   "nom": "Lyre",
+   "alias": [
+    "Lyra"
+   ],
+   "domaine": "ciel",
+   "detail": "Lyra · étoile la plus brillante : Vega"
+  },
+  {
+   "code": "Lac",
+   "nom": "Lézard",
+   "alias": [
+    "Lacerta"
+   ],
+   "domaine": "ciel",
+   "detail": "Lacerta · étoile la plus brillante : α Lacertae"
+  },
+  {
+   "code": "Ant",
+   "nom": "Machine pneumatique",
+   "alias": [
+    "Antlia"
+   ],
+   "domaine": "ciel",
+   "detail": "Antlia · étoile la plus brillante : α Antliae"
+  },
+  {
+   "code": "Mic",
+   "nom": "Microscope",
+   "alias": [
+    "Microscopium"
+   ],
+   "domaine": "ciel",
+   "detail": "Microscopium · étoile la plus brillante : γ Microscopii"
+  },
+  {
+   "code": "Mus",
+   "nom": "Mouche",
+   "alias": [
+    "Musca"
+   ],
+   "domaine": "ciel",
+   "detail": "Musca · étoile la plus brillante : α Muscae"
+  },
+  {
+   "code": "Oct",
+   "nom": "Octant",
+   "alias": [
+    "Octans"
+   ],
+   "domaine": "ciel",
+   "detail": "Octans · étoile la plus brillante : ν Octantis"
+  },
+  {
+   "code": "Aps",
+   "nom": "Oiseau de paradis",
+   "alias": [
+    "Apus"
+   ],
+   "domaine": "ciel",
+   "detail": "Apus · étoile la plus brillante : α Apodis"
+  },
+  {
+   "code": "Oph",
+   "nom": "Ophiuchus",
+   "alias": [
+    "Serpentaire"
+   ],
+   "domaine": "ciel",
+   "detail": "Ophiuchus · étoile la plus brillante : Rasalhague"
+  },
+  {
+   "code": "Ori",
+   "nom": "Orion",
+   "alias": [],
+   "domaine": "ciel",
+   "detail": "Orion · étoile la plus brillante : Rigel"
+  },
+  {
+   "code": "Pav",
+   "nom": "Paon",
+   "alias": [
+    "Pavo"
+   ],
+   "domaine": "ciel",
+   "detail": "Pavo · étoile la plus brillante : Peacock"
+  },
+  {
+   "code": "Pic",
+   "nom": "Peintre",
+   "alias": [
+    "Pictor"
+   ],
+   "domaine": "ciel",
+   "detail": "Pictor · étoile la plus brillante : α Pictoris"
+  },
+  {
+   "code": "Per",
+   "nom": "Persée",
+   "alias": [
+    "Perseus"
+   ],
+   "domaine": "ciel",
+   "detail": "Perseus · étoile la plus brillante : Mirfak"
+  },
+  {
+   "code": "Equ",
+   "nom": "Petit Cheval",
+   "alias": [
+    "Equuleus"
+   ],
+   "domaine": "ciel",
+   "detail": "Equuleus · étoile la plus brillante : Kitalpha"
+  },
+  {
+   "code": "CMi",
+   "nom": "Petit Chien",
+   "alias": [
+    "Canis Minor"
+   ],
+   "domaine": "ciel",
+   "detail": "Canis Minor · étoile la plus brillante : Procyon"
+  },
+  {
+   "code": "LMi",
+   "nom": "Petit Lion",
+   "alias": [
+    "Leo Minor"
+   ],
+   "domaine": "ciel",
+   "detail": "Leo Minor · étoile la plus brillante : Praecipua"
+  },
+  {
+   "code": "Vul",
+   "nom": "Petit Renard",
+   "alias": [
+    "Vulpecula"
+   ],
+   "domaine": "ciel",
+   "detail": "Vulpecula · étoile la plus brillante : Anser"
+  },
+  {
+   "code": "UMi",
+   "nom": "Petite Ourse",
+   "alias": [
+    "Ursa Minor"
+   ],
+   "domaine": "ciel",
+   "detail": "Ursa Minor · étoile la plus brillante : Polaris"
+  },
+  {
+   "code": "Phe",
+   "nom": "Phénix",
+   "alias": [
+    "Phoenix"
+   ],
+   "domaine": "ciel",
+   "detail": "Phoenix · étoile la plus brillante : Ankaa"
+  },
+  {
+   "code": "PsA",
+   "nom": "Poisson austral",
+   "alias": [
+    "Piscis Austrinus"
+   ],
+   "domaine": "ciel",
+   "detail": "Piscis Austrinus · étoile la plus brillante : Fomalhaut"
+  },
+  {
+   "code": "Vol",
+   "nom": "Poisson volant",
+   "alias": [
+    "Volans"
+   ],
+   "domaine": "ciel",
+   "detail": "Volans · étoile la plus brillante : β Volantis"
+  },
+  {
+   "code": "Psc",
+   "nom": "Poissons",
+   "alias": [
+    "Pisces"
+   ],
+   "domaine": "ciel",
+   "detail": "Pisces · étoile la plus brillante : Alpherg"
+  },
+  {
+   "code": "Pup",
+   "nom": "Poupe",
+   "alias": [
+    "Puppis"
+   ],
+   "domaine": "ciel",
+   "detail": "Puppis · étoile la plus brillante : Naos"
+  },
+  {
+   "code": "Peg",
+   "nom": "Pégase",
+   "alias": [
+    "Pegasus"
+   ],
+   "domaine": "ciel",
+   "detail": "Pegasus · étoile la plus brillante : Enif"
+  },
+  {
+   "code": "Nor",
+   "nom": "Règle",
+   "alias": [
+    "Norma"
+   ],
+   "domaine": "ciel",
+   "detail": "Norma · étoile la plus brillante : γ2 Normae"
+  },
+  {
+   "code": "Ret",
+   "nom": "Réticule",
+   "alias": [
+    "Reticulum"
+   ],
+   "domaine": "ciel",
+   "detail": "Reticulum · étoile la plus brillante : α Reticuli"
+  },
+  {
+   "code": "Sgr",
+   "nom": "Sagittaire",
+   "alias": [
+    "Sagittarius"
+   ],
+   "domaine": "ciel",
+   "detail": "Sagittarius · étoile la plus brillante : Kaus Australis"
+  },
+  {
+   "code": "Sco",
+   "nom": "Scorpion",
+   "alias": [
+    "Scorpius"
+   ],
+   "domaine": "ciel",
+   "detail": "Scorpius · étoile la plus brillante : Antares"
+  },
+  {
+   "code": "Scl",
+   "nom": "Sculpteur",
+   "alias": [
+    "Sculptor"
+   ],
+   "domaine": "ciel",
+   "detail": "Sculptor · étoile la plus brillante : α Sculptoris"
+  },
+  {
+   "code": "Ser",
+   "nom": "Serpent",
+   "alias": [
+    "Serpens Cauda"
+   ],
+   "domaine": "ciel",
+   "detail": "Serpens Cauda · étoile la plus brillante : Unukalhai"
+  },
+  {
+   "code": "Sex",
+   "nom": "Sextant",
+   "alias": [
+    "Sextans"
+   ],
+   "domaine": "ciel",
+   "detail": "Sextans · étoile la plus brillante : α Sextantis"
+  },
+  {
+   "code": "Men",
+   "nom": "Table",
+   "alias": [
+    "Mensa"
+   ],
+   "domaine": "ciel",
+   "detail": "Mensa · étoile la plus brillante : α Mensae"
+  },
+  {
+   "code": "Tau",
+   "nom": "Taureau",
+   "alias": [
+    "Taurus"
+   ],
+   "domaine": "ciel",
+   "detail": "Taurus · étoile la plus brillante : Aldebaran"
+  },
+  {
+   "code": "Tuc",
+   "nom": "Toucan",
+   "alias": [
+    "Tucana"
+   ],
+   "domaine": "ciel",
+   "detail": "Tucana · étoile la plus brillante : α Tucanae"
+  },
+  {
+   "code": "Tri",
+   "nom": "Triangle",
+   "alias": [
+    "Triangulum"
+   ],
+   "domaine": "ciel",
+   "detail": "Triangulum · étoile la plus brillante : β Trianguli"
+  },
+  {
+   "code": "TrA",
+   "nom": "Triangle austral",
+   "alias": [
+    "Triangulum Australe"
+   ],
+   "domaine": "ciel",
+   "detail": "Triangulum Australe · étoile la plus brillante : Atria"
+  },
+  {
+   "code": "Tel",
+   "nom": "Télescope",
+   "alias": [
+    "Telescopium"
+   ],
+   "domaine": "ciel",
+   "detail": "Telescopium · étoile la plus brillante : α Telescopii"
+  },
+  {
+   "code": "Aqr",
+   "nom": "Verseau",
+   "alias": [
+    "Aquarius"
+   ],
+   "domaine": "ciel",
+   "detail": "Aquarius · étoile la plus brillante : Sadalsuud"
+  },
+  {
+   "code": "Vir",
+   "nom": "Vierge",
+   "alias": [
+    "Virgo"
+   ],
+   "domaine": "ciel",
+   "detail": "Virgo · étoile la plus brillante : Spica"
+  },
+  {
+   "code": "Vel",
+   "nom": "Voiles",
+   "alias": [
+    "Vela"
+   ],
+   "domaine": "ciel",
+   "detail": "Vela · étoile la plus brillante : Regor"
+  },
+  {
+   "code": "Sct",
+   "nom": "Écu de Sobieski",
+   "alias": [
+    "Scutum",
+    "Écu"
+   ],
+   "domaine": "ciel",
+   "detail": "Scutum · étoile la plus brillante : α Scuti"
+  },
+  {
+   "code": "Eri",
+   "nom": "Éridan",
+   "alias": [
+    "Eridanus"
+   ],
+   "domaine": "ciel",
+   "detail": "Eridanus · étoile la plus brillante : Achernar"
+  }
+ ]
+}

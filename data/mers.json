@@ -1,0 +1,1367 @@
+{
+ "id": "mers",
+ "titre": "Mers et océans (OHI)",
+ "items": [
+  {
+   "code": "m001",
+   "nom": "Mer Adriatique",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    19.37,
+    39.76
+   ],
+   "detail": "OHI : Adriatic Sea"
+  },
+  {
+   "code": "m002",
+   "nom": "Mer Égée",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    25.75,
+    37.11
+   ],
+   "detail": "OHI : Aegean Sea"
+  },
+  {
+   "code": "m003",
+   "nom": "Mer d'Alboran",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -3.08,
+    36.09
+   ],
+   "detail": "OHI : Alboran Sea"
+  },
+  {
+   "code": "m004",
+   "nom": "Mer d'Andaman",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    94.99,
+    10.16
+   ],
+   "detail": "OHI : Andaman or Burma Sea"
+  },
+  {
+   "code": "m005",
+   "nom": "Mer d'Arabie",
+   "alias": [
+    "Mer d'Oman"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    63.84,
+    12.32
+   ],
+   "detail": "OHI : Arabian Sea"
+  },
+  {
+   "code": "m006",
+   "nom": "Mer d'Arafura",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    135.66,
+    -8.62
+   ],
+   "detail": "OHI : Arafura Sea"
+  },
+  {
+   "code": "m007",
+   "nom": "Océan Arctique",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "océan",
+   "gen": "ocean",
+   "geo": [
+    -5.17,
+    83.91
+   ],
+   "detail": "OHI : Arctic Ocean"
+  },
+  {
+   "code": "m008",
+   "nom": "Baie de Baffin",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "baie",
+   "geo": [
+    -64.1,
+    75.57
+   ],
+   "detail": "OHI : Baffin Bay"
+  },
+  {
+   "code": "m009",
+   "nom": "Mer des Baléares",
+   "alias": [
+    "Mer Ibérique"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    2.47,
+    39.98
+   ],
+   "detail": "OHI : Balearic (Iberian Sea)"
+  },
+  {
+   "code": "m010",
+   "nom": "Mer de Bali",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    115.82,
+    -8.04
+   ],
+   "detail": "OHI : Bali Sea"
+  },
+  {
+   "code": "m011",
+   "nom": "Mer Baltique",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    18.0,
+    56.83
+   ],
+   "detail": "OHI : Baltic Sea"
+  },
+  {
+   "code": "m012",
+   "nom": "Mer de Banda",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    126.49,
+    -5.55
+   ],
+   "detail": "OHI : Banda Sea"
+  },
+  {
+   "code": "m013",
+   "nom": "Mer de Barents",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    42.12,
+    75.55
+   ],
+   "detail": "OHI : Barentsz Sea"
+  },
+  {
+   "code": "m014",
+   "nom": "Détroit de Bass",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "detroit",
+   "geo": [
+    146.57,
+    -39.4
+   ],
+   "detail": "OHI : Bass Strait"
+  },
+  {
+   "code": "m015",
+   "nom": "Golfe du Bengale",
+   "alias": [
+    "Baie du Bengale"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    87.09,
+    12.78
+   ],
+   "detail": "OHI : Bay of Bengal"
+  },
+  {
+   "code": "m016",
+   "nom": "Golfe de Gascogne",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    -5.9,
+    46.02
+   ],
+   "detail": "OHI : Bay of Biscay"
+  },
+  {
+   "code": "m017",
+   "nom": "Baie de Fundy",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "baie",
+   "geo": [
+    -66.25,
+    44.73
+   ],
+   "detail": "OHI : Bay of Fundy"
+  },
+  {
+   "code": "m018",
+   "nom": "Mer de Beaufort",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -135.81,
+    72.76
+   ],
+   "detail": "OHI : Beaufort Sea"
+  },
+  {
+   "code": "m019",
+   "nom": "Mer de Béring",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -170.2,
+    58.56
+   ],
+   "detail": "OHI : Bering Sea"
+  },
+  {
+   "code": "m020",
+   "nom": "Mer de Bismarck",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    147.69,
+    -3.75
+   ],
+   "detail": "OHI : Bismarck Sea"
+  },
+  {
+   "code": "m021",
+   "nom": "Mer Noire",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    33.13,
+    43.33
+   ],
+   "detail": "OHI : Black Sea"
+  },
+  {
+   "code": "m022",
+   "nom": "Canal de Bristol",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "canal",
+   "geo": [
+    -4.33,
+    51.41
+   ],
+   "detail": "OHI : Bristol Channel"
+  },
+  {
+   "code": "m023",
+   "nom": "Mer des Caraïbes",
+   "alias": [
+    "Mer des Antilles"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -72.97,
+    15.21
+   ],
+   "detail": "OHI : Caribbean Sea"
+  },
+  {
+   "code": "m024",
+   "nom": "Mer de Célèbes",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    122.28,
+    3.7
+   ],
+   "detail": "OHI : Celebes Sea"
+  },
+  {
+   "code": "m025",
+   "nom": "Mer Celtique",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -6.59,
+    49.87
+   ],
+   "detail": "OHI : Celtic Sea"
+  },
+  {
+   "code": "m026",
+   "nom": "Mer de Seram",
+   "alias": [
+    "Mer de Céram"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    130.02,
+    -2.81
+   ],
+   "detail": "OHI : Ceram Sea"
+  },
+  {
+   "code": "m027",
+   "nom": "Mer des Tchouktches",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -168.03,
+    69.49
+   ],
+   "detail": "OHI : Chukchi Sea"
+  },
+  {
+   "code": "m028",
+   "nom": "Mer de Corail",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    156.86,
+    -18.73
+   ],
+   "detail": "OHI : Coral Sea"
+  },
+  {
+   "code": "m029",
+   "nom": "Détroit de Davis",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "detroit",
+   "geo": [
+    -57.24,
+    64.78
+   ],
+   "detail": "OHI : Davis Strait"
+  },
+  {
+   "code": "m030",
+   "nom": "Mer de Sibérie orientale",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    158.25,
+    73.53
+   ],
+   "detail": "OHI : East Siberian Sea"
+  },
+  {
+   "code": "m031",
+   "nom": "Mer de Chine orientale",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    124.84,
+    29.27
+   ],
+   "detail": "OHI : Eastern China Sea"
+  },
+  {
+   "code": "m032",
+   "nom": "Manche",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": null,
+   "geo": [
+    -2.52,
+    50.0
+   ],
+   "detail": "OHI : English Channel"
+  },
+  {
+   "code": "m033",
+   "nom": "Mer de Florès",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    119.58,
+    -7.37
+   ],
+   "detail": "OHI : Flores Sea"
+  },
+  {
+   "code": "m034",
+   "nom": "Grande Baie australienne",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": null,
+   "geo": [
+    132.95,
+    -36.92
+   ],
+   "detail": "OHI : Great Australian Bight"
+  },
+  {
+   "code": "m035",
+   "nom": "Mer du Groenland",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -9.62,
+    75.2
+   ],
+   "detail": "OHI : Greenland Sea"
+  },
+  {
+   "code": "m036",
+   "nom": "Golfe d'Aden",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    48.53,
+    13.19
+   ],
+   "detail": "OHI : Gulf of Aden"
+  },
+  {
+   "code": "m037",
+   "nom": "Golfe d'Alaska",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    -154.41,
+    55.9
+   ],
+   "detail": "OHI : Gulf of Alaska"
+  },
+  {
+   "code": "m038",
+   "nom": "Golfe d'Aqaba",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    34.62,
+    28.41
+   ],
+   "detail": "OHI : Gulf of Aqaba"
+  },
+  {
+   "code": "m039",
+   "nom": "Golfe de Bone",
+   "alias": [
+    "Golfe de Boni"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    121.4,
+    -5.19
+   ],
+   "detail": "OHI : Gulf of Boni"
+  },
+  {
+   "code": "m040",
+   "nom": "Golfe de Botnie",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    20.11,
+    61.39
+   ],
+   "detail": "OHI : Gulf of Bothnia"
+  },
+  {
+   "code": "m041",
+   "nom": "Golfe de Californie",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    -109.62,
+    25.16
+   ],
+   "detail": "OHI : Gulf of California"
+  },
+  {
+   "code": "m042",
+   "nom": "Golfe de Finlande",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    27.71,
+    60.2
+   ],
+   "detail": "OHI : Gulf of Finland"
+  },
+  {
+   "code": "m043",
+   "nom": "Golfe de Guinée",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    1.54,
+    3.39
+   ],
+   "detail": "OHI : Gulf of Guinea"
+  },
+  {
+   "code": "m044",
+   "nom": "Golfe du Mexique",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    -89.18,
+    25.13
+   ],
+   "detail": "OHI : Gulf of Mexico"
+  },
+  {
+   "code": "m045",
+   "nom": "Golfe d'Oman",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    59.33,
+    24.5
+   ],
+   "detail": "OHI : Gulf of Oman"
+  },
+  {
+   "code": "m046",
+   "nom": "Golfe de Riga",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    22.76,
+    58.73
+   ],
+   "detail": "OHI : Gulf of Riga"
+  },
+  {
+   "code": "m047",
+   "nom": "Golfe du Saint-Laurent",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    -57.35,
+    48.28
+   ],
+   "detail": "OHI : Gulf of St. Lawrence"
+  },
+  {
+   "code": "m048",
+   "nom": "Golfe de Suez",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    33.48,
+    28.42
+   ],
+   "detail": "OHI : Gulf of Suez"
+  },
+  {
+   "code": "m049",
+   "nom": "Golfe de Thaïlande",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    102.03,
+    9.5
+   ],
+   "detail": "OHI : Gulf of Thailand"
+  },
+  {
+   "code": "m050",
+   "nom": "Golfe de Tomini",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    121.89,
+    -0.34
+   ],
+   "detail": "OHI : Gulf of Tomini"
+  },
+  {
+   "code": "m051",
+   "nom": "Mer d'Halmahera",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    129.05,
+    0.11
+   ],
+   "detail": "OHI : Halmahera Sea"
+  },
+  {
+   "code": "m052",
+   "nom": "Baie d'Hudson",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "baie",
+   "geo": [
+    -85.5,
+    59.92
+   ],
+   "detail": "OHI : Hudson Bay"
+  },
+  {
+   "code": "m053",
+   "nom": "Détroit d'Hudson",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "detroit",
+   "geo": [
+    -72.85,
+    62.43
+   ],
+   "detail": "OHI : Hudson Strait"
+  },
+  {
+   "code": "m054",
+   "nom": "Océan Indien",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "océan",
+   "gen": "ocean",
+   "geo": [
+    78.9,
+    -32.62
+   ],
+   "detail": "OHI : Indian Ocean"
+  },
+  {
+   "code": "m055",
+   "nom": "Mers intérieures d'Écosse",
+   "alias": [
+    "Mer des Hébrides"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mers",
+   "geo": [
+    -6.27,
+    56.42
+   ],
+   "detail": "OHI : Inner Seas off the West Coast of Scotland"
+  },
+  {
+   "code": "m056",
+   "nom": "Mer Ionienne",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    18.68,
+    37.86
+   ],
+   "detail": "OHI : Ionian Sea"
+  },
+  {
+   "code": "m057",
+   "nom": "Mer d'Irlande",
+   "alias": [
+    "Canal Saint-Georges"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -5.53,
+    53.12
+   ],
+   "detail": "OHI : Irish Sea and St. George's Channel"
+  },
+  {
+   "code": "m058",
+   "nom": "Mer du Japon",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    135.4,
+    41.2
+   ],
+   "detail": "OHI : Japan Sea"
+  },
+  {
+   "code": "m059",
+   "nom": "Mer de Java",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    111.49,
+    -5.31
+   ],
+   "detail": "OHI : Java Sea"
+  },
+  {
+   "code": "m060",
+   "nom": "Mer de Kara",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    78.72,
+    76.45
+   ],
+   "detail": "OHI : Kara Sea"
+  },
+  {
+   "code": "m061",
+   "nom": "Cattégat",
+   "alias": [
+    "Kattegat"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": null,
+   "geo": [
+    10.99,
+    56.21
+   ],
+   "detail": "OHI : Kattegat"
+  },
+  {
+   "code": "m062",
+   "nom": "Mer du Labrador",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -53.23,
+    56.0
+   ],
+   "detail": "OHI : Labrador Sea"
+  },
+  {
+   "code": "m063",
+   "nom": "Mer des Laquedives",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    76.15,
+    6.95
+   ],
+   "detail": "OHI : Laccadive Sea"
+  },
+  {
+   "code": "m064",
+   "nom": "Mer de Laptev",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    120.79,
+    76.98
+   ],
+   "detail": "OHI : Laptev Sea"
+  },
+  {
+   "code": "m065",
+   "nom": "Mer Ligurienne",
+   "alias": [
+    "Mer de Ligurie"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    8.93,
+    43.55
+   ],
+   "detail": "OHI : Ligurian Sea"
+  },
+  {
+   "code": "m066",
+   "nom": "Mer de Lincoln",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    -55.07,
+    82.97
+   ],
+   "detail": "OHI : Lincoln Sea"
+  },
+  {
+   "code": "m067",
+   "nom": "Détroit de Makassar",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "detroit",
+   "geo": [
+    118.26,
+    -2.32
+   ],
+   "detail": "OHI : Makassar Strait"
+  },
+  {
+   "code": "m068",
+   "nom": "Détroit de Malacca",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "detroit",
+   "geo": [
+    99.42,
+    4.47
+   ],
+   "detail": "OHI : Malacca Strait"
+  },
+  {
+   "code": "m069",
+   "nom": "Méditerranée orientale",
+   "alias": [
+    "Méditerranée",
+    "Mer Méditerranée"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": null,
+   "geo": [
+    23.78,
+    34.36
+   ],
+   "detail": "OHI : Mediterranean Sea - Eastern Basin"
+  },
+  {
+   "code": "m070",
+   "nom": "Méditerranée occidentale",
+   "alias": [
+    "Méditerranée",
+    "Mer Méditerranée"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": null,
+   "geo": [
+    5.23,
+    38.98
+   ],
+   "detail": "OHI : Mediterranean Sea - Western Basin"
+  },
+  {
+   "code": "m071",
+   "nom": "Mer des Moluques",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    126.18,
+    0.64
+   ],
+   "detail": "OHI : Molukka Sea"
+  },
+  {
+   "code": "m072",
+   "nom": "Canal du Mozambique",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "canal",
+   "geo": [
+    41.65,
+    -19.1
+   ],
+   "detail": "OHI : Mozambique Channel"
+  },
+  {
+   "code": "m073",
+   "nom": "Océan Atlantique Nord",
+   "alias": [
+    "Atlantique Nord",
+    "Océan Atlantique",
+    "Atlantique"
+   ],
+   "domaine": "physique",
+   "categorie": "océan",
+   "gen": "ocean",
+   "geo": [
+    -37.41,
+    31.48
+   ],
+   "detail": "OHI : North Atlantic Ocean"
+  },
+  {
+   "code": "m074",
+   "nom": "Océan Pacifique Nord",
+   "alias": [
+    "Pacifique Nord",
+    "Océan Pacifique",
+    "Pacifique"
+   ],
+   "domaine": "physique",
+   "categorie": "océan",
+   "gen": "ocean",
+   "geo": [
+    -141.51,
+    23.73
+   ],
+   "detail": "OHI : North Pacific Ocean"
+  },
+  {
+   "code": "m075",
+   "nom": "Mer du Nord",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    3.13,
+    56.47
+   ],
+   "detail": "OHI : North Sea"
+  },
+  {
+   "code": "m076",
+   "nom": "Mer de Norvège",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    5.54,
+    68.51
+   ],
+   "detail": "OHI : Norwegian Sea"
+  },
+  {
+   "code": "m077",
+   "nom": "Golfe Persique",
+   "alias": [
+    "Golfe arabo-persique"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "golfe",
+   "geo": [
+    53.3,
+    26.0
+   ],
+   "detail": "OHI : Persian Gulf"
+  },
+  {
+   "code": "m078",
+   "nom": "Mer des Philippines",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    132.9,
+    18.7
+   ],
+   "detail": "OHI : Philippine Sea"
+  },
+  {
+   "code": "m079",
+   "nom": "Mer Rouge",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    37.8,
+    21.75
+   ],
+   "detail": "OHI : Red Sea"
+  },
+  {
+   "code": "m080",
+   "nom": "Río de la Plata",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": null,
+   "geo": [
+    -56.28,
+    -35.23
+   ],
+   "detail": "OHI : Rio de La Plata"
+  },
+  {
+   "code": "m081",
+   "nom": "Mer de Savu",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    121.88,
+    -9.34
+   ],
+   "detail": "OHI : Savu Sea"
+  },
+  {
+   "code": "m082",
+   "nom": "Mer d'Azov",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    36.26,
+    46.1
+   ],
+   "detail": "OHI : Sea of Azov"
+  },
+  {
+   "code": "m083",
+   "nom": "Mer de Marmara",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    27.52,
+    40.57
+   ],
+   "detail": "OHI : Sea of Marmara"
+  },
+  {
+   "code": "m084",
+   "nom": "Mer d'Okhotsk",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    148.29,
+    51.85
+   ],
+   "detail": "OHI : Sea of Okhotsk"
+  },
+  {
+   "code": "m085",
+   "nom": "Mer intérieure de Seto",
+   "alias": [
+    "Seto Naikai"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    132.92,
+    34.05
+   ],
+   "detail": "OHI : Seto Naikai or Inland Sea"
+  },
+  {
+   "code": "m086",
+   "nom": "Détroit de Singapour",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "detroit",
+   "geo": [
+    103.99,
+    1.23
+   ],
+   "detail": "OHI : Singapore Strait"
+  },
+  {
+   "code": "m087",
+   "nom": "Skagerrak",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": null,
+   "geo": [
+    9.18,
+    57.71
+   ],
+   "detail": "OHI : Skagerrak"
+  },
+  {
+   "code": "m088",
+   "nom": "Mer des Salomon",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    154.49,
+    -8.57
+   ],
+   "detail": "OHI : Solomon Sea"
+  },
+  {
+   "code": "m089",
+   "nom": "Océan Atlantique Sud",
+   "alias": [
+    "Atlantique Sud",
+    "Océan Atlantique",
+    "Atlantique"
+   ],
+   "domaine": "physique",
+   "categorie": "océan",
+   "gen": "ocean",
+   "geo": [
+    -18.68,
+    -33.68
+   ],
+   "detail": "OHI : South Atlantic Ocean"
+  },
+  {
+   "code": "m090",
+   "nom": "Mer de Chine méridionale",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    111.97,
+    11.49
+   ],
+   "detail": "OHI : South China Sea"
+  },
+  {
+   "code": "m091",
+   "nom": "Océan Pacifique Sud",
+   "alias": [
+    "Pacifique Sud",
+    "Océan Pacifique",
+    "Pacifique"
+   ],
+   "domaine": "physique",
+   "categorie": "océan",
+   "gen": "ocean",
+   "geo": [
+    -126.4,
+    -30.44
+   ],
+   "detail": "OHI : South Pacific Ocean"
+  },
+  {
+   "code": "m092",
+   "nom": "Océan Austral",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "océan",
+   "gen": "ocean",
+   "geo": [
+    -31.7,
+    -66.37
+   ],
+   "detail": "OHI : Southern Ocean"
+  },
+  {
+   "code": "m093",
+   "nom": "Détroit de Gibraltar",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "detroit",
+   "geo": [
+    -5.67,
+    36.0
+   ],
+   "detail": "OHI : Strait of Gibraltar"
+  },
+  {
+   "code": "m094",
+   "nom": "Mer de Sulu",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    120.27,
+    8.76
+   ],
+   "detail": "OHI : Sulu Sea"
+  },
+  {
+   "code": "m095",
+   "nom": "Mer de Tasman",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    161.16,
+    -39.67
+   ],
+   "detail": "OHI : Tasman Sea"
+  },
+  {
+   "code": "m096",
+   "nom": "Eaux côtières de l'Alaska et de la Colombie-Britannique",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "eaux",
+   "geo": [
+    -130.7,
+    53.73
+   ],
+   "detail": "OHI : The Coastal Waters of Southeast Alaska and British Columbia"
+  },
+  {
+   "code": "m097",
+   "nom": "Passage du Nord-Ouest",
+   "alias": [
+    "Passages du Nord-Ouest"
+   ],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "passage",
+   "geo": [
+    -98.37,
+    73.07
+   ],
+   "detail": "OHI : The Northwestern Passages"
+  },
+  {
+   "code": "m098",
+   "nom": "Mer de Timor",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    127.67,
+    -10.74
+   ],
+   "detail": "OHI : Timor Sea"
+  },
+  {
+   "code": "m099",
+   "nom": "Mer Tyrrhénienne",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    11.46,
+    40.17
+   ],
+   "detail": "OHI : Tyrrhenian Sea"
+  },
+  {
+   "code": "m100",
+   "nom": "Mer Blanche",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    41.77,
+    67.78
+   ],
+   "detail": "OHI : White Sea"
+  },
+  {
+   "code": "m101",
+   "nom": "Mer Jaune",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "mer",
+   "gen": "mer",
+   "geo": [
+    124.34,
+    33.72
+   ],
+   "detail": "OHI : Yellow Sea"
+  }
+ ]
+}

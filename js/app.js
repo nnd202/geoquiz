@@ -1,14 +1,12 @@
-// Accueil : récents, sections repliables de quiz compacts, panneau de détail, quiz personnalisé, réglages.
-import { $, el, fmt } from './core/dom.js';
+// Accueil : stats globales, sections repliables, panneau d'options par quiz, réglages et sauvegarde.
+import { $, el } from './core/dom.js';
 import { prepare } from './core/text.js';
-import { store, save, bestOf, attemptsOf, exportText, importText } from './core/store.js';
-import { Game, END, onHome, wireGameControls } from './core/game.js';
-import { MECHANICS } from './mechanics/index.js';
+import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, snooze } from './core/store.js';
+import { Game, END, fmtLong, onHome, wireGameControls } from './core/game.js';
+import { saveNow, folderSupported, folderState, chooseFolder, forgetFolder, writeToFolder } from './core/backup.js';
 
-const SUPPORT = { map: 'Carte', grid: 'Grille' };
 const cache = {};
 let CAT = null;
-store.ui ||= { closed: [] };
 
 async function loadJeu(key) {
   if (cache[key]) return cache[key];
@@ -21,79 +19,65 @@ async function loadJeu(key) {
   return (cache[key] = { def, data, mapSvg });
 }
 
-// Entrée du catalogue → réglages de partie.
-function toCfg(q) {
-  const def = CAT.jeux[q.jeu];
-  const sens = q.mecanique === 'clue' ? (def.sens.find(s => s.demande === q.demande) || def.sens[0]) : null;
-  return { jeu: q.jeu, support: q.support, mech: q.mecanique, ask: sens?.demande ?? null, answer: sens?.reponse ?? null, n: q.n || 0, limit: q.chrono || 0 };
+/* ---------- Quiz et options ----------
+ * Un quiz du catalogue = un jeu + un support. Ses options (tirage, mode clic) donnent la variante jouée,
+ * et chaque variante a ses propres stats et records. */
+const quizKey = q => `${q.jeu}|${q.support || 'map'}`;
+const canRandom = q => CAT.jeux[q.jeu].nb > CAT.options.seuilHasard;
+function optsOf(q) {
+  const o = store.ui.opts[quizKey(q)] || {};
+  return { random: !!o.random && canRandom(q), click: !!o.click };
 }
-
-// Identifiant stable d'un quiz pour les stats (compatible avec le prototype pour les départements).
-function quizId(c) {
-  const def = CAT.jeux[c.jeu];
-  let clue = '-';
-  if (c.mech === 'clue') {
-    clue = def.prefixe === 'dep' && c.ask === 'code' && c.answer === 'nom' ? 'num2name'
-      : def.prefixe === 'dep' && c.ask === 'nom' && c.answer === 'code' ? 'name2num'
-        : `${c.ask}>${c.answer}`;
-  }
-  return [def.prefixe, c.support, c.mech, clue, c.n, c.limit].join('|');
+function cfgOf(q, o = optsOf(q)) {
+  return { jeu: q.jeu, support: q.support || 'map', mech: o.click ? 'tap' : 'all', n: o.random ? CAT.options.hasard : 0 };
 }
+const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
+const optsLabel = o => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', o.click ? 'clic' : 'saisie'].join(' · ');
 
-function tagsOf(c) {
-  const def = CAT.jeux[c.jeu];
-  const sens = def.sens.find(s => s.demande === c.ask && s.reponse === c.answer);
-  return [SUPPORT[c.support], MECHANICS[c.mech].label, ...(c.mech === 'clue' && sens ? [sens.label] : []),
-    c.n ? `${c.n} au hasard` : 'Tous', c.limit ? `${c.limit / 60} min` : 'Illimité'];
-}
-
-async function play(cfg, name, study = false) {
-  const { def, data, mapSvg } = await loadJeu(cfg.jeu);
+async function play(q, study = false) {
+  const cfg = cfgOf(q);
+  const { def, data, mapSvg } = await loadJeu(q.jeu);
   closeSheet();
-  new Game({ cfg, name, id: quizId(cfg), def, data, mapSvg, study }).start();
-}
-
-// Tous les quiz du catalogue, indexés par identifiant.
-function allQuiz() {
-  const out = new Map();
-  for (const s of CAT.sections) for (const q of s.quiz) { const cfg = toCfg(q); out.set(quizId(cfg), { name: q.nom, cfg }); }
-  return out;
+  new Game({ cfg, name: q.nom, id: variantId(cfg), def, data, mapSvg, study }).start();
 }
 
 /* ---------- Accueil ---------- */
 function renderHome() {
-  $('h-att').textContent = store.attempts.length;
-  const today = new Date().toDateString();
-  $('h-today').textContent = store.attempts.filter(x => new Date(x.at).toDateString() === today).length;
-  renderRecent();
+  const g = globalStats();
+  const tiles = [
+    [String(g.current), g.current > 1 ? 'jours de suite' : 'jour de suite', g.playedToday ? '' : g.current ? 'à prolonger aujourd’hui' : ''],
+    [String(g.longest), 'record de série', ''],
+    [String(g.today), "aujourd'hui", ''],
+    [String(g.total), 'quiz au total', ''],
+    [fmtTotal(g.totalMs), 'temps cumulé', ''],
+  ];
+  const box = $('stats');
+  box.textContent = '';
+  for (const [v, k, hint] of tiles) {
+    const d = el('div', 'stat');
+    d.append(el('b', 'num', v), el('span', null, k));
+    if (hint) d.append(el('em', null, hint));
+    box.append(d);
+  }
   renderSections();
   $('p-val').textContent = store.pauses;
+  $('r-val').textContent = store.reminderDays ? `${store.reminderDays} j` : 'jamais';
+  $('last-save').textContent = store.lastExport
+    ? `Dernière sauvegarde : ${new Date(store.lastExport).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })}.`
+    : "Aucune sauvegarde pour l'instant.";
+  renderFolder();
+  maybeRemind();
 }
 
-// Les 4 derniers quiz joués, à un toucher de l'ouverture.
-function renderRecent() {
-  const known = allQuiz();
-  const box = $('recent');
-  box.textContent = '';
-  const seen = new Set();
-  for (const a of store.attempts.slice().reverse()) {
-    if (seen.has(a.quiz) || !known.has(a.quiz)) continue;
-    seen.add(a.quiz);
-    const q = known.get(a.quiz);
-    const chip = el('button', 'chip');
-    chip.append(el('span', 'chip-name', q.name), el('span', 'chip-score num', `${a.found}/${a.total} · ${fmt(a.ms)}`));
-    chip.addEventListener('click', () => play(q.cfg, q.name));
-    chip.setAttribute('aria-label', `Rejouer ${q.name}`);
-    box.append(chip);
-    if (seen.size === 4) break;
-  }
-  $('recent-wrap').hidden = !seen.size;
+function fmtTotal(ms) {
+  const m = Math.round(ms / 60000);
+  return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, '0')}`;
 }
 
 function renderSections() {
   const host = $('sections');
   host.textContent = '';
-  CAT.sections.forEach(sec => {
+  for (const sec of CAT.sections) {
     const d = el('details', 'section');
     d.open = !store.ui.closed.includes(sec.titre);
     d.addEventListener('toggle', () => {
@@ -105,135 +89,145 @@ function renderSections() {
     sum.append(el('span', 'sec-title', sec.titre), el('span', 'sec-count num', String(sec.quiz.length)));
     d.append(sum);
     const list = el('div', 'rows');
-    for (const q of sec.quiz) list.append(quizRow(q.nom, toCfg(q)));
+    for (const q of sec.quiz) list.append(quizRow(q));
     d.append(list);
     host.append(d);
-  });
+  }
 }
 
-function quizRow(name, cfg) {
+function quizRow(q) {
+  const def = CAT.jeux[q.jeu];
+  const o = optsOf(q);
   const row = el('div', 'qrow');
   const main = el('button', 'qmain');
-  main.append(el('span', 'qname', name), el('span', 'qmeta', tagsOf(cfg).join(' · ')));
-  main.addEventListener('click', () => openSheet(name, cfg));
-  const last = attemptsOf(quizId(cfg)).at(-1);
-  const score = el('span', 'qscore num', last ? `${last.found}/${last.total}` : '');
+  const meta = [`${def.nb}`, q.support === 'grid' ? 'grille' : 'carte', optsLabel(o)].join(' · ');
+  main.append(el('span', 'qname', q.nom), el('span', 'qmeta', meta));
+  main.addEventListener('click', () => openSheet(q));
+  const best = bestOf(variantId(cfgOf(q, o)));
+  const score = el('span', 'qscore num', best?.fastest ? fmtLong(best.fastest) : best ? `${best.best.found}/${best.best.total}` : '');
+  if (best?.fastest) score.title = 'Meilleur temps sur cette variante';
   const go = el('button', 'btn small', 'Jouer');
-  go.addEventListener('click', () => play(cfg, name));
+  go.addEventListener('click', () => play(q));
   row.append(main, score, go);
   return row;
 }
 
-/* ---------- Panneau de détail d'un quiz ---------- */
-function openSheet(name, cfg) {
+/* ---------- Panneau d'un quiz : options, stats de la variante, historique ---------- */
+function openSheet(q) {
   closeSheet();
-  const id = quizId(cfg);
+  const def = CAT.jeux[q.jeu];
   const veil = el('div', 'veil'); veil.id = 'veil';
   veil.addEventListener('click', e => { if (e.target === veil) closeSheet(); });
   const s = el('section', 'qsheet');
   s.setAttribute('role', 'dialog');
-  s.setAttribute('aria-label', name);
-  s.append(el('h3', null, name));
-  const t = el('div', 'tags');
-  tagsOf(cfg).forEach(x => t.append(el('span', 'tag', x)));
-  s.append(t);
-  const b = bestOf(id);
-  const hist = attemptsOf(id).slice().reverse();
-  const big = el('div', 'big');
-  [[String(hist.length), 'Tentatives'], [b ? `${b.best.found}/${b.best.total}` : '–', 'Meilleur'], [b?.fastest ? fmt(b.fastest) : '–', 'Record']]
-    .forEach(([v, k]) => { const d = el('div'); d.append(el('b', null, v), el('span', null, k)); big.append(d); });
-  s.append(big);
-  const r = el('div', 'row');
-  const go = el('button', 'btn', 'Jouer'); go.addEventListener('click', () => play(cfg, name));
-  const st = el('button', 'btn ghost', 'Étudier'); st.addEventListener('click', () => play(cfg, name, true));
-  const x = el('button', 'btn ghost', 'Fermer'); x.addEventListener('click', closeSheet);
-  r.append(go, st, x);
-  s.append(r);
-  if (hist.length) {
-    const tw = el('div', 'tablewrap'), tb = el('table', 'hist');
-    tb.innerHTML = '<thead><tr><th>Date</th><th>Heure</th><th>Score</th><th>Durée</th><th>Fin</th><th>Pauses</th></tr></thead>';
-    const body = el('tbody');
-    hist.slice(0, 20).forEach(h => {
-      const d = new Date(h.at), tr = el('tr');
-      [d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' }), d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }),
-        `${h.found}/${h.total}`, fmt(h.ms), END[h.end] || h.end, h.pauses ?? 0].forEach(v => tr.append(el('td', null, String(v))));
-      body.append(tr);
-    });
-    tb.append(body); tw.append(tb); s.append(tw);
-  } else s.append(el('p', 'note', 'Pas encore de tentative.'));
+  s.setAttribute('aria-label', q.nom);
   veil.append(s);
   document.body.append(veil);
-  go.focus();
+
+  const draw = () => {
+    s.textContent = '';
+    const o = optsOf(q);
+    s.append(el('h3', null, q.nom));
+    s.append(el('p', 'note', `${def.nb} éléments · ${q.support === 'grid' ? 'grille' : 'carte'}`));
+    const setOpt = (k, v) => { store.ui.opts[quizKey(q)] = { ...optsOf(q), [k]: v }; save(); draw(); renderSections(); };
+    const seg = (label, key, choices) => {
+      const f = el('div', 'field');
+      f.append(el('span', null, label));
+      const g = el('div', 'seg');
+      for (const [v, txt] of choices) {
+        const b = el('button', null, txt);
+        b.setAttribute('aria-pressed', String(o[key] === v));
+        b.addEventListener('click', () => setOpt(key, v));
+        g.append(b);
+      }
+      f.append(g);
+      s.append(f);
+    };
+    if (canRandom(q)) seg('Sélection', 'random', [[false, `Tous (${def.nb})`], [true, `${CAT.options.hasard} au hasard`]]);
+    seg('Réponse', 'click', [[false, 'Je tape les noms'], [true, q.support === 'grid' ? 'Je touche la case' : 'Je touche la carte']]);
+
+    const id = variantId(cfgOf(q, o));
+    const b = bestOf(id);
+    const hist = attemptsOf(id).slice().reverse();
+    const big = el('div', 'big');
+    [[String(hist.length), 'Tentatives'], [b ? `${b.best.found}/${b.best.total}` : '–', 'Meilleur score'], [b?.fastest ? fmtLong(b.fastest) : '–', 'Meilleur temps']]
+      .forEach(([v, k]) => { const d = el('div'); d.append(el('b', null, v), el('span', null, k)); big.append(d); });
+    s.append(big);
+
+    const r = el('div', 'row');
+    const go = el('button', 'btn', 'Jouer'); go.addEventListener('click', () => play(q));
+    const st = el('button', 'btn ghost', 'Étudier'); st.addEventListener('click', () => play(q, true));
+    const x = el('button', 'btn ghost', 'Fermer'); x.addEventListener('click', closeSheet);
+    r.append(go, st, x);
+    s.append(r);
+    if (hist.length) {
+      s.append(el('h2', null, `Historique · ${optsLabel(o)}`));
+      const tw = el('div', 'tablewrap'), tb = el('table', 'hist');
+      tb.innerHTML = '<thead><tr><th>Date</th><th>Heure</th><th>Score</th><th>Durée</th><th>Fin</th><th>Pauses</th></tr></thead>';
+      const body = el('tbody');
+      hist.slice(0, 30).forEach(h => {
+        const d = new Date(h.at), tr = el('tr');
+        [d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' }), d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }),
+          `${h.found}/${h.total}`, fmtLong(h.ms), END[h.end] || h.end, h.pauses ?? 0].forEach(v => tr.append(el('td', null, String(v))));
+        body.append(tr);
+      });
+      tb.append(body); tw.append(tb); s.append(tw);
+    } else s.append(el('p', 'note', 'Pas encore de tentative avec ces options.'));
+    go.focus();
+  };
+  draw();
 }
 function closeSheet() { $('veil')?.remove(); }
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeSheet(); $('remind')?.remove(); } });
 
-/* ---------- Quiz personnalisé ---------- */
-const custom = { jeu: 'departements', support: 'map', mech: 'clue', ask: 'code', answer: 'nom', n: 10, limit: 0 };
-
-function renderBuilder() {
-  const b = $('builder');
-  b.textContent = '';
-  const def = CAT.jeux[custom.jeu];
-  if (!def.grille && custom.support === 'grid') custom.support = 'map';
-  if (custom.support === 'grid' && custom.ask === 'zone') custom.ask = null;
-  if (!def.sens.some(s => s.demande === custom.ask && s.reponse === custom.answer)) {
-    const s0 = def.sens.find(s => custom.support !== 'grid' || s.demande !== 'zone') || def.sens[0];
-    custom.ask = s0.demande; custom.answer = s0.reponse;
-  }
-  const field = (label, key, opts, isOn, set, disabled = () => false) => {
-    const f = el('div', 'field');
-    f.append(el('span', null, label));
-    const s = el('div', 'seg');
-    opts.forEach(([v, txt], i) => {
-      const btn = el('button', null, txt);
-      btn.id = `b-${key}-${i}`;
-      btn.setAttribute('aria-pressed', String(isOn(v)));
-      btn.disabled = disabled(v);
-      btn.addEventListener('click', () => { set(v); renderBuilder(); });
-      s.append(btn);
-    });
-    f.append(s); b.append(f);
-  };
-  const simple = key => [v => custom[key] === v, v => { custom[key] = v; }];
-  field('Jeu', 'jeu', Object.entries(CAT.jeux).map(([k, d]) => [k, d.titre]), ...simple('jeu'));
-  field('Support', 'support', Object.entries(SUPPORT), ...simple('support'), v => v === 'grid' && !def.grille);
-  field('Mécanique', 'mech', Object.entries(MECHANICS).map(([k, m]) => [k, m.label]), ...simple('mech'));
-  field("Indice", 'sens', def.sens.map(s => [s, s.label]),
-    s => custom.ask === s.demande && custom.answer === s.reponse,
-    s => { custom.ask = s.demande; custom.answer = s.reponse; },
-    s => custom.mech !== 'clue' || (custom.support === 'grid' && s.demande === 'zone'));
-  field('Sélection', 'n', [[0, 'Tous'], [10, '10 au hasard'], [20, '20'], [30, '30']], ...simple('n'));
-  field('Chrono', 'limit', [[0, 'Illimité'], [120, '2 min'], [300, '5 min'], [600, '10 min'], [900, '15 min']], ...simple('limit'));
+/* ---------- Rappel de sauvegarde ---------- */
+function maybeRemind() {
+  const days = reminderDue();
+  if (!days || $('remind') || !$('game').hidden) return;
+  const veil = el('div', 'veil center'); veil.id = 'remind';
+  const box = el('section', 'qsheet small');
+  box.setAttribute('role', 'dialog');
+  box.append(el('h3', null, 'Sauvegarder vos stats ?'),
+    el('p', 'note', store.lastExport ? `Dernière sauvegarde il y a ${days} jours.` : 'Vous n’avez encore jamais sauvegardé vos stats.'));
   const r = el('div', 'row');
-  const cfg = () => ({ ...custom, ask: custom.mech === 'clue' ? custom.ask : null, answer: custom.mech === 'clue' ? custom.answer : null });
-  const name = () => `Personnalisé · ${def.titre}`;
-  const go = el('button', 'btn', 'Jouer'); go.addEventListener('click', () => play(cfg(), name()));
-  const st = el('button', 'btn ghost', 'Étudier'); st.addEventListener('click', () => play(cfg(), name(), true));
-  r.append(go, st); b.append(r);
+  const ok = el('button', 'btn', 'Sauvegarder');
+  ok.addEventListener('click', async () => { const m = await saveNow(); veil.remove(); renderHome(); flash(m); });
+  const later = el('button', 'btn ghost', 'Plus tard');
+  later.addEventListener('click', () => { snooze(); veil.remove(); });
+  r.append(ok, later);
+  box.append(r);
+  veil.append(box);
+  document.body.append(veil);
 }
+function flash(m) { $('io-msg').textContent = m; }
 
 /* ---------- Réglages et sauvegarde ---------- */
+async function renderFolder() {
+  const box = $('folder');
+  if (!folderSupported()) { box.hidden = true; return; }
+  box.hidden = false;
+  const st = await folderState();
+  const txt = $('folder-txt'), b1 = $('folder-pick'), b2 = $('folder-off');
+  if (!st) { txt.textContent = 'Sur ordinateur, l’app peut réécrire la sauvegarde dans un dossier de votre choix après chaque quiz.'; b1.textContent = 'Choisir un dossier'; b2.hidden = true; return; }
+  b2.hidden = false;
+  if (st.perm === 'granted') { txt.textContent = `Sauvegarde automatique dans « ${st.name} » après chaque quiz.`; b1.textContent = 'Changer de dossier'; }
+  else { txt.textContent = `Dossier « ${st.name} » : autorisation à renouveler depuis la réouverture de l’app.`; b1.textContent = 'Autoriser'; }
+}
+
 function wireSettings() {
-  $('p-minus').addEventListener('click', () => { store.pauses = Math.max(0, store.pauses - 1); save(); renderHome(); });
-  $('p-plus').addEventListener('click', () => { store.pauses = Math.min(9, store.pauses + 1); save(); renderHome(); });
-  const msg = t => { $('io-msg').textContent = t; };
-  $('exp').addEventListener('click', () => {
-    const blob = new Blob([exportText()], { type: 'application/json' });
-    const a = el('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = `geoquiz-sauvegarde-${new Date().toISOString().slice(0, 10)}.json`;
-    document.body.append(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-    msg('Sauvegarde téléchargée.');
-  });
+  const step = (id, f) => $(id).addEventListener('click', () => { f(); save(); renderHome(); });
+  step('p-minus', () => { store.pauses = Math.max(0, store.pauses - 1); });
+  step('p-plus', () => { store.pauses = Math.min(9, store.pauses + 1); });
+  step('r-minus', () => { store.reminderDays = Math.max(0, store.reminderDays - 1); });
+  step('r-plus', () => { store.reminderDays = Math.min(60, store.reminderDays + 1); });
+  $('exp').addEventListener('click', async () => { flash(await saveNow()); renderHome(); });
   const doImport = text => {
     try {
       const n = importText(text);
       renderHome();
-      msg(`Import terminé : ${n} nouvelle${n > 1 ? 's' : ''} tentative${n > 1 ? 's' : ''}, ${store.attempts.length} au total.`);
+      flash(`Import terminé : ${n} nouvelle${n > 1 ? 's' : ''} tentative${n > 1 ? 's' : ''}, ${store.attempts.length} au total.`);
     } catch {
-      msg("Ce fichier n'est pas une sauvegarde Géo-quiz. Choisissez le fichier exporté, ou collez le texte en entier.");
+      flash("Ce fichier n'est pas une sauvegarde Geoquiz. Choisissez le fichier exporté, ou collez le texte en entier.");
     }
   };
   $('imp-file').addEventListener('change', async e => {
@@ -242,6 +236,16 @@ function wireSettings() {
     e.target.value = '';
   });
   $('imp-text').addEventListener('click', () => doImport($('io').value));
+  $('folder-pick').addEventListener('click', async () => {
+    try {
+      const st = await folderState();
+      if (st && st.perm !== 'granted') await writeToFolder(true);
+      else await chooseFolder();
+      flash('Sauvegarde automatique activée.');
+    } catch { flash('Aucun dossier choisi.'); }
+    renderHome();
+  });
+  $('folder-off').addEventListener('click', async () => { await forgetFolder(); flash('Sauvegarde automatique désactivée.'); renderHome(); });
 }
 
 function registerSW() {
@@ -254,8 +258,6 @@ async function main() {
   wireSettings();
   onHome(renderHome);
   renderHome();
-  renderBuilder();
-  loadJeu('departements');
   registerSW();
 }
 

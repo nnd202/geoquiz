@@ -1,0 +1,748 @@
+{
+ "id": "etoiles",
+ "titre": "Étoiles les plus brillantes de chaque constellation",
+ "items": [
+  {
+   "code": "s-32349",
+   "nom": "Sirius",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CMa",
+   "geo": [
+    101.287,
+    -16.716
+   ],
+   "mag": -1.44,
+   "detail": "Grand Chien · magnitude -1.44"
+  },
+  {
+   "code": "s-30438",
+   "nom": "Canopus",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Car",
+   "geo": [
+    95.988,
+    -52.696
+   ],
+   "mag": -0.62,
+   "detail": "Carène · magnitude -0.62"
+  },
+  {
+   "code": "s-69673",
+   "nom": "Arcturus",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Boo",
+   "geo": [
+    -146.085,
+    19.182
+   ],
+   "mag": -0.05,
+   "detail": "Bouvier · magnitude -0.05"
+  },
+  {
+   "code": "s-71683",
+   "nom": "Rigil Kentaurus",
+   "alias": [
+    "Alpha du Centaure",
+    "Alpha Centauri"
+   ],
+   "domaine": "ciel",
+   "con": "Cen",
+   "geo": [
+    -140.098,
+    -60.834
+   ],
+   "mag": -0.01,
+   "detail": "Centaure · magnitude -0.01"
+  },
+  {
+   "code": "s-91262",
+   "nom": "Véga",
+   "alias": [
+    "Vega"
+   ],
+   "domaine": "ciel",
+   "con": "Lyr",
+   "geo": [
+    -80.765,
+    38.784
+   ],
+   "mag": 0.03,
+   "detail": "Lyre · magnitude 0.03"
+  },
+  {
+   "code": "s-24608",
+   "nom": "Capella",
+   "alias": [
+    "La Chèvre"
+   ],
+   "domaine": "ciel",
+   "con": "Aur",
+   "geo": [
+    79.172,
+    45.998
+   ],
+   "mag": 0.08,
+   "detail": "Cocher · magnitude 0.08"
+  },
+  {
+   "code": "s-24436",
+   "nom": "Rigel",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Ori",
+   "geo": [
+    78.635,
+    -8.202
+   ],
+   "mag": 0.18,
+   "detail": "Orion · magnitude 0.18"
+  },
+  {
+   "code": "s-37279",
+   "nom": "Procyon",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CMi",
+   "geo": [
+    114.826,
+    5.225
+   ],
+   "mag": 0.4,
+   "detail": "Petit Chien · magnitude 0.40"
+  },
+  {
+   "code": "s-7588",
+   "nom": "Achernar",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Eri",
+   "geo": [
+    24.428,
+    -57.237
+   ],
+   "mag": 0.45,
+   "detail": "Éridan · magnitude 0.45"
+  },
+  {
+   "code": "s-97649",
+   "nom": "Altaïr",
+   "alias": [
+    "Altair"
+   ],
+   "domaine": "ciel",
+   "con": "Aql",
+   "geo": [
+    -62.304,
+    8.868
+   ],
+   "mag": 0.76,
+   "detail": "Aigle · magnitude 0.76"
+  },
+  {
+   "code": "s-60718",
+   "nom": "Acrux",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cru",
+   "geo": [
+    -173.35,
+    -63.099
+   ],
+   "mag": 0.77,
+   "detail": "Croix du Sud · magnitude 0.77"
+  },
+  {
+   "code": "s-21421",
+   "nom": "Aldébaran",
+   "alias": [
+    "Aldebaran"
+   ],
+   "domaine": "ciel",
+   "con": "Tau",
+   "geo": [
+    68.98,
+    16.509
+   ],
+   "mag": 0.87,
+   "detail": "Taureau · magnitude 0.87"
+  },
+  {
+   "code": "s-65474",
+   "nom": "Spica",
+   "alias": [
+    "L'Épi"
+   ],
+   "domaine": "ciel",
+   "con": "Vir",
+   "geo": [
+    -158.702,
+    -11.161
+   ],
+   "mag": 0.98,
+   "detail": "Vierge · magnitude 0.98"
+  },
+  {
+   "code": "s-80763",
+   "nom": "Antarès",
+   "alias": [
+    "Antares"
+   ],
+   "domaine": "ciel",
+   "con": "Sco",
+   "geo": [
+    -112.648,
+    -26.432
+   ],
+   "mag": 1.06,
+   "detail": "Scorpion · magnitude 1.06"
+  },
+  {
+   "code": "s-37826",
+   "nom": "Pollux",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Gem",
+   "geo": [
+    116.329,
+    28.026
+   ],
+   "mag": 1.16,
+   "detail": "Gémeaux · magnitude 1.16"
+  },
+  {
+   "code": "s-113368",
+   "nom": "Fomalhaut",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "PsA",
+   "geo": [
+    -15.587,
+    -29.622
+   ],
+   "mag": 1.17,
+   "detail": "Poisson austral · magnitude 1.17"
+  },
+  {
+   "code": "s-102098",
+   "nom": "Deneb",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cyg",
+   "geo": [
+    -49.642,
+    45.28
+   ],
+   "mag": 1.25,
+   "detail": "Cygne · magnitude 1.25"
+  },
+  {
+   "code": "s-49669",
+   "nom": "Régulus",
+   "alias": [
+    "Regulus"
+   ],
+   "domaine": "ciel",
+   "con": "Leo",
+   "geo": [
+    152.093,
+    11.967
+   ],
+   "mag": 1.36,
+   "detail": "Lion · magnitude 1.36"
+  },
+  {
+   "code": "s-109268",
+   "nom": "Alnaïr",
+   "alias": [
+    "Alnair"
+   ],
+   "domaine": "ciel",
+   "con": "Gru",
+   "geo": [
+    -27.942,
+    -46.961
+   ],
+   "mag": 1.73,
+   "detail": "Grue · magnitude 1.73"
+  },
+  {
+   "code": "s-39953",
+   "nom": "Regor",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Vel",
+   "geo": [
+    122.383,
+    -47.337
+   ],
+   "mag": 1.75,
+   "detail": "Voiles · magnitude 1.75"
+  },
+  {
+   "code": "s-62956",
+   "nom": "Alioth",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "UMa",
+   "geo": [
+    -166.493,
+    55.96
+   ],
+   "mag": 1.76,
+   "detail": "Grande Ourse · magnitude 1.76"
+  },
+  {
+   "code": "s-15863",
+   "nom": "Mirfak",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Per",
+   "geo": [
+    51.081,
+    49.861
+   ],
+   "mag": 1.79,
+   "detail": "Persée · magnitude 1.79"
+  },
+  {
+   "code": "s-90185",
+   "nom": "Kaus Australis",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Sgr",
+   "geo": [
+    -83.957,
+    -34.385
+   ],
+   "mag": 1.79,
+   "detail": "Sagittaire · magnitude 1.79"
+  },
+  {
+   "code": "s-82273",
+   "nom": "Atria",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "TrA",
+   "geo": [
+    -107.834,
+    -69.028
+   ],
+   "mag": 1.91,
+   "detail": "Triangle austral · magnitude 1.91"
+  },
+  {
+   "code": "s-100751",
+   "nom": "Peacock",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Pav",
+   "geo": [
+    -53.588,
+    -56.735
+   ],
+   "mag": 1.94,
+   "detail": "Paon · magnitude 1.94"
+  },
+  {
+   "code": "s-11767",
+   "nom": "Étoile polaire",
+   "alias": [
+    "Polaris",
+    "Polaris",
+    "Polaire"
+   ],
+   "domaine": "ciel",
+   "con": "UMi",
+   "geo": [
+    37.955,
+    89.264
+   ],
+   "mag": 1.97,
+   "detail": "Petite Ourse · magnitude 1.97"
+  },
+  {
+   "code": "s-46390",
+   "nom": "Alphard",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Hya",
+   "geo": [
+    141.897,
+    -8.659
+   ],
+   "mag": 1.99,
+   "detail": "Hydre · magnitude 1.99"
+  },
+  {
+   "code": "s-9884",
+   "nom": "Hamal",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Ari",
+   "geo": [
+    31.793,
+    23.462
+   ],
+   "mag": 2.01,
+   "detail": "Bélier · magnitude 2.01"
+  },
+  {
+   "code": "s-3419",
+   "nom": "Diphda",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cet",
+   "geo": [
+    10.897,
+    -17.987
+   ],
+   "mag": 2.04,
+   "detail": "Baleine · magnitude 2.04"
+  },
+  {
+   "code": "s-677",
+   "nom": "Alpheratz",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "And",
+   "geo": [
+    2.097,
+    29.09
+   ],
+   "mag": 2.07,
+   "detail": "Andromède · magnitude 2.07"
+  },
+  {
+   "code": "s-86032",
+   "nom": "Rasalhague",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Oph",
+   "geo": [
+    -96.266,
+    12.56
+   ],
+   "mag": 2.08,
+   "detail": "Ophiuchus · magnitude 2.08"
+  },
+  {
+   "code": "s-4427",
+   "nom": "Navi",
+   "alias": [
+    "Tiansi"
+   ],
+   "domaine": "ciel",
+   "con": "Cas",
+   "geo": [
+    14.177,
+    60.717
+   ],
+   "mag": 2.15,
+   "detail": "Cassiopée · magnitude 2.15"
+  },
+  {
+   "code": "s-39429",
+   "nom": "Naos",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Pup",
+   "geo": [
+    120.896,
+    -40.003
+   ],
+   "mag": 2.21,
+   "detail": "Poupe · magnitude 2.21"
+  },
+  {
+   "code": "s-76267",
+   "nom": "Alphecca",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CrB",
+   "geo": [
+    -126.328,
+    26.715
+   ],
+   "mag": 2.22,
+   "detail": "Couronne boréale · magnitude 2.22"
+  },
+  {
+   "code": "s-87833",
+   "nom": "Eltanin",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Dra",
+   "geo": [
+    -90.849,
+    51.489
+   ],
+   "mag": 2.24,
+   "detail": "Dragon · magnitude 2.24"
+  },
+  {
+   "code": "s-107315",
+   "nom": "Enif",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Peg",
+   "geo": [
+    -33.953,
+    9.875
+   ],
+   "mag": 2.38,
+   "detail": "Pégase · magnitude 2.38"
+  },
+  {
+   "code": "s-2081",
+   "nom": "Ankaa",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Phe",
+   "geo": [
+    6.571,
+    -42.306
+   ],
+   "mag": 2.4,
+   "detail": "Phénix · magnitude 2.40"
+  },
+  {
+   "code": "s-105199",
+   "nom": "Alderamin",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cep",
+   "geo": [
+    -40.355,
+    62.586
+   ],
+   "mag": 2.45,
+   "detail": "Céphée · magnitude 2.45"
+  },
+  {
+   "code": "s-25985",
+   "nom": "Arneb",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Lep",
+   "geo": [
+    83.183,
+    -17.822
+   ],
+   "mag": 2.58,
+   "detail": "Lièvre · magnitude 2.58"
+  },
+  {
+   "code": "s-59803",
+   "nom": "Gienah",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Crv",
+   "geo": [
+    -176.048,
+    -17.542
+   ],
+   "mag": 2.58,
+   "detail": "Corbeau · magnitude 2.58"
+  },
+  {
+   "code": "s-74785",
+   "nom": "Zubeneschamali",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Lib",
+   "geo": [
+    -130.748,
+    -9.383
+   ],
+   "mag": 2.61,
+   "detail": "Balance · magnitude 2.61"
+  },
+  {
+   "code": "s-77070",
+   "nom": "Unukalhai",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Ser",
+   "geo": [
+    -123.933,
+    6.426
+   ],
+   "mag": 2.63,
+   "detail": "Serpent · magnitude 2.63"
+  },
+  {
+   "code": "s-26634",
+   "nom": "Phact",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Col",
+   "geo": [
+    84.912,
+    -34.074
+   ],
+   "mag": 2.65,
+   "detail": "Colombe · magnitude 2.65"
+  },
+  {
+   "code": "s-80816",
+   "nom": "Kornephoros",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Her",
+   "geo": [
+    -112.445,
+    21.49
+   ],
+   "mag": 2.78,
+   "detail": "Hercule · magnitude 2.78"
+  },
+  {
+   "code": "s-107556",
+   "nom": "Deneb Algedi",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cap",
+   "geo": [
+    -33.24,
+    -16.127
+   ],
+   "mag": 2.85,
+   "detail": "Capricorne · magnitude 2.85"
+  },
+  {
+   "code": "s-63125",
+   "nom": "Cor Caroli",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CVn",
+   "geo": [
+    -165.993,
+    38.318
+   ],
+   "mag": 2.89,
+   "detail": "Chiens de chasse · magnitude 2.89"
+  },
+  {
+   "code": "s-106278",
+   "nom": "Sadalsuud",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Aqr",
+   "geo": [
+    -37.11,
+    -5.571
+   ],
+   "mag": 2.9,
+   "detail": "Verseau · magnitude 2.90"
+  },
+  {
+   "code": "s-40526",
+   "nom": "Tarf",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cnc",
+   "geo": [
+    124.129,
+    9.185
+   ],
+   "mag": 3.53,
+   "detail": "Cancer · magnitude 3.53"
+  },
+  {
+   "code": "s-55282",
+   "nom": "Labrum",
+   "alias": [
+    "Labr"
+   ],
+   "domaine": "ciel",
+   "con": "Crt",
+   "geo": [
+    169.835,
+    -14.778
+   ],
+   "mag": 3.56,
+   "detail": "Coupe · magnitude 3.56"
+  },
+  {
+   "code": "s-7097",
+   "nom": "Alpherg",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Psc",
+   "geo": [
+    22.871,
+    15.346
+   ],
+   "mag": 3.62,
+   "detail": "Poissons · magnitude 3.62"
+  },
+  {
+   "code": "s-101769",
+   "nom": "Rotanev",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Del",
+   "geo": [
+    -50.613,
+    14.595
+   ],
+   "mag": 3.64,
+   "detail": "Dauphin · magnitude 3.64"
+  },
+  {
+   "code": "s-53229",
+   "nom": "Praecipua",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "LMi",
+   "geo": [
+    163.328,
+    34.215
+   ],
+   "mag": 3.79,
+   "detail": "Petit Lion · magnitude 3.79"
+  },
+  {
+   "code": "s-14879",
+   "nom": "Dalim",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "For",
+   "geo": [
+    48.019,
+    -28.988
+   ],
+   "mag": 3.8,
+   "detail": "Fourneau · magnitude 3.80"
+  },
+  {
+   "code": "s-104987",
+   "nom": "Kitalpha",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Equ",
+   "geo": [
+    -41.044,
+    5.248
+   ],
+   "mag": 3.92,
+   "detail": "Petit Cheval · magnitude 3.92"
+  },
+  {
+   "code": "s-95771",
+   "nom": "Anser",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Vul",
+   "geo": [
+    -67.824,
+    24.665
+   ],
+   "mag": 4.44,
+   "detail": "Petit Renard · magnitude 4.44"
+  }
+ ]
+}

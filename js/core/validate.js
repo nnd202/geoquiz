@@ -57,7 +57,8 @@ export function judgeName(raw, candidates, { all, found, last = null, notes = tr
   // 4. Fautes de frappe : une seule réponse proche, validée après une pause de frappe.
   const max = allowedTypos(k.lite.length);
   if (!max) return null;
-  const near = candidates.filter(d => d.keys.some(x => ins.some(i => dist(i, x, max) <= max)));
+  // Le mot générique (mer, golfe, détroit…) doit être tapé juste : la faute n'est tolérée que sur le nom.
+  const near = candidates.filter(d => d.keys.some(x => ins.some(i => (!d.gen || i.startsWith(d.gen)) && dist(i, x, max) <= max)));
   return near.length === 1 ? { item: near[0], when: 'wait' } : null;
 }
 

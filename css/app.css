@@ -197,19 +197,76 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .zone.flash { animation: flash .6s ease; }
 .zone.asked { fill: var(--lagoon); animation: pulse 1.4s ease-in-out infinite; }
 .sub { fill: none; stroke: var(--border-land); stroke-width: .6; stroke-dasharray: 2 2; vector-effect: non-scaling-stroke; opacity: .9; }
-.pt { --r: 3.2; r: calc(var(--r) * var(--k, 1) * 1px); fill: var(--pt); stroke: var(--panel); stroke-width: 1; vector-effect: non-scaling-stroke; transition: fill .25s; }
-.pt.pref { --r: 4.6; fill: var(--abyss); stroke-width: 1.4; }
-.pt.ref { --r: 3.6; fill: var(--panel); stroke: var(--abyss); stroke-width: 1.4; pointer-events: none; }
-.pt.off { opacity: .3; }
+/* Marqueurs : forme au rayon 1, mise à l'échelle par --r (pixels d'écran) × --k (unités par pixel).
+   Ils gardent la même taille à l'écran quel que soit le zoom ; en vue d'ensemble, ils peuvent se chevaucher. */
+.pt { --r: 5; transform: scale(calc(var(--r) * var(--k, 1))); fill: var(--missed); stroke: #fff; stroke-width: 1.2; vector-effect: non-scaling-stroke; transition: fill .25s; }
+.pt.sp { --r: 5; }
+.pt.pref { --r: 6.5; }
+.pt.preg { --r: 10; }
+.pt.cap { --r: 5.5; }
+.pt.ville { --r: 5; }
+.pt.mini { --r: 8; fill: transparent; stroke: var(--abyss); stroke-width: 1.4; }
+.pt.mini.todo { fill: rgba(196, 212, 229, .35); }
+.pt.ref { fill: var(--panel); stroke: var(--abyss); stroke-width: 1.2; pointer-events: none; }
+.pt.off { fill: var(--land); opacity: .45; }
 .pt.found { fill: var(--found); }
-.pt.missed { fill: var(--missed); }
+.pt.missed { fill: var(--wrong); }
+.pt.mini.missed { fill: var(--missed); }
 .pt.wrong { fill: var(--wrong); }
 .pt.sel { stroke: var(--lagoon); stroke-width: 3; }
-.pt.asked { --r: 7; fill: var(--lagoon); stroke: var(--panel); stroke-width: 2.5; animation: pulse 1.4s ease-in-out infinite; }
+.pt.asked { fill: var(--lagoon); stroke-width: 2.5; animation: pulse 1.4s ease-in-out infinite; }
 .pt.flash { animation: flash .6s ease; }
 @keyframes pulse { 50% { opacity: .55; } }
-.lbl { font-size: calc(11px * var(--k, 1)); }
-.lbl.side { text-anchor: start; dominant-baseline: central; transform: translateX(calc(6px * var(--k, 1))); font-family: var(--f-body); }
+.lbl { font-size: calc(12px * var(--k, 1)); stroke-width: calc(2.5px * var(--k, 1)); }
+.lbl.side { text-anchor: start; dominant-baseline: central; transform: translateX(calc(9px * var(--k, 1))); font-family: var(--f-body); }
+
+/* ---------- Mers : terres en décor, zones maritimes jouables ---------- */
+.mapwrap.mer { background: var(--mist); }
+.mer .zone { fill: #b9d5ef; stroke: #fff; }
+.mer .zone.off { fill: #dbe8f5; }
+.mer .zone.found { fill: var(--found); }
+.mer .zone.missed { fill: var(--missed); }
+.mer .land { fill: #e4e9ee; stroke: #c9d3dd; stroke-width: .6; vector-effect: non-scaling-stroke; pointer-events: none; }
+
+/* ---------- Ciel : fond de nuit fixe, quel que soit le thème ---------- */
+.mapwrap.ciel { background: #071427; }
+.ciel .sky-disk { fill: #0c1f3d; stroke: #24456c; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.ciel .sky-lbl { fill: #8fb0d6; font-family: var(--f-display); font-size: calc(14px * var(--k, 1)); text-anchor: middle; }
+.ciel .zone { fill: transparent; stroke: #2f5682; stroke-width: .7; }
+.ciel .zone.todo { fill: rgba(224, 138, 44, .3); }
+.ciel .zone.off { fill: transparent; }
+.ciel .zone.found { fill: rgba(63, 191, 134, .38); }
+.ciel .zone.missed { fill: rgba(230, 118, 107, .35); }
+.ciel .zone.sel { stroke: #fff; stroke-width: 2; }
+.ciel .zone.deco { fill: transparent; }
+.ciel .sky-line { stroke: #7fa7d6; stroke-width: .9; stroke-dasharray: none; opacity: .7; }
+.ciel .pt.star { fill: #f4f8ff; stroke: none; }
+.ciel .pt.star.named:not(.ref) { --r: 5.5 !important; }
+.ciel .pt.star.todo { fill: var(--missed); stroke: #071427; stroke-width: 1; }
+.ciel .pt.star.found { fill: var(--found); }
+.ciel .pt.star.missed { fill: var(--wrong); }
+.ciel .pt.star.off { fill: #f4f8ff; opacity: .8; }
+.ciel .lbl { fill: #eaf3fd; stroke: #071427; }
+.ciel .pt.star.ref { fill: #f4f8ff; stroke: none; }
+
+/* ---------- Bandeau de stats ---------- */
+.hero h1 { font-weight: 500; letter-spacing: .02em; }
+.stats { margin-top: 16px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.stats .stat { display: grid; align-content: start; gap: 2px; min-width: 0; }
+.stats b { font-size: 22px; font-weight: 500; color: #fff; line-height: 1.1; white-space: nowrap; }
+.stats span { font-size: 11px; color: #a9c6e5; line-height: 1.25; }
+.stats em { font-style: normal; font-size: 10.5px; color: #ffc98a; line-height: 1.2; }
+@media (max-width: 420px) {
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 12px; }
+  .stats b { font-size: 20px; }
+}
+.record { background: var(--found-soft); color: var(--found); font-weight: 600; border-radius: 10px; padding: 8px 12px; }
+.veil.center { align-items: center; padding: 16px; box-sizing: border-box; }
+.qsheet.small { border-radius: 20px; max-width: 420px; }
+.folder { display: grid; gap: 6px; }
 .infobar { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 8px; }
 .infobar .detail { font-size: 12px; color: var(--ink-soft); }
 @media (prefers-reduced-motion: reduce) { .zone, .pt { animation: none !important; transition: none; } }
+
+.qsheet .big { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.qsheet .big span { letter-spacing: .04em; }

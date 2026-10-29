@@ -1,0 +1,1424 @@
+{
+ "id": "villes-etats-unis",
+ "titre": "100 villes des États-Unis",
+ "items": [
+  {
+   "code": "v-new-york-ny",
+   "nom": "New York",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New York",
+   "etatCode": "NY",
+   "rang": 1,
+   "geo": [
+    -73.9957,
+    40.7216
+   ],
+   "detail": "New York"
+  },
+  {
+   "code": "v-los-angeles-ca",
+   "nom": "Los Angeles",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 2,
+   "geo": [
+    -118.232,
+    34.0492
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-chicago-il",
+   "nom": "Chicago",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Illinois",
+   "etatCode": "IL",
+   "rang": 3,
+   "geo": [
+    -87.6352,
+    41.848
+   ],
+   "detail": "Illinois"
+  },
+  {
+   "code": "v-houston-tx",
+   "nom": "Houston",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "rang": 4,
+   "geo": [
+    -95.3484,
+    29.7413
+   ],
+   "detail": "Texas"
+  },
+  {
+   "code": "v-phoenix-az",
+   "nom": "Phoenix",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Arizona",
+   "etatCode": "AZ",
+   "rang": 5,
+   "geo": [
+    -112.0674,
+    33.4483
+   ],
+   "detail": "Arizona"
+  },
+  {
+   "code": "v-philadelphie-pa",
+   "nom": "Philadelphie",
+   "alias": [
+    "Philadelphia"
+   ],
+   "domaine": "ville",
+   "etat": "Pennsylvanie",
+   "etatCode": "PA",
+   "rang": 6,
+   "geo": [
+    -75.1798,
+    39.9459
+   ],
+   "detail": "Pennsylvanie"
+  },
+  {
+   "code": "v-san-antonio-tx",
+   "nom": "San Antonio",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "rang": 7,
+   "geo": [
+    -98.4927,
+    29.4198
+   ],
+   "detail": "Texas"
+  },
+  {
+   "code": "v-san-diego-ca",
+   "nom": "San Diego",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 8,
+   "geo": [
+    -117.1509,
+    32.7189
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-dallas-tx",
+   "nom": "Dallas",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "rang": 9,
+   "geo": [
+    -96.7947,
+    32.772
+   ],
+   "detail": "Texas"
+  },
+  {
+   "code": "v-san-jose-ca",
+   "nom": "San José",
+   "alias": [
+    "San Jose"
+   ],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 10,
+   "geo": [
+    -121.8882,
+    37.3309
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-austin-tx",
+   "nom": "Austin",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "rang": 11,
+   "geo": [
+    -97.7447,
+    30.2689
+   ],
+   "detail": "Texas"
+  },
+  {
+   "code": "v-jacksonville-fl",
+   "nom": "Jacksonville",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "rang": 12,
+   "geo": [
+    -81.6719,
+    30.332
+   ],
+   "detail": "Floride"
+  },
+  {
+   "code": "v-fort-worth-tx",
+   "nom": "Fort Worth",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "rang": 13,
+   "geo": [
+    -97.34,
+    32.74
+   ],
+   "detail": "Texas"
+  },
+  {
+   "code": "v-columbus-oh",
+   "nom": "Columbus",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Ohio",
+   "etatCode": "OH",
+   "rang": 14,
+   "geo": [
+    -82.992,
+    39.9819
+   ],
+   "detail": "Ohio"
+  },
+  {
+   "code": "v-charlotte-nc",
+   "nom": "Charlotte",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Caroline du Nord",
+   "etatCode": "NC",
+   "rang": 15,
+   "geo": [
+    -80.832,
+    35.2069
+   ],
+   "detail": "Caroline du Nord"
+  },
+  {
+   "code": "v-san-francisco-ca",
+   "nom": "San Francisco",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 16,
+   "geo": [
+    -122.3996,
+    37.7843
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-indianapolis-in",
+   "nom": "Indianapolis",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Indiana",
+   "etatCode": "IN",
+   "rang": 17,
+   "geo": [
+    -86.172,
+    39.7519
+   ],
+   "detail": "Indiana"
+  },
+  {
+   "code": "v-seattle-wa",
+   "nom": "Seattle",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Washington",
+   "etatCode": "WA",
+   "rang": 18,
+   "geo": [
+    -122.3153,
+    47.6004
+   ],
+   "detail": "Washington"
+  },
+  {
+   "code": "v-denver-co",
+   "nom": "Denver",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Colorado",
+   "etatCode": "CO",
+   "rang": 19,
+   "geo": [
+    -104.986,
+    39.7411
+   ],
+   "detail": "Colorado"
+  },
+  {
+   "code": "v-washington-dc",
+   "nom": "Washington",
+   "alias": [
+    "Washington DC"
+   ],
+   "domaine": "ville",
+   "etat": "district de Columbia",
+   "etatCode": "DC",
+   "rang": 20,
+   "geo": [
+    -77.0114,
+    38.9015
+   ],
+   "detail": "district de Columbia"
+  },
+  {
+   "code": "v-boston-ma",
+   "nom": "Boston",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Massachusetts",
+   "etatCode": "MA",
+   "rang": 21,
+   "geo": [
+    -71.072,
+    42.3319
+   ],
+   "detail": "Massachusetts"
+  },
+  {
+   "code": "v-el-paso-tx",
+   "nom": "El Paso",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "rang": 22,
+   "geo": [
+    -106.5119,
+    31.7819
+   ],
+   "detail": "Texas"
+  },
+  {
+   "code": "v-nashville-tn",
+   "nom": "Nashville",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Tennessee",
+   "etatCode": "TN",
+   "rang": 23,
+   "geo": [
+    -86.7819,
+    36.1719
+   ],
+   "detail": "Tennessee"
+  },
+  {
+   "code": "v-detroit-mi",
+   "nom": "Détroit",
+   "alias": [
+    "Detroit"
+   ],
+   "domaine": "ville",
+   "etat": "Michigan",
+   "etatCode": "MI",
+   "rang": 24,
+   "geo": [
+    -83.0513,
+    42.3336
+   ],
+   "detail": "Michigan"
+  },
+  {
+   "code": "v-oklahoma-city-ok",
+   "nom": "Oklahoma City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Oklahoma",
+   "etatCode": "OK",
+   "rang": 25,
+   "geo": [
+    -97.5206,
+    35.472
+   ],
+   "detail": "Oklahoma"
+  },
+  {
+   "code": "v-portland-or",
+   "nom": "Portland",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Oregon",
+   "etatCode": "OR",
+   "rang": 26,
+   "geo": [
+    -122.6819,
+    45.522
+   ],
+   "detail": "Oregon"
+  },
+  {
+   "code": "v-las-vegas-nv",
+   "nom": "Las Vegas",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nevada",
+   "etatCode": "NV",
+   "rang": 27,
+   "geo": [
+    -115.1514,
+    36.1648
+   ],
+   "detail": "Nevada"
+  },
+  {
+   "code": "v-memphis-tn",
+   "nom": "Memphis",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Tennessee",
+   "etatCode": "TN",
+   "rang": 28,
+   "geo": [
+    -90.0288,
+    35.1447
+   ],
+   "detail": "Tennessee"
+  },
+  {
+   "code": "v-louisville-ky",
+   "nom": "Louisville",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Kentucky",
+   "etatCode": "KY",
+   "rang": 29,
+   "geo": [
+    -85.7506,
+    38.227
+   ],
+   "detail": "Kentucky"
+  },
+  {
+   "code": "v-baltimore-md",
+   "nom": "Baltimore",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Maryland",
+   "etatCode": "MD",
+   "rang": 30,
+   "geo": [
+    -76.6146,
+    39.2815
+   ],
+   "detail": "Maryland"
+  },
+  {
+   "code": "v-milwaukee-wi",
+   "nom": "Milwaukee",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Wisconsin",
+   "etatCode": "WI",
+   "rang": 31,
+   "geo": [
+    -87.9167,
+    43.0296
+   ],
+   "detail": "Wisconsin"
+  },
+  {
+   "code": "v-albuquerque-nm",
+   "nom": "Albuquerque",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nouveau-Mexique",
+   "etatCode": "NM",
+   "rang": 32,
+   "geo": [
+    -106.6413,
+    35.105
+   ],
+   "detail": "Nouveau-Mexique"
+  },
+  {
+   "code": "v-tucson-az",
+   "nom": "Tucson",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Arizona",
+   "etatCode": "AZ",
+   "rang": 33,
+   "geo": [
+    -110.8919,
+    32.2069
+   ],
+   "detail": "Arizona"
+  },
+  {
+   "code": "v-fresno-ca",
+   "nom": "Fresno",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 34,
+   "geo": [
+    -119.773,
+    36.7477
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-sacramento-ca",
+   "nom": "Sacramento",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 35,
+   "geo": [
+    -121.472,
+    38.577
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-kansas-city-mo",
+   "nom": "Kansas City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Missouri",
+   "etatCode": "MO",
+   "rang": 36,
+   "geo": [
+    -94.606,
+    39.109
+   ],
+   "detail": "Missouri"
+  },
+  {
+   "code": "v-atlanta-ga",
+   "nom": "Atlanta",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Géorgie",
+   "etatCode": "GA",
+   "rang": 37,
+   "geo": [
+    -84.3676,
+    33.7395
+   ],
+   "detail": "Géorgie"
+  },
+  {
+   "code": "v-omaha-ne",
+   "nom": "Omaha",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nebraska",
+   "etatCode": "NE",
+   "rang": 38,
+   "geo": [
+    -96.01,
+    41.24
+   ],
+   "detail": "Nebraska"
+  },
+  {
+   "code": "v-colorado-springs-co",
+   "nom": "Colorado Springs",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Colorado",
+   "etatCode": "CO",
+   "rang": 39,
+   "geo": [
+    -104.792,
+    38.863
+   ],
+   "detail": "Colorado"
+  },
+  {
+   "code": "v-raleigh-nc",
+   "nom": "Raleigh",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Caroline du Nord",
+   "etatCode": "NC",
+   "rang": 40,
+   "geo": [
+    -78.647,
+    35.7727
+   ],
+   "detail": "Caroline du Nord"
+  },
+  {
+   "code": "v-miami-fl",
+   "nom": "Miami",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "rang": 41,
+   "geo": [
+    -80.2261,
+    25.7896
+   ],
+   "detail": "Floride"
+  },
+  {
+   "code": "v-long-beach-ca",
+   "nom": "Long Beach",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 42,
+   "geo": [
+    -118.2003,
+    33.777
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-virginia-beach-va",
+   "nom": "Virginia Beach",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Virginie",
+   "etatCode": "VA",
+   "rang": 43,
+   "geo": [
+    -75.9803,
+    36.8552
+   ],
+   "detail": "Virginie"
+  },
+  {
+   "code": "v-oakland-ca",
+   "nom": "Oakland",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 44,
+   "geo": [
+    -122.278,
+    37.8047
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-minneapolis-mn",
+   "nom": "Minneapolis",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Minnesota",
+   "etatCode": "MN",
+   "rang": 45,
+   "geo": [
+    -93.2537,
+    44.9819
+   ],
+   "detail": "Minnesota"
+  },
+  {
+   "code": "v-tulsa-ok",
+   "nom": "Tulsa",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Oklahoma",
+   "etatCode": "OK",
+   "rang": 46,
+   "geo": [
+    -95.93,
+    36.12
+   ],
+   "detail": "Oklahoma"
+  },
+  {
+   "code": "v-tampa-fl",
+   "nom": "Tampa",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "rang": 47,
+   "geo": [
+    -82.4606,
+    27.9489
+   ],
+   "detail": "Floride"
+  },
+  {
+   "code": "v-la-nouvelle-orleans-la",
+   "nom": "La Nouvelle-Orléans",
+   "alias": [
+    "Nouvelle-Orléans",
+    "New Orleans"
+   ],
+   "domaine": "ville",
+   "etat": "Louisiane",
+   "etatCode": "LA",
+   "rang": 48,
+   "geo": [
+    -90.0884,
+    29.9689
+   ],
+   "detail": "Louisiane"
+  },
+  {
+   "code": "v-wichita-ks",
+   "nom": "Wichita",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Kansas",
+   "etatCode": "KS",
+   "rang": 49,
+   "geo": [
+    -97.3277,
+    37.6763
+   ],
+   "detail": "Kansas"
+  },
+  {
+   "code": "v-cleveland-oh",
+   "nom": "Cleveland",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Ohio",
+   "etatCode": "OH",
+   "rang": 50,
+   "geo": [
+    -81.6969,
+    41.4719
+   ],
+   "detail": "Ohio"
+  },
+  {
+   "code": "v-bakersfield-ca",
+   "nom": "Bakersfield",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 51,
+   "geo": [
+    -119.02,
+    35.37
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-honolulu-hi",
+   "nom": "Honolulu",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Hawaï",
+   "etatCode": "HI",
+   "rang": 52,
+   "geo": [
+    -157.8583,
+    21.3034
+   ],
+   "detail": "Hawaï"
+  },
+  {
+   "code": "v-anaheim-ca",
+   "nom": "Anaheim",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 53,
+   "geo": [
+    -117.9145,
+    33.8366
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-riverside-ca",
+   "nom": "Riverside",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 54,
+   "geo": [
+    -117.398,
+    33.9419
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-saint-louis-mo",
+   "nom": "Saint-Louis",
+   "alias": [
+    "St. Louis"
+   ],
+   "domaine": "ville",
+   "etat": "Missouri",
+   "etatCode": "MO",
+   "rang": 55,
+   "geo": [
+    -90.2419,
+    38.637
+   ],
+   "detail": "Missouri"
+  },
+  {
+   "code": "v-pittsburgh-pa",
+   "nom": "Pittsburgh",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Pennsylvanie",
+   "etatCode": "PA",
+   "rang": 56,
+   "geo": [
+    -80.0019,
+    40.4319
+   ],
+   "detail": "Pennsylvanie"
+  },
+  {
+   "code": "v-cincinnati-oh",
+   "nom": "Cincinnati",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Ohio",
+   "etatCode": "OH",
+   "rang": 57,
+   "geo": [
+    -84.4589,
+    39.1638
+   ],
+   "detail": "Ohio"
+  },
+  {
+   "code": "v-saint-paul-mn",
+   "nom": "Saint Paul",
+   "alias": [
+    "St. Paul"
+   ],
+   "domaine": "ville",
+   "etat": "Minnesota",
+   "etatCode": "MN",
+   "rang": 58,
+   "geo": [
+    -93.085,
+    44.944
+   ],
+   "detail": "Minnesota"
+  },
+  {
+   "code": "v-orlando-fl",
+   "nom": "Orlando",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "rang": 59,
+   "geo": [
+    -81.382,
+    28.5119
+   ],
+   "detail": "Floride"
+  },
+  {
+   "code": "v-buffalo-ny",
+   "nom": "Buffalo",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New York",
+   "etatCode": "NY",
+   "rang": 60,
+   "geo": [
+    -78.8819,
+    42.8819
+   ],
+   "detail": "New York"
+  },
+  {
+   "code": "v-anchorage-ak",
+   "nom": "Anchorage",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Alaska",
+   "etatCode": "AK",
+   "rang": 61,
+   "geo": [
+    -149.8874,
+    61.214
+   ],
+   "detail": "Alaska"
+  },
+  {
+   "code": "v-salt-lake-city-ut",
+   "nom": "Salt Lake City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Utah",
+   "etatCode": "UT",
+   "rang": 62,
+   "geo": [
+    -111.932,
+    40.777
+   ],
+   "detail": "Utah"
+  },
+  {
+   "code": "v-richmond-va",
+   "nom": "Richmond",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Virginie",
+   "etatCode": "VA",
+   "rang": 63,
+   "geo": [
+    -77.4519,
+    37.552
+   ],
+   "detail": "Virginie"
+  },
+  {
+   "code": "v-birmingham-al",
+   "nom": "Birmingham",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Alabama",
+   "etatCode": "AL",
+   "rang": 64,
+   "geo": [
+    -86.825,
+    33.53
+   ],
+   "detail": "Alabama"
+  },
+  {
+   "code": "v-rochester-ny",
+   "nom": "Rochester",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New York",
+   "etatCode": "NY",
+   "rang": 65,
+   "geo": [
+    -77.6219,
+    43.1724
+   ],
+   "detail": "New York"
+  },
+  {
+   "code": "v-hartford-ct",
+   "nom": "Hartford",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Connecticut",
+   "etatCode": "CT",
+   "rang": 66,
+   "geo": [
+    -72.6819,
+    41.772
+   ],
+   "detail": "Connecticut"
+  },
+  {
+   "code": "v-providence-ri",
+   "nom": "Providence",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Rhode Island",
+   "etatCode": "RI",
+   "rang": 67,
+   "geo": [
+    -71.4169,
+    41.823
+   ],
+   "detail": "Rhode Island"
+  },
+  {
+   "code": "v-albany-ny",
+   "nom": "Albany",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New York",
+   "etatCode": "NY",
+   "rang": 68,
+   "geo": [
+    -73.7576,
+    42.6537
+   ],
+   "detail": "New York"
+  },
+  {
+   "code": "v-boise-id",
+   "nom": "Boise",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Idaho",
+   "etatCode": "ID",
+   "rang": 69,
+   "geo": [
+    -116.2275,
+    43.6086
+   ],
+   "detail": "Idaho"
+  },
+  {
+   "code": "v-spokane-wa",
+   "nom": "Spokane",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Washington",
+   "etatCode": "WA",
+   "rang": 70,
+   "geo": [
+    -117.4199,
+    47.67
+   ],
+   "detail": "Washington"
+  },
+  {
+   "code": "v-des-moines-ia",
+   "nom": "Des Moines",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Iowa",
+   "etatCode": "IA",
+   "rang": 71,
+   "geo": [
+    -93.62,
+    41.58
+   ],
+   "detail": "Iowa"
+  },
+  {
+   "code": "v-madison-wi",
+   "nom": "Madison",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Wisconsin",
+   "etatCode": "WI",
+   "rang": 72,
+   "geo": [
+    -89.4011,
+    43.073
+   ],
+   "detail": "Wisconsin"
+  },
+  {
+   "code": "v-grand-rapids-mi",
+   "nom": "Grand Rapids",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Michigan",
+   "etatCode": "MI",
+   "rang": 73,
+   "geo": [
+    -85.6699,
+    42.9637
+   ],
+   "detail": "Michigan"
+  },
+  {
+   "code": "v-knoxville-tn",
+   "nom": "Knoxville",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Tennessee",
+   "etatCode": "TN",
+   "rang": 74,
+   "geo": [
+    -83.92,
+    35.97
+   ],
+   "detail": "Tennessee"
+  },
+  {
+   "code": "v-little-rock-ar",
+   "nom": "Little Rock",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Arkansas",
+   "etatCode": "AR",
+   "rang": 75,
+   "geo": [
+    -92.3311,
+    34.7361
+   ],
+   "detail": "Arkansas"
+  },
+  {
+   "code": "v-charleston-sc",
+   "nom": "Charleston",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Caroline du Sud",
+   "etatCode": "SC",
+   "rang": 76,
+   "geo": [
+    -79.9921,
+    32.7924
+   ],
+   "detail": "Caroline du Sud"
+  },
+  {
+   "code": "v-savannah-ga",
+   "nom": "Savannah",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Géorgie",
+   "etatCode": "GA",
+   "rang": 77,
+   "geo": [
+    -81.11,
+    32.0211
+   ],
+   "detail": "Géorgie"
+  },
+  {
+   "code": "v-baton-rouge-la",
+   "nom": "Baton Rouge",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Louisiane",
+   "etatCode": "LA",
+   "rang": 78,
+   "geo": [
+    -91.1402,
+    30.4579
+   ],
+   "detail": "Louisiane"
+  },
+  {
+   "code": "v-reno-nv",
+   "nom": "Reno",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nevada",
+   "etatCode": "NV",
+   "rang": 79,
+   "geo": [
+    -119.82,
+    39.53
+   ],
+   "detail": "Nevada"
+  },
+  {
+   "code": "v-fort-lauderdale-fl",
+   "nom": "Fort Lauderdale",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "rang": 80,
+   "geo": [
+    -80.1418,
+    26.1361
+   ],
+   "detail": "Floride"
+  },
+  {
+   "code": "v-norfolk-va",
+   "nom": "Norfolk",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Virginie",
+   "etatCode": "VA",
+   "rang": 81,
+   "geo": [
+    -76.28,
+    36.85
+   ],
+   "detail": "Virginie"
+  },
+  {
+   "code": "v-durham-nc",
+   "nom": "Durham",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Caroline du Nord",
+   "etatCode": "NC",
+   "rang": 82,
+   "geo": [
+    -78.92,
+    36.0
+   ],
+   "detail": "Caroline du Nord"
+  },
+  {
+   "code": "v-lexington-ky",
+   "nom": "Lexington",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Kentucky",
+   "etatCode": "KY",
+   "rang": 83,
+   "geo": [
+    -84.5,
+    38.05
+   ],
+   "detail": "Kentucky"
+  },
+  {
+   "code": "v-toledo-oh",
+   "nom": "Toledo",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Ohio",
+   "etatCode": "OH",
+   "rang": 84,
+   "geo": [
+    -83.553,
+    41.6398
+   ],
+   "detail": "Ohio"
+  },
+  {
+   "code": "v-dayton-oh",
+   "nom": "Dayton",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Ohio",
+   "etatCode": "OH",
+   "rang": 85,
+   "geo": [
+    -84.2019,
+    39.7523
+   ],
+   "detail": "Ohio"
+  },
+  {
+   "code": "v-chattanooga-tn",
+   "nom": "Chattanooga",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Tennessee",
+   "etatCode": "TN",
+   "rang": 86,
+   "geo": [
+    -85.25,
+    35.07
+   ],
+   "detail": "Tennessee"
+  },
+  {
+   "code": "v-corpus-christi-tx",
+   "nom": "Corpus Christi",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Texas",
+   "etatCode": "TX",
+   "rang": 87,
+   "geo": [
+    -97.4019,
+    27.7428
+   ],
+   "detail": "Texas"
+  },
+  {
+   "code": "v-santa-fe-nm",
+   "nom": "Santa Fe",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Nouveau-Mexique",
+   "etatCode": "NM",
+   "rang": 88,
+   "geo": [
+    -105.9372,
+    35.6869
+   ],
+   "detail": "Nouveau-Mexique"
+  },
+  {
+   "code": "v-santa-barbara-ca",
+   "nom": "Santa Barbara",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 89,
+   "geo": [
+    -119.7166,
+    34.4108
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-pasadena-ca",
+   "nom": "Pasadena",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 90,
+   "geo": [
+    -118.1389,
+    34.1604
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-fargo-nd",
+   "nom": "Fargo",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Dakota du Nord",
+   "etatCode": "ND",
+   "rang": 91,
+   "geo": [
+    -96.7894,
+    46.8772
+   ],
+   "detail": "Dakota du Nord"
+  },
+  {
+   "code": "v-sioux-falls-sd",
+   "nom": "Sioux Falls",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Dakota du Sud",
+   "etatCode": "SD",
+   "rang": 92,
+   "geo": [
+    -96.73,
+    43.55
+   ],
+   "detail": "Dakota du Sud"
+  },
+  {
+   "code": "v-billings-mt",
+   "nom": "Billings",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Montana",
+   "etatCode": "MT",
+   "rang": 93,
+   "geo": [
+    -108.54,
+    45.7883
+   ],
+   "detail": "Montana"
+  },
+  {
+   "code": "v-burlington-vt",
+   "nom": "Burlington",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Vermont",
+   "etatCode": "VT",
+   "rang": 94,
+   "geo": [
+    -73.2125,
+    44.4758
+   ],
+   "detail": "Vermont"
+  },
+  {
+   "code": "v-key-west-fl",
+   "nom": "Key West",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "rang": 95,
+   "geo": [
+    -81.7827,
+    24.5552
+   ],
+   "detail": "Floride"
+  },
+  {
+   "code": "v-palm-springs-ca",
+   "nom": "Palm Springs",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "Californie",
+   "etatCode": "CA",
+   "rang": 96,
+   "geo": [
+    -116.5331,
+    33.7774
+   ],
+   "detail": "Californie"
+  },
+  {
+   "code": "v-atlantic-city-nj",
+   "nom": "Atlantic City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New Jersey",
+   "etatCode": "NJ",
+   "rang": 97,
+   "geo": [
+    -74.4233,
+    39.3646
+   ],
+   "detail": "New Jersey"
+  },
+  {
+   "code": "v-newark-nj",
+   "nom": "Newark",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New Jersey",
+   "etatCode": "NJ",
+   "rang": 98,
+   "geo": [
+    -74.17,
+    40.7004
+   ],
+   "detail": "New Jersey"
+  },
+  {
+   "code": "v-jersey-city-nj",
+   "nom": "Jersey City",
+   "alias": [],
+   "domaine": "ville",
+   "etat": "New Jersey",
+   "etatCode": "NJ",
+   "rang": 99,
+   "geo": [
+    -74.0776,
+    40.7282
+   ],
+   "detail": "New Jersey"
+  },
+  {
+   "code": "v-saint-petersburg-fl",
+   "nom": "Saint Petersburg",
+   "alias": [
+    "St. Petersburg",
+    "Saint-Pétersbourg"
+   ],
+   "domaine": "ville",
+   "etat": "Floride",
+   "etatCode": "FL",
+   "rang": 100,
+   "geo": [
+    -82.6794,
+    27.7705
+   ],
+   "detail": "Floride"
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
-  "name": "Géo-quiz",
-  "short_name": "Géo-quiz",
+  "name": "Geoquiz",
+  "short_name": "Geoquiz",
   "description": "Réviser la géographie tous les jours.",
   "lang": "fr",
   "start_url": "./",

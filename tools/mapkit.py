@@ -3,7 +3,9 @@
 Chaque carte produite suit le même contrat :
 - <path class="zone" data-code="…" data-layer="…">  zones jouables ou de décor
 - <path class="sub" data-layer="…">                  traits de sous-division (affichés si le quiz le demande)
-- <circle class="pt …" data-code="…" data-layer="…" cx cy>  points (villes)
+- <path class="pt <forme> …" data-code="…" data-x data-y d="forme unité"> dans un <g transform="translate(x y)">
+  marqueurs (villes, étoiles…) : la forme est dessinée au rayon 1 et mise à l'échelle par le CSS,
+  pour garder une taille constante à l'écran quel que soit le zoom
 - <rect class="inset-bg">                            fonds d'encarts
 Un même code peut apparaître deux fois (carte principale + encart) : les deux réagissent ensemble.
 """
@@ -142,3 +144,29 @@ def svg_doc(viewbox, insets, body):
 
 def esc(s):
     return s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
+
+
+# Formes de marqueurs au rayon 1, centrées sur l'origine.
+def _star(n=5, inner=0.45):
+    import math as m
+    pts = []
+    for i in range(2 * n):
+        r = 1 if i % 2 == 0 else inner
+        a = -m.pi / 2 + i * m.pi / n
+        pts.append(f"{r * m.cos(a):.3f} {r * m.sin(a):.3f}")
+    return "M" + " L".join(pts) + "Z"
+
+
+SHAPES = {
+    "rond": "M-1 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0z",
+    "carre": "M-.82-.82h1.64v1.64h-1.64z",
+    "etoile": _star(),
+}
+
+
+def marker(x, y, shape, cls, code=None, extra=""):
+    """Marqueur à taille constante à l'écran (voir css .pt)."""
+    attr = f' data-code="{code}"' if code else ""
+    # Le translate est porté par un <g> : le CSS « transform » du <path> remplacerait sinon l'attribut.
+    return (f'<g transform="translate({x:.1f} {y:.1f})"><path class="pt {shape} {cls}"{attr} '
+            f'data-x="{x:.1f}" data-y="{y:.1f}" d="{SHAPES[shape]}"{extra}/></g>')

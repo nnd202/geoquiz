@@ -1,4 +1,4 @@
-# Géo-quiz
+# Geoquiz
 
 Web app personnelle pour réviser la géographie tous les jours. Installable sur téléphone, fonctionne hors ligne, sans serveur ni compte.
 
@@ -19,7 +19,7 @@ Tout ce qui varie vit dans des fichiers ; le code ne change que pour une nouvell
 
 | Dossier ou fichier | Rôle |
 | --- | --- |
-| `catalogue.json` | Les jeux de données et les quiz (support, mécanique, tirage, chrono) |
+| `catalogue.json` | Les jeux de données (fichier, carte, calques, nombre d’éléments) et les sections de quiz de l’accueil ; chaque quiz propose ensuite ses options (15 au hasard, mode clic) |
 | `data/` | Un fichier par jeu : code, nom, alias explicites, étiquettes |
 | `maps/` | Un SVG par carte, un `data-code` stable par zone |
 | `js/core/` | Moteur commun : validation, plateaux carte et grille, partie, stats |
@@ -43,11 +43,27 @@ Liste les homonymes et les préfixes ambigus (réponses qui commencent comme une
 
 ## Régénérer les cartes
 
-Outils : [mapshaper](https://github.com/mbloch/mapshaper) et Python 3. Les scripts sont dans `tools/` ; `mapkit.py` contient la projection, les encarts et l'écriture des SVG.
+Outils : [mapshaper](https://github.com/mbloch/mapshaper), Python 3 et [shapely](https://pypi.org/project/shapely/) pour le ciel. Les scripts sont dans `tools/` ; `mapkit.py` contient la projection, les encarts, les marqueurs et l'écriture des SVG. Après une régénération, mettre à jour le nombre d'éléments (`nb`) dans `catalogue.json` et lancer `node tools/check.mjs`.
 
-**France** (`maps/france.svg`, `maps/france-regions.svg`, données des départements, régions, préfectures et sous-préfectures)
+**Monde** (`maps/monde.svg`, `maps/mers.svg`) · `tools/build_world.py`
 
-Sources : communes de [france-geojson](https://github.com/gregoiredavid/france-geojson) et référentiel [@etalab/decoupage-administratif](https://www.npmjs.com/package/@etalab/decoupage-administratif) (chefs-lieux à jour). Les arrondissements sont recalculés en fusionnant les communes, puis départements et régions en sont déduits, pour que tous les traits coïncident.
+- Pays et capitales : [Natural Earth](https://www.naturalearthdata.com/) (domaine public). 197 pays : les 193 membres de l'ONU, plus Vatican, Palestine, Kosovo et Taïwan. Somaliland, Chypre du Nord, Hong Kong, Macao et Åland sont fusionnés avec leur pays.
+- Mers et océans : zones maritimes de l'OHI, version 3, [Marine Regions](https://www.marineregions.org/) (CC-BY 4.0), via le paquet npm `oceans-seas.geojson`. Noms traduits en français dans le script.
+
+```
+mapshaper ne_50m_admin_0_countries.geojson -each "code = ({SOL:'SOM',CYN:'CYP',HKG:'CHN',MAC:'CHN',ALD:'FIN'})[ADM0_A3] || ADM0_A3" -dissolve2 code -simplify 14% keep-shapes -clean -o world-countries.geojson precision=0.001
+mapshaper world-countries.geojson -dissolve2 -o world-land.geojson
+mapshaper oceans-seas.geo.json -simplify 8% keep-shapes -clean -o world-seas.geojson precision=0.001
+python3 tools/build_world.py <dossier des sources> .
+```
+
+**Ciel** (`maps/ciel.svg`) · `tools/build_sky.py`
+
+Source : [d3-celestial](https://github.com/ofrohn/d3-celestial) (BSD) : frontières officielles des 88 constellations, tracés, étoiles jusqu'à la magnitude 6, noms. Deux hémisphères côte à côte, projection azimutale équidistante centrée sur chaque pôle. L'étoile la plus brillante de chaque constellation est à trouver quand elle a un nom d'usage (55 sur 88, vérifiés contre le catalogue de l'UAI).
+
+**France** (`maps/france.svg`, `maps/france-regions.svg`) · `tools/build_france.py`
+
+Sources : communes de [france-geojson](https://github.com/gregoiredavid/france-geojson) et référentiel [@etalab/decoupage-administratif](https://www.npmjs.com/package/@etalab/decoupage-administratif) (chefs-lieux et populations à jour). Les arrondissements sont recalculés en fusionnant les communes, puis départements et régions en sont déduits, pour que tous les traits coïncident. Marqueurs : étoile pour la préfecture de région, carré pour la préfecture, rond pour la sous-préfecture. Les 100 villes sont les communes les plus peuplées.
 
 ```
 mapshaper communes-arr.geojson -dissolve2 arr copy-fields=dep,reg -simplify 2% keep-shapes -clean -o arr.geojson precision=0.0001
@@ -60,9 +76,9 @@ mapshaper idf-arr.geojson -innerlines where='A.dep == B.dep' -o idf-lines.geojso
 python3 tools/build_france.py <dossier des sources> .
 ```
 
-**États-Unis et Canada** (`maps/etats-unis.svg`, `maps/canada.svg` et leurs capitales)
+**États-Unis et Canada** (`maps/etats-unis.svg`, `maps/canada.svg`) · `tools/build_na.py`
 
-Source : [Natural Earth](https://www.naturalearthdata.com/) (domaine public), `ne_50m_admin_1_states_provinces` et `ne_10m_populated_places_simple`.
+Source : Natural Earth, `ne_50m_admin_1_states_provinces` et `ne_10m_populated_places`. Les 100 villes américaines sont une sélection éditoriale (villes principales des grandes agglomérations, plus quelques villes célèbres), listée dans le script.
 
 ```
 mapshaper ne_50m_admin_1_states_provinces.geojson -filter 'adm0_a3=="USA"' -filter-fields name,name_fr,postal -simplify 30% keep-shapes -clean -o us.geojson precision=0.0001
@@ -72,6 +88,6 @@ python3 tools/build_na.py <dossier des sources> .
 
 ## Contrat des cartes
 
-Chaque SVG regroupe ses éléments en calques `<g data-layer="…">` : zones `path.zone`, traits de sous-division `path.sub`, points `circle.pt` (`pref` pour un point principal). Les éléments jouables portent un `data-code` identique à celui des données.
+Chaque SVG regroupe ses éléments en calques `<g data-layer="…">` : zones `path.zone`, traits `path.sub`, marqueurs `path.pt` (forme au rayon 1 dans un `<g transform="translate(x y)">`, avec `data-x` et `data-y`). Le CSS met les marqueurs à l'échelle pour qu'ils gardent la même taille à l'écran quel que soit le zoom. Les éléments jouables portent un `data-code` identique à celui des données.
 
 Dans un quiz, les zones hors du jeu de données deviennent du décor ; les points hors du jeu sont masqués, sauf si leur calque figure dans `calques` (ils deviennent alors des repères) ; les traits ne s'affichent que si leur calque est demandé.

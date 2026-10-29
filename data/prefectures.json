@@ -182,7 +182,7 @@
    ],
    "dep": "13",
    "depNom": "Bouches-du-Rhône",
-   "detail": "Préfecture · Bouches-du-Rhône (13)"
+   "detail": "Préfecture de région (Provence-Alpes-Côte d'Azur) · Bouches-du-Rhône (13)"
   },
   {
    "code": "14118",
@@ -280,7 +280,7 @@
    ],
    "dep": "2A",
    "depNom": "Corse-du-Sud",
-   "detail": "Préfecture · Corse-du-Sud (2A)"
+   "detail": "Préfecture de région (Corse) · Corse-du-Sud (2A)"
   },
   {
    "code": "2B033",
@@ -308,7 +308,7 @@
    ],
    "dep": "21",
    "depNom": "Côte-d'Or",
-   "detail": "Préfecture · Côte-d'Or (21)"
+   "detail": "Préfecture de région (Bourgogne-Franche-Comté) · Côte-d'Or (21)"
   },
   {
    "code": "22278",
@@ -448,7 +448,7 @@
    ],
    "dep": "31",
    "depNom": "Haute-Garonne",
-   "detail": "Préfecture · Haute-Garonne (31)"
+   "detail": "Préfecture de région (Occitanie) · Haute-Garonne (31)"
   },
   {
    "code": "32013",
@@ -476,7 +476,7 @@
    ],
    "dep": "33",
    "depNom": "Gironde",
-   "detail": "Préfecture · Gironde (33)"
+   "detail": "Préfecture de région (Nouvelle-Aquitaine) · Gironde (33)"
   },
   {
    "code": "34172",
@@ -504,7 +504,7 @@
    ],
    "dep": "35",
    "depNom": "Ille-et-Vilaine",
-   "detail": "Préfecture · Ille-et-Vilaine (35)"
+   "detail": "Préfecture de région (Bretagne) · Ille-et-Vilaine (35)"
   },
   {
    "code": "36044",
@@ -630,7 +630,7 @@
    ],
    "dep": "44",
    "depNom": "Loire-Atlantique",
-   "detail": "Préfecture · Loire-Atlantique (44)"
+   "detail": "Préfecture de région (Pays de la Loire) · Loire-Atlantique (44)"
   },
   {
    "code": "45234",
@@ -644,7 +644,7 @@
    ],
    "dep": "45",
    "depNom": "Loiret",
-   "detail": "Préfecture · Loiret (45)"
+   "detail": "Préfecture de région (Centre-Val de Loire) · Loiret (45)"
   },
   {
    "code": "46042",
@@ -840,7 +840,7 @@
    ],
    "dep": "59",
    "depNom": "Nord",
-   "detail": "Préfecture · Nord (59)"
+   "detail": "Préfecture de région (Hauts-de-France) · Nord (59)"
   },
   {
    "code": "60057",
@@ -952,7 +952,7 @@
    ],
    "dep": "67",
    "depNom": "Bas-Rhin",
-   "detail": "Préfecture · Bas-Rhin (67)"
+   "detail": "Préfecture de région (Grand Est) · Bas-Rhin (67)"
   },
   {
    "code": "68066",
@@ -980,7 +980,7 @@
    ],
    "dep": "69",
    "depNom": "Rhône",
-   "detail": "Préfecture · Rhône (69)"
+   "detail": "Préfecture de région (Auvergne-Rhône-Alpes) · Rhône (69)"
   },
   {
    "code": "70550",
@@ -1064,7 +1064,7 @@
    ],
    "dep": "75",
    "depNom": "Paris",
-   "detail": "Préfecture · Paris (75)"
+   "detail": "Préfecture de région (Île-de-France) · Paris (75)"
   },
   {
    "code": "76540",
@@ -1078,7 +1078,7 @@
    ],
    "dep": "76",
    "depNom": "Seine-Maritime",
-   "detail": "Préfecture · Seine-Maritime (76)"
+   "detail": "Préfecture de région (Normandie) · Seine-Maritime (76)"
   },
   {
    "code": "77288",
@@ -1358,7 +1358,7 @@
    ],
    "dep": "971",
    "depNom": "Guadeloupe",
-   "detail": "Préfecture · Guadeloupe (971)"
+   "detail": "Préfecture de région (Guadeloupe) · Guadeloupe (971)"
   },
   {
    "code": "97209",
@@ -1372,7 +1372,7 @@
    ],
    "dep": "972",
    "depNom": "Martinique",
-   "detail": "Préfecture · Martinique (972)"
+   "detail": "Préfecture de région (Martinique) · Martinique (972)"
   },
   {
    "code": "97302",
@@ -1386,7 +1386,7 @@
    ],
    "dep": "973",
    "depNom": "Guyane",
-   "detail": "Préfecture · Guyane (973)"
+   "detail": "Préfecture de région (Guyane) · Guyane (973)"
   },
   {
    "code": "97411",
@@ -1400,7 +1400,7 @@
    ],
    "dep": "974",
    "depNom": "La Réunion",
-   "detail": "Préfecture · La Réunion (974)"
+   "detail": "Préfecture de région (La Réunion) · La Réunion (974)"
   },
   {
    "code": "97611",
@@ -1414,7 +1414,7 @@
    ],
    "dep": "976",
    "depNom": "Mayotte",
-   "detail": "Préfecture · Mayotte (976)"
+   "detail": "Préfecture de région (Mayotte) · Mayotte (976)"
   }
  ]
 }

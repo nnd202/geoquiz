@@ -2,7 +2,7 @@
 import { judgeName } from '../core/validate.js';
 
 export default {
-  label: 'Tout trouver',
+  label: 'Saisie',
   typing: true,
   hasPrompt: false,
   start() {},

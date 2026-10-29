@@ -3,14 +3,15 @@
 Usage : python3 -I tools/build_na.py <dossier des sources> <racine du dépôt>
 Sources (Natural Earth, domaine public) :
   us.geojson, ca.geojson   (ne_50m_admin_1_states_provinces filtré et simplifié, voir README)
-  ne/ne_10m_populated_places_simple.geojson
+  ne/ne_10m_populated_places_simple.geojson, ne/ne_10m_populated_places.geojson
 """
 import json
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mapkit import lcc, equi, fit, path_d, centroid, svg_doc, esc  # noqa: E402
+from mapkit import lcc, equi, fit, path_d, centroid, svg_doc, esc, marker  # noqa: E402
+from unicodedata import normalize
 
 src, root = sys.argv[1:3]
 J = lambda name: json.load(open(os.path.join(src, name)))
@@ -66,7 +67,7 @@ def dump(name, titre, items):
               open(f"{root}/data/{name}.json", "w"), ensure_ascii=False, indent=1)
 
 
-def write_map(name, viewbox, insets, feats, cities, tf_of):
+def write_map(name, viewbox, insets, feats, cities, tf_of, villes=()):
     body = ['<g data-layer="zones">']
     for f in feats:
         code = f["properties"]["postal"]
@@ -76,8 +77,14 @@ def write_map(name, viewbox, insets, feats, cities, tf_of):
     body.append('</g><g data-layer="capitales">')
     for c in cities:
         x, y = tf_of(c["etatCode"])(*c["geo"])
-        body.append(f'<circle class="pt pref" r="3" data-code="{c["code"]}" cx="{x:.1f}" cy="{y:.1f}"/>')
+        body.append(marker(x, y, "carre", "cap", c["code"]))
     body.append('</g>')
+    if villes:
+        body.append('<g data-layer="villes">')
+        for v in villes:
+            x, y = tf_of(v["etatCode"])(*v["geo"])
+            body.append(marker(x, y, "rond", "ville", v["code"]))
+        body.append('</g>')
     open(f"{root}/maps/{name}.svg", "w").write(svg_doc(viewbox, insets, body))
     print(name, os.path.getsize(f"{root}/maps/{name}.svg"), "octets")
 
@@ -99,6 +106,86 @@ states, us_caps = items_and_points(us, capitals("USA"), "Capitale")
 write_map("etats-unis", f"0 0 {W} {H}", [("AK", ak_box), ("HI", hi_box)], us, us_caps, tf_us)
 dump("etats-unis", "États des États-Unis", states)
 dump("capitales-etats-unis", "Capitales des États américains", us_caps)
+
+
+# ---------- 100 villes américaines à connaître ----------
+# Choix éditorial : les villes principales des plus grandes agglomérations, plus quelques villes
+# célèbres pour autre chose que leur taille (Santa Fe, Key West, Atlantic City…).
+US100 = [
+    ("New York", "NY", []), ("Los Angeles", "CA", []), ("Chicago", "IL", []), ("Houston", "TX", []),
+    ("Phoenix", "AZ", []), ("Philadelphie", "PA", ["Philadelphia"]), ("San Antonio", "TX", []),
+    ("San Diego", "CA", []), ("Dallas", "TX", []), ("San José", "CA", ["San Jose"]), ("Austin", "TX", []),
+    ("Jacksonville", "FL", []), ("Fort Worth", "TX", []), ("Columbus", "OH", []), ("Charlotte", "NC", []),
+    ("San Francisco", "CA", []), ("Indianapolis", "IN", []), ("Seattle", "WA", []), ("Denver", "CO", []),
+    ("Washington", "DC", ["Washington DC"]), ("Boston", "MA", []), ("El Paso", "TX", []),
+    ("Nashville", "TN", []), ("Détroit", "MI", ["Detroit"]), ("Oklahoma City", "OK", []),
+    ("Portland", "OR", []), ("Las Vegas", "NV", []), ("Memphis", "TN", []), ("Louisville", "KY", []),
+    ("Baltimore", "MD", []), ("Milwaukee", "WI", []), ("Albuquerque", "NM", []), ("Tucson", "AZ", []),
+    ("Fresno", "CA", []), ("Sacramento", "CA", []), ("Kansas City", "MO", []), ("Atlanta", "GA", []),
+    ("Omaha", "NE", []), ("Colorado Springs", "CO", []), ("Raleigh", "NC", []), ("Miami", "FL", []),
+    ("Long Beach", "CA", []), ("Virginia Beach", "VA", []), ("Oakland", "CA", []),
+    ("Minneapolis", "MN", []), ("Tulsa", "OK", []), ("Tampa", "FL", []),
+    ("La Nouvelle-Orléans", "LA", ["Nouvelle-Orléans", "New Orleans"]), ("Wichita", "KS", []),
+    ("Cleveland", "OH", []), ("Bakersfield", "CA", []), ("Honolulu", "HI", []), ("Anaheim", "CA", []),
+    ("Riverside", "CA", []), ("Saint-Louis", "MO", ["St. Louis"]), ("Pittsburgh", "PA", []),
+    ("Cincinnati", "OH", []), ("Saint Paul", "MN", ["St. Paul"]), ("Orlando", "FL", []),
+    ("Buffalo", "NY", []), ("Anchorage", "AK", []), ("Salt Lake City", "UT", []), ("Richmond", "VA", []),
+    ("Birmingham", "AL", []), ("Rochester", "NY", []), ("Hartford", "CT", []), ("Providence", "RI", []),
+    ("Albany", "NY", []), ("Boise", "ID", []), ("Spokane", "WA", []), ("Des Moines", "IA", []),
+    ("Madison", "WI", []), ("Grand Rapids", "MI", []), ("Knoxville", "TN", []), ("Little Rock", "AR", []),
+    ("Charleston", "SC", []), ("Savannah", "GA", []), ("Baton Rouge", "LA", []), ("Reno", "NV", []),
+    ("Fort Lauderdale", "FL", []), ("Norfolk", "VA", []), ("Durham", "NC", []), ("Lexington", "KY", []),
+    ("Toledo", "OH", []), ("Dayton", "OH", []), ("Chattanooga", "TN", []), ("Corpus Christi", "TX", []),
+    ("Santa Fe", "NM", []), ("Santa Barbara", "CA", []), ("Pasadena", "CA", []), ("Fargo", "ND", []),
+    ("Sioux Falls", "SD", []), ("Billings", "MT", []), ("Burlington", "VT", []), ("Key West", "FL", []),
+    ("Palm Springs", "CA", []), ("Atlantic City", "NJ", []), ("Newark", "NJ", []),
+    ("Jersey City", "NJ", []), ("Saint Petersburg", "FL", ["St. Petersburg", "Saint-Pétersbourg"]),
+]
+assert len(US100) == 100, len(US100)
+
+# Coordonnées absentes de Natural Earth (centre-ville, lon/lat).
+MANUAL = {"Anaheim": [-117.9145, 33.8366], "Jersey City": [-74.0776, 40.7282]}
+
+ALL_PLACES = J("ne/ne_10m_populated_places.geojson")["features"]
+STATE_NAME = {f["properties"]["postal"]: f["properties"]["name"] for f in J("us.geojson")["features"]}
+STATE_NAME["DC"] = "District of Columbia"
+
+
+def key(s):
+    s = normalize("NFD", s.lower()).encode("ascii", "ignore").decode()
+    s = s.replace("st. ", "saint ").replace("ft. ", "fort ").replace(",", " ").replace("d.c.", "")
+    return " ".join(s.replace("-", " ").split())
+
+
+us_places = {}
+for f in ALL_PLACES:
+    q = f["properties"]
+    if q["ADM0_A3"] == "USA":
+        k = (key(q["NAME"]), q["ADM1NAME"])
+        if k not in us_places or q["POP_MAX"] > us_places[k][0]:
+            us_places[k] = (q["POP_MAX"], f["geometry"]["coordinates"])
+
+
+def find_place(nom, alias, st):
+    for n in [nom, *alias]:
+        k = (key(n), STATE_NAME[st])
+        if k in us_places:
+            return us_places[k][1]
+    if nom in MANUAL:
+        return MANUAL[nom]
+    raise SystemExit(f"introuvable : {nom} ({st})")
+
+
+state_fr = {s["code"]: s["nom"] for s in states}
+state_fr["DC"] = "district de Columbia"
+villes_us = []
+for i, (nom, st, alias) in enumerate(US100):
+    lon, lat = find_place(nom, alias, st)
+    villes_us.append({"code": f"v-{key(nom).replace(' ', '-')}-{st.lower()}", "nom": nom, "alias": alias,
+                      "domaine": "ville", "etat": state_fr[st], "etatCode": st, "rang": i + 1,
+                      "geo": [round(lon, 4), round(lat, 4)], "detail": state_fr[st]})
+dump("villes-etats-unis", "100 villes des États-Unis", villes_us)
+write_map("etats-unis", f"0 0 {W} {H}", [("AK", ak_box), ("HI", hi_box)], us, us_caps, tf_us, villes_us)
 
 # ---------- Canada : projection conique de Statistique Canada ----------
 ca = J("ca.geojson")["features"]

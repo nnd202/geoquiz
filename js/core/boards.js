@@ -39,13 +39,13 @@ export function buildGrid(container, items, inPlay, onTap) {
 }
 
 /* ---------- Carte ----------
- * Contrat du SVG : groupes [data-layer] ; zones path.zone, traits path.sub, points circle.pt, avec data-code.
+ * Contrat du SVG : groupes [data-layer] ; zones path.zone, traits path.sub, marqueurs path.pt (data-x, data-y), avec data-code.
  * - éléments du jeu de données : jouables ;
  * - zones hors jeu : décor ; traits : affichés si le calque est demandé ;
  * - points hors jeu : repères si leur calque est demandé, sinon masqués.
  */
-export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap, label, tapNeedsSingle }) {
-  const wrap = el('div', 'mapwrap');
+export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap, label, tapNeedsSingle, style }) {
+  const wrap = el('div', 'mapwrap' + (style ? ` ${style}` : ''));
   const parsed = new DOMParser().parseFromString(svgText, 'image/svg+xml').documentElement;
   const map = document.importNode(parsed, true);
   map.setAttribute('role', 'img');
@@ -68,6 +68,7 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
       return;
     }
     if (!inPlay.has(code)) n.classList.add('off');
+    else n.classList.add('todo');
     (nodes[code] ||= []).push(n);
     if (n.classList.contains('pt')) points.push(n);
   });
@@ -83,7 +84,7 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
       let best = null, bd = TAP_PX / scale;
       for (const p of points) {
         if (p.classList.contains('off')) continue;
-        const d = Math.hypot(+p.getAttribute('cx') - svgXY[0], +p.getAttribute('cy') - svgXY[1]);
+        const d = Math.hypot(+p.dataset.x - svgXY[0], +p.dataset.y - svgXY[1]);
         if (d < bd) { bd = d; best = p; }
       }
       if (best) return best.dataset.code;
@@ -107,8 +108,8 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
         if (inInset.has(it.code) && !n.dataset.inset) continue;
         const t = document.createElementNS(NS, 'text');
         if (n.classList.contains('pt')) {
-          t.setAttribute('x', +n.getAttribute('cx'));
-          t.setAttribute('y', +n.getAttribute('cy'));
+          t.setAttribute('x', +n.dataset.x);
+          t.setAttribute('y', +n.dataset.y);
           t.setAttribute('class', 'lbl side');
         } else {
           const bb = n.getBBox();
@@ -137,11 +138,15 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
 function panZoom(svg, pick, onTap, tapNeedsSingle) {
   const BASE = svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
   let view;
-  // --k garde points et étiquettes à taille constante à l'écran quel que soit le zoom.
+  // --k = unités SVG par pixel d'écran : marqueurs et étiquettes gardent la même taille à l'écran
+  // quel que soit le zoom (comme sur une appli de cartes) ; en vue d'ensemble, ils peuvent se chevaucher.
   const setVB = () => {
     svg.setAttribute('viewBox', `${view.x} ${view.y} ${view.w} ${view.h}`);
-    svg.style.setProperty('--k', String(Math.pow(view.w / BASE[2], 0.8)));
+    const r = svg.getBoundingClientRect();
+    const s = Math.min(r.width / view.w, r.height / view.h);
+    svg.style.setProperty('--k', String(s > 0 ? 1 / s : view.w / 380));
   };
+  if (window.ResizeObserver) new ResizeObserver(() => setVB()).observe(svg);
   const reset = () => { view = { x: BASE[0], y: BASE[1], w: BASE[2], h: BASE[3] }; setVB(); };
   const info = () => {
     const r = svg.getBoundingClientRect();

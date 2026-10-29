@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<title>Géo-quiz</title>
+<title>Geoquiz</title>
 <meta name="description" content="Réviser la géographie tous les jours : départements, numéros, cartes.">
 <meta name="theme-color" content="#0b2a4f">
 <link rel="manifest" href="manifest.webmanifest">
@@ -17,22 +17,11 @@
 <body>
 <main id="home">
   <header class="hero">
-    <h1><b>Géo-quiz</b></h1>
-    <p>Réviser le monde tous les jours, comme on fait ses gammes.</p>
-    <div class="count"><div><b id="h-att">0</b>tentatives</div><div><b id="h-today">0</b>aujourd'hui</div></div>
+    <h1>Geoquiz</h1>
+    <div class="stats" id="stats"></div>
   </header>
 
-  <section id="recent-wrap" hidden>
-    <h2>Récents</h2>
-    <div class="chips" id="recent"></div>
-  </section>
-
   <div id="sections"></div>
-
-  <details class="section">
-    <summary><span class="sec-title">Quiz personnalisé</span></summary>
-    <section class="builder" id="builder"></section>
-  </details>
 
   <details class="section">
     <summary><span class="sec-title">Réglages et sauvegarde</span></summary>
@@ -41,12 +30,20 @@
         <div class="field"><span>Pauses par partie</span>
           <div class="stepper"><button id="p-minus" aria-label="Une pause de moins">−</button><b class="num" id="p-val">3</b><button id="p-plus" aria-label="Une pause de plus">+</button></div>
         </div>
+        <div class="field"><span>Rappel de sauvegarde tous les</span>
+          <div class="stepper"><button id="r-minus" aria-label="Un jour de moins">−</button><b class="num" id="r-val">7 j</b><button id="r-plus" aria-label="Un jour de plus">+</button></div>
+        </div>
       </section>
       <section class="panel">
-        <p>Vos tentatives restent sur cet appareil. Exportez-les régulièrement : vider les données du navigateur efface l'historique. Le même fichier sert à passer du téléphone au PC.</p>
+        <p>Vos stats restent sur cet appareil. La sauvegarde en fait une copie : sur téléphone, choisissez Drive (ou une autre appli) dans le menu de partage ; le même fichier sert à passer du téléphone au PC.</p>
+        <p class="note" id="last-save"></p>
         <div class="row">
-          <button class="btn small" id="exp">Exporter un fichier</button>
+          <button class="btn small" id="exp">Sauvegarder maintenant</button>
           <label class="btn small ghost file">Importer un fichier<input type="file" id="imp-file" accept=".json,application/json"></label>
+        </div>
+        <div class="folder" id="folder" hidden>
+          <p class="note" id="folder-txt"></p>
+          <div class="row"><button class="btn small ghost" id="folder-pick">Choisir un dossier</button><button class="btn small ghost" id="folder-off" hidden>Désactiver</button></div>
         </div>
         <details>
           <summary class="note">Importer depuis le prototype (texte copié)</summary>

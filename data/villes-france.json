@@ -1,0 +1,1406 @@
+{
+ "id": "villes-france",
+ "titre": "100 villes de France",
+ "items": [
+  {
+   "code": "v-75056",
+   "nom": "Paris",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 1,
+   "geo": [
+    2.3428,
+    48.8566
+   ],
+   "dep": "75",
+   "depNom": "Paris",
+   "detail": "1e ville · 2 103 778 hab. · Paris (75)"
+  },
+  {
+   "code": "v-13055",
+   "nom": "Marseille",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 2,
+   "geo": [
+    5.4219,
+    43.2924
+   ],
+   "dep": "13",
+   "depNom": "Bouches-du-Rhône",
+   "detail": "2e ville · 886 040 hab. · Bouches-du-Rhône (13)"
+  },
+  {
+   "code": "v-69123",
+   "nom": "Lyon",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 3,
+   "geo": [
+    4.8364,
+    45.7549
+   ],
+   "dep": "69",
+   "depNom": "Rhône",
+   "detail": "3e ville · 519 127 hab. · Rhône (69)"
+  },
+  {
+   "code": "v-31555",
+   "nom": "Toulouse",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 4,
+   "geo": [
+    1.4321,
+    43.596
+   ],
+   "dep": "31",
+   "depNom": "Haute-Garonne",
+   "detail": "4e ville · 514 819 hab. · Haute-Garonne (31)"
+  },
+  {
+   "code": "v-06088",
+   "nom": "Nice",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 5,
+   "geo": [
+    7.2378,
+    43.7123
+   ],
+   "dep": "06",
+   "depNom": "Alpes-Maritimes",
+   "detail": "5e ville · 357 737 hab. · Alpes-Maritimes (06)"
+  },
+  {
+   "code": "v-44109",
+   "nom": "Nantes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 6,
+   "geo": [
+    -1.5482,
+    47.232
+   ],
+   "dep": "44",
+   "depNom": "Loire-Atlantique",
+   "detail": "6e ville · 327 734 hab. · Loire-Atlantique (44)"
+  },
+  {
+   "code": "v-34172",
+   "nom": "Montpellier",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 7,
+   "geo": [
+    3.8692,
+    43.6134
+   ],
+   "dep": "34",
+   "depNom": "Hérault",
+   "detail": "7e ville · 310 240 hab. · Hérault (34)"
+  },
+  {
+   "code": "v-67482",
+   "nom": "Strasbourg",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 8,
+   "geo": [
+    7.7676,
+    48.5714
+   ],
+   "dep": "67",
+   "depNom": "Bas-Rhin",
+   "detail": "8e ville · 293 771 hab. · Bas-Rhin (67)"
+  },
+  {
+   "code": "v-33063",
+   "nom": "Bordeaux",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 9,
+   "geo": [
+    -0.5734,
+    44.8576
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "9e ville · 267 991 hab. · Gironde (33)"
+  },
+  {
+   "code": "v-59350",
+   "nom": "Lille",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 10,
+   "geo": [
+    3.0471,
+    50.6318
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "10e ville · 238 246 hab. · Nord (59)"
+  },
+  {
+   "code": "v-35238",
+   "nom": "Rennes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 11,
+   "geo": [
+    -1.6819,
+    48.1116
+   ],
+   "dep": "35",
+   "depNom": "Ille-et-Vilaine",
+   "detail": "11e ville · 230 890 hab. · Ille-et-Vilaine (35)"
+  },
+  {
+   "code": "v-83137",
+   "nom": "Toulon",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 12,
+   "geo": [
+    5.9327,
+    43.1365
+   ],
+   "dep": "83",
+   "depNom": "Var",
+   "detail": "12e ville · 179 116 hab. · Var (83)"
+  },
+  {
+   "code": "v-51454",
+   "nom": "Reims",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 13,
+   "geo": [
+    4.0401,
+    49.2517
+   ],
+   "dep": "51",
+   "depNom": "Marne",
+   "detail": "13e ville · 177 674 hab. · Marne (51)"
+  },
+  {
+   "code": "v-42218",
+   "nom": "Saint-Étienne",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 14,
+   "geo": [
+    4.4178,
+    45.4267
+   ],
+   "dep": "42",
+   "depNom": "Loire",
+   "detail": "14e ville · 173 136 hab. · Loire (42)"
+  },
+  {
+   "code": "v-76351",
+   "nom": "Le Havre",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 15,
+   "geo": [
+    0.1402,
+    49.4966
+   ],
+   "dep": "76",
+   "depNom": "Seine-Maritime",
+   "detail": "15e ville · 166 687 hab. · Seine-Maritime (76)"
+  },
+  {
+   "code": "v-69266",
+   "nom": "Villeurbanne",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 16,
+   "geo": [
+    4.8892,
+    45.7709
+   ],
+   "dep": "69",
+   "depNom": "Rhône",
+   "detail": "16e ville · 163 684 hab. · Rhône (69)"
+  },
+  {
+   "code": "v-21231",
+   "nom": "Dijon",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 17,
+   "geo": [
+    5.0375,
+    47.3229
+   ],
+   "dep": "21",
+   "depNom": "Côte-d'Or",
+   "detail": "17e ville · 161 830 hab. · Côte-d'Or (21)"
+  },
+  {
+   "code": "v-49007",
+   "nom": "Angers",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 18,
+   "geo": [
+    -0.5562,
+    47.4766
+   ],
+   "dep": "49",
+   "depNom": "Maine-et-Loire",
+   "detail": "18e ville · 159 022 hab. · Maine-et-Loire (49)"
+  },
+  {
+   "code": "v-38185",
+   "nom": "Grenoble",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 19,
+   "geo": [
+    5.7211,
+    45.1822
+   ],
+   "dep": "38",
+   "depNom": "Isère",
+   "detail": "19e ville · 156 140 hab. · Isère (38)"
+  },
+  {
+   "code": "v-97411",
+   "nom": "Saint-Denis",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 20,
+   "geo": [
+    55.447,
+    -20.9331
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "20e ville · 155 634 hab. · La Réunion (974)"
+  },
+  {
+   "code": "v-30189",
+   "nom": "Nîmes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 21,
+   "geo": [
+    4.3476,
+    43.8446
+   ],
+   "dep": "30",
+   "depNom": "Gard",
+   "detail": "21e ville · 151 839 hab. · Gard (30)"
+  },
+  {
+   "code": "v-13001",
+   "nom": "Aix-en-Provence",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 22,
+   "geo": [
+    5.3986,
+    43.5361
+   ],
+   "dep": "13",
+   "depNom": "Bouches-du-Rhône",
+   "detail": "22e ville · 149 695 hab. · Bouches-du-Rhône (13)"
+  },
+  {
+   "code": "v-93066",
+   "nom": "Saint-Denis",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 23,
+   "geo": [
+    2.3593,
+    48.9296
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "23e ville · 149 077 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-63113",
+   "nom": "Clermont-Ferrand",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 24,
+   "geo": [
+    3.1155,
+    45.7859
+   ],
+   "dep": "63",
+   "depNom": "Puy-de-Dôme",
+   "detail": "24e ville · 146 351 hab. · Puy-de-Dôme (63)"
+  },
+  {
+   "code": "v-72181",
+   "nom": "Le Mans",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 25,
+   "geo": [
+    0.2,
+    47.9887
+   ],
+   "dep": "72",
+   "depNom": "Sarthe",
+   "detail": "25e ville · 146 249 hab. · Sarthe (72)"
+  },
+  {
+   "code": "v-29019",
+   "nom": "Brest",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 26,
+   "geo": [
+    -4.5026,
+    48.4003
+   ],
+   "dep": "29",
+   "depNom": "Finistère",
+   "detail": "26e ville · 142 346 hab. · Finistère (29)"
+  },
+  {
+   "code": "v-37261",
+   "nom": "Tours",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 27,
+   "geo": [
+    0.6962,
+    47.3983
+   ],
+   "dep": "37",
+   "depNom": "Indre-et-Loire",
+   "detail": "27e ville · 139 259 hab. · Indre-et-Loire (37)"
+  },
+  {
+   "code": "v-80021",
+   "nom": "Amiens",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 28,
+   "geo": [
+    2.2899,
+    49.9004
+   ],
+   "dep": "80",
+   "depNom": "Somme",
+   "detail": "28e ville · 136 449 hab. · Somme (80)"
+  },
+  {
+   "code": "v-74010",
+   "nom": "Annecy",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 29,
+   "geo": [
+    6.1182,
+    45.9017
+   ],
+   "dep": "74",
+   "depNom": "Haute-Savoie",
+   "detail": "29e ville · 132 117 hab. · Haute-Savoie (74)"
+  },
+  {
+   "code": "v-87085",
+   "nom": "Limoges",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 30,
+   "geo": [
+    1.249,
+    45.8543
+   ],
+   "dep": "87",
+   "depNom": "Haute-Vienne",
+   "detail": "30e ville · 129 937 hab. · Haute-Vienne (87)"
+  },
+  {
+   "code": "v-57463",
+   "nom": "Metz",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 31,
+   "geo": [
+    6.1959,
+    49.1081
+   ],
+   "dep": "57",
+   "depNom": "Moselle",
+   "detail": "31e ville · 122 572 hab. · Moselle (57)"
+  },
+  {
+   "code": "v-66136",
+   "nom": "Perpignan",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 32,
+   "geo": [
+    2.8991,
+    42.6964
+   ],
+   "dep": "66",
+   "depNom": "Pyrénées-Orientales",
+   "detail": "32e ville · 121 616 hab. · Pyrénées-Orientales (66)"
+  },
+  {
+   "code": "v-92012",
+   "nom": "Boulogne-Billancourt",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 33,
+   "geo": [
+    2.2391,
+    48.8364
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "33e ville · 119 019 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-25056",
+   "nom": "Besançon",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 34,
+   "geo": [
+    6.0194,
+    47.2552
+   ],
+   "dep": "25",
+   "depNom": "Doubs",
+   "detail": "34e ville · 118 489 hab. · Doubs (25)"
+  },
+  {
+   "code": "v-76540",
+   "nom": "Rouen",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 35,
+   "geo": [
+    1.0937,
+    49.4416
+   ],
+   "dep": "76",
+   "depNom": "Seine-Maritime",
+   "detail": "35e ville · 117 662 hab. · Seine-Maritime (76)"
+  },
+  {
+   "code": "v-45234",
+   "nom": "Orléans",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 36,
+   "geo": [
+    1.9166,
+    47.8822
+   ],
+   "dep": "45",
+   "depNom": "Loiret",
+   "detail": "36e ville · 116 357 hab. · Loiret (45)"
+  },
+  {
+   "code": "v-93048",
+   "nom": "Montreuil",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 37,
+   "geo": [
+    2.4485,
+    48.8635
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "37e ville · 111 934 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-14118",
+   "nom": "Caen",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 38,
+   "geo": [
+    -0.3699,
+    49.185
+   ],
+   "dep": "14",
+   "depNom": "Calvados",
+   "detail": "38e ville · 109 400 hab. · Calvados (14)"
+  },
+  {
+   "code": "v-97415",
+   "nom": "Saint-Paul",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 39,
+   "geo": [
+    55.3224,
+    -21.0446
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "39e ville · 108 088 hab. · La Réunion (974)"
+  },
+  {
+   "code": "v-95018",
+   "nom": "Argenteuil",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 40,
+   "geo": [
+    2.2403,
+    48.9515
+   ],
+   "dep": "95",
+   "depNom": "Val-d'Oise",
+   "detail": "40e ville · 106 130 hab. · Val-d'Oise (95)"
+  },
+  {
+   "code": "v-68224",
+   "nom": "Mulhouse",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 41,
+   "geo": [
+    7.3253,
+    47.7489
+   ],
+   "dep": "68",
+   "depNom": "Haut-Rhin",
+   "detail": "41e ville · 104 978 hab. · Haut-Rhin (68)"
+  },
+  {
+   "code": "v-54395",
+   "nom": "Nancy",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 42,
+   "geo": [
+    6.1753,
+    48.69
+   ],
+   "dep": "54",
+   "depNom": "Meurthe-et-Moselle",
+   "detail": "42e ville · 103 671 hab. · Meurthe-et-Moselle (54)"
+  },
+  {
+   "code": "v-59599",
+   "nom": "Tourcoing",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 43,
+   "geo": [
+    3.1596,
+    50.7257
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "43e ville · 98 772 hab. · Nord (59)"
+  },
+  {
+   "code": "v-59512",
+   "nom": "Roubaix",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 44,
+   "geo": [
+    3.1821,
+    50.6884
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "44e ville · 98 286 hab. · Nord (59)"
+  },
+  {
+   "code": "v-92050",
+   "nom": "Nanterre",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 45,
+   "geo": [
+    2.2071,
+    48.8962
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "45e ville · 97 783 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-94081",
+   "nom": "Vitry-sur-Seine",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 46,
+   "geo": [
+    2.3945,
+    48.7881
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "46e ville · 93 963 hab. · Val-de-Marne (94)"
+  },
+  {
+   "code": "v-92004",
+   "nom": "Asnières-sur-Seine",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 47,
+   "geo": [
+    2.2878,
+    48.9159
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "47e ville · 93 941 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-94028",
+   "nom": "Créteil",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 48,
+   "geo": [
+    2.4547,
+    48.7837
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "48e ville · 93 397 hab. · Val-de-Marne (94)"
+  },
+  {
+   "code": "v-84007",
+   "nom": "Avignon",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 49,
+   "geo": [
+    4.8409,
+    43.9354
+   ],
+   "dep": "84",
+   "depNom": "Vaucluse",
+   "detail": "49e ville · 92 188 hab. · Vaucluse (84)"
+  },
+  {
+   "code": "v-92025",
+   "nom": "Colombes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 50,
+   "geo": [
+    2.2471,
+    48.9228
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "50e ville · 91 053 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-86194",
+   "nom": "Poitiers",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 51,
+   "geo": [
+    0.3597,
+    46.5836
+   ],
+   "dep": "86",
+   "depNom": "Vienne",
+   "detail": "51e ville · 89 916 hab. · Vienne (86)"
+  },
+  {
+   "code": "v-93001",
+   "nom": "Aubervilliers",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 52,
+   "geo": [
+    2.3845,
+    48.9124
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "52e ville · 88 365 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-93005",
+   "nom": "Aulnay-sous-Bois",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 53,
+   "geo": [
+    2.4935,
+    48.9459
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "53e ville · 87 599 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-59183",
+   "nom": "Dunkerque",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 54,
+   "geo": [
+    2.356,
+    51.0341
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "54e ville · 86 263 hab. · Nord (59)"
+  },
+  {
+   "code": "v-97416",
+   "nom": "Saint-Pierre",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 55,
+   "geo": [
+    55.4939,
+    -21.3123
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "55e ville · 85 038 hab. · La Réunion (974)"
+  },
+  {
+   "code": "v-78646",
+   "nom": "Versailles",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 56,
+   "geo": [
+    2.1175,
+    48.8023
+   ],
+   "dep": "78",
+   "depNom": "Yvelines",
+   "detail": "56e ville · 84 095 hab. · Yvelines (78)"
+  },
+  {
+   "code": "v-92026",
+   "nom": "Courbevoie",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 57,
+   "geo": [
+    2.2557,
+    48.8984
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "57e ville · 82 902 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-92063",
+   "nom": "Rueil-Malmaison",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 58,
+   "geo": [
+    2.1777,
+    48.8694
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "58e ville · 82 874 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-97422",
+   "nom": "Le Tampon",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 59,
+   "geo": [
+    55.5586,
+    -21.2233
+   ],
+   "dep": "974",
+   "depNom": "La Réunion",
+   "detail": "59e ville · 82 579 hab. · La Réunion (974)"
+  },
+  {
+   "code": "v-34032",
+   "nom": "Béziers",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 60,
+   "geo": [
+    3.2307,
+    43.3475
+   ],
+   "dep": "34",
+   "depNom": "Hérault",
+   "detail": "60e ville · 81 545 hab. · Hérault (34)"
+  },
+  {
+   "code": "v-64445",
+   "nom": "Pau",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 61,
+   "geo": [
+    -0.35,
+    43.32
+   ],
+   "dep": "64",
+   "depNom": "Pyrénées-Atlantiques",
+   "detail": "61e ville · 80 441 hab. · Pyrénées-Atlantiques (64)"
+  },
+  {
+   "code": "v-17300",
+   "nom": "La Rochelle",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 62,
+   "geo": [
+    -1.175,
+    46.1619
+   ],
+   "dep": "17",
+   "depNom": "Charente-Maritime",
+   "detail": "62e ville · 79 851 hab. · Charente-Maritime (17)"
+  },
+  {
+   "code": "v-50129",
+   "nom": "Cherbourg-en-Cotentin",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 63,
+   "geo": [
+    -1.6209,
+    49.6318
+   ],
+   "dep": "50",
+   "depNom": "Manche",
+   "detail": "63e ville · 78 258 hab. · Manche (50)"
+  },
+  {
+   "code": "v-33281",
+   "nom": "Mérignac",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 64,
+   "geo": [
+    -0.6818,
+    44.8322
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "64e ville · 78 090 hab. · Gironde (33)"
+  },
+  {
+   "code": "v-94017",
+   "nom": "Champigny-sur-Marne",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 65,
+   "geo": [
+    2.517,
+    48.8174
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "65e ville · 78 072 hab. · Val-de-Marne (94)"
+  },
+  {
+   "code": "v-06004",
+   "nom": "Antibes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 66,
+   "geo": [
+    7.1052,
+    43.5876
+   ],
+   "dep": "06",
+   "depNom": "Alpes-Maritimes",
+   "detail": "66e ville · 77 637 hab. · Alpes-Maritimes (06)"
+  },
+  {
+   "code": "v-94068",
+   "nom": "Saint-Maur-des-Fossés",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 67,
+   "geo": [
+    2.4944,
+    48.7989
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "67e ville · 76 572 hab. · Val-de-Marne (94)"
+  },
+  {
+   "code": "v-2A004",
+   "nom": "Ajaccio",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 68,
+   "geo": [
+    8.7011,
+    41.9349
+   ],
+   "dep": "2A",
+   "depNom": "Corse-du-Sud",
+   "detail": "68e ville · 76 320 hab. · Corse-du-Sud (2A)"
+  },
+  {
+   "code": "v-97209",
+   "nom": "Fort-de-France",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 69,
+   "geo": [
+    -61.069,
+    14.6406
+   ],
+   "dep": "972",
+   "depNom": "Martinique",
+   "detail": "69e ville · 75 506 hab. · Martinique (972)"
+  },
+  {
+   "code": "v-44184",
+   "nom": "Saint-Nazaire",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 70,
+   "geo": [
+    -2.251,
+    47.2803
+   ],
+   "dep": "44",
+   "depNom": "Loire-Atlantique",
+   "detail": "70e ville · 74 568 hab. · Loire-Atlantique (44)"
+  },
+  {
+   "code": "v-06029",
+   "nom": "Cannes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 71,
+   "geo": [
+    6.9994,
+    43.5563
+   ],
+   "dep": "06",
+   "depNom": "Alpes-Maritimes",
+   "detail": "71e ville · 74 350 hab. · Alpes-Maritimes (06)"
+  },
+  {
+   "code": "v-93051",
+   "nom": "Noisy-le-Grand",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 72,
+   "geo": [
+    2.5646,
+    48.8362
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "72e ville · 72 978 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-93029",
+   "nom": "Drancy",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 73,
+   "geo": [
+    2.4445,
+    48.9235
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "73e ville · 72 390 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-97611",
+   "nom": "Mamoudzou",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 74,
+   "geo": [
+    45.1939,
+    -12.7898
+   ],
+   "dep": "976",
+   "depNom": "Mayotte",
+   "detail": "74e ville · 71 437 hab. · Mayotte (976)"
+  },
+  {
+   "code": "v-95127",
+   "nom": "Cergy",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 75,
+   "geo": [
+    2.0512,
+    49.0399
+   ],
+   "dep": "95",
+   "depNom": "Val-d'Oise",
+   "detail": "75e ville · 70 906 hab. · Val-d'Oise (95)"
+  },
+  {
+   "code": "v-92044",
+   "nom": "Levallois-Perret",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 76,
+   "geo": [
+    2.2869,
+    48.8952
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "76e ville · 68 092 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-92040",
+   "nom": "Issy-les-Moulineaux",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 77,
+   "geo": [
+    2.2649,
+    48.8231
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "77e ville · 67 669 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-62193",
+   "nom": "Calais",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 78,
+   "geo": [
+    1.8759,
+    50.9501
+   ],
+   "dep": "62",
+   "depNom": "Pas-de-Calais",
+   "detail": "78e ville · 67 571 hab. · Pas-de-Calais (62)"
+  },
+  {
+   "code": "v-33318",
+   "nom": "Pessac",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 79,
+   "geo": [
+    -0.6764,
+    44.7916
+   ],
+   "dep": "33",
+   "depNom": "Gironde",
+   "detail": "79e ville · 67 339 hab. · Gironde (33)"
+  },
+  {
+   "code": "v-68066",
+   "nom": "Colmar",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 80,
+   "geo": [
+    7.3848,
+    48.1099
+   ],
+   "dep": "68",
+   "depNom": "Haut-Rhin",
+   "detail": "80e ville · 66 970 hab. · Haut-Rhin (68)"
+  },
+  {
+   "code": "v-91228",
+   "nom": "Évry-Courcouronnes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 81,
+   "geo": [
+    2.4398,
+    48.6295
+   ],
+   "dep": "91",
+   "depNom": "Essonne",
+   "detail": "81e ville · 66 919 hab. · Essonne (91)"
+  },
+  {
+   "code": "v-69259",
+   "nom": "Vénissieux",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 82,
+   "geo": [
+    4.8813,
+    45.7041
+   ],
+   "dep": "69",
+   "depNom": "Rhône",
+   "detail": "82e ville · 65 502 hab. · Rhône (69)"
+  },
+  {
+   "code": "v-94041",
+   "nom": "Ivry-sur-Seine",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 83,
+   "geo": [
+    2.3877,
+    48.8123
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "83e ville · 65 064 hab. · Val-de-Marne (94)"
+  },
+  {
+   "code": "v-26362",
+   "nom": "Valence",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 84,
+   "geo": [
+    4.9136,
+    44.9225
+   ],
+   "dep": "26",
+   "depNom": "Drôme",
+   "detail": "84e ville · 64 458 hab. · Drôme (26)"
+  },
+  {
+   "code": "v-92024",
+   "nom": "Clichy",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 85,
+   "geo": [
+    2.3059,
+    48.9041
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "85e ville · 64 410 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-29232",
+   "nom": "Quimper",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 86,
+   "geo": [
+    -4.091,
+    47.997
+   ],
+   "dep": "29",
+   "depNom": "Finistère",
+   "detail": "86e ville · 64 385 hab. · Finistère (29)"
+  },
+  {
+   "code": "v-92002",
+   "nom": "Antony",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 87,
+   "geo": [
+    2.2991,
+    48.75
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "87e ville · 64 263 hab. · Hauts-de-Seine (92)"
+  },
+  {
+   "code": "v-18033",
+   "nom": "Bourges",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 88,
+   "geo": [
+    2.4048,
+    47.0749
+   ],
+   "dep": "18",
+   "depNom": "Cher",
+   "detail": "88e ville · 64 186 hab. · Cher (18)"
+  },
+  {
+   "code": "v-83126",
+   "nom": "La Seyne-sur-Mer",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 89,
+   "geo": [
+    5.871,
+    43.0892
+   ],
+   "dep": "83",
+   "depNom": "Var",
+   "detail": "89e ville · 63 732 hab. · Var (83)"
+  },
+  {
+   "code": "v-82121",
+   "nom": "Montauban",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 90,
+   "geo": [
+    1.364,
+    44.0223
+   ],
+   "dep": "82",
+   "depNom": "Tarn-et-Garonne",
+   "detail": "90e ville · 62 945 hab. · Tarn-et-Garonne (82)"
+  },
+  {
+   "code": "v-59009",
+   "nom": "Villeneuve-d'Ascq",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 91,
+   "geo": [
+    3.1531,
+    50.6324
+   ],
+   "dep": "59",
+   "depNom": "Nord",
+   "detail": "91e ville · 62 868 hab. · Nord (59)"
+  },
+  {
+   "code": "v-97302",
+   "nom": "Cayenne",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 92,
+   "geo": [
+    -52.3157,
+    4.9248
+   ],
+   "dep": "973",
+   "depNom": "Guyane",
+   "detail": "92e ville · 62 675 hab. · Guyane (973)"
+  },
+  {
+   "code": "v-93007",
+   "nom": "Le Blanc-Mesnil",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 93,
+   "geo": [
+    2.461,
+    48.9395
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "93e ville · 62 376 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-10387",
+   "nom": "Troyes",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 94,
+   "geo": [
+    4.0785,
+    48.2968
+   ],
+   "dep": "10",
+   "depNom": "Aube",
+   "detail": "94e ville · 62 088 hab. · Aube (10)"
+  },
+  {
+   "code": "v-93055",
+   "nom": "Pantin",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 95,
+   "geo": [
+    2.4091,
+    48.8985
+   ],
+   "dep": "93",
+   "depNom": "Seine-Saint-Denis",
+   "detail": "95e ville · 61 929 hab. · Seine-Saint-Denis (93)"
+  },
+  {
+   "code": "v-94076",
+   "nom": "Villejuif",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 96,
+   "geo": [
+    2.3598,
+    48.7924
+   ],
+   "dep": "94",
+   "depNom": "Val-de-Marne",
+   "detail": "96e ville · 60 183 hab. · Val-de-Marne (94)"
+  },
+  {
+   "code": "v-73065",
+   "nom": "Chambéry",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 97,
+   "geo": [
+    5.9089,
+    45.5836
+   ],
+   "dep": "73",
+   "depNom": "Savoie",
+   "detail": "97e ville · 59 964 hab. · Savoie (73)"
+  },
+  {
+   "code": "v-79191",
+   "nom": "Niort",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 98,
+   "geo": [
+    -0.4652,
+    46.3284
+   ],
+   "dep": "79",
+   "depNom": "Deux-Sèvres",
+   "detail": "98e ville · 59 854 hab. · Deux-Sèvres (79)"
+  },
+  {
+   "code": "v-83061",
+   "nom": "Fréjus",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 99,
+   "geo": [
+    6.7638,
+    43.472
+   ],
+   "dep": "83",
+   "depNom": "Var",
+   "detail": "99e ville · 59 719 hab. · Var (83)"
+  },
+  {
+   "code": "v-92051",
+   "nom": "Neuilly-sur-Seine",
+   "alias": [],
+   "domaine": "ville",
+   "rang": 100,
+   "geo": [
+    2.2666,
+    48.8857
+   ],
+   "dep": "92",
+   "depNom": "Hauts-de-Seine",
+   "detail": "100e ville · 59 538 hab. · Hauts-de-Seine (92)"
+  }
+ ]
+}

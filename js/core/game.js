@@ -2,9 +2,12 @@
 import { $, el, fmt, shuffle } from './dom.js';
 import { buildGrid, buildMap } from './boards.js';
 import { store, addAttempt, attemptsOf, bestOf } from './store.js';
+import { writeToFolder } from './backup.js';
+import { keysOf } from './text.js';
 import { MECHANICS } from '../mechanics/index.js';
 
 export const END = { time: 'Chrono écoulé', all: 'Tout trouvé', list: 'Liste terminée', stop: 'Terminer' };
+export const fmtLong = ms => { const s = Math.round(ms / 1000); return s >= 3600 ? `${Math.floor(s / 3600)} h ${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}` : fmt(ms); };
 const WAIT_MS = 700; // pause de frappe avant de valider un préfixe ambigu ou une faute
 
 let current = null;
@@ -28,6 +31,17 @@ export class Game {
     this.mech = MECHANICS[cfg.mech];
     this.mapSvg = mapSvg;
     this.waitTimer = null;
+    // Mode clic : un nom partagé par plusieurs éléments est précisé (« Saint-Denis (La Réunion) »).
+    const seen = new Map();
+    for (const d of this.all) { const k = keysOf(d.nom).full; seen.set(k, (seen.get(k) || 0) + 1); }
+    this.dupNames = new Set([...seen].filter(([, n]) => n > 1).map(([k]) => k));
+  }
+
+  // Nom affiché en mode clic, précisé si un autre élément porte le même nom.
+  label(item) {
+    if (!this.dupNames.has(keysOf(item.nom).full)) return item.nom;
+    const ctx = item.depNom || item.etat || item.pays || item.categorie;
+    return ctx ? `${item.nom} (${ctx})` : item.nom;
   }
 
   start() {
@@ -66,7 +80,7 @@ export class Game {
       ? buildGrid(host, this.all, this.inPlay, tap)
       : buildMap(host, this.mapSvg, {
         codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
-        onTap: tap, label: this.def.titre,
+        onTap: tap, label: this.def.titre, style: this.def.style,
         tapNeedsSingle: () => this.cfg.mech === 'tap' && !this.over && !this.study,
       });
     this.toastEl = el('div', 'toast');
@@ -77,11 +91,9 @@ export class Game {
   elapsed() { return this.acc + (this.resumeAt != null ? performance.now() - this.resumeAt : 0); }
   tick() {
     if (current !== this || this.over || this.study || this.paused) return;
-    const ms = this.elapsed(), lim = this.cfg.limit * 1000;
-    $('g-clock').textContent = lim ? fmt(lim - ms) : fmt(ms);
-    $('g-clock').classList.toggle('low', !!lim && lim - ms < 30000);
+    // Pas de limite : on mesure le temps mis.
+    $('g-clock').textContent = fmtLong(this.elapsed());
     $('g-score').textContent = `${this.found.size}/${this.items.length}`;
-    if (lim && ms >= lim) return this.finish('time');
     setTimeout(() => this.tick(), 200);
   }
 
@@ -120,6 +132,7 @@ export class Game {
   validate(item) {
     this.found.add(item.code);
     this.last = item;
+    this.board.mark(item.code, 'todo', false);
     this.board.mark(item.code, 'found');
     this.board.flash(item.code);
     this.board.reveal(item.code, item.nom);
@@ -182,10 +195,9 @@ export class Game {
     if (this.over) return;
     this.over = true;
     clearTimeout(this.waitTimer);
-    const lim = this.cfg.limit * 1000;
-    const ms = lim ? Math.min(this.elapsed(), lim) : this.elapsed();
+    const ms = this.elapsed();
     for (const d of this.items) {
-      if (!this.found.has(d.code)) { this.missed.add(d.code); this.board.mark(d.code, 'missed'); this.board.reveal(d.code, d.nom); }
+      if (!this.found.has(d.code)) { this.missed.add(d.code); this.board.mark(d.code, 'todo', false); this.board.mark(d.code, 'missed'); this.board.reveal(d.code, d.nom); }
     }
     const att = {
       quiz: this.id, label: this.name, at: this.at, ms: Math.round(ms),
@@ -193,9 +205,10 @@ export class Game {
       pauses: this.pausesUsed, missed: [...this.missed], errors: this.errors,
     };
     addAttempt(att);
+    writeToFolder().catch(() => {}); // sauvegarde automatique sur PC si un dossier est choisi
     $('answer').blur();
     $('g-input').hidden = true; $('g-prompt').hidden = true;
-    $('g-clock').textContent = fmt(ms);
+    $('g-clock').textContent = fmtLong(ms);
     $('g-close').hidden = false;
     this.results(att);
   }
@@ -210,7 +223,7 @@ export class Game {
     s.append(grab);
 
     const big = el('div', 'big');
-    [[`${att.found}/${att.total}`, 'Score'], [fmt(att.ms), 'Durée'], [END[att.end], 'Fin'], [String(att.pauses), 'Pauses']]
+    [[`${att.found}/${att.total}`, 'Score'], [fmtLong(att.ms), 'Durée'], [END[att.end], 'Fin'], [String(att.pauses), 'Pauses']]
       .forEach(([v, k]) => { const d = el('div'); d.append(el('b', null, v), el('span', null, k)); big.append(d); });
     big.children[2].querySelector('b').style.fontSize = '17px';
     s.append(big);
@@ -221,7 +234,7 @@ export class Game {
       att.missed.slice().sort((a, b) => order.get(a) - order.get(b)).forEach(c => {
         const sp = el('span');
         if (this.def.etiquette === 'code') sp.append(el('b', null, c));
-        sp.append(document.createTextNode(byCode[c].nom));
+        sp.append(document.createTextNode(this.label(byCode[c])));
         ml.append(sp);
       });
       s.append(ml);
@@ -229,8 +242,10 @@ export class Game {
 
     const hist = attemptsOf(att.quiz).slice().reverse();
     const best = bestOf(att.quiz);
-    s.append(el('h2', null, `Historique · ${hist.length}`));
-    if (best) s.append(el('div', 'note', `Meilleur score ${best.best.found}/${best.best.total}${best.fastest ? ` · meilleur temps ${fmt(best.fastest)}` : ''}`));
+    const record = best?.fastest === att.ms && att.found === att.total && hist.length > 1;
+    if (record) s.append(el('div', 'record', 'Nouveau record de temps'));
+    s.append(el('h2', null, `Historique de cette variante · ${hist.length}`));
+    if (best) s.append(el('div', 'note', `Meilleur score ${best.best.found}/${best.best.total}${best.fastest ? ` · meilleur temps ${fmtLong(best.fastest)}` : ''}`));
     const tw = el('div', 'tablewrap'), t = el('table', 'hist');
     t.innerHTML = '<thead><tr><th>Date</th><th>Heure</th><th>Score</th><th>Durée</th><th>Fin</th><th>Pauses</th></tr></thead>';
     const tb = el('tbody');
@@ -238,7 +253,7 @@ export class Game {
       const d = new Date(h.at), tr = el('tr', h === att ? 'now' : null);
       [d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' }),
         d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }),
-        `${h.found}/${h.total}`, fmt(h.ms), END[h.end] || h.end, h.pauses ?? 0]
+        `${h.found}/${h.total}`, fmtLong(h.ms), END[h.end] || h.end, h.pauses ?? 0]
         .forEach(v => tr.append(el('td', null, String(v))));
       tb.append(tr);
     });

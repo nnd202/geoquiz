@@ -1,96 +1,341 @@
 {
  "jeux": {
-  "departements": {
-   "titre": "Départements", "fichier": "data/departements.json", "carte": "maps/france.svg",
-   "prefixe": "dep", "grille": true, "etiquette": "code", "question": "Quel est ce département ?",
+  "pays": {
+   "titre": "Pays du monde",
+   "fichier": "data/pays.json",
+   "carte": "maps/monde.svg",
+   "prefixe": "pays",
+   "etiquette": "nom",
+   "calques": [],
    "sens": [
-    { "demande": "code", "reponse": "nom", "label": "Numéro → nom" },
-    { "demande": "nom", "reponse": "code", "label": "Nom → numéro" },
-    { "demande": "zone", "reponse": "nom", "label": "Zone → nom" }
-   ]
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 197
+  },
+  "capitales": {
+   "titre": "Capitales du monde",
+   "fichier": "data/capitales.json",
+   "carte": "maps/monde.svg",
+   "prefixe": "capw",
+   "etiquette": "nom",
+   "sens": [
+    {
+     "demande": "pays",
+     "reponse": "nom",
+     "label": "Pays → capitale"
+    }
+   ],
+   "nb": 197
+  },
+  "mers": {
+   "titre": "Mers et océans",
+   "fichier": "data/mers.json",
+   "carte": "maps/mers.svg",
+   "prefixe": "mers",
+   "etiquette": "nom",
+   "style": "mer",
+   "calques": [
+    "terres"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 101
+  },
+  "constellations": {
+   "titre": "Constellations",
+   "fichier": "data/constellations.json",
+   "carte": "maps/ciel.svg",
+   "prefixe": "con",
+   "etiquette": "nom",
+   "style": "ciel",
+   "calques": [
+    "cadre",
+    "traces",
+    "etoiles"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 88
+  },
+  "etoiles": {
+   "titre": "Étoiles",
+   "fichier": "data/etoiles.json",
+   "carte": "maps/ciel.svg",
+   "prefixe": "eto",
+   "etiquette": "nom",
+   "style": "ciel",
+   "calques": [
+    "cadre",
+    "traces",
+    "etoiles"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Point → nom"
+    }
+   ],
+   "nb": 55
   },
   "regions": {
-   "titre": "Régions", "fichier": "data/regions.json", "carte": "maps/france-regions.svg",
-   "prefixe": "reg", "etiquette": "nom", "question": "Quelle est cette région ?",
-   "sens": [{ "demande": "zone", "reponse": "nom", "label": "Zone → nom" }]
+   "titre": "Régions",
+   "fichier": "data/regions.json",
+   "carte": "maps/france-regions.svg",
+   "prefixe": "reg",
+   "etiquette": "nom",
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 18
+  },
+  "departements": {
+   "titre": "Départements",
+   "fichier": "data/departements.json",
+   "carte": "maps/france.svg",
+   "prefixe": "dep",
+   "grille": true,
+   "etiquette": "code",
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Numéro → nom"
+    }
+   ],
+   "nb": 101
   },
   "prefectures": {
-   "titre": "Préfectures", "fichier": "data/prefectures.json", "carte": "maps/france.svg",
-   "prefixe": "pref", "etiquette": "nom", "question": "Quelle est cette préfecture ?",
+   "titre": "Préfectures",
+   "fichier": "data/prefectures.json",
+   "carte": "maps/france.svg",
+   "prefixe": "pref",
+   "etiquette": "nom",
    "sens": [
-    { "demande": "depNom", "reponse": "nom", "label": "Département → préfecture" },
-    { "demande": "dep", "reponse": "nom", "label": "Numéro → préfecture" },
-    { "demande": "zone", "reponse": "nom", "label": "Point → nom" },
-    { "demande": "nom", "reponse": "dep", "label": "Préfecture → numéro" }
-   ]
-  },
-  "sous-prefectures": {
-   "titre": "Sous-préfectures", "fichier": "data/sous-prefectures.json", "carte": "maps/france.svg",
-   "calques": ["arrondissements", "prefectures"],
-   "prefixe": "sp", "etiquette": "nom", "question": "Quelle est cette sous-préfecture ?",
-   "sens": [{ "demande": "zone", "reponse": "nom", "label": "Point → nom" }]
+    {
+     "demande": "depNom",
+     "reponse": "nom",
+     "label": "Département → préfecture"
+    }
+   ],
+   "nb": 101
   },
   "chefs-lieux": {
-   "titre": "Préfectures et sous-préfectures", "fichier": "data/chefs-lieux.json", "carte": "maps/france.svg",
-   "calques": ["arrondissements"],
-   "prefixe": "cl", "etiquette": "nom", "question": "Quelle est cette ville ?",
-   "sens": [{ "demande": "zone", "reponse": "nom", "label": "Point → nom" }]
+   "titre": "Préfectures et sous-préfectures",
+   "fichier": "data/chefs-lieux.json",
+   "carte": "maps/france.svg",
+   "prefixe": "cl",
+   "etiquette": "nom",
+   "calques": [
+    "arrondissements"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Point → nom"
+    }
+   ],
+   "nb": 334
+  },
+  "villes-france": {
+   "titre": "100 villes de France",
+   "fichier": "data/villes-france.json",
+   "carte": "maps/france.svg",
+   "prefixe": "vfr",
+   "etiquette": "nom",
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Point → nom"
+    }
+   ],
+   "nb": 100
   },
   "etats-unis": {
-   "titre": "États des États-Unis", "fichier": "data/etats-unis.json", "carte": "maps/etats-unis.svg",
-   "prefixe": "us", "etiquette": "nom", "question": "Quel est cet État ?",
-   "sens": [{ "demande": "zone", "reponse": "nom", "label": "Zone → nom" }]
-  },
-  "capitales-etats-unis": {
-   "titre": "Capitales des États", "fichier": "data/capitales-etats-unis.json", "carte": "maps/etats-unis.svg",
-   "prefixe": "uscap", "etiquette": "nom", "question": "Quelle est cette capitale ?",
+   "titre": "États des États-Unis",
+   "fichier": "data/etats-unis.json",
+   "carte": "maps/etats-unis.svg",
+   "prefixe": "us",
+   "etiquette": "nom",
    "sens": [
-    { "demande": "etat", "reponse": "nom", "label": "État → capitale" },
-    { "demande": "nom", "reponse": "etat", "label": "Capitale → État" },
-    { "demande": "zone", "reponse": "nom", "label": "Point → nom" }
-   ]
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 50
   },
   "canada": {
-   "titre": "Provinces et territoires du Canada", "fichier": "data/canada.json", "carte": "maps/canada.svg",
-   "prefixe": "ca", "etiquette": "nom", "question": "Quelle est cette province ou ce territoire ?",
-   "sens": [{ "demande": "zone", "reponse": "nom", "label": "Zone → nom" }]
+   "titre": "Provinces et territoires du Canada",
+   "fichier": "data/canada.json",
+   "carte": "maps/canada.svg",
+   "prefixe": "ca",
+   "etiquette": "nom",
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 13
+  },
+  "capitales-etats-unis": {
+   "titre": "Capitales des États",
+   "fichier": "data/capitales-etats-unis.json",
+   "carte": "maps/etats-unis.svg",
+   "prefixe": "uscap",
+   "etiquette": "nom",
+   "sens": [
+    {
+     "demande": "etat",
+     "reponse": "nom",
+     "label": "État → capitale"
+    }
+   ],
+   "nb": 50
   },
   "capitales-canada": {
-   "titre": "Capitales du Canada", "fichier": "data/capitales-canada.json", "carte": "maps/canada.svg",
-   "prefixe": "cacap", "etiquette": "nom", "question": "Quelle est cette capitale ?",
+   "titre": "Capitales du Canada",
+   "fichier": "data/capitales-canada.json",
+   "carte": "maps/canada.svg",
+   "prefixe": "cacap",
+   "etiquette": "nom",
    "sens": [
-    { "demande": "etat", "reponse": "nom", "label": "Province → capitale" },
-    { "demande": "nom", "reponse": "etat", "label": "Capitale → province" },
-    { "demande": "zone", "reponse": "nom", "label": "Point → nom" }
-   ]
+    {
+     "demande": "etat",
+     "reponse": "nom",
+     "label": "Province → capitale"
+    }
+   ],
+   "nb": 13
+  },
+  "villes-etats-unis": {
+   "titre": "100 villes des États-Unis",
+   "fichier": "data/villes-etats-unis.json",
+   "carte": "maps/etats-unis.svg",
+   "prefixe": "vus",
+   "etiquette": "nom",
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Point → nom"
+    }
+   ],
+   "nb": 100
   }
  },
  "sections": [
   {
+   "titre": "Monde",
+   "quiz": [
+    {
+     "nom": "Pays",
+     "jeu": "pays"
+    },
+    {
+     "nom": "Capitales",
+     "jeu": "capitales"
+    },
+    {
+     "nom": "Mers et océans",
+     "jeu": "mers"
+    }
+   ]
+  },
+  {
+   "titre": "Ciel",
+   "quiz": [
+    {
+     "nom": "Constellations",
+     "jeu": "constellations"
+    },
+    {
+     "nom": "Étoiles",
+     "jeu": "etoiles"
+    }
+   ]
+  },
+  {
    "titre": "France",
    "quiz": [
-    { "nom": "Quiz du jour", "jeu": "departements", "support": "map", "mecanique": "clue", "demande": "code", "n": 20, "chrono": 0 },
-    { "nom": "Les 101 numéros", "jeu": "departements", "support": "grid", "mecanique": "all", "n": 0, "chrono": 600 },
-    { "nom": "Toucher le numéro", "jeu": "departements", "support": "grid", "mecanique": "tap", "n": 20, "chrono": 0 },
-    { "nom": "Les 101 départements", "jeu": "departements", "support": "map", "mecanique": "all", "n": 0, "chrono": 600 },
-    { "nom": "Régions", "jeu": "regions", "support": "map", "mecanique": "all", "n": 0, "chrono": 0 },
-    { "nom": "Préfectures", "jeu": "prefectures", "support": "map", "mecanique": "all", "n": 0, "chrono": 600 },
-    { "nom": "Préfecture de chaque département", "jeu": "prefectures", "support": "map", "mecanique": "clue", "demande": "depNom", "n": 20, "chrono": 0 },
-    { "nom": "Placer les préfectures", "jeu": "prefectures", "support": "map", "mecanique": "tap", "n": 20, "chrono": 0 },
-    { "nom": "Sous-préfectures", "jeu": "sous-prefectures", "support": "map", "mecanique": "all", "n": 0, "chrono": 0 },
-    { "nom": "Placer les sous-préfectures", "jeu": "sous-prefectures", "support": "map", "mecanique": "tap", "n": 20, "chrono": 0 },
-    { "nom": "Préfectures et sous-préfectures", "jeu": "chefs-lieux", "support": "map", "mecanique": "all", "n": 0, "chrono": 0 }
+    {
+     "nom": "Régions",
+     "jeu": "regions"
+    },
+    {
+     "nom": "Départements",
+     "jeu": "departements"
+    },
+    {
+     "nom": "Préfectures",
+     "jeu": "prefectures"
+    },
+    {
+     "nom": "Préfectures et sous-préfectures",
+     "jeu": "chefs-lieux"
+    },
+    {
+     "nom": "100 villes",
+     "jeu": "villes-france"
+    },
+    {
+     "nom": "Numéros des départements",
+     "jeu": "departements",
+     "support": "grid"
+    }
    ]
   },
   {
    "titre": "Amérique du Nord",
    "quiz": [
-    { "nom": "États des États-Unis", "jeu": "etats-unis", "support": "map", "mecanique": "all", "n": 0, "chrono": 600 },
-    { "nom": "Capitales des États", "jeu": "capitales-etats-unis", "support": "map", "mecanique": "all", "n": 0, "chrono": 600 },
-    { "nom": "Capitale de chaque État", "jeu": "capitales-etats-unis", "support": "map", "mecanique": "clue", "demande": "etat", "n": 20, "chrono": 0 },
-    { "nom": "Provinces et territoires du Canada", "jeu": "canada", "support": "map", "mecanique": "all", "n": 0, "chrono": 300 },
-    { "nom": "Capitales du Canada", "jeu": "capitales-canada", "support": "map", "mecanique": "all", "n": 0, "chrono": 300 }
+    {
+     "nom": "États américains",
+     "jeu": "etats-unis"
+    },
+    {
+     "nom": "Provinces et territoires canadiens",
+     "jeu": "canada"
+    },
+    {
+     "nom": "Capitales américaines",
+     "jeu": "capitales-etats-unis"
+    },
+    {
+     "nom": "Capitales canadiennes",
+     "jeu": "capitales-canada"
+    },
+    {
+     "nom": "100 villes américaines",
+     "jeu": "villes-etats-unis"
+    }
    ]
   }
- ]
+ ],
+ "options": {
+  "hasard": 15,
+  "seuilHasard": 30
+ }
 }

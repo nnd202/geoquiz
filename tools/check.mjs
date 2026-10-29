@@ -10,6 +10,7 @@ let problems = 0;
 for (const [key, def] of Object.entries(cat.jeux)) {
   const data = JSON.parse(readFileSync(new URL(def.fichier, root)));
   const items = prepare(data.items);
+  if (def.nb !== items.length) { console.log(`✗ catalogue : nb = ${def.nb} pour ${key}, le fichier en contient ${items.length}`); problems++; }
   const short = it => it.dep ? `${it.nom} (${it.dep})` : it.etat ? `${it.nom} (${it.etat})` : `${it.code} ${it.nom}`;
   const codes = new Set();
   for (const it of items) { if (codes.has(it.code)) { console.log(`✗ code en double : ${it.code}`); problems++; } codes.add(it.code); }
