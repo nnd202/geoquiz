@@ -2,7 +2,7 @@
 import { $, el } from './core/dom.js';
 import { prepare } from './core/text.js';
 import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, snooze } from './core/store.js';
-import { Game, END, fmtLong, onHome, wireGameControls } from './core/game.js';
+import { Game, END, fmtLong, onHome, wireGameControls, backRequest } from './core/game.js';
 import { saveNow, folderSupported, folderState, chooseFolder, forgetFolder, writeToFolder } from './core/backup.js';
 
 const cache = {};
@@ -37,7 +37,8 @@ const optsLabel = o => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', o
 async function play(q, study = false) {
   const cfg = cfgOf(q);
   const { def, data, mapSvg } = await loadJeu(q.jeu);
-  closeSheet();
+  closeSheet(true);
+  pushGuard();
   new Game({ cfg, name: q.nom, id: variantId(cfg), def, data, mapSvg, study }).start();
 }
 
@@ -123,6 +124,7 @@ function openSheet(q) {
   s.setAttribute('aria-label', q.nom);
   veil.append(s);
   document.body.append(veil);
+  pushGuard();
 
   const draw = () => {
     s.textContent = '';
@@ -157,7 +159,7 @@ function openSheet(q) {
     const r = el('div', 'row');
     const go = el('button', 'btn', 'Jouer'); go.addEventListener('click', () => play(q));
     const st = el('button', 'btn ghost', 'Étudier'); st.addEventListener('click', () => play(q, true));
-    const x = el('button', 'btn ghost', 'Fermer'); x.addEventListener('click', closeSheet);
+    const x = el('button', 'btn ghost', 'Fermer'); x.addEventListener('click', () => closeSheet());
     r.append(go, st, x);
     s.append(r);
     if (hist.length) {
@@ -177,7 +179,25 @@ function openSheet(q) {
   };
   draw();
 }
-function closeSheet() { $('veil')?.remove(); }
+function closeSheet(keepGuard = false) {
+  if (!$('veil')) return;
+  $('veil').remove();
+  if (!keepGuard) dropGuard();
+}
+
+/* ---------- Bouton retour d'Android ----------
+ * Une entrée d'historique « garde » est ajoutée quand un panneau ou une partie s'ouvre.
+ * Retour la consomme : il ferme le panneau, ou annule la partie (avec confirmation au-delà de 10 trouvés).
+ * Sur l'accueil, sans garde, retour quitte l'app normalement. */
+let ignorePop = false;
+function pushGuard() { if (!history.state?.gq) history.pushState({ gq: 1 }, ''); }
+function dropGuard() { if (history.state?.gq) { ignorePop = true; history.back(); } }
+window.addEventListener('popstate', () => {
+  if (ignorePop) { ignorePop = false; return; }
+  if ($('remind')) { $('remind').remove(); snooze(); return; }
+  if ($('veil')) { $('veil').remove(); return; }
+  if (!$('game').hidden && backRequest()) pushGuard(); // la partie continue (confirmation affichée ou refusée)
+});
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeSheet(); $('remind')?.remove(); } });
 
 /* ---------- Rappel de sauvegarde ---------- */
@@ -256,7 +276,7 @@ async function main() {
   CAT = await fetch('catalogue.json').then(r => r.json());
   wireGameControls();
   wireSettings();
-  onHome(renderHome);
+  onHome(() => { renderHome(); dropGuard(); });
   renderHome();
   registerSW();
 }

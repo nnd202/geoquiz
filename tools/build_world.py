@@ -211,20 +211,21 @@ SEAS = {
     "Kattegat": ("Cattégat", ["Kattegat"]), "Labrador Sea": ("Mer du Labrador", []), "Laccadive Sea": ("Mer des Laquedives", []),
     "Laptev Sea": ("Mer de Laptev", []), "Ligurian Sea": ("Mer Ligurienne", ["Mer de Ligurie"]), "Lincoln Sea": ("Mer de Lincoln", []),
     "Makassar Strait": ("Détroit de Makassar", []), "Malacca Strait": ("Détroit de Malacca", []),
-    "Mediterranean Sea - Eastern Basin": ("Méditerranée orientale", ["Méditerranée", "Mer Méditerranée"]),
-    "Mediterranean Sea - Western Basin": ("Méditerranée occidentale", ["Méditerranée", "Mer Méditerranée"]),
+    # Regroupés (décision du 29 octobre 2026) : l'OHI coupe ces trois étendues, l'usage courant non.
+    "Mediterranean Sea - Eastern Basin": ("Mer Méditerranée", ["Méditerranée"]),
+    "Mediterranean Sea - Western Basin": ("Mer Méditerranée", ["Méditerranée"]),
     "Molukka Sea": ("Mer des Moluques", []), "Mozambique Channel": ("Canal du Mozambique", []),
-    "North Atlantic Ocean": ("Océan Atlantique Nord", ["Atlantique Nord", "Océan Atlantique", "Atlantique"]),
-    "North Pacific Ocean": ("Océan Pacifique Nord", ["Pacifique Nord", "Océan Pacifique", "Pacifique"]),
+    "North Atlantic Ocean": ("Océan Atlantique", ["Atlantique"]),
+    "North Pacific Ocean": ("Océan Pacifique", ["Pacifique"]),
     "North Sea": ("Mer du Nord", []), "Norwegian Sea": ("Mer de Norvège", []),
     "Persian Gulf": ("Golfe Persique", ["Golfe arabo-persique"]), "Philippine Sea": ("Mer des Philippines", []),
     "Red Sea": ("Mer Rouge", []), "Rio de La Plata": ("Río de la Plata", []), "Savu Sea": ("Mer de Savu", []),
     "Sea of Azov": ("Mer d'Azov", []), "Sea of Marmara": ("Mer de Marmara", []), "Sea of Okhotsk": ("Mer d'Okhotsk", []),
     "Seto Naikai or Inland Sea": ("Mer intérieure de Seto", ["Seto Naikai"]), "Singapore Strait": ("Détroit de Singapour", []),
     "Skagerrak": ("Skagerrak", []), "Solomon Sea": ("Mer des Salomon", []),
-    "South Atlantic Ocean": ("Océan Atlantique Sud", ["Atlantique Sud", "Océan Atlantique", "Atlantique"]),
+    "South Atlantic Ocean": ("Océan Atlantique", ["Atlantique"]),
     "South China Sea": ("Mer de Chine méridionale", []),
-    "South Pacific Ocean": ("Océan Pacifique Sud", ["Pacifique Sud", "Océan Pacifique", "Pacifique"]),
+    "South Pacific Ocean": ("Océan Pacifique", ["Pacifique"]),
     "Southern Ocean": ("Océan Austral", []), "Strait of Gibraltar": ("Détroit de Gibraltar", []),
     "Sulu Sea": ("Mer de Sulu", []), "Tasman Sea": ("Mer de Tasman", []),
     "The Coastal Waters of Southeast Alaska and British Columbia": ("Eaux côtières de l'Alaska et de la Colombie-Britannique", []),
@@ -240,17 +241,22 @@ sea_feats = J("world-seas.geojson")["features"]
 assert len(sea_feats) == 101 and all(f["properties"]["NAME"] in SEAS for f in sea_feats)
 land_d = "".join(path_d(g, tf, 0.05) for g in geoms(J("world-land.geojson")))
 seas, body = [], ['<g data-layer="mers">']
-for i, f in enumerate(sorted(sea_feats, key=lambda f: f["properties"]["NAME"])):
-    en = f["properties"]["NAME"]
-    nom, alias = SEAS[en]
+# Un élément par nom français : les zones regroupées partagent un code et sont dessinées en plusieurs morceaux.
+groups = {}
+for f in sorted(sea_feats, key=lambda f: f["properties"]["NAME"]):
+    groups.setdefault(SEAS[f["properties"]["NAME"]][0], []).append(f)
+for i, (nom, feats) in enumerate(sorted(groups.items(), key=lambda kv: kv[0])):
+    alias = SEAS[feats[0]["properties"]["NAME"]][1]
     code = f"m{i + 1:03d}"
     first = nom.split()[0].lower().replace("é", "e").replace("è", "e")
-    gen = first if first in ("mer", "mers", "golfe", "baie", "détroit", "detroit", "canal", "océan", "ocean", "passage", "eaux") else None
+    gen = first if first in ("mer", "mers", "golfe", "baie", "detroit", "canal", "ocean", "passage", "eaux") else None
     kind = "océan" if nom.startswith("Océan") else "mer"
-    seas.append({"code": code, "nom": nom, "alias": alias, "domaine": "physique", "categorie": kind,
-                 "gen": gen.replace("é", "e") if gen else None,
-                 "geo": [round(v, 2) for v in centroid(f["geometry"])], "detail": f"OHI : {en}"})
-    body.append(f'<path class="zone sea" data-code="{code}" d="{path_d(f["geometry"], tf, 0.02)}"/>')
+    big = max(feats, key=lambda f: len(json.dumps(f["geometry"])))
+    seas.append({"code": code, "nom": nom, "alias": alias, "domaine": "physique", "categorie": kind, "gen": gen,
+                 "geo": [round(v, 2) for v in centroid(big["geometry"])],
+                 "detail": "OHI : " + " + ".join(f["properties"]["NAME"] for f in feats)})
+    for f in feats:
+        body.append(f'<path class="zone sea" data-code="{code}" d="{path_d(f["geometry"], tf, 0.02)}"/>')
 # Les terres passent au-dessus des zones OHI, dont le trait de côte est grossier.
 body.append('</g><g data-layer="terres"><path class="land" d="' + land_d + '"/></g>')
 open(f"{root}/maps/mers.svg", "w").write(svg_doc(VIEW, [], body))

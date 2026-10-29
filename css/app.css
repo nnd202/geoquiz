@@ -270,3 +270,11 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 
 .qsheet .big { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 .qsheet .big span { letter-spacing: .04em; }
+
+/* ---------- Annuler ---------- */
+.bar .cancel { font-size: 17px; line-height: 1; padding: 6px 8px; margin-left: -6px; border-radius: 10px; color: #cfe2f4; }
+.bar .cancel:hover { background: rgba(255, 255, 255, .08); }
+.confirm { position: absolute; inset: 0; z-index: 7; background: rgba(6, 22, 42, .45); display: grid; place-items: center; padding: 16px; }
+.confirm-card { background: var(--panel); border-radius: 18px; box-shadow: var(--shadow); padding: 18px; display: grid; gap: 10px; max-width: 340px; width: 100%; box-sizing: border-box; }
+.confirm-card h3 { margin: 0; font-family: var(--f-display); font-weight: 500; font-size: 19px; color: var(--abyss); }
+.confirm-card p { margin: 0; color: var(--ink-soft); font-size: 14px; }

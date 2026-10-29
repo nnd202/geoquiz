@@ -9,6 +9,7 @@ import { MECHANICS } from '../mechanics/index.js';
 export const END = { time: 'Chrono écoulé', all: 'Tout trouvé', list: 'Liste terminée', stop: 'Terminer' };
 export const fmtLong = ms => { const s = Math.round(ms / 1000); return s >= 3600 ? `${Math.floor(s / 3600)} h ${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}` : fmt(ms); };
 const WAIT_MS = 700; // pause de frappe avant de valider un préfixe ambigu ou une faute
+const CONFIRM_FROM = 10; // éléments trouvés au-delà desquels Annuler demande confirmation
 
 let current = null;
 let onLeave = () => {};
@@ -56,7 +57,8 @@ export class Game {
     $('g-input').hidden = study;
     inp.hidden = !typing; inp.value = ''; inp.disabled = false; inp.classList.remove('pending');
     inp.inputMode = cfg.mech === 'clue' && cfg.ask === 'nom' ? 'text' : 'text';
-    $('g-close').hidden = !study; $('g-clock').hidden = study; $('g-score').hidden = study;
+    $('g-cancel').setAttribute('aria-label', study ? "Fermer l'étude" : 'Annuler la partie');
+    $('g-clock').hidden = study; $('g-score').hidden = study;
     $('g-pause').hidden = study; $('g-stop').hidden = study;
     this.updatePauseBtn();
     $('g-prompt').hidden = study || !mech.hasPrompt;
@@ -161,6 +163,35 @@ export class Game {
     b.textContent = `Pause · ${this.pausesLeft}`;
     b.disabled = !this.pausesLeft || this.paused;
   }
+  /* --- Annuler : quitter sans rien enregistrer ---
+   * Sans question tant que moins de 10 éléments sont trouvés ; au-delà, une confirmation dans la page. */
+  cancel() {
+    if (this.over || this.study) return goHome();
+    if ($('confirm')) return this.closeConfirm();
+    if (this.found.size < CONFIRM_FROM) return goHome();
+    this.wasPaused = this.paused;
+    if (!this.paused) { this.paused = true; this.acc = this.elapsed(); this.resumeAt = null; }
+    clearTimeout(this.waitTimer);
+    $('answer').blur();
+    const box = el('div', 'confirm'); box.id = 'confirm';
+    const card = el('div', 'confirm-card');
+    card.append(el('h3', null, 'Annuler la partie ?'), el('p', null, `${this.found.size} trouvés. Rien ne sera enregistré.`));
+    const r = el('div', 'row');
+    const yes = el('button', 'btn', 'Annuler la partie'); yes.addEventListener('click', () => goHome());
+    const no = el('button', 'btn ghost', 'Continuer'); no.addEventListener('click', () => this.closeConfirm());
+    r.append(yes, no); card.append(r); box.append(card);
+    $('board').append(box);
+    no.focus();
+    return true;
+  }
+  closeConfirm() {
+    $('confirm')?.remove();
+    if (this.over || this.wasPaused) return;
+    this.paused = false; this.resumeAt = performance.now();
+    this.tick();
+    if (this.mech.typing) $('answer').focus();
+  }
+
   pause() {
     if (this.over || this.paused || !this.pausesLeft || this.study) return;
     this.paused = true; this.pausesLeft--; this.pausesUsed++;
@@ -209,7 +240,7 @@ export class Game {
     $('answer').blur();
     $('g-input').hidden = true; $('g-prompt').hidden = true;
     $('g-clock').textContent = fmtLong(ms);
-    $('g-close').hidden = false;
+    $('g-cancel').setAttribute('aria-label', 'Retour à l’accueil');
     this.results(att);
   }
 
@@ -288,6 +319,13 @@ export class Game {
   }
 }
 
+// Bouton retour d'Android : même effet que ✕. Renvoie true si l'écran de jeu reste affiché.
+export function backRequest() {
+  if (!current) return false;
+  current.cancel();
+  return !!current;
+}
+
 export function goHome() {
   current?.dispose();
   current = null;
@@ -302,7 +340,7 @@ export function wireGameControls() {
   $('g-pause').addEventListener('click', () => current?.pause());
   $('g-stop').addEventListener('click', () => { if (current && !current.over && !current.paused && !current.study) current.finish('stop'); });
   $('g-skip').addEventListener('click', () => current?.skip());
-  $('g-close').addEventListener('click', goHome);
+  $('g-cancel').addEventListener('click', () => current?.cancel());
   window.visualViewport?.addEventListener('resize', fitViewport);
   window.visualViewport?.addEventListener('scroll', fitViewport);
 }
