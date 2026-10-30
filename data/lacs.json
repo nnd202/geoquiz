@@ -1,0 +1,1030 @@
+{
+ "id": "lacs",
+ "titre": "Lacs du monde",
+ "items": [
+  {
+   "code": "l01",
+   "nom": "Mer Caspienne",
+   "alias": [
+    "Caspienne"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    50.493,
+    41.91
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l02",
+   "nom": "Lac Supérieur",
+   "alias": [
+    "Supérieur"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -88.201,
+    47.726
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l03",
+   "nom": "Lac Michigan",
+   "alias": [
+    "Michigan"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -87.089,
+    43.878
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l04",
+   "nom": "Lac Huron",
+   "alias": [
+    "Huron"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -82.288,
+    44.686
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l05",
+   "nom": "Lac Érié",
+   "alias": [
+    "Érié"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -80.967,
+    42.247
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l06",
+   "nom": "Lac Ontario",
+   "alias": [
+    "Ontario"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -77.645,
+    43.849
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l07",
+   "nom": "Lac Victoria",
+   "alias": [
+    "Victoria"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    32.866,
+    -1.267
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l08",
+   "nom": "Lac Tanganyika",
+   "alias": [
+    "Tanganyika"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    29.462,
+    -6.072
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l09",
+   "nom": "Lac Malawi",
+   "alias": [
+    "Lac Nyassa",
+    "Malawi"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    34.515,
+    -11.95
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l10",
+   "nom": "Lac Baïkal",
+   "alias": [
+    "Baïkal"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    108.159,
+    53.631
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l11",
+   "nom": "Grand lac de l'Ours",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -120.354,
+    65.928
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l12",
+   "nom": "Grand lac des Esclaves",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -113.928,
+    61.817
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l13",
+   "nom": "Lac Winnipeg",
+   "alias": [
+    "Winnipeg"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -97.481,
+    52.401
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l14",
+   "nom": "Lac Ladoga",
+   "alias": [
+    "Ladoga"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    31.661,
+    60.845
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l15",
+   "nom": "Lac Onega",
+   "alias": [
+    "Lac Onéga",
+    "Onega"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    35.558,
+    61.89
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l16",
+   "nom": "Lac Balkhach",
+   "alias": [
+    "Balkhach"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    73.954,
+    45.903
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l17",
+   "nom": "Mer d'Aral",
+   "alias": [
+    "Aral"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    60.634,
+    46.434
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l18",
+   "nom": "Lac Tchad",
+   "alias": [
+    "Tchad"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    14.536,
+    13.063
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l19",
+   "nom": "Lac Titicaca",
+   "alias": [
+    "Titicaca"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -69.354,
+    -15.92
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l20",
+   "nom": "Lac Nicaragua",
+   "alias": [
+    "Lac Cocibolca",
+    "Nicaragua"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -85.308,
+    11.572
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l21",
+   "nom": "Lac Vänern",
+   "alias": [
+    "Lac Vanern",
+    "Vänern"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    13.594,
+    58.883
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l22",
+   "nom": "Lac Vättern",
+   "alias": [
+    "Vättern"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    14.473,
+    58.33
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l23",
+   "nom": "Lac Tana",
+   "alias": [
+    "Tana"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    37.279,
+    11.962
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l24",
+   "nom": "Lac Turkana",
+   "alias": [
+    "Lac Rodolphe",
+    "Turkana"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    36.075,
+    3.531
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l25",
+   "nom": "Lac Albert",
+   "alias": [
+    "Albert"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    31.011,
+    1.709
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l26",
+   "nom": "Lac Kivu",
+   "alias": [
+    "Kivu"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    29.238,
+    -2.031
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l27",
+   "nom": "Lac Édouard",
+   "alias": [
+    "Édouard"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    29.593,
+    -0.383
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l28",
+   "nom": "Lac Volta",
+   "alias": [
+    "Volta"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    0.065,
+    7.728
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l29",
+   "nom": "Lac Nasser",
+   "alias": [
+    "Nasser"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    32.58,
+    22.797
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l30",
+   "nom": "Lac Kariba",
+   "alias": [
+    "Kariba"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    27.585,
+    -17.235
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l31",
+   "nom": "Lac Moero",
+   "alias": [
+    "Lac Mweru",
+    "Moero"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    28.713,
+    -9.003
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l32",
+   "nom": "Lac Issyk-Koul",
+   "alias": [
+    "Issyk-Koul"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    77.036,
+    42.449
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l33",
+   "nom": "Lac Qinghai",
+   "alias": [
+    "Qinghai"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    100.113,
+    36.879
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l34",
+   "nom": "Lac Khanka",
+   "alias": [
+    "Khanka"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    132.433,
+    44.937
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l35",
+   "nom": "Tonlé Sap",
+   "alias": [
+    "Lac Tonlé Sap"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    104.028,
+    12.818
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l36",
+   "nom": "Mer Morte",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    35.45,
+    31.167
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l37",
+   "nom": "Lac de Tibériade",
+   "alias": [
+    "Mer de Galilée",
+    "Lac Kinneret",
+    "Tibériade"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    35.583,
+    32.804
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l38",
+   "nom": "Lac de Van",
+   "alias": [
+    "Van"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    42.816,
+    38.657
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l39",
+   "nom": "Lac d'Ourmia",
+   "alias": [
+    "Ourmia"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    45.512,
+    37.698
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l40",
+   "nom": "Grand Lac Salé",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -112.577,
+    41.184
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l41",
+   "nom": "Lac Okeechobee",
+   "alias": [
+    "Okeechobee"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -80.846,
+    26.942
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l42",
+   "nom": "Lac Athabasca",
+   "alias": [
+    "Athabasca"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -110.201,
+    59.035
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l43",
+   "nom": "Lac Champlain",
+   "alias": [
+    "Champlain"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -73.324,
+    44.416
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l44",
+   "nom": "Lac Tahoe",
+   "alias": [
+    "Tahoe"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -120.046,
+    39.099
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l45",
+   "nom": "Lac Léman",
+   "alias": [
+    "Lac de Genève",
+    "Léman"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    6.256,
+    46.358
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l46",
+   "nom": "Lac de Constance",
+   "alias": [
+    "Constance"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    9.336,
+    47.655
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l47",
+   "nom": "Lac de Garde",
+   "alias": [
+    "Garde"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    10.708,
+    45.694
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l48",
+   "nom": "Lac de Côme",
+   "alias": [
+    "Côme"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    8.632,
+    45.95
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l49",
+   "nom": "Lac Balaton",
+   "alias": [
+    "Balaton"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    17.823,
+    46.883
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l50",
+   "nom": "Lac Saimaa",
+   "alias": [
+    "Saimaa"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    29.535,
+    62.327
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l51",
+   "nom": "Lac Peïpous",
+   "alias": [
+    "Lac Peipsi",
+    "Peïpous"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    27.49,
+    58.628
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l52",
+   "nom": "Lac Inari",
+   "alias": [
+    "Inari"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    27.896,
+    69.069
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l53",
+   "nom": "Lac Eyre",
+   "alias": [
+    "Eyre"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    137.299,
+    -28.484
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l54",
+   "nom": "Lac Taupo",
+   "alias": [
+    "Taupo"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    175.938,
+    -38.805
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l55",
+   "nom": "Lac Sevan",
+   "alias": [
+    "Sevan"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    45.363,
+    40.379
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l56",
+   "nom": "Lac Dongting",
+   "alias": [
+    "Dongting"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    112.167,
+    28.92
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l57",
+   "nom": "Lac Poyang",
+   "alias": [
+    "Poyang"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    116.06,
+    29.263
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l58",
+   "nom": "Lac Khövsgöl",
+   "alias": [
+    "Khövsgöl"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    100.489,
+    51.03
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l59",
+   "nom": "Lac Bangweulu",
+   "alias": [
+    "Bangweulu"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    29.766,
+    -11.143
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l60",
+   "nom": "Lac Manitoba",
+   "alias": [
+    "Manitoba"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -98.845,
+    50.997
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l61",
+   "nom": "Lac Nipigon",
+   "alias": [
+    "Nipigon"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -88.349,
+    49.833
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l62",
+   "nom": "Lac Mistassini",
+   "alias": [
+    "Mistassini"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -73.838,
+    50.715
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l63",
+   "nom": "Lac des Bois",
+   "alias": [
+    "Bois"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -94.822,
+    49.424
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l64",
+   "nom": "Lac Mälar",
+   "alias": [
+    "Lac Mälaren",
+    "Mälar"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    16.849,
+    59.522
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l65",
+   "nom": "IJsselmeer",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    5.422,
+    52.667
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l66",
+   "nom": "Lac Argentino",
+   "alias": [
+    "Argentino"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -73.035,
+    -50.318
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l67",
+   "nom": "Lac Buenos Aires",
+   "alias": [
+    "Lac General Carrera",
+    "Buenos Aires"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -72.508,
+    -46.656
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l68",
+   "nom": "Lac Kyoga",
+   "alias": [
+    "Kyoga"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    32.891,
+    1.495
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l69",
+   "nom": "Lac Tuz",
+   "alias": [
+    "Tuz"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    33.312,
+    38.825
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l70",
+   "nom": "Lac Assal",
+   "alias": [
+    "Assal"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    42.419,
+    11.665
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l71",
+   "nom": "Lac Poopó",
+   "alias": [
+    "Poopó"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    -67.181,
+    -18.614
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l72",
+   "nom": "Lac Toba",
+   "alias": [
+    "Toba"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    98.902,
+    2.616
+   ],
+   "detail": "Lac"
+  },
+  {
+   "code": "l73",
+   "nom": "Lac Biwa",
+   "alias": [
+    "Biwa"
+   ],
+   "domaine": "physique",
+   "categorie": "lac",
+   "geo": [
+    136.095,
+    35.246
+   ],
+   "detail": "Lac"
+  }
+ ]
+}

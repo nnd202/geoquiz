@@ -1,0 +1,1430 @@
+{
+ "id": "fleuves",
+ "titre": "Fleuves du monde",
+ "items": [
+  {
+   "code": "r001",
+   "nom": "Volga",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    50.047,
+    53.192
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r002",
+   "nom": "Danube",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    18.969,
+    46.764
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r003",
+   "nom": "Rhin",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    8.391,
+    49.584
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r004",
+   "nom": "Rhône",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    4.828,
+    45.495
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r005",
+   "nom": "Loire",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    0.942,
+    47.411
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r006",
+   "nom": "Seine",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    2.31,
+    48.862
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r007",
+   "nom": "Garonne",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    1.166,
+    43.932
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r008",
+   "nom": "Meuse",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    5.734,
+    50.96
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r009",
+   "nom": "Escaut",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    3.493,
+    50.791
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r010",
+   "nom": "Elbe",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    14.312,
+    50.454
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r011",
+   "nom": "Oder",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    16.269,
+    51.677
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r012",
+   "nom": "Vistule",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    21.226,
+    51.992
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r013",
+   "nom": "Dniepr",
+   "alias": [
+    "Dnipro"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    30.296,
+    53.715
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r014",
+   "nom": "Dniestr",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    27.193,
+    48.572
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r015",
+   "nom": "Don",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    42.939,
+    49.446
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r016",
+   "nom": "Oural",
+   "alias": [
+    "Ural"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    52.725,
+    51.483
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r017",
+   "nom": "Tamise",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -0.948,
+    51.468
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r018",
+   "nom": "Pô",
+   "alias": [
+    "Po"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    9.973,
+    45.128
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r019",
+   "nom": "Tibre",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    12.217,
+    42.692
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r020",
+   "nom": "Èbre",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -1.465,
+    42.009
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r021",
+   "nom": "Tage",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -7.077,
+    39.692
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r022",
+   "nom": "Douro",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -4.768,
+    41.597
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r023",
+   "nom": "Guadalquivir",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -4.577,
+    37.953
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r024",
+   "nom": "Guadiana",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -7.243,
+    38.751
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r025",
+   "nom": "Neva",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    30.88,
+    59.833
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r026",
+   "nom": "Daugava",
+   "alias": [
+    "Dvina occidentale"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    28.808,
+    55.494
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r027",
+   "nom": "Dvina septentrionale",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    43.157,
+    62.749
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r028",
+   "nom": "Petchora",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    57.215,
+    65.125
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r029",
+   "nom": "Kama",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    54.118,
+    56.799
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r030",
+   "nom": "Niémen",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    22.546,
+    55.068
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r031",
+   "nom": "Tisza",
+   "alias": [
+    "Tisa"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    20.107,
+    45.723
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r032",
+   "nom": "Save",
+   "alias": [
+    "Sava"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    17.982,
+    45.139
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r033",
+   "nom": "Drave",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    14.82,
+    46.665
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r034",
+   "nom": "Weser",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    9.379,
+    51.719
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r035",
+   "nom": "Shannon",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -8.035,
+    53.187
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r036",
+   "nom": "Moselle",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    6.155,
+    49.347
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r037",
+   "nom": "Ienisseï",
+   "alias": [
+    "Iénisséï"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    87.74,
+    64.771
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r038",
+   "nom": "Ob",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    76.64,
+    60.902
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r039",
+   "nom": "Irtych",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    83.655,
+    48.145
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r040",
+   "nom": "Léna",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    126.807,
+    64.244
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r041",
+   "nom": "Amour",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    130.232,
+    48.882
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r042",
+   "nom": "Kolyma",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    152.908,
+    63.456
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r043",
+   "nom": "Indiguirka",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    144.281,
+    67.623
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r044",
+   "nom": "Angara",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    97.678,
+    58.398
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r045",
+   "nom": "Selenga",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    105.301,
+    49.84
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r046",
+   "nom": "Yangzi Jiang",
+   "alias": [
+    "Yangtsé",
+    "Fleuve Bleu",
+    "Yangtze"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    104.4,
+    28.648
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r047",
+   "nom": "Huang He",
+   "alias": [
+    "Fleuve Jaune"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    106.191,
+    38.052
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r048",
+   "nom": "Mékong",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    100.411,
+    22.638
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r049",
+   "nom": "Salouen",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    98.862,
+    25.725
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r050",
+   "nom": "Irrawaddy",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    95.331,
+    21.47
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r051",
+   "nom": "Gange",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    82.149,
+    25.285
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r052",
+   "nom": "Brahmapoutre",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    95.096,
+    28.492
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r053",
+   "nom": "Indus",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    69.838,
+    28.534
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r054",
+   "nom": "Euphrate",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    42.363,
+    34.299
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r055",
+   "nom": "Tigre",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    41.812,
+    37.687
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r056",
+   "nom": "Amou-Daria",
+   "alias": [
+    "Amou Darya"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    62.54,
+    39.888
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r057",
+   "nom": "Syr-Daria",
+   "alias": [
+    "Syr Darya"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    66.987,
+    44.022
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r058",
+   "nom": "Xi Jiang",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    112.329,
+    23.148
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r059",
+   "nom": "Godavari",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    78.38,
+    18.985
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r060",
+   "nom": "Krishna",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    77.081,
+    16.501
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r061",
+   "nom": "Chatt-el-Arab",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    48.024,
+    30.464
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r062",
+   "nom": "Jourdain",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    35.55,
+    32.488
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r063",
+   "nom": "Tarim",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    84.785,
+    41.169
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r064",
+   "nom": "Oussouri",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    134.22,
+    47.115
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r065",
+   "nom": "Nil",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    32.038,
+    9.836
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r066",
+   "nom": "Nil Bleu",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    35.165,
+    10.743
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r067",
+   "nom": "Congo",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    18.995,
+    1.454
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r068",
+   "nom": "Niger",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    0.954,
+    14.644
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r069",
+   "nom": "Zambèze",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    23.281,
+    -16.226
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r070",
+   "nom": "Orange",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    22.091,
+    -28.867
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r071",
+   "nom": "Limpopo",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    30.826,
+    -22.284
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r072",
+   "nom": "Sénégal",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -14.759,
+    16.647
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r073",
+   "nom": "Volta",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    0.23,
+    7.244
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r074",
+   "nom": "Oubangui",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    18.071,
+    1.611
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r075",
+   "nom": "Kasaï",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    20.579,
+    -5.947
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r076",
+   "nom": "Okavango",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    18.497,
+    -17.459
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r077",
+   "nom": "Bénoué",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    11.067,
+    9.116
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r078",
+   "nom": "Chari",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    16.303,
+    10.651
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r079",
+   "nom": "Vaal",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    26.016,
+    -27.704
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r080",
+   "nom": "Mississippi",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -90.933,
+    41.439
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r081",
+   "nom": "Missouri",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -94.99,
+    39.712
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r082",
+   "nom": "Ohio",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -82.183,
+    38.642
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r083",
+   "nom": "Saint-Laurent",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -75.293,
+    44.849
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r084",
+   "nom": "Mackenzie",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -124.773,
+    64.406
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r085",
+   "nom": "Yukon",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -159.375,
+    63.696
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r086",
+   "nom": "Colorado",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -108.304,
+    39.183
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r087",
+   "nom": "Rio Grande",
+   "alias": [
+    "Rio Bravo"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -103.911,
+    29.305
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r088",
+   "nom": "Columbia",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -117.173,
+    44.295
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r089",
+   "nom": "Fraser",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -122.162,
+    54.217
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r090",
+   "nom": "Arkansas",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -97.781,
+    37.966
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r091",
+   "nom": "Tennessee",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -87.003,
+    34.633
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r092",
+   "nom": "Nelson",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -97.777,
+    52.826
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r093",
+   "nom": "Hudson",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -73.662,
+    42.946
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r094",
+   "nom": "Snake",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -112.752,
+    42.918
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r095",
+   "nom": "Rivière de la Paix",
+   "alias": [
+    "Peace"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -116.22,
+    58.395
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r096",
+   "nom": "Saskatchewan",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -113.201,
+    53.731
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r097",
+   "nom": "Outaouais",
+   "alias": [
+    "Ottawa"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -79.158,
+    46.817
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r098",
+   "nom": "Niagara",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -79.063,
+    43.192
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r099",
+   "nom": "Rivière Rouge",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -93.849,
+    33.096
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r100",
+   "nom": "Amazone",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -63.806,
+    -3.855
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r101",
+   "nom": "Paraná",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -58.086,
+    -20.354
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r102",
+   "nom": "Orénoque",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -67.599,
+    5.81
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r103",
+   "nom": "Rio Negro",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -66.286,
+    -0.362
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r104",
+   "nom": "Madeira",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -62.5,
+    -6.751
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r105",
+   "nom": "Uruguay",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -54.901,
+    -27.641
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r106",
+   "nom": "São Francisco",
+   "alias": [
+    "Sao Francisco"
+   ],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -42.728,
+    -10.756
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r107",
+   "nom": "Tocantins",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -47.876,
+    -7.786
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r108",
+   "nom": "Araguaia",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -50.714,
+    -11.387
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r109",
+   "nom": "Xingu",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -52.792,
+    -7.842
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r110",
+   "nom": "Tapajós",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -57.985,
+    -6.373
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r111",
+   "nom": "Magdalena",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -74.796,
+    4.757
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r112",
+   "nom": "Juruá",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -69.441,
+    -6.532
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r113",
+   "nom": "Ucayali",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -74.292,
+    -9.432
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r114",
+   "nom": "Marañón",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    -78.337,
+    -4.778
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r115",
+   "nom": "Murray",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    142.448,
+    -34.622
+   ],
+   "detail": "Fleuve"
+  },
+  {
+   "code": "r116",
+   "nom": "Darling",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "fleuve",
+   "geo": [
+    143.916,
+    -31.4
+   ],
+   "detail": "Fleuve"
+  }
+ ]
+}

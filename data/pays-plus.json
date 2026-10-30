@@ -1,0 +1,3518 @@
+{
+ "id": "pays-plus",
+ "titre": "Pays et territoires",
+ "items": [
+  {
+   "code": "ABK",
+   "nom": "Abkhazie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    41.457,
+    42.995
+   ],
+   "statut": "Reconnaissance limitée",
+   "st": "lim",
+   "detail": "Europe · Reconnaissance limitée · revendiqué par : Géorgie"
+  },
+  {
+   "code": "AFG",
+   "nom": "Afghanistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    66.497,
+    34.164
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "ZAF",
+   "nom": "Afrique du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    23.666,
+    -29.709
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "ALB",
+   "nom": "Albanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    20.114,
+    40.655
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "DZA",
+   "nom": "Algérie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    2.808,
+    27.397
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "DEU",
+   "nom": "Allemagne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.678,
+    50.962
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "AND",
+   "nom": "Andorre",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    1.539,
+    42.548
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "AGO",
+   "nom": "Angola",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    17.984,
+    -12.183
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "AIA",
+   "nom": "Anguilla",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -63.042,
+    18.246
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "ATG",
+   "nom": "Antigua-et-Barbuda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.791,
+    17.352
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "SAU",
+   "nom": "Arabie saoudite",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    44.7,
+    23.807
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "ARG",
+   "nom": "Argentine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -64.173,
+    -33.501
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "ARM",
+   "nom": "Arménie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    44.801,
+    40.459
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "ABW",
+   "nom": "Aruba",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -69.97,
+    12.5
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Pays-Bas"
+  },
+  {
+   "code": "AUS",
+   "nom": "Australie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    134.05,
+    -24.13
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "AUT",
+   "nom": "Autriche",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    14.131,
+    47.519
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "AZE",
+   "nom": "Azerbaïdjan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    47.211,
+    40.402
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "BHS",
+   "nom": "Bahamas",
+   "alias": [
+    "Les Bahamas"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -77.147,
+    26.402
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "BHR",
+   "nom": "Bahreïn",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    50.555,
+    26.056
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "BGD",
+   "nom": "Bangladesh",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    89.685,
+    24.215
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "BRB",
+   "nom": "Barbade",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -59.569,
+    13.164
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "BEL",
+   "nom": "Belgique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    4.8,
+    50.785
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "BLZ",
+   "nom": "Belize",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -88.713,
+    17.202
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "BMU",
+   "nom": "Bermudes",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -64.727,
+    32.34
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "BTN",
+   "nom": "Bhoutan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    90.04,
+    27.537
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "MMR",
+   "nom": "Birmanie",
+   "alias": [
+    "Myanmar"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    95.804,
+    21.574
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "BLR",
+   "nom": "Biélorussie",
+   "alias": [
+    "Bélarus"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    28.418,
+    53.822
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "BOL",
+   "nom": "Bolivie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -64.593,
+    -16.666
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "BIH",
+   "nom": "Bosnie-Herzégovine",
+   "alias": [
+    "Bosnie"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    18.068,
+    44.091
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "BWA",
+   "nom": "Botswana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    24.179,
+    -22.103
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "BRN",
+   "nom": "Brunei",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    114.552,
+    4.448
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "BRA",
+   "nom": "Brésil",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -49.559,
+    -12.099
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "BGR",
+   "nom": "Bulgarie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    25.157,
+    42.509
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "BFA",
+   "nom": "Burkina Faso",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -1.364,
+    12.673
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "BDI",
+   "nom": "Burundi",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.917,
+    -3.333
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "BEN",
+   "nom": "Bénin",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    2.352,
+    10.325
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "KHM",
+   "nom": "Cambodge",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    104.505,
+    12.648
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "CMR",
+   "nom": "Cameroun",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    12.473,
+    4.585
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "CAN",
+   "nom": "Canada",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -101.911,
+    60.324
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "CPV",
+   "nom": "Cap-Vert",
+   "alias": [
+    "Cabo Verde"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -23.639,
+    15.075
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "CHL",
+   "nom": "Chili",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -72.319,
+    -38.152
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "CHN",
+   "nom": "Chine",
+   "alias": [
+    "République populaire de Chine"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    106.337,
+    32.498
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "CYP",
+   "nom": "Chypre",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    33.084,
+    34.913
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "CYN",
+   "nom": "Chypre du Nord",
+   "alias": [
+    "République turque de Chypre du Nord"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    33.367,
+    35.231
+   ],
+   "statut": "Reconnaissance limitée",
+   "st": "lim",
+   "detail": "Europe · Reconnaissance limitée · revendiqué par : Chypre"
+  },
+  {
+   "code": "COL",
+   "nom": "Colombie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -73.174,
+    3.373
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "COM",
+   "nom": "Comores",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    43.318,
+    -11.728
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "COG",
+   "nom": "Congo",
+   "alias": [
+    "Congo-Brazzaville",
+    "République du Congo"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    15.9,
+    0.142
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "PRK",
+   "nom": "Corée du Nord",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    126.445,
+    39.885
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "KOR",
+   "nom": "Corée du Sud",
+   "alias": [
+    "Corée"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    128.13,
+    36.385
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "CRI",
+   "nom": "Costa Rica",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -84.078,
+    10.065
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "HRV",
+   "nom": "Croatie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    16.372,
+    45.806
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "CUB",
+   "nom": "Cuba",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -77.976,
+    21.334
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "CUW",
+   "nom": "Curaçao",
+   "alias": [
+    "Curacao"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -68.985,
+    12.195
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Pays-Bas"
+  },
+  {
+   "code": "CIV",
+   "nom": "Côte d'Ivoire",
+   "alias": [
+    "Ivory Coast"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -5.569,
+    7.491
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "DNK",
+   "nom": "Danemark",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.018,
+    55.967
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "DJI",
+   "nom": "Djibouti",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    42.499,
+    11.976
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "DMA",
+   "nom": "Dominique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.345,
+    15.459
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "ESP",
+   "nom": "Espagne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -3.465,
+    40.091
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "EST",
+   "nom": "Estonie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    25.867,
+    58.725
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "SWZ",
+   "nom": "Eswatini",
+   "alias": [
+    "Swaziland"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    31.467,
+    -26.534
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "FJI",
+   "nom": "Fidji",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    177.975,
+    -17.826
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "FIN",
+   "nom": "Finlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    27.276,
+    63.252
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "FRA",
+   "nom": "France",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    2.552,
+    46.696
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "GAB",
+   "nom": "Gabon",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    11.836,
+    -0.438
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "GMB",
+   "nom": "Gambie",
+   "alias": [
+    "La Gambie"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -14.998,
+    13.642
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "GHA",
+   "nom": "Ghana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -1.037,
+    7.718
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "GIB",
+   "nom": "Gibraltar",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -5.347,
+    36.133
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Europe · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "GRD",
+   "nom": "Grenade",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.68,
+    12.113
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "GRL",
+   "nom": "Groenland",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -39.091,
+    71.9
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Danemark"
+  },
+  {
+   "code": "GRC",
+   "nom": "Grèce",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    21.726,
+    39.493
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "GUM",
+   "nom": "Guam",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    144.726,
+    13.344
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : États-Unis"
+  },
+  {
+   "code": "GTM",
+   "nom": "Guatemala",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -90.497,
+    14.982
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "GGY",
+   "nom": "Guernesey",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -2.567,
+    49.449
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Europe · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "GIN",
+   "nom": "Guinée",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -10.016,
+    10.619
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "GNQ",
+   "nom": "Guinée équatoriale",
+   "alias": [
+    "Guinée-Équatoriale"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    8.99,
+    2.333
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "GNB",
+   "nom": "Guinée-Bissau",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -14.524,
+    12.164
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "GUY",
+   "nom": "Guyana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -58.943,
+    5.124
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "GEO",
+   "nom": "Géorgie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    43.736,
+    41.87
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "SGS",
+   "nom": "Géorgie du Sud-et-les Îles Sandwich du Sud",
+   "alias": [
+    "Géorgie du Sud"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -36.527,
+    -54.381
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Sud · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "HTI",
+   "nom": "Haïti",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -72.224,
+    19.264
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "HND",
+   "nom": "Honduras",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -86.888,
+    14.795
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "HKG",
+   "nom": "Hong Kong",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    114.204,
+    22.404
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Asie · Territoire · rattaché à : Chine"
+  },
+  {
+   "code": "HUN",
+   "nom": "Hongrie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.448,
+    47.087
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "IND",
+   "nom": "Inde",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    79.358,
+    22.687
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "IDN",
+   "nom": "Indonésie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    101.893,
+    -0.954
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "IRQ",
+   "nom": "Irak",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    43.262,
+    33.094
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "IRN",
+   "nom": "Iran",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    54.931,
+    32.166
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "IRL",
+   "nom": "Irlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -7.799,
+    53.079
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "ISL",
+   "nom": "Islande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -18.674,
+    64.779
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "ISR",
+   "nom": "Israël",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    34.848,
+    30.911
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "ITA",
+   "nom": "Italie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    11.077,
+    44.732
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "JAM",
+   "nom": "Jamaïque",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -77.319,
+    18.137
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "JPN",
+   "nom": "Japon",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    138.442,
+    36.143
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "JEY",
+   "nom": "Jersey",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -2.179,
+    49.204
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Europe · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "JOR",
+   "nom": "Jordanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    36.376,
+    30.805
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "KAZ",
+   "nom": "Kazakhstan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    68.686,
+    49.054
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "KEN",
+   "nom": "Kenya",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    37.908,
+    0.549
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "KGZ",
+   "nom": "Kirghizistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    74.533,
+    41.669
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "KIR",
+   "nom": "Kiribati",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -157.385,
+    1.82
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "KOS",
+   "nom": "Kosovo",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    20.861,
+    42.594
+   ],
+   "statut": "Reconnaissance limitée",
+   "st": "lim",
+   "detail": "Europe · Reconnaissance limitée"
+  },
+  {
+   "code": "KWT",
+   "nom": "Koweït",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    47.314,
+    29.414
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "LAO",
+   "nom": "Laos",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    102.534,
+    19.432
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "LSO",
+   "nom": "Lesotho",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    28.247,
+    -29.48
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "LVA",
+   "nom": "Lettonie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    25.459,
+    57.067
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "LBN",
+   "nom": "Liban",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    35.993,
+    34.133
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "LBR",
+   "nom": "Liberia",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -9.46,
+    6.447
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "LBY",
+   "nom": "Libye",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    18.011,
+    26.639
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "LIE",
+   "nom": "Liechtenstein",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.559,
+    47.111
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "LTU",
+   "nom": "Lituanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    24.09,
+    55.104
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "LUX",
+   "nom": "Luxembourg",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    6.078,
+    49.734
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "MAC",
+   "nom": "Macao",
+   "alias": [
+    "Macau"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    113.494,
+    22.219
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Asie · Territoire · rattaché à : Chine"
+  },
+  {
+   "code": "MKD",
+   "nom": "Macédoine du Nord",
+   "alias": [
+    "Macédoine"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    21.556,
+    41.558
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "MDG",
+   "nom": "Madagascar",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    46.704,
+    -18.628
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "MYS",
+   "nom": "Malaisie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    113.837,
+    2.529
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "MWI",
+   "nom": "Malawi",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    33.608,
+    -13.387
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "MDV",
+   "nom": "Maldives",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    73.508,
+    4.174
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "MLI",
+   "nom": "Mali",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -2.038,
+    18.693
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "MLT",
+   "nom": "Malte",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    14.433,
+    35.893
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "MAR",
+   "nom": "Maroc",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -7.187,
+    31.651
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "MUS",
+   "nom": "Maurice",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    57.566,
+    -20.3
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "MRT",
+   "nom": "Mauritanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -9.74,
+    19.587
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "MEX",
+   "nom": "Mexique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -102.289,
+    23.92
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "FSM",
+   "nom": "Micronésie",
+   "alias": [
+    "États fédérés de Micronésie"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    158.234,
+    6.888
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "MDA",
+   "nom": "Moldavie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    28.488,
+    47.435
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "MCO",
+   "nom": "Monaco",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    7.398,
+    43.74
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "MNG",
+   "nom": "Mongolie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    104.15,
+    45.997
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "MSR",
+   "nom": "Montserrat",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -62.186,
+    16.72
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "MNE",
+   "nom": "Monténégro",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.144,
+    42.803
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "MOZ",
+   "nom": "Mozambique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    37.838,
+    -13.943
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "NAM",
+   "nom": "Namibie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    17.108,
+    -20.575
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "NRU",
+   "nom": "Nauru",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    166.933,
+    -0.52
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "NIC",
+   "nom": "Nicaragua",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -85.069,
+    12.671
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "NER",
+   "nom": "Niger",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    9.504,
+    17.446
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "NGA",
+   "nom": "Nigeria",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    7.503,
+    9.44
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "NIU",
+   "nom": "Niue",
+   "alias": [
+    "Niué"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -169.855,
+    -19.02
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : Nouvelle-Zélande"
+  },
+  {
+   "code": "NOR",
+   "nom": "Norvège",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    9.68,
+    61.357
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "NCL",
+   "nom": "Nouvelle-Calédonie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    165.491,
+    -21.396
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : France"
+  },
+  {
+   "code": "NZL",
+   "nom": "Nouvelle-Zélande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    172.787,
+    -39.759
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "NPL",
+   "nom": "Népal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    83.64,
+    28.298
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "OMN",
+   "nom": "Oman",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    57.337,
+    22.12
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "OSS",
+   "nom": "Ossétie du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    44.06,
+    42.367
+   ],
+   "statut": "Reconnaissance limitée",
+   "st": "lim",
+   "detail": "Europe · Reconnaissance limitée · revendiqué par : Géorgie"
+  },
+  {
+   "code": "UGA",
+   "nom": "Ouganda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    32.949,
+    1.973
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "UZB",
+   "nom": "Ouzbékistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    64.005,
+    41.694
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "PAK",
+   "nom": "Pakistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    68.546,
+    29.328
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "PLW",
+   "nom": "Palaos",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    134.58,
+    7.518
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "PSX",
+   "nom": "Palestine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    35.291,
+    32.047
+   ],
+   "statut": "Reconnaissance limitée",
+   "st": "lim",
+   "detail": "Asie · Reconnaissance limitée"
+  },
+  {
+   "code": "PAN",
+   "nom": "Panama",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -80.352,
+    8.722
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "PNG",
+   "nom": "Papouasie-Nouvelle-Guinée",
+   "alias": [
+    "Papouasie"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    143.91,
+    -5.695
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "PRY",
+   "nom": "Paraguay",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -60.146,
+    -21.675
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "NLD",
+   "nom": "Pays-Bas",
+   "alias": [
+    "Hollande"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    5.611,
+    52.422
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "PHL",
+   "nom": "Philippines",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    122.465,
+    11.198
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "POL",
+   "nom": "Pologne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.49,
+    51.99
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "PYF",
+   "nom": "Polynésie française",
+   "alias": [
+    "Polynésie"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -149.474,
+    -17.611
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : France"
+  },
+  {
+   "code": "PRI",
+   "nom": "Porto Rico",
+   "alias": [
+    "Puerto Rico"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -66.485,
+    18.118
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : États-Unis"
+  },
+  {
+   "code": "PRT",
+   "nom": "Portugal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -8.272,
+    39.607
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "PER",
+   "nom": "Pérou",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -72.9,
+    -12.977
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "QAT",
+   "nom": "Qatar",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    51.144,
+    25.237
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "ROU",
+   "nom": "Roumanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    24.973,
+    45.733
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "GBR",
+   "nom": "Royaume-Uni",
+   "alias": [
+    "Angleterre"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -2.116,
+    54.403
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "RUS",
+   "nom": "Russie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    44.686,
+    58.249
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "RWA",
+   "nom": "Rwanda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    30.104,
+    -1.897
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "CAF",
+   "nom": "République centrafricaine",
+   "alias": [
+    "Centrafrique"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    20.907,
+    6.99
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "DOM",
+   "nom": "République dominicaine",
+   "alias": [
+    "Dominicaine"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -70.654,
+    19.104
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "COD",
+   "nom": "République démocratique du Congo",
+   "alias": [
+    "RDC",
+    "Congo-Kinshasa"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    23.459,
+    -1.858
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "SAH",
+   "nom": "Sahara occidental",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -12.602,
+    24.191
+   ],
+   "statut": "Territoire disputé",
+   "st": "dis",
+   "detail": "Afrique · Territoire disputé · revendiqué par : Maroc"
+  },
+  {
+   "code": "BLM",
+   "nom": "Saint-Barthélemy",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -62.83,
+    17.892
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : France"
+  },
+  {
+   "code": "KNA",
+   "nom": "Saint-Christophe-et-Niévès",
+   "alias": [
+    "Saint-Kitts-et-Nevis"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -62.758,
+    17.337
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "SMR",
+   "nom": "Saint-Marin",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    12.441,
+    43.934
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "MAF",
+   "nom": "Saint-Martin",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -63.065,
+    18.092
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : France"
+  },
+  {
+   "code": "SPM",
+   "nom": "Saint-Pierre-et-Miquelon",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -56.329,
+    47.011
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : France"
+  },
+  {
+   "code": "VCT",
+   "nom": "Saint-Vincent-et-les-Grenadines",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -61.336,
+    13.088
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "SHN",
+   "nom": "Sainte-Hélène",
+   "alias": [
+    "Sainte-Hélène, Ascension et Tristan da Cunha"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -5.723,
+    -15.931
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Afrique · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "LCA",
+   "nom": "Sainte-Lucie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -60.98,
+    13.892
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "SLV",
+   "nom": "Salvador",
+   "alias": [
+    "El Salvador"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -88.89,
+    13.685
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "WSM",
+   "nom": "Samoa",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -172.438,
+    -13.639
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "ASM",
+   "nom": "Samoa américaines",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -170.727,
+    -14.284
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : États-Unis"
+  },
+  {
+   "code": "STP",
+   "nom": "Sao Tomé-et-Principe",
+   "alias": [
+    "São Tomé-et-Príncipe"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    7.021,
+    0.971
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "SRB",
+   "nom": "Serbie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    20.788,
+    44.19
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "SYC",
+   "nom": "Seychelles",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    55.48,
+    -4.677
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "SLE",
+   "nom": "Sierra Leone",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -11.764,
+    8.617
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "SGP",
+   "nom": "Singapour",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    103.817,
+    1.367
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "SXM",
+   "nom": "Sint Maarten",
+   "alias": [
+    "Saint-Martin néerlandais"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -63.045,
+    18.044
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Pays-Bas"
+  },
+  {
+   "code": "SVK",
+   "nom": "Slovaquie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.05,
+    48.734
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "SVN",
+   "nom": "Slovénie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    14.915,
+    46.061
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "SOM",
+   "nom": "Somalie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    45.192,
+    3.569
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "SOL",
+   "nom": "Somaliland",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    46.124,
+    9.666
+   ],
+   "statut": "Non reconnu",
+   "st": "non",
+   "detail": "Afrique · Non reconnu · revendiqué par : Somalie"
+  },
+  {
+   "code": "SDN",
+   "nom": "Soudan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.261,
+    16.331
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "SDS",
+   "nom": "Soudan du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    30.39,
+    7.23
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "LKA",
+   "nom": "Sri Lanka",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    80.705,
+    7.581
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "CHE",
+   "nom": "Suisse",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    7.464,
+    46.719
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "SUR",
+   "nom": "Suriname",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -55.911,
+    4.144
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "SWE",
+   "nom": "Suède",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.017,
+    65.859
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "SYR",
+   "nom": "Syrie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    38.278,
+    35.007
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "SEN",
+   "nom": "Sénégal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    -14.779,
+    15.138
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "TJK",
+   "nom": "Tadjikistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    72.587,
+    38.2
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "TZA",
+   "nom": "Tanzanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    34.959,
+    -6.052
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "TWN",
+   "nom": "Taïwan",
+   "alias": [
+    "Formose"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    120.868,
+    23.652
+   ],
+   "statut": "Reconnaissance limitée",
+   "st": "lim",
+   "detail": "Asie · Reconnaissance limitée"
+  },
+  {
+   "code": "TCD",
+   "nom": "Tchad",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    18.645,
+    15.143
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "CZE",
+   "nom": "Tchéquie",
+   "alias": [
+    "République tchèque"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    15.378,
+    49.882
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "ATF",
+   "nom": "Terres australes et antarctiques françaises",
+   "alias": [
+    "TAAF",
+    "Terres australes françaises",
+    "Kerguelen"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    69.367,
+    -49.387
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Afrique · Territoire · rattaché à : France"
+  },
+  {
+   "code": "IOT",
+   "nom": "Territoire britannique de l'océan Indien",
+   "alias": [
+    "Chagos",
+    "Archipel des Chagos"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    72.48,
+    -7.286
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Asie · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "THA",
+   "nom": "Thaïlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    101.073,
+    15.46
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "TLS",
+   "nom": "Timor oriental",
+   "alias": [
+    "Timor-Leste"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    125.855,
+    -8.804
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "TGO",
+   "nom": "Togo",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    1.058,
+    8.807
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "TON",
+   "nom": "Tonga",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -175.163,
+    -21.21
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "TRN",
+   "nom": "Transnistrie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    29.245,
+    47.359
+   ],
+   "statut": "Non reconnu",
+   "st": "non",
+   "detail": "Europe · Non reconnu · revendiqué par : Moldavie"
+  },
+  {
+   "code": "TTO",
+   "nom": "Trinité-et-Tobago",
+   "alias": [
+    "Trinidad-et-Tobago"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -60.918,
+    10.999
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "TUN",
+   "nom": "Tunisie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    9.008,
+    33.687
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "TKM",
+   "nom": "Turkménistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    58.677,
+    39.855
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "TUR",
+   "nom": "Turquie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    34.508,
+    39.345
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "TUV",
+   "nom": "Tuvalu",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    179.21,
+    -8.514
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "UKR",
+   "nom": "Ukraine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    32.141,
+    49.725
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "URY",
+   "nom": "Uruguay",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -55.967,
+    -32.961
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "VUT",
+   "nom": "Vanuatu",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    166.909,
+    -15.372
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "VAT",
+   "nom": "Vatican",
+   "alias": [
+    "Cité du Vatican",
+    "Saint-Siège"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    12.453,
+    41.903
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Europe · Pays reconnu"
+  },
+  {
+   "code": "VEN",
+   "nom": "Venezuela",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -64.599,
+    7.182
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "VNM",
+   "nom": "Viêt Nam",
+   "alias": [
+    "Vietnam"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    105.387,
+    21.715
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "WLF",
+   "nom": "Wallis-et-Futuna",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -178.124,
+    -14.277
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : France"
+  },
+  {
+   "code": "YEM",
+   "nom": "Yémen",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    45.874,
+    15.328
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "ZMB",
+   "nom": "Zambie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    26.395,
+    -14.661
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "ZWE",
+   "nom": "Zimbabwe",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.925,
+    -18.912
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "ALD",
+   "nom": "Åland",
+   "alias": [
+    "Îles Åland",
+    "Aland"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    19.86,
+    60.18
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Europe · Territoire · rattaché à : Finlande"
+  },
+  {
+   "code": "EGY",
+   "nom": "Égypte",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    29.446,
+    26.186
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "ARE",
+   "nom": "Émirats arabes unis",
+   "alias": [
+    "Émirats"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    54.547,
+    23.466
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Asie · Pays reconnu"
+  },
+  {
+   "code": "ECU",
+   "nom": "Équateur",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -78.188,
+    -1.259
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Sud · Pays reconnu"
+  },
+  {
+   "code": "ERI",
+   "nom": "Érythrée",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    38.286,
+    15.787
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "USA",
+   "nom": "États-Unis",
+   "alias": [
+    "USA"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -97.483,
+    39.538
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Amérique du Nord · Pays reconnu"
+  },
+  {
+   "code": "ETH",
+   "nom": "Éthiopie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "geo": [
+    39.089,
+    8.033
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Afrique · Pays reconnu"
+  },
+  {
+   "code": "IOA",
+   "nom": "Île Christmas et îles Cocos",
+   "alias": [
+    "Île Christmas",
+    "Îles Cocos",
+    "Christmas",
+    "Cocos"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "geo": [
+    105.66,
+    -10.503
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Asie · Territoire · rattaché à : Australie"
+  },
+  {
+   "code": "NFK",
+   "nom": "Île Norfolk",
+   "alias": [
+    "Norfolk"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    167.945,
+    -29.047
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : Australie"
+  },
+  {
+   "code": "IMN",
+   "nom": "Île de Man",
+   "alias": [
+    "Man"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -4.529,
+    54.281
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Europe · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "CYM",
+   "nom": "Îles Caïmans",
+   "alias": [
+    "Caïmans"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -81.277,
+    19.309
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "COK",
+   "nom": "Îles Cook",
+   "alias": [
+    "Cook"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -159.795,
+    -21.219
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : Nouvelle-Zélande"
+  },
+  {
+   "code": "FRO",
+   "nom": "Îles Féroé",
+   "alias": [
+    "Féroé"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "geo": [
+    -6.946,
+    62.161
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Europe · Territoire · rattaché à : Danemark"
+  },
+  {
+   "code": "FLK",
+   "nom": "Îles Malouines",
+   "alias": [
+    "Malouines",
+    "Îles Falkland",
+    "Falkland"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -58.791,
+    -51.817
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Sud · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "MNP",
+   "nom": "Îles Mariannes du Nord",
+   "alias": [
+    "Mariannes du Nord"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    145.73,
+    15.154
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : États-Unis"
+  },
+  {
+   "code": "MHL",
+   "nom": "Îles Marshall",
+   "alias": [
+    "Marshall"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    171.194,
+    7.083
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "PCN",
+   "nom": "Îles Pitcairn",
+   "alias": [
+    "Pitcairn"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    -128.316,
+    -24.368
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Océanie · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "SLB",
+   "nom": "Îles Salomon",
+   "alias": [
+    "Salomon"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "geo": [
+    159.17,
+    -8.03
+   ],
+   "statut": "Pays reconnu",
+   "st": "ok",
+   "detail": "Océanie · Pays reconnu"
+  },
+  {
+   "code": "TCA",
+   "nom": "Îles Turques-et-Caïques",
+   "alias": [
+    "Turques-et-Caïques"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -71.744,
+    21.812
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "VGB",
+   "nom": "Îles Vierges britanniques",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -64.387,
+    18.489
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : Royaume-Uni"
+  },
+  {
+   "code": "VIR",
+   "nom": "Îles Vierges des États-Unis",
+   "alias": [
+    "Îles Vierges américaines"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -64.801,
+    17.739
+   ],
+   "statut": "Territoire",
+   "st": "ter",
+   "detail": "Amérique du Nord · Territoire · rattaché à : États-Unis"
+  }
+ ]
+}

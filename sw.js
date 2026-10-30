@@ -1,6 +1,6 @@
 // Hors ligne : réseau d'abord (l'app est toujours à jour quand le téléphone est connecté),
 // cache en secours (l'app marche sans réseau). Changer VERSION force un nettoyage du cache.
-const VERSION = 'geoquiz-5';
+const VERSION = 'geoquiz-6';
 const CORE = [
   './',
   'index.html',
@@ -36,6 +36,10 @@ const CORE = [
   'data/capitales-etats-unis.json',
   'data/capitales-canada.json',
   'data/villes-etats-unis.json',
+  'data/pays-plus.json',
+  'data/lacs.json',
+  'data/fleuves.json',
+  'data/drapeaux.json',
   'maps/monde.svg',
   'maps/mers.svg',
   'maps/ciel.svg',
@@ -43,12 +47,18 @@ const CORE = [
   'maps/france-regions.svg',
   'maps/etats-unis.svg',
   'maps/canada.svg',
+  'maps/monde-plus.svg',
+  'maps/lacs.svg',
+  'maps/fleuves.svg',
   'icons/icon-192.png',
   'icons/icon-512.png',
 ];
 
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
+  // Les drapeaux (≈ 1,3 Mo) sont mis en cache en plus, sans bloquer l'installation s'ils échouent.
+  const flags = c => fetch('data/drapeaux.json').then(r => r.json())
+    .then(d => c.addAll(d.items.map(it => it.image))).catch(() => {});
+  e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE).then(() => flags(c))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', e => {

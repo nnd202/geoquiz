@@ -57,6 +57,21 @@ mapshaper oceans-seas.geo.json -simplify 20% keep-shapes -o world-seas.geojson p
 python3 tools/build_world.py <dossier des sources> .
 ```
 
+**Pays ++, lacs, fleuves, drapeaux** · `tools/build_world_plus.py`, `tools/build_water.py`, `tools/build_flags.py` (même projection que le monde, `tools/worldproj.py`)
+
+- Pays ++ (`maps/monde-plus.svg`) : les 197 pays, plus 45 États non reconnus et territoires habités (Natural Earth sans fusion ; Abkhazie, Ossétie du Sud, Transnistrie et Gibraltar repris des zones disputées et découpés dans leur pays). Chaque élément porte un statut, coloré en mode étude.
+- Lacs (`maps/lacs.svg`) : 73 lacs choisis dans `ne_10m_lakes`, noms français dans le script ; la mer Caspienne est le « trou » qu'elle forme dans les terres ; les petits lacs ont un rond en plus.
+- Fleuves (`maps/fleuves.svg`) : 116 fleuves et rivières de `ne_10m_rivers_lake_centerlines` ; chaque nom français regroupe les tronçons aux noms locaux (Donau, Duna, Dunav…), avec une zone géographique pour les noms ambigus (Colorado, Negro, Don…). Un trait large invisible facilite le toucher.
+- Drapeaux (`flags/`) : paquet npm [flag-icons](https://github.com/lipis/flag-icons) (MIT), format 4:3, optimisés avec svgo.
+
+```
+mapshaper ne_50m_admin_0_countries.geojson -each "code = ADM0_A3" -filter-fields code -dissolve2 code -simplify 14% keep-shapes -clean -o world-units.geojson precision=0.001
+mapshaper ne_10m_admin_0_disputed_areas.geojson -filter '["B35","B36","B37","B55"].indexOf(BRK_A3)>-1' -each "code=BRK_A3" -filter-fields code -simplify 30% keep-shapes -o breakaway.geojson precision=0.001
+python3 tools/build_world_plus.py <dossier des sources> .
+python3 tools/build_water.py <dossier des sources> .
+python3 tools/build_flags.py <dossier des sources> . && svgo -f flags --multipass
+```
+
 **Ciel** (`maps/ciel.svg`) · `tools/build_sky.py`
 
 Source : [d3-celestial](https://github.com/ofrohn/d3-celestial) (BSD) : frontières officielles des 88 constellations, tracés, étoiles jusqu'à la magnitude 6, noms. Deux hémisphères côte à côte, projection azimutale équidistante centrée sur chaque pôle. L'étoile la plus brillante de chaque constellation est à trouver quand elle a un nom d'usage (55 sur 88, vérifiés contre le catalogue de l'UAI).

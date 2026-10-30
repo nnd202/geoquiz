@@ -15,15 +15,20 @@ function common(nodes, root) {
 }
 
 /* ---------- Grille ---------- */
-export function buildGrid(container, items, inPlay, onTap) {
+export function buildGrid(container, items, inPlay, onTap, { images = false } = {}) {
   const wrap = el('div', 'gridwrap');
-  const grid = el('div', 'grid');
+  const grid = el('div', 'grid' + (images ? ' images' : ''));
   const nodes = {};
   for (const it of items) {
     const c = el('button', 'cell');
     c.dataset.code = it.code;
-    c.append(el('span', 'n', it.code), el('span', 'nm', ''));
-    if (!inPlay.has(it.code)) c.classList.add('off');
+    if (images) {
+      // Grille d'images (drapeaux) : l'image tient lieu d'indice, le nom apparaît une fois trouvé.
+      const img = el('img');
+      img.src = it.image; img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
+      c.append(img, el('span', 'nm', ''));
+    } else c.append(el('span', 'n', it.code), el('span', 'nm', ''));
+    c.classList.add(inPlay.has(it.code) ? 'todo' : 'off');
     c.addEventListener('click', () => onTap(it.code));
     grid.append(c);
     nodes[it.code] = [c];
@@ -35,6 +40,8 @@ export function buildGrid(container, items, inPlay, onTap) {
   b.showLabels = list => list.forEach(it => b.reveal(it.code, it.nom));
   b.select = () => {};
   b.ask = () => {};
+  b.relate = () => {};
+  b.setReveal = on => wrap.classList.toggle('reveal', on);
   return b;
 }
 
@@ -104,10 +111,18 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     labels.textContent = '';
     const inInset = new Set([...map.querySelectorAll('[data-inset][data-code]')].map(p => p.dataset.code));
     for (const it of list) {
-      for (const n of nodes[it.code] || []) {
+      const own = nodes[it.code] || [];
+      const hasPt = own.some(n => n.classList.contains('pt'));
+      for (const n of own) {
         if (inInset.has(it.code) && !n.dataset.inset) continue;
+        if (n.classList.contains('riv-hit') || (hasPt && !n.classList.contains('pt'))) continue;
         const t = document.createElementNS(NS, 'text');
-        if (n.classList.contains('pt')) {
+        if (n.classList.contains('riv') && n.getTotalLength) {
+          const p = n.getPointAtLength(n.getTotalLength() / 2);
+          t.setAttribute('x', p.x);
+          t.setAttribute('y', p.y);
+          t.setAttribute('class', 'lbl');
+        } else if (n.classList.contains('pt')) {
           t.setAttribute('x', +n.dataset.x);
           t.setAttribute('y', +n.dataset.y);
           t.setAttribute('class', 'lbl side');
@@ -126,6 +141,10 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     map.querySelectorAll('.sel').forEach(n => n.classList.remove('sel'));
     b.mark(code, 'sel');
   };
+  // Territoires rattachés (Groenland pour le Danemark…) : teinte pâle quand leur pays est trouvé.
+  b.relate = (code, cls) => map.querySelectorAll(`[data-parent="${code}"]`).forEach(n => n.classList.add(cls));
+  // « Révéler les restants » : les éléments encore à trouver passent en orange (réversible).
+  b.setReveal = on => wrap.classList.toggle('reveal', on);
   // Indice « zone surlignée » : l'élément demandé est mis en évidence, sans son nom.
   b.ask = code => {
     map.querySelectorAll('.asked').forEach(n => n.classList.remove('asked'));

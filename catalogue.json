@@ -14,7 +14,8 @@
      "label": "Zone → nom"
     }
    ],
-   "nb": 197
+   "nb": 197,
+   "reveler": true
   },
   "capitales": {
    "titre": "Capitales du monde",
@@ -48,7 +49,8 @@
      "label": "Zone → nom"
     }
    ],
-   "nb": 98
+   "nb": 98,
+   "reveler": true
   },
   "constellations": {
    "titre": "Constellations",
@@ -245,6 +247,100 @@
     }
    ],
    "nb": 100
+  },
+  "lacs": {
+   "titre": "Lacs du monde",
+   "fichier": "data/lacs.json",
+   "carte": "maps/lacs.svg",
+   "prefixe": "lacs",
+   "etiquette": "nom",
+   "style": "eau",
+   "calques": [
+    "terres"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 73,
+   "reveler": true
+  },
+  "fleuves": {
+   "titre": "Fleuves du monde",
+   "fichier": "data/fleuves.json",
+   "carte": "maps/fleuves.svg",
+   "prefixe": "flv",
+   "etiquette": "nom",
+   "style": "eau",
+   "calques": [
+    "terres"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 116,
+   "reveler": true
+  },
+  "pays-plus": {
+   "titre": "Pays et territoires",
+   "fichier": "data/pays-plus.json",
+   "carte": "maps/monde-plus.svg",
+   "prefixe": "paysp",
+   "etiquette": "nom",
+   "calques": [],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 242,
+   "reveler": true,
+   "legende": [
+    [
+     "ok",
+     "Pays reconnu"
+    ],
+    [
+     "lim",
+     "Reconnaissance limitée"
+    ],
+    [
+     "non",
+     "Non reconnu"
+    ],
+    [
+     "dis",
+     "Territoire disputé"
+    ],
+    [
+     "ter",
+     "Territoire"
+    ]
+   ]
+  },
+  "drapeaux": {
+   "titre": "Drapeaux",
+   "fichier": "data/drapeaux.json",
+   "prefixe": "drap",
+   "etiquette": "nom",
+   "images": true,
+   "sens": [
+    {
+     "demande": "image",
+     "reponse": "nom",
+     "label": "Drapeau → nom"
+    }
+   ],
+   "nb": 197
   }
  },
  "sections": [
@@ -256,12 +352,29 @@
      "jeu": "pays"
     },
     {
+     "nom": "Pays ++",
+     "jeu": "pays-plus"
+    },
+    {
+     "nom": "Drapeaux",
+     "jeu": "drapeaux",
+     "support": "grid"
+    },
+    {
      "nom": "Capitales",
      "jeu": "capitales"
     },
     {
      "nom": "Mers et océans",
      "jeu": "mers"
+    },
+    {
+     "nom": "Lacs",
+     "jeu": "lacs"
+    },
+    {
+     "nom": "Fleuves",
+     "jeu": "fleuves"
     }
    ]
   },

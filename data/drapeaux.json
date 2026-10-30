@@ -1,0 +1,1848 @@
+{
+ "id": "drapeaux",
+ "titre": "Drapeaux",
+ "items": [
+  {
+   "code": "AND",
+   "nom": "Andorre",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ad.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "ALB",
+   "nom": "Albanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/al.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "AUT",
+   "nom": "Autriche",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/at.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "BIH",
+   "nom": "Bosnie-Herzégovine",
+   "alias": [
+    "Bosnie"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ba.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "BEL",
+   "nom": "Belgique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/be.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "BGR",
+   "nom": "Bulgarie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/bg.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "BLR",
+   "nom": "Biélorussie",
+   "alias": [
+    "Bélarus"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/by.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "CHE",
+   "nom": "Suisse",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ch.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "CZE",
+   "nom": "Tchéquie",
+   "alias": [
+    "République tchèque"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/cz.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "DEU",
+   "nom": "Allemagne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/de.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "DNK",
+   "nom": "Danemark",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/dk.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "EST",
+   "nom": "Estonie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ee.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "ESP",
+   "nom": "Espagne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/es.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "FIN",
+   "nom": "Finlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/fi.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "FRA",
+   "nom": "France",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/fr.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "GBR",
+   "nom": "Royaume-Uni",
+   "alias": [
+    "Angleterre"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/gb.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "GRC",
+   "nom": "Grèce",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/gr.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "HRV",
+   "nom": "Croatie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/hr.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "HUN",
+   "nom": "Hongrie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/hu.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "IRL",
+   "nom": "Irlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ie.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "ISL",
+   "nom": "Islande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/is.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "ITA",
+   "nom": "Italie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/it.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "LIE",
+   "nom": "Liechtenstein",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/li.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "LTU",
+   "nom": "Lituanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/lt.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "LUX",
+   "nom": "Luxembourg",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/lu.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "LVA",
+   "nom": "Lettonie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/lv.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "MCO",
+   "nom": "Monaco",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/mc.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "MDA",
+   "nom": "Moldavie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/md.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "MNE",
+   "nom": "Monténégro",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/me.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "MKD",
+   "nom": "Macédoine du Nord",
+   "alias": [
+    "Macédoine"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/mk.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "MLT",
+   "nom": "Malte",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/mt.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "NLD",
+   "nom": "Pays-Bas",
+   "alias": [
+    "Hollande"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/nl.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "NOR",
+   "nom": "Norvège",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/no.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "POL",
+   "nom": "Pologne",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/pl.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "PRT",
+   "nom": "Portugal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/pt.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "ROU",
+   "nom": "Roumanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ro.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "SRB",
+   "nom": "Serbie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/rs.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "RUS",
+   "nom": "Russie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ru.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "SWE",
+   "nom": "Suède",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/se.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "SVN",
+   "nom": "Slovénie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/si.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "SVK",
+   "nom": "Slovaquie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/sk.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "SMR",
+   "nom": "Saint-Marin",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/sm.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "UKR",
+   "nom": "Ukraine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/ua.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "VAT",
+   "nom": "Vatican",
+   "alias": [
+    "Cité du Vatican",
+    "Saint-Siège"
+   ],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/va.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "KOS",
+   "nom": "Kosovo",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Europe",
+   "image": "flags/xk.svg",
+   "detail": "Europe"
+  },
+  {
+   "code": "ARE",
+   "nom": "Émirats arabes unis",
+   "alias": [
+    "Émirats"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/ae.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "AFG",
+   "nom": "Afghanistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/af.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "ARM",
+   "nom": "Arménie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/am.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "AZE",
+   "nom": "Azerbaïdjan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/az.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "BGD",
+   "nom": "Bangladesh",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/bd.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "BHR",
+   "nom": "Bahreïn",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/bh.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "BRN",
+   "nom": "Brunei",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/bn.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "BTN",
+   "nom": "Bhoutan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/bt.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "CHN",
+   "nom": "Chine",
+   "alias": [
+    "République populaire de Chine"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/cn.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "CYP",
+   "nom": "Chypre",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/cy.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "GEO",
+   "nom": "Géorgie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/ge.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "IDN",
+   "nom": "Indonésie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/id.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "ISR",
+   "nom": "Israël",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/il.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "IND",
+   "nom": "Inde",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/in.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "IRQ",
+   "nom": "Irak",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/iq.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "IRN",
+   "nom": "Iran",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/ir.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "JOR",
+   "nom": "Jordanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/jo.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "JPN",
+   "nom": "Japon",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/jp.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "KGZ",
+   "nom": "Kirghizistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/kg.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "KHM",
+   "nom": "Cambodge",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/kh.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "PRK",
+   "nom": "Corée du Nord",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/kp.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "KOR",
+   "nom": "Corée du Sud",
+   "alias": [
+    "Corée"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/kr.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "KWT",
+   "nom": "Koweït",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/kw.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "KAZ",
+   "nom": "Kazakhstan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/kz.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "LAO",
+   "nom": "Laos",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/la.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "LBN",
+   "nom": "Liban",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/lb.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "LKA",
+   "nom": "Sri Lanka",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/lk.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "MMR",
+   "nom": "Birmanie",
+   "alias": [
+    "Myanmar"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/mm.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "MNG",
+   "nom": "Mongolie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/mn.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "MYS",
+   "nom": "Malaisie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/my.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "NPL",
+   "nom": "Népal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/np.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "OMN",
+   "nom": "Oman",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/om.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "PHL",
+   "nom": "Philippines",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/ph.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "PAK",
+   "nom": "Pakistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/pk.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "PSX",
+   "nom": "Palestine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/ps.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "QAT",
+   "nom": "Qatar",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/qa.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "SAU",
+   "nom": "Arabie saoudite",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/sa.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "SGP",
+   "nom": "Singapour",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/sg.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "SYR",
+   "nom": "Syrie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/sy.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "THA",
+   "nom": "Thaïlande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/th.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "TJK",
+   "nom": "Tadjikistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/tj.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "TLS",
+   "nom": "Timor oriental",
+   "alias": [
+    "Timor-Leste"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/tl.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "TKM",
+   "nom": "Turkménistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/tm.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "TUR",
+   "nom": "Turquie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/tr.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "TWN",
+   "nom": "Taïwan",
+   "alias": [
+    "Formose"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/tw.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "UZB",
+   "nom": "Ouzbékistan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/uz.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "VNM",
+   "nom": "Viêt Nam",
+   "alias": [
+    "Vietnam"
+   ],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/vn.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "YEM",
+   "nom": "Yémen",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Asie",
+   "image": "flags/ye.svg",
+   "detail": "Asie"
+  },
+  {
+   "code": "AGO",
+   "nom": "Angola",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ao.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "BFA",
+   "nom": "Burkina Faso",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/bf.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "BDI",
+   "nom": "Burundi",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/bi.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "BEN",
+   "nom": "Bénin",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/bj.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "BWA",
+   "nom": "Botswana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/bw.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "COD",
+   "nom": "République démocratique du Congo",
+   "alias": [
+    "RDC",
+    "Congo-Kinshasa"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/cd.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "CAF",
+   "nom": "République centrafricaine",
+   "alias": [
+    "Centrafrique"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/cf.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "COG",
+   "nom": "Congo",
+   "alias": [
+    "Congo-Brazzaville",
+    "République du Congo"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/cg.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "CIV",
+   "nom": "Côte d'Ivoire",
+   "alias": [
+    "Ivory Coast"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ci.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "CMR",
+   "nom": "Cameroun",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/cm.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "CPV",
+   "nom": "Cap-Vert",
+   "alias": [
+    "Cabo Verde"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/cv.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "DJI",
+   "nom": "Djibouti",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/dj.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "DZA",
+   "nom": "Algérie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/dz.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "EGY",
+   "nom": "Égypte",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/eg.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "ERI",
+   "nom": "Érythrée",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/er.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "ETH",
+   "nom": "Éthiopie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/et.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "GAB",
+   "nom": "Gabon",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ga.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "GHA",
+   "nom": "Ghana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/gh.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "GMB",
+   "nom": "Gambie",
+   "alias": [
+    "La Gambie"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/gm.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "GIN",
+   "nom": "Guinée",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/gn.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "GNQ",
+   "nom": "Guinée équatoriale",
+   "alias": [
+    "Guinée-Équatoriale"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/gq.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "GNB",
+   "nom": "Guinée-Bissau",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/gw.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "KEN",
+   "nom": "Kenya",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ke.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "COM",
+   "nom": "Comores",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/km.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "LBR",
+   "nom": "Liberia",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/lr.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "LSO",
+   "nom": "Lesotho",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ls.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "LBY",
+   "nom": "Libye",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ly.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "MAR",
+   "nom": "Maroc",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ma.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "MDG",
+   "nom": "Madagascar",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/mg.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "MLI",
+   "nom": "Mali",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ml.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "MRT",
+   "nom": "Mauritanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/mr.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "MWI",
+   "nom": "Malawi",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/mw.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "MOZ",
+   "nom": "Mozambique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/mz.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "NAM",
+   "nom": "Namibie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/na.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "NER",
+   "nom": "Niger",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ne.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "NGA",
+   "nom": "Nigeria",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ng.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "RWA",
+   "nom": "Rwanda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/rw.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "SDN",
+   "nom": "Soudan",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/sd.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "SLE",
+   "nom": "Sierra Leone",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/sl.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "SEN",
+   "nom": "Sénégal",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/sn.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "SOM",
+   "nom": "Somalie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/so.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "SDS",
+   "nom": "Soudan du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ss.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "STP",
+   "nom": "Sao Tomé-et-Principe",
+   "alias": [
+    "São Tomé-et-Príncipe"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/st.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "SWZ",
+   "nom": "Eswatini",
+   "alias": [
+    "Swaziland"
+   ],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/sz.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "TCD",
+   "nom": "Tchad",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/td.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "TGO",
+   "nom": "Togo",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/tg.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "TUN",
+   "nom": "Tunisie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/tn.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "TZA",
+   "nom": "Tanzanie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/tz.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "UGA",
+   "nom": "Ouganda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/ug.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "ZAF",
+   "nom": "Afrique du Sud",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/za.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "ZMB",
+   "nom": "Zambie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/zm.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "ZWE",
+   "nom": "Zimbabwe",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Afrique",
+   "image": "flags/zw.svg",
+   "detail": "Afrique"
+  },
+  {
+   "code": "ATG",
+   "nom": "Antigua-et-Barbuda",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/ag.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "BRB",
+   "nom": "Barbade",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/bb.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "BHS",
+   "nom": "Bahamas",
+   "alias": [
+    "Les Bahamas"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/bs.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "BLZ",
+   "nom": "Belize",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/bz.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "CAN",
+   "nom": "Canada",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/ca.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "CRI",
+   "nom": "Costa Rica",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/cr.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "CUB",
+   "nom": "Cuba",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/cu.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "DMA",
+   "nom": "Dominique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/dm.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "DOM",
+   "nom": "République dominicaine",
+   "alias": [
+    "Dominicaine"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/do.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "GRD",
+   "nom": "Grenade",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/gd.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "GTM",
+   "nom": "Guatemala",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/gt.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "HND",
+   "nom": "Honduras",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/hn.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "HTI",
+   "nom": "Haïti",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/ht.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "JAM",
+   "nom": "Jamaïque",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/jm.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "KNA",
+   "nom": "Saint-Christophe-et-Niévès",
+   "alias": [
+    "Saint-Kitts-et-Nevis"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/kn.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "LCA",
+   "nom": "Sainte-Lucie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/lc.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "MEX",
+   "nom": "Mexique",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/mx.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "NIC",
+   "nom": "Nicaragua",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/ni.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "PAN",
+   "nom": "Panama",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/pa.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "SLV",
+   "nom": "Salvador",
+   "alias": [
+    "El Salvador"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/sv.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "TTO",
+   "nom": "Trinité-et-Tobago",
+   "alias": [
+    "Trinidad-et-Tobago"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/tt.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "USA",
+   "nom": "États-Unis",
+   "alias": [
+    "USA"
+   ],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/us.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "VCT",
+   "nom": "Saint-Vincent-et-les-Grenadines",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Nord",
+   "image": "flags/vc.svg",
+   "detail": "Amérique du Nord"
+  },
+  {
+   "code": "ARG",
+   "nom": "Argentine",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/ar.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "BOL",
+   "nom": "Bolivie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/bo.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "BRA",
+   "nom": "Brésil",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/br.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "CHL",
+   "nom": "Chili",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/cl.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "COL",
+   "nom": "Colombie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/co.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "ECU",
+   "nom": "Équateur",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/ec.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "GUY",
+   "nom": "Guyana",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/gy.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "PER",
+   "nom": "Pérou",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/pe.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "PRY",
+   "nom": "Paraguay",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/py.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "SUR",
+   "nom": "Suriname",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/sr.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "URY",
+   "nom": "Uruguay",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/uy.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "VEN",
+   "nom": "Venezuela",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Amérique du Sud",
+   "image": "flags/ve.svg",
+   "detail": "Amérique du Sud"
+  },
+  {
+   "code": "AUS",
+   "nom": "Australie",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/au.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "FJI",
+   "nom": "Fidji",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/fj.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "FSM",
+   "nom": "Micronésie",
+   "alias": [
+    "États fédérés de Micronésie"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/fm.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "KIR",
+   "nom": "Kiribati",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/ki.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "MHL",
+   "nom": "Îles Marshall",
+   "alias": [
+    "Marshall"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/mh.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "MUS",
+   "nom": "Maurice",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/mu.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "MDV",
+   "nom": "Maldives",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/mv.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "NRU",
+   "nom": "Nauru",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/nr.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "NZL",
+   "nom": "Nouvelle-Zélande",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/nz.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "PNG",
+   "nom": "Papouasie-Nouvelle-Guinée",
+   "alias": [
+    "Papouasie"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/pg.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "PLW",
+   "nom": "Palaos",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/pw.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "SLB",
+   "nom": "Îles Salomon",
+   "alias": [
+    "Salomon"
+   ],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/sb.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "SYC",
+   "nom": "Seychelles",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/sc.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "TON",
+   "nom": "Tonga",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/to.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "TUV",
+   "nom": "Tuvalu",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/tv.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "VUT",
+   "nom": "Vanuatu",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/vu.svg",
+   "detail": "Océanie"
+  },
+  {
+   "code": "WSM",
+   "nom": "Samoa",
+   "alias": [],
+   "domaine": "zone",
+   "continent": "Océanie",
+   "image": "flags/ws.svg",
+   "detail": "Océanie"
+  }
+ ]
+}

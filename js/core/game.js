@@ -58,6 +58,9 @@ export class Game {
     inp.hidden = !typing; inp.value = ''; inp.disabled = false; inp.classList.remove('pending');
     inp.inputMode = cfg.mech === 'clue' && cfg.ask === 'nom' ? 'text' : 'text';
     $('g-cancel').setAttribute('aria-label', study ? "Fermer l'étude" : 'Annuler la partie');
+    this.revealOn = false; this.revealUsed = false;
+    $('g-reveal').hidden = study || !this.def.reveler;
+    $('g-reveal').setAttribute('aria-pressed', 'false');
     $('g-clock').hidden = study; $('g-score').hidden = study;
     $('g-pause').hidden = study; $('g-stop').hidden = study;
     this.updatePauseBtn();
@@ -65,7 +68,16 @@ export class Game {
     $('g-prompt').style.visibility = '';
     $('g-skip').hidden = !mech.skip;
     fitViewport();
-    if (study) { this.board.showLabels(this.items, this.def.etiquette); return; }
+    $('board').classList.toggle('study', !!study);
+    if (study) {
+      this.board.showLabels(this.items, this.def.etiquette);
+      if (this.def.legende && cfg.support !== 'grid') {
+        const lg = el('div', 'legend');
+        for (const [k, t] of this.def.legende) { const s = el('span'); s.append(el('i', `st-${k}`), t); lg.append(s); }
+        $('board').append(lg);
+      }
+      return;
+    }
     this.resumeAt = performance.now();
     mech.start(this);
     this.tick();
@@ -79,7 +91,7 @@ export class Game {
     host.textContent = '';
     const tap = code => this.onTap(code);
     this.board = this.cfg.support === 'grid'
-      ? buildGrid(host, this.all, this.inPlay, tap)
+      ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images })
       : buildMap(host, this.mapSvg, {
         codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
         onTap: tap, label: this.def.titre, style: this.def.style,
@@ -136,6 +148,7 @@ export class Game {
     this.last = item;
     this.board.mark(item.code, 'todo', false);
     this.board.mark(item.code, 'found');
+    this.board.relate(item.code, 'rel');
     this.board.flash(item.code);
     this.board.reveal(item.code, item.nom);
     const inp = $('answer');
@@ -147,7 +160,20 @@ export class Game {
   onTap(code) {
     if (this.paused) return;
     if (this.study || this.over) return this.showInfo(code);
+    // Pendant la partie, toucher un élément déjà trouvé rappelle discrètement son nom.
+    if (this.found.has(code)) {
+      const it = this.all.find(d => d.code === code);
+      return it && this.toast(this.label(it));
+    }
     this.mech.tap(this, code);
+  }
+
+  toggleReveal() {
+    if (this.over || this.study || this.paused) return;
+    this.revealOn = !this.revealOn;
+    this.revealUsed ||= this.revealOn;
+    this.board.setReveal(this.revealOn);
+    $('g-reveal').setAttribute('aria-pressed', String(this.revealOn));
   }
 
   skip() {
@@ -226,6 +252,8 @@ export class Game {
     if (this.over) return;
     this.over = true;
     clearTimeout(this.waitTimer);
+    this.board.setReveal(false);
+    $('g-reveal').hidden = true;
     const ms = this.elapsed();
     for (const d of this.items) {
       if (!this.found.has(d.code)) { this.missed.add(d.code); this.board.mark(d.code, 'todo', false); this.board.mark(d.code, 'missed'); this.board.reveal(d.code, d.nom); }
@@ -234,6 +262,7 @@ export class Game {
       quiz: this.id, label: this.name, at: this.at, ms: Math.round(ms),
       found: this.found.size, total: this.items.length, end: reason,
       pauses: this.pausesUsed, missed: [...this.missed], errors: this.errors,
+      ...(this.revealUsed ? { revealed: true } : {}),
     };
     addAttempt(att);
     writeToFolder().catch(() => {}); // sauvegarde automatique sur PC si un dossier est choisi
@@ -308,6 +337,18 @@ export class Game {
   showInfo(code) {
     const it = this.all.find(d => d.code === code);
     if (!it) return;
+    if (it.image) {
+      // Drapeau agrandi, avec son nom ; un toucher n'importe où le referme.
+      const v = el('div', 'flagview');
+      const fig = el('figure');
+      const img = el('img'); img.src = it.image; img.alt = `Drapeau : ${it.nom}`;
+      const cap = el('figcaption');
+      cap.append(el('b', null, it.nom), el('span', null, it.detail || ''));
+      fig.append(img, cap); v.append(fig);
+      v.addEventListener('click', () => v.remove());
+      $('board').append(v);
+      return;
+    }
     this.board.select(code);
     let ib = $('info');
     if (!ib) { ib = el('div', 'infobar'); ib.id = 'info'; $('board').append(ib); }
@@ -341,6 +382,7 @@ export function wireGameControls() {
   $('g-stop').addEventListener('click', () => { if (current && !current.over && !current.paused && !current.study) current.finish('stop'); });
   $('g-skip').addEventListener('click', () => current?.skip());
   $('g-cancel').addEventListener('click', () => current?.cancel());
+  $('g-reveal').addEventListener('click', () => current?.toggleReveal());
   window.visualViewport?.addEventListener('resize', fitViewport);
   window.visualViewport?.addEventListener('scroll', fitViewport);
 }

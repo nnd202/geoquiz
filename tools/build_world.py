@@ -163,8 +163,12 @@ def proj_area(geom):
 
 body = ['<g data-layer="pays">']
 deco = [c for c in shapes if c not in SOV]
+# Territoires : rattachés à leur pays souverain (le Groenland se teinte quand le Danemark est trouvé).
+sov_code = {ne[c]["ADMIN"]: c for c in SOV if c in ne}
 for c in deco:
-    body.append(f'<path class="zone" data-code="x-{c}" d="{path_d(shapes[c], tf, 0.05)}"/>')
+    parent = sov_code.get(ne.get(c, {}).get("SOVEREIGNT"))
+    attr = f' data-parent="{parent}"' if parent and parent != c else ""
+    body.append(f'<path class="zone" data-code="x-{c}"{attr} d="{path_d(shapes[c], tf, 0.05)}"/>')
 for c in SOV:
     body.append(f'<path class="zone" data-code="{c}" d="{path_d(shapes[c], tf, 0.05)}"/>')
 body.append('</g><g data-layer="micro-etats">')

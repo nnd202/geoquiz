@@ -1,7 +1,7 @@
 // Accueil : stats globales, sections repliables, panneau d'options par quiz, réglages et sauvegarde.
 import { $, el } from './core/dom.js';
 import { prepare } from './core/text.js';
-import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, snooze } from './core/store.js';
+import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, snooze, variantOf } from './core/store.js';
 import { Game, END, fmtLong, onHome, wireGameControls, backRequest } from './core/game.js';
 import { saveNow, folderSupported, folderState, chooseFolder, forgetFolder, writeToFolder } from './core/backup.js';
 
@@ -70,9 +70,19 @@ function renderHome() {
   maybeRemind();
 }
 
+// Temps cumulé : minutes, puis heures, puis jours au-delà de 48 h (« 6 j 22 h ») pour rester court.
 function fmtTotal(ms) {
   const m = Math.round(ms / 60000);
-  return m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, '0')}`;
+  if (m < 60) return `${m} min`;
+  if (m < 48 * 60) return `${Math.floor(m / 60)} h ${String(m % 60).padStart(2, '0')}`;
+  return `${Math.floor(m / 1440)} j ${Math.floor(m % 1440 / 60)} h`;
+}
+
+// Nombre de parties terminées aujourd'hui pour un quiz, toutes options confondues.
+function todayCount(q) {
+  const pre = `${CAT.jeux[q.jeu].prefixe}|${q.support || 'map'}|`;
+  const today = new Date().toDateString();
+  return store.attempts.filter(a => variantOf(a.quiz).startsWith(pre) && new Date(a.at).toDateString() === today).length;
 }
 
 function renderSections() {
@@ -107,8 +117,14 @@ function quizRow(q) {
   const best = bestOf(variantId(cfgOf(q, o)));
   const score = el('span', 'qscore num', best?.fastest ? fmtLong(best.fastest) : best ? `${best.best.found}/${best.best.total}` : '');
   if (best?.fastest) score.title = 'Meilleur temps sur cette variante';
-  const go = el('button', 'btn small', 'Jouer');
+  const go = el('button', 'btn small play', 'Jouer');
   go.addEventListener('click', () => play(q));
+  const n = todayCount(q);
+  if (n) {
+    const badge = el('span', 'badge num', String(n));
+    badge.setAttribute('aria-label', `${n} partie${n > 1 ? 's' : ''} aujourd'hui`);
+    go.append(badge);
+  }
   row.append(main, score, go);
   return row;
 }
