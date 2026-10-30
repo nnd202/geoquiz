@@ -341,6 +341,26 @@
     }
    ],
    "nb": 197
+  },
+  "herault": {
+   "titre": "Hérault",
+   "fichier": "data/herault.json",
+   "carte": "maps/herault.svg",
+   "prefixe": "h34",
+   "etiquette": "nom",
+   "style": "eau",
+   "calques": [
+    "terres"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Lieu → nom"
+    }
+   ],
+   "nb": 60,
+   "reveler": true
   }
  },
  "sections": [
@@ -418,6 +438,10 @@
      "nom": "Numéros des départements",
      "jeu": "departements",
      "support": "grid"
+    },
+    {
+     "nom": "Hérault",
+     "jeu": "herault"
     }
    ]
   },

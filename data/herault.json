@@ -1,0 +1,780 @@
+{
+ "id": "herault",
+ "titre": "Hérault",
+ "items": [
+  {
+   "code": "hv-34172",
+   "nom": "Montpellier",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.8767,
+    43.6108
+   ],
+   "detail": "Commune · 310 240 hab."
+  },
+  {
+   "code": "hv-34032",
+   "nom": "Béziers",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.2158,
+    43.3442
+   ],
+   "detail": "Commune · 81 545 hab."
+  },
+  {
+   "code": "hv-34301",
+   "nom": "Sète",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.6976,
+    43.4028
+   ],
+   "detail": "Commune · 45 337 hab."
+  },
+  {
+   "code": "hv-34003",
+   "nom": "Agde",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.4753,
+    43.3108
+   ],
+   "detail": "Commune · 29 939 hab."
+  },
+  {
+   "code": "hv-34145",
+   "nom": "Lunel",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    4.1361,
+    43.6756
+   ],
+   "detail": "Commune · 26 623 hab."
+  },
+  {
+   "code": "hv-34108",
+   "nom": "Frontignan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.7556,
+    43.4483
+   ],
+   "detail": "Commune · 24 136 hab."
+  },
+  {
+   "code": "hv-34057",
+   "nom": "Castelnau-le-Lez",
+   "alias": [
+    "Castelnau"
+   ],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.9008,
+    43.6336
+   ],
+   "detail": "Commune · 26 058 hab."
+  },
+  {
+   "code": "hv-34129",
+   "nom": "Lattes",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.9036,
+    43.5675
+   ],
+   "detail": "Commune · 17 351 hab."
+  },
+  {
+   "code": "hv-34154",
+   "nom": "Mauguio",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.9667,
+    43.6167
+   ],
+   "detail": "Commune · 16 522 hab."
+  },
+  {
+   "code": "hv-34157",
+   "nom": "Mèze",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.6053,
+    43.4256
+   ],
+   "detail": "Commune · 12 669 hab."
+  },
+  {
+   "code": "hv-34199",
+   "nom": "Pézenas",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.4233,
+    43.4592
+   ],
+   "detail": "Commune · 7 797 hab."
+  },
+  {
+   "code": "hv-34142",
+   "nom": "Lodève",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.3194,
+    43.7317
+   ],
+   "detail": "Commune · 7 251 hab."
+  },
+  {
+   "code": "hv-34079",
+   "nom": "Clermont-l'Hérault",
+   "alias": [
+    "Clermont"
+   ],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.4317,
+    43.6275
+   ],
+   "detail": "Commune · 9 461 hab."
+  },
+  {
+   "code": "hv-34111",
+   "nom": "Ganges",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.7086,
+    43.9339
+   ],
+   "detail": "Commune · 3 724 hab."
+  },
+  {
+   "code": "hv-34284",
+   "nom": "Saint-Pons-de-Thomières",
+   "alias": [
+    "Saint-Pons"
+   ],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    2.7656,
+    43.4894
+   ],
+   "detail": "Commune · 1 706 hab."
+  },
+  {
+   "code": "hv-34028",
+   "nom": "Bédarieux",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.1556,
+    43.6156
+   ],
+   "detail": "Commune · 5 804 hab."
+  },
+  {
+   "code": "hv-34114",
+   "nom": "Gignac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.5508,
+    43.6522
+   ],
+   "detail": "Commune · 6 651 hab."
+  },
+  {
+   "code": "hv-34150",
+   "nom": "Marseillan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.5281,
+    43.3569
+   ],
+   "detail": "Commune · 8 414 hab."
+  },
+  {
+   "code": "hv-34192",
+   "nom": "Palavas-les-Flots",
+   "alias": [
+    "Palavas"
+   ],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.9333,
+    43.5283
+   ],
+   "detail": "Commune · 6 133 hab."
+  },
+  {
+   "code": "hv-34344",
+   "nom": "La Grande-Motte",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    4.0847,
+    43.5614
+   ],
+   "detail": "Commune · 8 440 hab."
+  },
+  {
+   "code": "hv-34198",
+   "nom": "Pérols",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.9528,
+    43.565
+   ],
+   "detail": "Commune · 9 615 hab."
+  },
+  {
+   "code": "hv-34189",
+   "nom": "Olonzac",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    2.7314,
+    43.2828
+   ],
+   "detail": "Commune · 1 693 hab."
+  },
+  {
+   "code": "hv-34274",
+   "nom": "Saint-Martin-de-Londres",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.7314,
+    43.79
+   ],
+   "detail": "Commune · 2 696 hab."
+  },
+  {
+   "code": "hv-34337",
+   "nom": "Villeneuve-lès-Maguelone",
+   "alias": [
+    "Villeneuve-les-Maguelone"
+   ],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.8606,
+    43.5328
+   ],
+   "detail": "Commune · 10 872 hab."
+  },
+  {
+   "code": "hv-34299",
+   "nom": "Sérignan",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.2783,
+    43.2817
+   ],
+   "detail": "Commune · 8 588 hab."
+  },
+  {
+   "code": "hv-34324",
+   "nom": "Valras-Plage",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.2908,
+    43.2481
+   ],
+   "detail": "Commune · 4 432 hab."
+  },
+  {
+   "code": "hv-34052",
+   "nom": "Capestang",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.0442,
+    43.3283
+   ],
+   "detail": "Commune · 3 514 hab."
+  },
+  {
+   "code": "hv-34245",
+   "nom": "Saint-Chinian",
+   "alias": [],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    2.9472,
+    43.4222
+   ],
+   "detail": "Commune · 1 811 hab."
+  },
+  {
+   "code": "hv-34126",
+   "nom": "Lamalou-les-Bains",
+   "alias": [
+    "Lamalou"
+   ],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.0808,
+    43.5975
+   ],
+   "detail": "Commune · 2 389 hab."
+  },
+  {
+   "code": "hv-34023",
+   "nom": "Balaruc-les-Bains",
+   "alias": [
+    "Balaruc"
+   ],
+   "domaine": "ville",
+   "categorie": "ville",
+   "geo": [
+    3.6778,
+    43.4417
+   ],
+   "detail": "Commune · 7 139 hab."
+  },
+  {
+   "code": "hr-01",
+   "nom": "Hérault",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    3.4284,
+    43.4316
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-02",
+   "nom": "Orb",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    3.1706,
+    43.7149
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-03",
+   "nom": "Lez",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    3.9074,
+    43.5836
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-04",
+   "nom": "Vidourle",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    4.0651,
+    43.8416
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-05",
+   "nom": "Lergue",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    3.3437,
+    43.6913
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-06",
+   "nom": "Jaur",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    2.8661,
+    43.5396
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-07",
+   "nom": "Vis",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    3.5274,
+    43.8608
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-08",
+   "nom": "Libron",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    3.289,
+    43.3687
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-09",
+   "nom": "Mosson",
+   "alias": [],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    3.8889,
+    43.5408
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hr-10",
+   "nom": "Agoût",
+   "alias": [
+    "Agout"
+   ],
+   "domaine": "fleuve",
+   "categorie": "fleuve",
+   "geo": [
+    2.7878,
+    43.5988
+   ],
+   "detail": "Cours d'eau"
+  },
+  {
+   "code": "hs-01",
+   "nom": "Pic Saint-Loup",
+   "alias": [
+    "Saint-Loup"
+   ],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    3.8112,
+    43.7789
+   ],
+   "detail": "Sommet · 658 m"
+  },
+  {
+   "code": "hs-02",
+   "nom": "Montagne de l'Hortus",
+   "alias": [
+    "Hortus",
+    "Montagne d'Hortus"
+   ],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    3.8361,
+    43.7952
+   ],
+   "detail": "Sommet · 512 m"
+  },
+  {
+   "code": "hs-03",
+   "nom": "Montagne de la Séranne",
+   "alias": [
+    "Séranne"
+   ],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    3.6425,
+    43.8716
+   ],
+   "detail": "Sommet · 940 m"
+  },
+  {
+   "code": "hs-04",
+   "nom": "Mont Saint-Baudille",
+   "alias": [
+    "Saint-Baudille"
+   ],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    3.4859,
+    43.7432
+   ],
+   "detail": "Sommet · 848 m"
+  },
+  {
+   "code": "hs-05",
+   "nom": "Mont Caroux",
+   "alias": [
+    "Caroux"
+   ],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    2.9871,
+    43.6063
+   ],
+   "detail": "Sommet · 1091 m"
+  },
+  {
+   "code": "hs-06",
+   "nom": "Sommet de l'Espinouse",
+   "alias": [
+    "Espinouse",
+    "Mont de l'Espinouse"
+   ],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    2.9389,
+    43.6566
+   ],
+   "detail": "Sommet · 1124 m"
+  },
+  {
+   "code": "hs-07",
+   "nom": "Mont Saint-Clair",
+   "alias": [],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    3.6844,
+    43.4022
+   ],
+   "detail": "Sommet · 176 m"
+  },
+  {
+   "code": "hs-08",
+   "nom": "Pic de Vissou",
+   "alias": [
+    "Vissou"
+   ],
+   "domaine": "relief",
+   "categorie": "relief",
+   "geo": [
+    3.3568,
+    43.5978
+   ],
+   "detail": "Sommet · 481 m"
+  },
+  {
+   "code": "he-01",
+   "nom": "Étang de Thau",
+   "alias": [
+    "Thau",
+    "Bassin de Thau"
+   ],
+   "domaine": "etang",
+   "categorie": "etang",
+   "geo": [
+    3.6032,
+    43.3923
+   ],
+   "detail": "Étang littoral"
+  },
+  {
+   "code": "he-02",
+   "nom": "Étang de l'Or",
+   "alias": [
+    "Étang de Mauguio",
+    "Or"
+   ],
+   "domaine": "etang",
+   "categorie": "etang",
+   "geo": [
+    4.0418,
+    43.5811
+   ],
+   "detail": "Étang littoral"
+  },
+  {
+   "code": "he-03",
+   "nom": "Étang de Vic",
+   "alias": [
+    "Vic"
+   ],
+   "domaine": "etang",
+   "categorie": "etang",
+   "geo": [
+    3.8258,
+    43.4877
+   ],
+   "detail": "Étang littoral"
+  },
+  {
+   "code": "he-04",
+   "nom": "Étang d'Ingril",
+   "alias": [
+    "Ingril"
+   ],
+   "domaine": "etang",
+   "categorie": "etang",
+   "geo": [
+    3.7926,
+    43.4554
+   ],
+   "detail": "Étang littoral"
+  },
+  {
+   "code": "he-05",
+   "nom": "Étang du Bagnas",
+   "alias": [
+    "Bagnas"
+   ],
+   "domaine": "etang",
+   "categorie": "etang",
+   "geo": [
+    3.5164,
+    43.3232
+   ],
+   "detail": "Étang littoral"
+  },
+  {
+   "code": "he-06",
+   "nom": "Étang du Méjean",
+   "alias": [
+    "Méjean"
+   ],
+   "domaine": "etang",
+   "categorie": "etang",
+   "geo": [
+    3.9225,
+    43.5466
+   ],
+   "detail": "Étang littoral"
+  },
+  {
+   "code": "hl-01",
+   "nom": "Saint-Guilhem-le-Désert",
+   "alias": [
+    "Saint-Guilhem"
+   ],
+   "domaine": "site",
+   "categorie": "site",
+   "geo": [
+    3.5497,
+    43.7339
+   ],
+   "detail": "Site"
+  },
+  {
+   "code": "hl-02",
+   "nom": "Pont du Diable",
+   "alias": [],
+   "domaine": "site",
+   "categorie": "site",
+   "geo": [
+    3.5567,
+    43.7113
+   ],
+   "detail": "Site"
+  },
+  {
+   "code": "hl-03",
+   "nom": "Grotte de Clamouse",
+   "alias": [
+    "Clamouse"
+   ],
+   "domaine": "site",
+   "categorie": "site",
+   "geo": [
+    3.5589,
+    43.7096
+   ],
+   "detail": "Site"
+  },
+  {
+   "code": "hl-04",
+   "nom": "Minerve",
+   "alias": [],
+   "domaine": "site",
+   "categorie": "site",
+   "geo": [
+    2.7461,
+    43.3544
+   ],
+   "detail": "Site"
+  },
+  {
+   "code": "hl-05",
+   "nom": "Cirque de Navacelles",
+   "alias": [
+    "Navacelles"
+   ],
+   "domaine": "site",
+   "categorie": "site",
+   "geo": [
+    3.5113,
+    43.8869
+   ],
+   "detail": "Site"
+  },
+  {
+   "code": "hl-06",
+   "nom": "Lac du Salagou",
+   "alias": [
+    "Salagou"
+   ],
+   "domaine": "site",
+   "categorie": "site",
+   "geo": [
+    3.3807,
+    43.6565
+   ],
+   "detail": "Lac de barrage"
+  }
+ ]
+}

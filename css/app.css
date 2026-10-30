@@ -343,3 +343,9 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .eau .riv.found.late { stroke: var(--late); }
 .cell.found.late { background: var(--late); }
 .missed-list.late span { background: color-mix(in srgb, var(--late) 28%, transparent); }
+
+/* ---------- Hérault : départements voisins pâles, sommets en triangle, sites en étoile ---------- */
+.eau .land.nb { fill: var(--land-off); }
+.eau .land.dep34 { stroke: var(--abyss); stroke-width: 1; stroke-opacity: .35; }
+.pt.som { --r: 6.5; }
+.pt.site { --r: 7.5; }

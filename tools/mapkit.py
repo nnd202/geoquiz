@@ -161,6 +161,7 @@ SHAPES = {
     "rond": "M-1 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0z",
     "carre": "M-.82-.82h1.64v1.64h-1.64z",
     "etoile": _star(),
+    "triangle": "M0-1.1L1.05.75H-1.05z",
 }
 
 

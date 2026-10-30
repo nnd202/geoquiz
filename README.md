@@ -72,6 +72,22 @@ python3 tools/build_water.py <dossier des sources> .
 python3 tools/build_flags.py <dossier des sources> . && svgo -f flags --multipass
 ```
 
+**Hérault** (`maps/herault.svg`) · `tools/build_herault.py`
+
+30 communes, 10 cours d'eau, 8 sommets, 6 étangs et 6 sites. Contours : communes de france-geojson ; populations : @etalab/decoupage-administratif ; cours d'eau, étangs et sommets : © contributeurs [OpenStreetMap](https://www.openstreetmap.org/copyright) (ODbL), exportés depuis [overpass-turbo.eu](https://overpass-turbo.eu) (Exporter → GeoJSON, enregistré dans `osm34/export.geojson`) avec :
+
+```
+[out:json][timeout:180];
+area["ref:INSEE"="34"]["boundary"="administrative"]["admin_level"="6"]->.h;
+(
+  way["waterway"="river"](area.h);
+  way["natural"="water"]["name"~"[ÉE]tang|Salagou",i](area.h);
+  relation["natural"="water"]["name"~"[ÉE]tang|Salagou",i](area.h);
+  node["natural"="peak"]["name"](area.h);
+);
+out geom;
+```
+
 **Ciel** (`maps/ciel.svg`) · `tools/build_sky.py`
 
 Source : [d3-celestial](https://github.com/ofrohn/d3-celestial) (BSD) : frontières officielles des 88 constellations, tracés, étoiles jusqu'à la magnitude 6, noms. Deux hémisphères côte à côte, projection azimutale équidistante centrée sur chaque pôle. L'étoile la plus brillante de chaque constellation est à trouver quand elle a un nom d'usage (55 sur 88, vérifiés contre le catalogue de l'UAI).
