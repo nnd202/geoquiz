@@ -26,6 +26,7 @@ export class Game {
     this.found = new Set(); this.missed = new Set();
     this.queue = shuffle(this.items.slice());
     this.tries = 0; this.errors = 0;
+    this.late = new Set(); // mode clic : trouvés après au moins une erreur, non comptés dans le score
     this.acc = 0; this.resumeAt = null; this.paused = false; this.over = false;
     this.pausesLeft = store.pauses; this.pausesUsed = 0;
     this.at = new Date().toISOString();
@@ -260,9 +261,10 @@ export class Game {
     }
     const att = {
       quiz: this.id, label: this.name, at: this.at, ms: Math.round(ms),
-      found: this.found.size, total: this.items.length, end: reason,
+      found: this.found.size - this.late.size, total: this.items.length, end: reason,
       pauses: this.pausesUsed, missed: [...this.missed], errors: this.errors,
       ...(this.revealUsed ? { revealed: true } : {}),
+      ...(this.late.size ? { late: [...this.late] } : {}),
     };
     addAttempt(att);
     writeToFolder().catch(() => {}); // sauvegarde automatique sur PC si un dossier est choisi
@@ -298,6 +300,19 @@ export class Game {
         ml.append(sp);
       });
       s.append(ml);
+    }
+
+    if (att.late?.length) {
+      s.append(el('h2', null, `Trouvés après une erreur · ${att.late.length}`));
+      s.append(el('div', 'note', 'Non comptés dans le score, en jaune sur la carte.'));
+      const ll = el('div', 'missed-list late');
+      att.late.slice().sort((a, b) => order.get(a) - order.get(b)).forEach(c => {
+        const sp = el('span');
+        if (this.def.etiquette === 'code') sp.append(el('b', null, c));
+        sp.append(document.createTextNode(this.label(byCode[c])));
+        ll.append(sp);
+      });
+      s.append(ll);
     }
 
     const hist = attemptsOf(att.quiz).slice().reverse();

@@ -1,4 +1,5 @@
 // Nom → toucher : un nom s'affiche, on touche l'élément. Trois erreurs : la réponse est montrée et comptée manquée.
+// Trouvé après une ou deux erreurs : en jaune, hors score.
 import { next, skip } from './queue.js';
 
 // Le nom est précisé quand un autre élément du quiz porte le même (Saint-Denis, Saint-Pierre…).
@@ -15,7 +16,13 @@ export default {
   tap(g, code) {
     if (!g.inPlay.has(code) || g.found.has(code) || g.missed.has(code)) return;
     const cur = g.cur;
-    if (code === cur.code) return g.validate(cur);
+    if (code === cur.code) {
+      // Trouvé après une erreur : visible en jaune, et compté à part dans le bilan.
+      const late = g.tries > 0;
+      g.validate(cur);
+      if (late) { g.late.add(cur.code); g.board.mark(cur.code, 'late'); }
+      return;
+    }
     g.errors++;
     g.tries++;
     g.board.mark(code, 'wrong');

@@ -71,6 +71,7 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     const code = n.dataset.code;
     if (!codes.has(code)) {
       n.classList.add(n.classList.contains('pt') ? 'ref' : 'deco');
+      if (code.startsWith('x-')) n.classList.add('terr'); // territoires : plus pâles que les zones à trouver
       n.removeAttribute('data-code');
       return;
     }

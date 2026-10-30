@@ -12,6 +12,7 @@
   --land-off: #e3ebf3;   /* hors sélection */
   --pt: #2f6aab;         /* points (villes) non trouvés */
   --border-land: #ffffff;
+  --late: #e6b93f;       /* trouvé après une erreur (mode clic) */
   --sea: #e3eef9;
   --found: #2e9a68;
   --found-soft: #dff3e9;
@@ -291,8 +292,8 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .mer.reveal .zone.todo, .eau.reveal .zone.todo { fill: var(--missed); }
 
 /* Territoires en décor : nettement plus pâles que les pays à trouver ; teinte verte pâle quand leur pays est trouvé */
-.zone.deco { fill: var(--land-off); }
-.zone.deco.rel { fill: #a9dcc3; }
+.zone.deco.terr { fill: var(--land-off); }
+.zone.deco.terr.rel { fill: #a9dcc3; }
 
 /* ---------- Pastille : parties du jour ---------- */
 .btn.play { position: relative; }
@@ -337,3 +338,8 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .flagview b { font-family: var(--f-display); font-weight: 500; font-size: 20px; color: var(--abyss); }
 .flagview span { font-size: 12px; color: var(--ink-soft); }
 .eau .pt.mini { --r: 4.5; stroke-width: 1.2; }
+.zone.found.late, .eau .zone.found.late { fill: var(--late); }
+.pt.found.late { fill: var(--late); }
+.eau .riv.found.late { stroke: var(--late); }
+.cell.found.late { background: var(--late); }
+.missed-list.late span { background: color-mix(in srgb, var(--late) 28%, transparent); }
