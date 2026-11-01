@@ -1,6 +1,6 @@
 // Hors ligne : réseau d'abord (l'app est toujours à jour quand le téléphone est connecté),
 // cache en secours (l'app marche sans réseau). Changer VERSION force un nettoyage du cache.
-const VERSION = 'geoquiz-10';
+const VERSION = 'geoquiz-11';
 const CORE = [
   './',
   'index.html',
@@ -60,7 +60,7 @@ self.addEventListener('install', e => {
   // Les drapeaux (≈ 1,3 Mo) sont mis en cache en plus, sans bloquer l'installation s'ils échouent.
   const flags = c => fetch('data/drapeaux.json').then(r => r.json())
     .then(d => c.addAll(d.items.map(it => it.image))).catch(() => {});
-  e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE).then(() => flags(c))).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE.map(u => new Request(u, { cache: 'reload' }))).then(() => flags(c))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', e => {
@@ -73,7 +73,8 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
   e.respondWith(
-    fetch(req)
+    // Même origine : toujours revalider auprès du serveur (no-cache), pour ne pas servir un ancien fichier du cache HTTP.
+    (new URL(req.url).origin === location.origin ? fetch(req.url, { cache: 'no-cache' }) : fetch(req))
       .then(res => {
         if (res && (res.ok || res.type === 'opaque')) {
           const copy = res.clone();

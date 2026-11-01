@@ -284,15 +284,24 @@ function wireSettings() {
   $('folder-off').addEventListener('click', async () => { await forgetFolder(); flash('Sauvegarde automatique désactivée.'); renderHome(); });
 }
 
+// Mise à jour : quand une nouvelle version prend la main, l'accueil se recharge tout seul
+// (jamais pendant une partie : la nouvelle version attend alors le prochain retour à l'accueil).
+let pendingReload = false;
 function registerSW() {
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+  if (!('serviceWorker' in navigator)) return;
+  const hadController = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!hadController) return; // première installation : la page est déjà à jour
+    if ($('game').hidden) location.reload(); else pendingReload = true;
+  });
+  navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(r => r.update()).catch(() => {});
 }
 
 async function main() {
   CAT = await fetch('catalogue.json').then(r => r.json());
   wireGameControls();
   wireSettings();
-  onHome(() => { renderHome(); dropGuard(); });
+  onHome(() => { if (pendingReload) return location.reload(); renderHome(); dropGuard(); });
   renderHome();
   registerSW();
 }
