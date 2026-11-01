@@ -350,7 +350,8 @@
    "etiquette": "nom",
    "style": "eau",
    "calques": [
-    "terres"
+    "terres",
+    "communes"
    ],
    "sens": [
     {

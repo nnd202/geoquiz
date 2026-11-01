@@ -27,7 +27,10 @@ for f in comm:
     d = f["properties"]["dep"]
     if d in ("34", "11", "12", "30", "81"):
         dep_parts.setdefault(d, []).append(shape(f["geometry"]).buffer(0))
-herault = unary_union(dep_parts.pop("34"))
+communes34 = dep_parts.pop("34")
+herault = unary_union(communes34)
+# Limites de communes : toutes les frontières, moins le contour du département
+com_lines = unary_union([c.boundary for c in communes34]).difference(herault.boundary.buffer(0.0002)).simplify(0.0005)
 x0, y0, x1, y1 = herault.bounds
 frame = box(x0 - 0.06, y0 - 0.05, x1 + 0.06, y1 + 0.05)
 voisins = {d: unary_union(p).intersection(frame) for d, p in dep_parts.items()}
@@ -151,6 +154,7 @@ body = ['<g data-layer="terres">']
 for d, g in voisins.items():
     body.append(f'<path class="land nb" d="{path_d(mapping(g.simplify(0.0008)), tf, 0.5)}"/>')
 body.append(f'<path class="land dep34" d="{path_d(mapping(herault.simplify(0.0005)), tf, 0.5)}"/>')
+body.append('</g><g data-layer="communes">' + f'<path class="sub com" d="{line_d(mapping(com_lines), tf)}"/>')
 body.append('</g><g data-layer="eaux">' + "".join(zones) + "</g>")
 body.append('<g data-layer="cours">' + "".join(lines) + "</g>")
 body.append('<g data-layer="cours-toucher">' + "".join(hits) + "</g>")

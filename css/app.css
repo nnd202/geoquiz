@@ -8,12 +8,12 @@
   --panel: #ffffff;      /* panneaux blancs posés sur le bleu */
   --ink: #12253d;
   --ink-soft: #5a6f88;
-  --land: #c4d4e5;       /* départements non trouvés : bleu-gris doux */
-  --land-off: #e3ebf3;   /* hors sélection */
+  --land: #b8cbe0;       /* zones à trouver ou de repère : bleu-gris doux */
+  --land-off: #d7e1ec;   /* hors sélection : plus pâle que --land, plus soutenu que la mer */
   --pt: #2f6aab;         /* points (villes) non trouvés */
   --border-land: #ffffff;
   --late: #e6b93f;       /* trouvé après une erreur (mode clic) */
-  --sea: #e3eef9;
+  --sea: #f4f8fd;
   --found: #2e9a68;
   --found-soft: #dff3e9;
   --missed: #e08a2c;
@@ -27,16 +27,16 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --abyss: #dbe9f8; --ocean: #4f93d8; --lagoon: #7db4ea; --sky: #24456c; --mist: #07162a;
-    --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #2d4b70; --land-off: #172e4c; --pt: #9cc4ec;
-    --border-land: #0c1f3a; --sea: #0b1c34; --found: #3fbf86; --found-soft: #123b31;
+    --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #36587f; --land-off: #223e62; --pt: #9cc4ec;
+    --border-land: #0c1f3a; --sea: #081629; --found: #3fbf86; --found-soft: #123b31;
     --missed: #ec9d48; --missed-soft: #3b2a17; --wrong: #e6766b;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.35); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --abyss: #dbe9f8; --ocean: #4f93d8; --lagoon: #7db4ea; --sky: #24456c; --mist: #07162a;
-  --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #2d4b70; --land-off: #172e4c; --pt: #9cc4ec;
-  --border-land: #0c1f3a; --sea: #0b1c34; --found: #3fbf86; --found-soft: #123b31;
+  --panel: #0f2341; --ink: #e5eef8; --ink-soft: #94a9c2; --land: #36587f; --land-off: #223e62; --pt: #9cc4ec;
+  --border-land: #0c1f3a; --sea: #081629; --found: #3fbf86; --found-soft: #123b31;
   --missed: #ec9d48; --missed-soft: #3b2a17; --wrong: #e6766b;
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 22px rgba(0,0,0,.35); color-scheme: dark;
 }
@@ -349,3 +349,13 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .eau .land.dep34 { stroke: var(--abyss); stroke-width: 1; stroke-opacity: .35; }
 .pt.som { --r: 6.5; }
 .pt.site { --r: 7.5; }
+
+/* Eau jouable (étangs, lacs) : les états l'emportent sur la couleur de base de l'eau */
+.eau .zone.found { fill: var(--found); }
+.eau .zone.missed { fill: var(--missed); }
+.eau .zone.found.late { fill: var(--late); }
+.eau .zone.wrong { fill: var(--wrong); }
+.eau .zone.sel { stroke: var(--abyss); stroke-width: 2.2; }
+.eau .zone.asked { fill: var(--lagoon); }
+/* Limites de communes : liseré fin et continu */
+.sub.com { stroke: var(--border-land); stroke-width: .7; stroke-dasharray: none; opacity: 1; }
