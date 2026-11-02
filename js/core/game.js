@@ -20,6 +20,8 @@ export class Game {
     this.cfg = cfg; this.name = name; this.id = id; this.study = study; this.def = def;
     this.last = null; // réponse précédente (départage des homonymes)
     this.all = data.items;
+    // Grille de mots (capitales : le pays dans la case) : ordre alphabétique français de la case.
+    if (def.case) this.all = this.all.slice().sort((a, b) => a[def.case].localeCompare(b[def.case], 'fr'));
     // En mode étude, tout est montré, même pour un quiz « N au hasard ».
     this.items = cfg.n && !study ? shuffle(this.all.slice()).slice(0, cfg.n) : this.all.slice();
     this.inPlay = new Set(this.items.map(d => d.code));
@@ -92,7 +94,7 @@ export class Game {
     host.textContent = '';
     const tap = code => this.onTap(code);
     this.board = this.cfg.support === 'grid'
-      ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images })
+      ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images, head: this.def.case || null })
       : buildMap(host, this.mapSvg, {
         codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
         onTap: tap, label: this.def.titre, style: this.def.style,

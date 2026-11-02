@@ -2,5 +2,6 @@
 import all from './all.js';
 import clue from './clue.js';
 import tap from './tap.js';
+import cur from './cursor.js';
 
-export const MECHANICS = { all, clue, tap };
+export const MECHANICS = { all, clue, tap, cur };

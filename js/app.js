@@ -26,13 +26,13 @@ const quizKey = q => `${q.jeu}|${q.support || 'map'}`;
 const canRandom = q => CAT.jeux[q.jeu].nb > CAT.options.seuilHasard;
 function optsOf(q) {
   const o = store.ui.opts[quizKey(q)] || {};
-  return { random: !!o.random && canRandom(q), click: !!o.click };
+  return { random: !!o.random && canRandom(q), click: !!o.click, cursor: !!o.cursor && q.support === 'grid' };
 }
 function cfgOf(q, o = optsOf(q)) {
-  return { jeu: q.jeu, support: q.support || 'map', mech: o.click ? 'tap' : 'all', n: o.random ? CAT.options.hasard : 0 };
+  return { jeu: q.jeu, support: q.support || 'map', mech: o.click ? 'tap' : o.cursor ? 'cur' : 'all', n: o.random ? CAT.options.hasard : 0 };
 }
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
-const optsLabel = o => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', o.click ? 'clic' : 'saisie'].join(' · ');
+const optsLabel = o => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie'].join(' · ');
 
 async function play(q, study = false) {
   const cfg = cfgOf(q);
@@ -163,6 +163,7 @@ function openSheet(q) {
     };
     if (canRandom(q)) seg('Sélection', 'random', [[false, `Tous (${def.nb})`], [true, `${CAT.options.hasard} au hasard`]]);
     seg('Réponse', 'click', [[false, 'Je tape les noms'], [true, q.support === 'grid' ? 'Je touche la case' : 'Je touche la carte']]);
+    if (q.support === 'grid' && !o.click) seg('Grille', 'cursor', [[false, 'Libre'], [true, 'Curseur']]);
 
     const id = variantId(cfgOf(q, o));
     const b = bestOf(id);

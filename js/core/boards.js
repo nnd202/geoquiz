@@ -15,9 +15,9 @@ function common(nodes, root) {
 }
 
 /* ---------- Grille ---------- */
-export function buildGrid(container, items, inPlay, onTap, { images = false } = {}) {
+export function buildGrid(container, items, inPlay, onTap, { images = false, head = null } = {}) {
   const wrap = el('div', 'gridwrap');
-  const grid = el('div', 'grid' + (images ? ' images' : ''));
+  const grid = el('div', 'grid' + (images ? ' images' : head ? ' words' : ''));
   const nodes = {};
   for (const it of items) {
     const c = el('button', 'cell');
@@ -27,7 +27,7 @@ export function buildGrid(container, items, inPlay, onTap, { images = false } = 
       const img = el('img');
       img.src = it.image; img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
       c.append(img, el('span', 'nm', ''));
-    } else c.append(el('span', 'n', it.code), el('span', 'nm', ''));
+    } else c.append(el('span', 'n', head ? it[head] : it.code), el('span', 'nm', ''));
     c.classList.add(inPlay.has(it.code) ? 'todo' : 'off');
     c.addEventListener('click', () => onTap(it.code));
     grid.append(c);
@@ -42,6 +42,14 @@ export function buildGrid(container, items, inPlay, onTap, { images = false } = 
   b.ask = () => {};
   b.relate = () => {};
   b.setReveal = on => wrap.classList.toggle('reveal', on);
+  // Mode curseur : la case qui attend la réponse, gardée visible au-dessus du clavier.
+  b.setCursor = code => {
+    grid.querySelectorAll('.cur').forEach(c => c.classList.remove('cur'));
+    const c = nodes[code]?.[0];
+    if (!c) return;
+    c.classList.add('cur');
+    c.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' });
+  };
   return b;
 }
 

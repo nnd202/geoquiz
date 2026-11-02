@@ -359,3 +359,15 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .eau .zone.asked { fill: var(--lagoon); }
 /* Limites de communes : liseré fin et continu */
 .sub.com { stroke: var(--border-land); stroke-width: .7; stroke-dasharray: none; opacity: 1; }
+
+/* ---------- Grille de mots (capitales : le pays dans la case) et curseur ---------- */
+.grid.words { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
+.grid.words .cell { min-height: 54px; padding: 6px 5px; }
+.grid.words .n { font-family: var(--f-body); font-size: 12.5px; font-weight: 600; line-height: 1.15; text-align: center; color: var(--ocean); overflow-wrap: anywhere; }
+.grid.words .nm { font-size: 11px; }
+.cell.cur { box-shadow: inset 0 0 0 2.5px var(--lagoon), 0 0 0 3px color-mix(in srgb, var(--lagoon) 30%, transparent); background: color-mix(in srgb, var(--lagoon) 12%, var(--panel)); }
+.grid.images .cell.cur { box-shadow: 0 0 0 3px var(--lagoon); }
+.grid.words .cell.found .n, .grid.words .cell.found .nm { color: #fff; }
+.grid.words .cell.missed .nm { color: var(--missed); font-weight: 600; }
+/* « N au hasard » sur une grille : seules les cases tirées restent affichées */
+.grid .cell.off { display: none; }

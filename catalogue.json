@@ -30,7 +30,8 @@
      "label": "Pays → capitale"
     }
    ],
-   "nb": 197
+   "nb": 197,
+   "case": "pays"
   },
   "mers": {
    "titre": "Mers et océans",
@@ -384,6 +385,11 @@
     {
      "nom": "Capitales",
      "jeu": "capitales"
+    },
+    {
+     "nom": "Capitales (grille)",
+     "jeu": "capitales",
+     "support": "grid"
     },
     {
      "nom": "Mers et océans",
