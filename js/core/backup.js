@@ -12,41 +12,54 @@ export function fileName(d = new Date()) {
   return `${d.getFullYear()}${p(d.getMonth() + 1)}${p(d.getDate())} - Export Geoquiz.txt`;
 }
 
+// Téléphone ou tablette : le menu de partage passe avant tout (c'est lui qui propose Proton Drive).
+const mobile = () => /Android|iPhone|iPad/i.test(navigator.userAgent) || matchMedia('(pointer: coarse)').matches;
+
+async function share(file) {
+  if (!navigator.share) return 'none';
+  if (navigator.canShare && !navigator.canShare({ files: [file] })) return 'none';
+  try {
+    await navigator.share({ files: [file], title: file.name });
+    return 'ok';
+  } catch (e) {
+    return e?.name === 'AbortError' ? 'abort' : 'none';
+  }
+}
+
+async function savePicker(text, name) {
+  if (!('showSaveFilePicker' in window)) return 'none';
+  try {
+    const fh = await window.showSaveFilePicker({
+      suggestedName: name, id: 'geoquiz-export',
+      types: [{ description: 'Sauvegarde Geoquiz', accept: { [TYPE]: ['.txt'] } }],
+    });
+    const w = await fh.createWritable();
+    await w.write(text);
+    await w.close();
+    return 'ok';
+  } catch (e) {
+    return e?.name === 'AbortError' ? 'abort' : 'none';
+  }
+}
+
 export async function saveNow() {
   const text = exportText();
   const name = fileName();
-  if ('showSaveFilePicker' in window) {
-    try {
-      const fh = await window.showSaveFilePicker({
-        suggestedName: name, id: 'geoquiz-export',
-        types: [{ description: 'Sauvegarde Geoquiz', accept: { [TYPE]: ['.txt'] } }],
-      });
-      const w = await fh.createWritable();
-      await w.write(text);
-      await w.close();
-      markExported();
-      return `Sauvegarde enregistrée : ${fh.name}`;
-    } catch (e) {
-      if (e?.name === 'AbortError') return 'Sauvegarde annulée.';
-    }
-  }
   const file = new File([text], name, { type: TYPE });
-  if (navigator.canShare?.({ files: [file] })) {
-    try {
-      await navigator.share({ files: [file], title: name.replace(/\.txt$/, '') });
-      markExported();
-      return 'Sauvegarde envoyée.';
-    } catch (e) {
-      if (e?.name === 'AbortError') return 'Sauvegarde annulée.';
-    }
+  // Téléphone : partage d'abord ; ordinateur : « Enregistrer sous » d'abord.
+  const tries = mobile() ? [() => share(file), () => savePicker(text, name)] : [() => savePicker(text, name), () => share(file)];
+  for (const t of tries) {
+    const r = await t();
+    if (r === 'ok') { markExported(); return `Sauvegarde envoyée : ${name}`; }
+    if (r === 'abort') return 'Sauvegarde annulée.';
   }
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([text], { type: TYPE }));
+  a.href = URL.createObjectURL(file);
   a.download = name;
   document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 2000);
   markExported();
-  return `Sauvegarde téléchargée : ${name}`;
+  return `Ce navigateur ne propose pas le partage de fichiers : sauvegarde téléchargée (${name}).`;
 }
 
 /* ---------- Dossier automatique (PC) ---------- */

@@ -304,6 +304,16 @@ async function main() {
   onHome(() => { if (pendingReload) return location.reload(); renderHome(); dropGuard(); });
   renderHome();
   registerSW();
+  showVersion();
+  navigator.serviceWorker?.ready.then(() => setTimeout(showVersion, 1500));
+}
+
+// Version installée (nom du cache hors ligne), pour vérifier qu'une mise à jour est bien arrivée.
+async function showVersion() {
+  try {
+    const k = (await caches.keys()).filter(n => n.startsWith('geoquiz-')).sort((a, b) => parseInt(b.slice(8)) - parseInt(a.slice(8)))[0];
+    if (k) $('app-version').textContent = `Version ${k.slice(8)}`;
+  } catch { /* rien */ }
 }
 
 main().catch(() => {
