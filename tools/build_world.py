@@ -86,11 +86,13 @@ CAP_ALIAS = {
     "KIR": ["Tarawa"], "GRD": ["Saint George's"], "TTO": ["Port of Spain"], "PRY": ["Asunción"],
     "STP": ["Sao Tomé"], "MDV": ["Male"], "TCD": ["Ndjamena"], "CHN": ["Beijing"], "IND": ["Delhi"],
     "MEX": ["Mexico City"], "LKA": ["Kotte"], "BRA": ["Brasília"], "COL": ["Bogotá"], "ISL": ["Reykjavík"],
-    "MDA": ["Kichinev"], "DNK": ["Kobenhavn"], "ARE": ["Abu Dhabi"], "SAU": ["Riyadh"], "OMN": ["Muscat"],
+    "MDA": ["Kichinev"], "GNQ": ["Oyala"], "DNK": ["Kobenhavn"], "ARE": ["Abu Dhabi"], "SAU": ["Riyadh"], "OMN": ["Muscat"],
     "TKM": ["Achkhabad"], "KGZ": ["Bichkek"], "MRT": ["Nouakchott"], "ETH": ["Addis Abeba"],
 }
 EXTRA = {  # capitales absentes de Natural Earth (lon, lat)
     "BDI": ("Gitega", [29.9246, -3.4271]), "SDS": ("Djouba", [31.5825, 4.8517]), "PLW": ("Ngerulmud", [134.6243, 7.5006]), "NRU": ("Yaren", [166.9209, -0.5477]),
+    # Guinée équatoriale : capitale transférée de Malabo à Ciudad de la Paz (ex-Oyala), annoncée le 3 janvier 2026
+    "GNQ": ("Ciudad de la Paz", [10.81, 1.583]),
 }
 by_country = {}
 for f in places:

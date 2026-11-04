@@ -952,15 +952,17 @@
   },
   {
    "code": "c-GNQ",
-   "nom": "Malabo",
-   "alias": [],
+   "nom": "Ciudad de la Paz",
+   "alias": [
+    "Oyala"
+   ],
    "domaine": "ville",
    "pays": "Guinée équatoriale",
    "paysCode": "GNQ",
    "continent": "Afrique",
    "geo": [
-    8.7833,
-    3.75
+    10.81,
+    1.583
    ],
    "detail": "Capitale · Guinée équatoriale"
   },
