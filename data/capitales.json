@@ -1887,9 +1887,7 @@
   {
    "code": "c-PSX",
    "nom": "Ramallah",
-   "alias": [
-    "Jérusalem-Est"
-   ],
+   "alias": [],
    "domaine": "ville",
    "pays": "Palestine",
    "paysCode": "PSX",

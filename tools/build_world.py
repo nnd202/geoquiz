@@ -82,7 +82,7 @@ CAP_ALIAS = {
     "BOL": ["La Paz"], "ZAF": ["Le Cap", "Bloemfontein"], "MYS": ["Putrajaya"], "SWZ": ["Lobamba"],
     "UKR": ["Kyiv"], "KAZ": ["Nour-Soultan", "Noursoultan"], "BGD": ["Dhaka"], "KWT": ["Koweït City", "Koweït-Ville"],
     "GTM": ["Guatemala-Ville", "Guatemala City"], "PAN": ["Panama City"], "VAT": ["Cité du Vatican"],
-    "MMR": ["Nay Pyi Taw", "Naypyitaw"], "MNG": ["Oulan Bator", "Ulaanbaatar"], "PSX": ["Jérusalem-Est"],
+    "MMR": ["Nay Pyi Taw", "Naypyitaw"], "MNG": ["Oulan Bator", "Ulaanbaatar"], 
     "KIR": ["Tarawa"], "GRD": ["Saint George's"], "TTO": ["Port of Spain"], "PRY": ["Asunción"],
     "STP": ["Sao Tomé"], "MDV": ["Male"], "TCD": ["Ndjamena"], "CHN": ["Beijing"], "IND": ["Delhi"],
     "MEX": ["Mexico City"], "LKA": ["Kotte"], "BRA": ["Brasília"], "COL": ["Bogotá"], "ISL": ["Reykjavík"],
@@ -155,6 +155,8 @@ dump("pays", "Pays du monde", countries)
 dump("capitales", "Capitales du monde", caps)
 
 # ---------- Carte du monde : pays, micro-États, capitales ----------
+from build_world_rings import NO_RING  # noqa: E402  petits pays sans rond (choix du 8 novembre 2026)
+
 def proj_area(geom):
     a = 0
     for ring in rings(geom):
@@ -176,7 +178,7 @@ for c in SOV:
 body.append('</g><g data-layer="micro-etats">')
 small = []
 for it in countries:
-    if is_tiny(shapes[it["code"]], tf):
+    if it["code"] not in NO_RING and is_tiny(shapes[it["code"]], tf):
         small.append(it["nom"])
         body.append(marker(*tf(*it["geo"]), "rond", "mini", it["code"]))
 body.append('</g><g data-layer="capitales">')

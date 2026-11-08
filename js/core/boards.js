@@ -191,6 +191,20 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     }
     placeLabels(pz.view(), k);
   };
+  // Candidats d'un point, de la place la plus naturelle à la plus éloignée : [dx, dy, avec trait].
+  const ptCands = (hw, h) => {
+    const c = [[9 + hw, 0, 0]];
+    for (const d of [22, 36, 52]) for (const a of [0, -30, 30, -55, 55]) {
+      const r = a * Math.PI / 180;
+      c.push([Math.cos(r) * d + hw, Math.sin(r) * d, 1]);
+    }
+    c.push([0, -13, 0], [0, 13, 0], [0, -(22 + h), 1], [0, 22 + h, 1], [-(9 + hw), 0, 0]);
+    for (const d of [22, 36, 52]) for (const a of [0, -30, 30]) {
+      const r = a * Math.PI / 180;
+      c.push([-(Math.cos(r) * d + hw), Math.sin(r) * d, 1]);
+    }
+    return c;
+  };
   placeLabels = (v, k) => {
     if (!entries.length) return;
     const placed = []; // rectangles occupés, en unités SVG
@@ -205,26 +219,22 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
       if (!inView) continue;
       const w = e.w, hw = w / 2, h = LH / 2;
       // Positions candidates (centre de l'étiquette, en pixels), de la plus naturelle à la plus éloignée.
-      const near = e.kind === 'pt'
-        ? [[9 + hw, 0], [-(9 + hw), 0], [0, -13], [0, 13], [7 + hw, -11], [7 + hw, 11], [-(7 + hw), -11], [-(7 + hw), 11]]
-        : [[0, 0], [0, -LH], [0, LH], [hw + 8, 0], [-(hw + 8), 0]];
-      const far = e.kind === 'pt'
-        ? [[22 + hw, 0], [-(22 + hw), 0], [0, -26], [0, 26], [18 + hw, -20], [18 + hw, 20], [-(18 + hw), -20], [-(18 + hw), 20]]
-        : []; // une zone garde son nom sur elle ou juste à côté, sans trait
+      // Positions candidates (centre de l'étiquette, en pixels). Un point garde son nom à droite tant
+      // que possible : d'abord collé, puis écarté avec un trait (droite, puis en biais), avant de passer
+      // au-dessus, en dessous ou à gauche. La place trouvée au zoom précédent est essayée en premier,
+      // pour que les noms ne sautent pas d'un côté à l'autre pendant le zoom.
+      const cands = e.kind === 'pt' ? ptCands(hw, h) : [[0, 0, 0], [0, -LH, 0], [0, LH, 0], [hw + 8, 0, 0], [-(hw + 8), 0, 0]];
+      const order = e.prev != null && e.prev < cands.length ? [e.prev, ...cands.keys()] : [...cands.keys()];
       let spot = null, lead = false;
-      for (const [list, isFar] of [[near, false], [far, true]]) {
-        for (const [dx, dy] of list) {
-          const cx = e.ax + dx * k, cy = e.ay + dy * k;
-          const r = [cx - (hw + GAP) * k, cy - (h + GAP) * k, cx + (hw + GAP) * k, cy + (h + GAP) * k];
-          // le point de l'élément lui-même ne gêne pas sa propre étiquette
-          const own = e.kind === 'pt' ? placed.findIndex(q => q[0] === e.ax - o && q[1] === e.ay - o) : -1;
-          const saved = own >= 0 ? placed.splice(own, 1)[0] : null;
-          const busy = hit(...r);
-          if (saved) placed.push(saved);
-          if (!busy) { spot = [cx, cy, r]; lead = isFar; break; }
-        }
-        if (spot) break;
+      const own = e.kind === 'pt' ? placed.findIndex(q => q[0] === e.ax - o && q[1] === e.ay - o) : -1;
+      const saved = own >= 0 ? placed.splice(own, 1)[0] : null; // son propre point ne gêne pas l'étiquette
+      for (const i of order) {
+        const [dx, dy, far] = cands[i];
+        const cx = e.ax + dx * k, cy = e.ay + dy * k;
+        const r = [cx - (hw + GAP) * k, cy - (h + GAP) * k, cx + (hw + GAP) * k, cy + (h + GAP) * k];
+        if (!hit(...r)) { spot = [cx, cy, r]; lead = !!far; e.prev = i; break; }
       }
+      if (saved) placed.push(saved);
       if (!spot) continue;
       const [cx, cy, r] = spot;
       placed.push(r);
@@ -285,7 +295,7 @@ function panZoom(svg, pick, onTap, tapNeedsSingle, onView = () => {}) {
     view.y = Math.min(Math.max(view.y, BASE[1] - view.h / 2), BASE[1] + BASE[3] - view.h / 2);
   };
   const zoomAt = (px, py, f) => {
-    const nw = Math.min(BASE[2], Math.max(BASE[2] / 20, view.w / f));
+    const nw = Math.min(BASE[2], Math.max(BASE[2] / 60, view.w / f));
     const k = nw / view.w;
     view.x = px - (px - view.x) * k; view.y = py - (py - view.y) * k;
     view.w = nw; view.h *= k;
