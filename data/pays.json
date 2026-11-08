@@ -1929,7 +1929,11 @@
     17.337
    ],
    "capitale": "Basseterre",
-   "detail": "Amérique du Nord · capitale : Basseterre"
+   "detail": "Amérique du Nord · capitale : Basseterre",
+   "lbl": [
+    -24,
+    0
+   ]
   },
   {
    "code": "SMR",

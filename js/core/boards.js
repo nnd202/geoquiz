@@ -141,13 +141,11 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
 
   const b = common(nodes, wrap);
   b.reveal = () => {};
-  // Étiquettes du mode étude et du bilan : code ou nom, au centre des zones, à côté des points.
-  // Elles gardent la même taille à l'écran et sont replacées à chaque zoom : par ordre de priorité
-  // (grandes zones d'abord, puis points dans l'ordre des données), chacune prend la première position
-  // libre autour de son élément ; un peu plus loin, un trait fin la relie à lui ; sinon elle attend
-  // un zoom plus fort pour apparaître.
+  // Étiquettes du mode étude et du bilan : code ou nom, au centre des zones, à droite des points.
+  // Toujours à la même place et toutes affichées ; elles gardent la même taille à l'écran, et un zoom
+  // plus fort les espace. Exception : un élément peut fixer son étiquette à l'écart (champ « lbl » des
+  // données, en pixels : [dx, dy] du bord le plus proche), reliée par un trait (Saint-Martin, Sint Maarten).
   let entries = [];
-  const LH = 14, GAP = 2, OBST = 5; // hauteur d'une étiquette, marge entre étiquettes, demi-taille d'un point (px)
   b.showLabels = (list, mode = 'code') => {
     labels.textContent = '';
     entries = [];
@@ -178,11 +176,9 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
         const line = document.createElementNS(NS, 'line');
         line.setAttribute('class', 'lead');
         labels.append(line, t);
-        entries.push({ t, line, ax, ay, kind, area, idx, w: 0 });
+        entries.push({ t, line, ax, ay, kind, off: it.lbl || null, w: 0 });
       }
     });
-    // Ordre de priorité : zones et fleuves par taille décroissante, puis points dans l'ordre des données.
-    entries.sort((p, q) => (p.kind === 'pt') - (q.kind === 'pt') || q.area - p.area || p.idx - q.idx);
     const k = pz.k();
     for (const e of entries) {
       e.t.setAttribute('x', e.ax); e.t.setAttribute('y', e.ay);
@@ -191,62 +187,22 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     }
     placeLabels(pz.view(), k);
   };
-  // Candidats d'un point, de la place la plus naturelle à la plus éloignée : [dx, dy, avec trait].
-  const ptCands = (hw, h) => {
-    const c = [[9 + hw, 0, 0]];
-    for (const d of [22, 36, 52]) for (const a of [0, -30, 30, -55, 55]) {
-      const r = a * Math.PI / 180;
-      c.push([Math.cos(r) * d + hw, Math.sin(r) * d, 1]);
-    }
-    c.push([0, -13, 0], [0, 13, 0], [0, -(22 + h), 1], [0, 22 + h, 1], [-(9 + hw), 0, 0]);
-    for (const d of [22, 36, 52]) for (const a of [0, -30, 30]) {
-      const r = a * Math.PI / 180;
-      c.push([-(Math.cos(r) * d + hw), Math.sin(r) * d, 1]);
-    }
-    return c;
-  };
   placeLabels = (v, k) => {
-    if (!entries.length) return;
-    const placed = []; // rectangles occupés, en unités SVG
-    const hit = (x0, y0, x1, y1) => placed.some(r => x0 < r[2] && x1 > r[0] && y0 < r[3] && y1 > r[1]);
-    // Les points eux-mêmes sont des obstacles : une étiquette ne recouvre pas un autre point.
-    const o = OBST * k;
-    for (const e of entries) if (e.kind === 'pt') placed.push([e.ax - o, e.ay - o, e.ax + o, e.ay + o]);
-    const margin = 40 * k;
     for (const e of entries) {
-      const inView = e.ax > v.x - margin && e.ax < v.x + v.w + margin && e.ay > v.y - margin && e.ay < v.y + v.h + margin;
-      e.t.style.display = 'none'; e.line.style.display = 'none';
-      if (!inView) continue;
-      const w = e.w, hw = w / 2, h = LH / 2;
-      // Positions candidates (centre de l'étiquette, en pixels), de la plus naturelle à la plus éloignée.
-      // Positions candidates (centre de l'étiquette, en pixels). Un point garde son nom à droite tant
-      // que possible : d'abord collé, puis écarté avec un trait (droite, puis en biais), avant de passer
-      // au-dessus, en dessous ou à gauche. La place trouvée au zoom précédent est essayée en premier,
-      // pour que les noms ne sautent pas d'un côté à l'autre pendant le zoom.
-      const cands = e.kind === 'pt' ? ptCands(hw, h) : [[0, 0, 0], [0, -LH, 0], [0, LH, 0], [hw + 8, 0, 0], [-(hw + 8), 0, 0]];
-      const order = e.prev != null && e.prev < cands.length ? [e.prev, ...cands.keys()] : [...cands.keys()];
-      let spot = null, lead = false;
-      const own = e.kind === 'pt' ? placed.findIndex(q => q[0] === e.ax - o && q[1] === e.ay - o) : -1;
-      const saved = own >= 0 ? placed.splice(own, 1)[0] : null; // son propre point ne gêne pas l'étiquette
-      for (const i of order) {
-        const [dx, dy, far] = cands[i];
-        const cx = e.ax + dx * k, cy = e.ay + dy * k;
-        const r = [cx - (hw + GAP) * k, cy - (h + GAP) * k, cx + (hw + GAP) * k, cy + (h + GAP) * k];
-        if (!hit(...r)) { spot = [cx, cy, r]; lead = !!far; e.prev = i; break; }
-      }
-      if (saved) placed.push(saved);
-      if (!spot) continue;
-      const [cx, cy, r] = spot;
-      placed.push(r);
-      e.t.setAttribute('x', cx); e.t.setAttribute('y', cy);
-      e.t.style.display = '';
-      if (lead) {
-        // trait du point vers le bord le plus proche de l'étiquette
-        const ex = Math.min(Math.max(e.ax, cx - hw * k), cx + hw * k), ey = Math.min(Math.max(e.ay, cy - h * k), cy + h * k);
+      let cx = e.ax, cy = e.ay;
+      const hw = e.w / 2;
+      if (e.off) {
+        const [dx, dy] = e.off;
+        cx = e.ax + (dx + Math.sign(dx || 1) * hw) * k; cy = e.ay + dy * k;
+        const ex = cx - Math.sign(dx || 1) * hw * k; // bord de l'étiquette côté point
         e.line.setAttribute('x1', e.ax); e.line.setAttribute('y1', e.ay);
-        e.line.setAttribute('x2', ex); e.line.setAttribute('y2', ey);
+        e.line.setAttribute('x2', ex); e.line.setAttribute('y2', cy);
         e.line.style.display = '';
+      } else {
+        if (e.kind === 'pt') cx = e.ax + (9 + hw) * k;
+        e.line.style.display = 'none';
       }
+      e.t.setAttribute('x', cx); e.t.setAttribute('y', cy);
     }
   };
   b.select = code => {

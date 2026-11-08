@@ -151,6 +151,10 @@ def dump(name, titre, items):
               open(f"{root}/data/{name}.json", "w"), ensure_ascii=False, indent=1)
 
 
+# Noms trop serrés même au zoom maximal : étiquette écartée à gauche, reliée par un trait (pixels d'écran).
+for it in countries:
+    if it["code"] == "KNA":
+        it["lbl"] = [-24, 0]
 dump("pays", "Pays du monde", countries)
 dump("capitales", "Capitales du monde", caps)
 

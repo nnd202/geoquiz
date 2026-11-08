@@ -99,6 +99,11 @@ for code, nom, alias, cont, st, sov, _ in EXTRA:
     items.append({"code": code, "nom": nom, "alias": alias, "domaine": "zone", "continent": cont,
                   "geo": [round(c.x, 3), round(c.y, 3)], "statut": STATUT[st], "st": st,
                   "detail": f"{cont} · {STATUT[st]} · {lien} : {sov}"})
+# Noms trop serrés même au zoom maximal : étiquette écartée, reliée par un trait ([dx, dy] en pixels d'écran).
+LBL = {"MAF": [-30, -12], "SXM": [-30, 6], "KNA": [-24, 0]}
+for it in items:
+    if it["code"] in LBL:
+        it["lbl"] = LBL[it["code"]]
 items.sort(key=lambda x: x["nom"])
 json.dump({"id": "pays-plus", "titre": "Pays et territoires", "items": items},
           open(f"{root}/data/pays-plus.json", "w"), ensure_ascii=False, indent=1)
