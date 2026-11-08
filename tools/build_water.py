@@ -14,7 +14,7 @@ from shapely.geometry import shape, mapping, box, MultiLineString
 from shapely.ops import unary_union, linemerge
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mapkit import path_d, line_d, svg_doc, marker  # noqa: E402
+from mapkit import anchor, path_d, line_d, svg_doc, marker  # noqa: E402
 
 src, root = sys.argv[1:3]
 J = lambda name: json.load(open(os.path.join(src, name)))
@@ -113,7 +113,7 @@ for i, (nom, ne_names, alias) in enumerate(LAKES):
     c = g.representative_point()
     lakes.append({"code": code, "nom": nom, "alias": alias + short(nom), "domaine": "physique", "categorie": "lac",
                   "geo": [round(c.x, 3), round(c.y, 3)], "detail": "Lac"})
-    body.append(f'<path class="zone lake-z" data-code="{code}" d="{path_d(mapping(g.simplify(0.02)), tf, 0.0)}"/>')
+    body.append(f'<path class="zone lake-z" data-code="{code}"{anchor(mapping(g), tf)} d="{path_d(mapping(g.simplify(0.02)), tf, 0.0)}"/>')
     if proj_area(g) < 4:
         minis.append(marker(*tf(c.x, c.y), "rond", "mini", code))
 body.append('</g>')

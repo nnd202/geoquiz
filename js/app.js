@@ -305,8 +305,22 @@ async function main() {
   onHome(() => { if (pendingReload) return location.reload(); renderHome(); dropGuard(); });
   renderHome();
   registerSW();
+  trackViewport();
   showVersion();
   navigator.serviceWorker?.ready.then(() => setTimeout(showVersion, 1500));
+}
+
+// Zone réellement visible (barre du navigateur, clavier) : les fenêtres s'y calent en direct.
+function trackViewport() {
+  const vv = window.visualViewport;
+  if (!vv) return;
+  const set = () => {
+    document.documentElement.style.setProperty('--vv-h', `${vv.height}px`);
+    document.documentElement.style.setProperty('--vv-top', `${vv.offsetTop}px`);
+  };
+  vv.addEventListener('resize', set);
+  vv.addEventListener('scroll', set);
+  set();
 }
 
 // Version installée (nom du cache hors ligne), pour vérifier qu'une mise à jour est bien arrivée.

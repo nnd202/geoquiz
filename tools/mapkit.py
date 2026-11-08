@@ -171,3 +171,34 @@ def marker(x, y, shape, cls, code=None, extra=""):
     # Le translate est porté par un <g> : le CSS « transform » du <path> remplacerait sinon l'attribut.
     return (f'<g transform="translate({x:.1f} {y:.1f})"><path class="pt {shape} {cls}"{attr} '
             f'data-x="{x:.1f}" data-y="{y:.1f}" d="{SHAPES[shape]}"{extra}/></g>')
+
+
+def is_tiny(geom, tf, area_max=6, small_max=16, extent_max=6):
+    """Pays ou territoire trop petit pour être vu ou touché sur la carte du monde : il reçoit un rond de repère.
+    Très petit (aire projetée < area_max), ou petit (aire < small_max) ET ramassé (plus grand morceau
+    de moins de extent_max unités de large) : Chypre, Liban, Qatar, Fidji… mais pas la Gambie, longue et fine."""
+    from shapely.geometry import shape as _shape
+    a = 0
+    for ring in rings(geom):
+        pts = [tf(*c[:2]) for c in ring]
+        a += abs(sum(pts[i][0] * pts[i - 1][1] - pts[i - 1][0] * pts[i][1] for i in range(len(pts)))) / 2
+    if a < area_max:
+        return True
+    if a >= small_max:
+        return False
+    g = _shape(geom)
+    big = max(getattr(g, "geoms", [g]), key=lambda p: p.area)
+    x0, y0, x1, y1 = big.bounds
+    p, q = tf(x0, y0), tf(x1, y1)
+    return max(abs(p[0] - q[0]), abs(p[1] - q[1])) < extent_max
+
+
+def anchor(geom, tf):
+    """Point d'accroche d'une étiquette de zone : à l'intérieur du plus grand morceau
+    (la France sur l'Hexagone et non au milieu de l'Atlantique à cause de la Guyane)."""
+    from shapely.geometry import shape as _shape
+    g = _shape(geom).buffer(0)
+    big = max(getattr(g, "geoms", [g]), key=lambda p: p.area)
+    p = big.representative_point()
+    x, y = tf(p.x, p.y)
+    return f' data-x="{x:.1f}" data-y="{y:.1f}"'

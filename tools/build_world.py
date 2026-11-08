@@ -12,7 +12,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mapkit import path_d, centroid, svg_doc, marker, rings  # noqa: E402
+from mapkit import anchor, is_tiny, path_d, centroid, svg_doc, marker, rings  # noqa: E402
 
 src, root = sys.argv[1:3]
 J = lambda name: json.load(open(os.path.join(src, name)))
@@ -172,11 +172,11 @@ for c in deco:
     attr = f' data-parent="{parent}"' if parent and parent != c else ""
     body.append(f'<path class="zone" data-code="x-{c}"{attr} d="{path_d(shapes[c], tf, 0.05)}"/>')
 for c in SOV:
-    body.append(f'<path class="zone" data-code="{c}" d="{path_d(shapes[c], tf, 0.05)}"/>')
+    body.append(f'<path class="zone" data-code="{c}"{anchor(shapes[c], tf)} d="{path_d(shapes[c], tf, 0.05)}"/>')
 body.append('</g><g data-layer="micro-etats">')
 small = []
 for it in countries:
-    if proj_area(shapes[it["code"]]) < 6:
+    if is_tiny(shapes[it["code"]], tf):
         small.append(it["nom"])
         body.append(marker(*tf(*it["geo"]), "rond", "mini", it["code"]))
 body.append('</g><g data-layer="capitales">')

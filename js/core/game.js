@@ -75,9 +75,19 @@ export class Game {
     if (study) {
       this.board.showLabels(this.items, this.def.etiquette);
       if (this.def.legende && cfg.support !== 'grid') {
-        const lg = el('div', 'legend');
+        // Légende repliée derrière un bouton : elle s'ouvre au toucher et se replie seule après 5 s.
+        const lg = el('div', 'legend'); lg.hidden = true;
         for (const [k, t] of this.def.legende) { const s = el('span'); s.append(el('i', `st-${k}`), t); lg.append(s); }
-        $('board').append(lg);
+        const btn = el('button', 'legend-btn', 'Légende');
+        btn.setAttribute('aria-expanded', 'false');
+        let timer = 0;
+        const show = on => {
+          lg.hidden = !on; btn.setAttribute('aria-expanded', String(on));
+          clearTimeout(timer); if (on) timer = setTimeout(() => show(false), 5000);
+        };
+        btn.addEventListener('click', () => show(lg.hidden));
+        lg.addEventListener('click', () => show(false));
+        $('board').append(btn, lg);
       }
       return;
     }

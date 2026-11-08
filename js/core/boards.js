@@ -132,7 +132,8 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     }
     return document.elementFromPoint(cx, cy)?.closest?.('[data-code]')?.dataset.code || null;
   };
-  const pz = panZoom(map, pick, onTap, tapNeedsSingle);
+  let placeLabels = () => {};
+  const pz = panZoom(map, pick, onTap, tapNeedsSingle, (v, k) => placeLabels(v, k));
   const z = el('div', 'zoom');
   [['+', 'Zoomer', () => pz.zoomBy(1.6)], ['−', 'Dézoomer', () => pz.zoomBy(1 / 1.6)], ['⤢', "Vue d'ensemble", pz.reset]]
     .forEach(([t, a, f]) => { const bt = el('button', null, t); bt.setAttribute('aria-label', a); bt.addEventListener('click', f); z.append(bt); });
@@ -140,34 +141,101 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
 
   const b = common(nodes, wrap);
   b.reveal = () => {};
-  // Étiquettes du mode étude et du bilan : code ou nom, au centre des zones, à droite des points.
+  // Étiquettes du mode étude et du bilan : code ou nom, au centre des zones, à côté des points.
+  // Elles gardent la même taille à l'écran et sont replacées à chaque zoom : par ordre de priorité
+  // (grandes zones d'abord, puis points dans l'ordre des données), chacune prend la première position
+  // libre autour de son élément ; un peu plus loin, un trait fin la relie à lui ; sinon elle attend
+  // un zoom plus fort pour apparaître.
+  let entries = [];
+  const LH = 14, GAP = 2, OBST = 5; // hauteur d'une étiquette, marge entre étiquettes, demi-taille d'un point (px)
   b.showLabels = (list, mode = 'code') => {
     labels.textContent = '';
+    entries = [];
     const inInset = new Set([...map.querySelectorAll('[data-inset][data-code]')].map(p => p.dataset.code));
-    for (const it of list) {
+    list.forEach((it, idx) => {
       const own = nodes[it.code] || [];
       const hasPt = own.some(n => n.classList.contains('pt'));
       for (const n of own) {
         if (inInset.has(it.code) && !n.dataset.inset) continue;
         if (n.classList.contains('riv-hit') || (hasPt && !n.classList.contains('pt'))) continue;
-        const t = document.createElementNS(NS, 'text');
+        let ax, ay, kind, area = 0;
         if (n.classList.contains('riv') && n.getTotalLength) {
           const p = n.getPointAtLength(n.getTotalLength() / 2);
-          t.setAttribute('x', p.x);
-          t.setAttribute('y', p.y);
-          t.setAttribute('class', 'lbl');
+          ax = p.x; ay = p.y; kind = 'riv';
+          const bb = n.getBBox(); area = bb.width * bb.height;
         } else if (n.classList.contains('pt')) {
-          t.setAttribute('x', +n.dataset.x);
-          t.setAttribute('y', +n.dataset.y);
-          t.setAttribute('class', 'lbl side');
+          ax = +n.dataset.x; ay = +n.dataset.y; kind = 'pt';
         } else {
+          // accroche fournie par la carte (plus grand morceau de la zone), sinon centre du cadre
           const bb = n.getBBox();
-          t.setAttribute('x', bb.x + bb.width / 2);
-          t.setAttribute('y', bb.y + bb.height / 2);
-          t.setAttribute('class', 'lbl');
+          ax = n.dataset.x ? +n.dataset.x : bb.x + bb.width / 2;
+          ay = n.dataset.y ? +n.dataset.y : bb.y + bb.height / 2;
+          kind = 'zone'; area = bb.width * bb.height;
         }
+        const t = document.createElementNS(NS, 'text');
+        t.setAttribute('class', 'lbl' + (kind === 'pt' ? ' pl' : ''));
         t.textContent = mode === 'code' ? it.code : it.nom;
-        labels.append(t);
+        const line = document.createElementNS(NS, 'line');
+        line.setAttribute('class', 'lead');
+        labels.append(line, t);
+        entries.push({ t, line, ax, ay, kind, area, idx, w: 0 });
+      }
+    });
+    // Ordre de priorité : zones et fleuves par taille décroissante, puis points dans l'ordre des données.
+    entries.sort((p, q) => (p.kind === 'pt') - (q.kind === 'pt') || q.area - p.area || p.idx - q.idx);
+    const k = pz.k();
+    for (const e of entries) {
+      e.t.setAttribute('x', e.ax); e.t.setAttribute('y', e.ay);
+      const len = e.t.getComputedTextLength?.() || 0;
+      e.w = len > 0 ? len / k : e.t.textContent.length * 6.6; // largeur en pixels d'écran
+    }
+    placeLabels(pz.view(), k);
+  };
+  placeLabels = (v, k) => {
+    if (!entries.length) return;
+    const placed = []; // rectangles occupés, en unités SVG
+    const hit = (x0, y0, x1, y1) => placed.some(r => x0 < r[2] && x1 > r[0] && y0 < r[3] && y1 > r[1]);
+    // Les points eux-mêmes sont des obstacles : une étiquette ne recouvre pas un autre point.
+    const o = OBST * k;
+    for (const e of entries) if (e.kind === 'pt') placed.push([e.ax - o, e.ay - o, e.ax + o, e.ay + o]);
+    const margin = 40 * k;
+    for (const e of entries) {
+      const inView = e.ax > v.x - margin && e.ax < v.x + v.w + margin && e.ay > v.y - margin && e.ay < v.y + v.h + margin;
+      e.t.style.display = 'none'; e.line.style.display = 'none';
+      if (!inView) continue;
+      const w = e.w, hw = w / 2, h = LH / 2;
+      // Positions candidates (centre de l'étiquette, en pixels), de la plus naturelle à la plus éloignée.
+      const near = e.kind === 'pt'
+        ? [[9 + hw, 0], [-(9 + hw), 0], [0, -13], [0, 13], [7 + hw, -11], [7 + hw, 11], [-(7 + hw), -11], [-(7 + hw), 11]]
+        : [[0, 0], [0, -LH], [0, LH], [hw + 8, 0], [-(hw + 8), 0]];
+      const far = e.kind === 'pt'
+        ? [[22 + hw, 0], [-(22 + hw), 0], [0, -26], [0, 26], [18 + hw, -20], [18 + hw, 20], [-(18 + hw), -20], [-(18 + hw), 20]]
+        : []; // une zone garde son nom sur elle ou juste à côté, sans trait
+      let spot = null, lead = false;
+      for (const [list, isFar] of [[near, false], [far, true]]) {
+        for (const [dx, dy] of list) {
+          const cx = e.ax + dx * k, cy = e.ay + dy * k;
+          const r = [cx - (hw + GAP) * k, cy - (h + GAP) * k, cx + (hw + GAP) * k, cy + (h + GAP) * k];
+          // le point de l'élément lui-même ne gêne pas sa propre étiquette
+          const own = e.kind === 'pt' ? placed.findIndex(q => q[0] === e.ax - o && q[1] === e.ay - o) : -1;
+          const saved = own >= 0 ? placed.splice(own, 1)[0] : null;
+          const busy = hit(...r);
+          if (saved) placed.push(saved);
+          if (!busy) { spot = [cx, cy, r]; lead = isFar; break; }
+        }
+        if (spot) break;
+      }
+      if (!spot) continue;
+      const [cx, cy, r] = spot;
+      placed.push(r);
+      e.t.setAttribute('x', cx); e.t.setAttribute('y', cy);
+      e.t.style.display = '';
+      if (lead) {
+        // trait du point vers le bord le plus proche de l'étiquette
+        const ex = Math.min(Math.max(e.ax, cx - hw * k), cx + hw * k), ey = Math.min(Math.max(e.ay, cy - h * k), cy + h * k);
+        e.line.setAttribute('x1', e.ax); e.line.setAttribute('y1', e.ay);
+        e.line.setAttribute('x2', ex); e.line.setAttribute('y2', ey);
+        e.line.style.display = '';
       }
     }
   };
@@ -188,9 +256,9 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
 }
 
 // Pincer pour zoomer, glisser à un doigt, double toucher, molette sur PC. Le zoom agit sur la carte seule.
-function panZoom(svg, pick, onTap, tapNeedsSingle) {
+function panZoom(svg, pick, onTap, tapNeedsSingle, onView = () => {}) {
   const BASE = svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
-  let view;
+  let view, raf = 0;
   // --k = unités SVG par pixel d'écran : marqueurs et étiquettes gardent la même taille à l'écran
   // quel que soit le zoom (comme sur une appli de cartes) ; en vue d'ensemble, ils peuvent se chevaucher.
   const setVB = () => {
@@ -198,6 +266,7 @@ function panZoom(svg, pick, onTap, tapNeedsSingle) {
     const r = svg.getBoundingClientRect();
     const s = Math.min(r.width / view.w, r.height / view.h);
     svg.style.setProperty('--k', String(s > 0 ? 1 / s : view.w / 380));
+    if (!raf) raf = requestAnimationFrame(() => { raf = 0; onView(visible(), s > 0 ? 1 / s : view.w / 380); });
   };
   if (window.ResizeObserver) new ResizeObserver(() => setVB()).observe(svg);
   const reset = () => { view = { x: BASE[0], y: BASE[1], w: BASE[2], h: BASE[3] }; setVB(); };
@@ -205,6 +274,10 @@ function panZoom(svg, pick, onTap, tapNeedsSingle) {
     const r = svg.getBoundingClientRect();
     const s = Math.min(r.width / view.w, r.height / view.h) || 1;
     return { r, s, ox: (r.width - view.w * s) / 2, oy: (r.height - view.h * s) / 2 };
+  };
+  const visible = () => {
+    const { r, s, ox, oy } = info();
+    return { x: view.x - ox / s, y: view.y - oy / s, w: r.width / s, h: r.height / s };
   };
   const toSvg = (cx, cy) => { const { r, s, ox, oy } = info(); return [view.x + (cx - r.left - ox) / s, view.y + (cy - r.top - oy) / s]; };
   const clamp = () => {
@@ -275,5 +348,5 @@ function panZoom(svg, pick, onTap, tapNeedsSingle) {
     const [px, py] = toSvg(e.clientX, e.clientY);
     zoomAt(px, py, e.deltaY < 0 ? 1.2 : 1 / 1.2);
   }, { passive: false });
-  return { reset, zoomBy };
+  return { reset, zoomBy, view: visible, k: () => 1 / (info().s || 1) };
 }

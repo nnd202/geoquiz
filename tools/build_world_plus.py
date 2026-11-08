@@ -12,7 +12,7 @@ import sys
 from shapely.geometry import shape, mapping
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mapkit import path_d, svg_doc, marker, rings  # noqa: E402
+from mapkit import anchor, is_tiny, path_d, svg_doc, marker, rings  # noqa: E402
 from worldproj import tf, VIEW  # noqa: E402
 
 src, root = sys.argv[1:3]
@@ -117,11 +117,11 @@ for c, g in units.items():  # décor : Antarctique, îles inhabitées
     if c not in used and c not in ("SOL", "CYN"):
         body.append(f'<path class="zone" data-code="x-{c}" d="{path_d(mapping(g), tf, 0.05)}"/>')
 for it in items:
-    body.append(f'<path class="zone st-{it["st"]}" data-code="{it["code"]}" d="{path_d(mapping(geom[it["code"]]), tf, 0.05)}"/>')
+    body.append(f'<path class="zone st-{it["st"]}" data-code="{it["code"]}"{anchor(mapping(geom[it["code"]]), tf)} d="{path_d(mapping(geom[it["code"]]), tf, 0.05)}"/>')
 body.append('</g><g data-layer="micro-etats">')
 small = 0
 for it in items:
-    if proj_area(geom[it["code"]]) < 6:
+    if is_tiny(mapping(geom[it["code"]]), tf):
         small += 1
         body.append(marker(*tf(*it["geo"]), "rond", f"mini st-{it['st']}", it["code"]))
 body.append('</g>')
