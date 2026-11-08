@@ -152,7 +152,7 @@ export class Game {
     this.board.mark(item.code, 'todo', false);
     this.board.mark(item.code, 'found');
     this.board.relate(item.code, 'rel');
-    this.board.flash(item.code);
+    this.board.pulse(item.code);
     this.board.reveal(item.code, item.nom);
     const inp = $('answer');
     inp.value = ''; inp.classList.remove('pending');

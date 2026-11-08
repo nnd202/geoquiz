@@ -11,6 +11,31 @@ function common(nodes, root) {
     flash(code) {
       (nodes[code] || []).forEach(n => { n.classList.remove('flash'); void n.getBoundingClientRect(); n.classList.add('flash'); });
     },
+    // Onde verte au moment où un élément est trouvé : copie éphémère du tracé, animée en CSS.
+    // Marqueur : la forme grandit et s'efface ; zone : contour qui déborde, posé au-dessus des voisines ;
+    // fleuve : trait qui s'épaissit ; case de grille : liseré qui déborde.
+    pulse(code) {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      for (const n of nodes[code] || []) {
+        const cl = n.classList;
+        if (cl.contains('cell')) { cl.remove('pulse'); void n.offsetWidth; cl.add('pulse'); continue; }
+        if (cl.contains('riv-hit') || !n.getAttribute?.('d')) continue;
+        const a = n.cloneNode(false);
+        a.removeAttribute('data-code');
+        if (cl.contains('pt')) {
+          a.setAttribute('class', [...cl].filter(c => !['todo', 'found', 'off', 'missed', 'wrong', 'sel', 'asked', 'flash', 'late'].includes(c)).concat('pt-aura').join(' '));
+          n.parentNode.insertBefore(a, n);
+        } else if (cl.contains('riv')) {
+          a.setAttribute('class', 'riv-aura');
+          n.parentNode.insertBefore(a, n);
+        } else {
+          a.setAttribute('class', 'zone-aura');
+          n.parentNode.append(a); // au-dessus des zones voisines, sinon elles cachent l'onde
+        }
+        a.addEventListener('animationend', () => a.remove());
+        setTimeout(() => a.remove(), 1200); // filet de sécurité si l'animation ne se joue pas
+      }
+    },
   };
 }
 

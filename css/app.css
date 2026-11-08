@@ -371,3 +371,16 @@ details.section[open] > summary::after { transform: rotate(45deg); }
 .grid.words .cell.missed .nm { color: var(--missed); font-weight: 600; }
 /* « N au hasard » sur une grille : seules les cases tirées restent affichées */
 .grid .cell.off { display: none; }
+
+/* ---------- Onde verte au moment trouvé (variante A) ---------- */
+@property --s { syntax: '<number>'; inherits: false; initial-value: 1; }
+.pt.pt-aura { fill: none !important; stroke: var(--found) !important; stroke-width: 2.5; opacity: 1; pointer-events: none;
+  transform: scale(calc(var(--r) * var(--k, 1) * var(--s))); animation: pt-ring .45s cubic-bezier(.2, .7, .3, 1) forwards; }
+@keyframes pt-ring { from { --s: 1; opacity: .9; stroke-width: 2.5; } to { --s: 3.2; opacity: 0; stroke-width: .6; } }
+.zone-aura { fill: none; stroke: var(--found); stroke-linejoin: round; vector-effect: non-scaling-stroke; pointer-events: none; animation: zone-ring .45s ease-out forwards; }
+@keyframes zone-ring { from { opacity: .8; stroke-width: 2; } to { opacity: 0; stroke-width: 16; } }
+.riv-aura { fill: none; stroke: var(--found); stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; pointer-events: none; animation: riv-ring .45s ease-out forwards; }
+@keyframes riv-ring { from { opacity: .7; stroke-width: 4; } to { opacity: 0; stroke-width: 18; } }
+.cell.pulse { animation: cell-ring .45s cubic-bezier(.2, .7, .3, 1); }
+@keyframes cell-ring { from { box-shadow: 0 0 0 0 color-mix(in srgb, var(--found) 80%, transparent); } to { box-shadow: 0 0 0 12px color-mix(in srgb, var(--found) 0%, transparent); } }
+@media (prefers-reduced-motion: reduce) { .pt-aura, .zone-aura, .riv-aura { display: none; } .cell.pulse { animation: none; } }
