@@ -26,7 +26,8 @@ const quizKey = q => `${q.jeu}|${q.support || 'map'}`;
 const canRandom = q => CAT.jeux[q.jeu].nb > CAT.options.seuilHasard;
 function optsOf(q) {
   const o = store.ui.opts[quizKey(q)] || {};
-  return { random: !!o.random && canRandom(q), click: !!o.click, cursor: !!o.cursor && q.support === 'grid' };
+  // Curseur : choix mémorisé, sinon réglage par défaut du quiz (« curseur » dans le catalogue).
+  return { random: !!o.random && canRandom(q), click: !!o.click, cursor: q.support === 'grid' && !!(o.cursor ?? q.curseur) };
 }
 function cfgOf(q, o = optsOf(q)) {
   return { jeu: q.jeu, support: q.support || 'map', mech: o.click ? 'tap' : o.cursor ? 'cur' : 'all', n: o.random ? CAT.options.hasard : 0 };
@@ -64,7 +65,7 @@ function renderHome() {
   $('p-val').textContent = store.pauses;
   $('r-val').textContent = store.reminderDays ? `${store.reminderDays} j` : 'jamais';
   $('last-save').textContent = store.lastExport
-    ? `Dernière sauvegarde : ${new Date(store.lastExport).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })}.`
+    ? `Dernière sauvegarde : ${new Date(store.lastExport).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })} à ${new Date(store.lastExport).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', ' h ')}.`
     : "Aucune sauvegarde pour l'instant.";
   renderFolder();
   maybeRemind();

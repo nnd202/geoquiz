@@ -389,7 +389,8 @@
     {
      "nom": "Capitales (grille)",
      "jeu": "capitales",
-     "support": "grid"
+     "support": "grid",
+     "curseur": true
     },
     {
      "nom": "Mers et océans",

@@ -15,14 +15,25 @@ export function fileName(d = new Date()) {
 // Téléphone ou tablette : le menu de partage passe avant tout (c'est lui qui propose Proton Drive).
 const mobile = () => /Android|iPhone|iPad/i.test(navigator.userAgent) || matchMedia('(pointer: coarse)').matches;
 
+// Partage : réussi quand Android le confirme, ou quand on revient sur l'app après être passé dans
+// l'appli choisie (Proton Drive…) : certaines applis ne renvoient jamais la confirmation, et la date
+// de dernière sauvegarde ne bougeait alors plus.
 async function share(file) {
   if (!navigator.share) return 'none';
   if (navigator.canShare && !navigator.canShare({ files: [file] })) return 'none';
+  let away = false, onVis;
+  const back = new Promise(res => {
+    onVis = () => { if (document.hidden) away = true; else if (away) res('ok'); };
+    document.addEventListener('visibilitychange', onVis);
+  });
+  const sent = navigator.share({ files: [file], title: file.name }).then(
+    () => 'ok',
+    e => (away ? 'ok' : e?.name === 'AbortError' ? 'abort' : 'none'),
+  );
   try {
-    await navigator.share({ files: [file], title: file.name });
-    return 'ok';
-  } catch (e) {
-    return e?.name === 'AbortError' ? 'abort' : 'none';
+    return await Promise.race([sent, back]);
+  } finally {
+    document.removeEventListener('visibilitychange', onVis);
   }
 }
 
