@@ -643,9 +643,7 @@
   {
    "code": "c-KOR",
    "nom": "Séoul",
-   "alias": [
-    "Seoul"
-   ],
+   "alias": [],
    "domaine": "ville",
    "pays": "Corée du Sud",
    "paysCode": "KOR",
@@ -1147,9 +1145,7 @@
   {
    "code": "c-ISR",
    "nom": "Jérusalem",
-   "alias": [
-    "Jerusalem"
-   ],
+   "alias": [],
    "domaine": "ville",
    "pays": "Israël",
    "paysCode": "ISR",
@@ -1993,9 +1989,7 @@
   {
    "code": "c-PRT",
    "nom": "Lisbonne",
-   "alias": [
-    "Lisbon"
-   ],
+   "alias": [],
    "domaine": "ville",
    "pays": "Portugal",
    "paysCode": "PRT",
@@ -2394,9 +2388,7 @@
   {
    "code": "c-CHE",
    "nom": "Berne",
-   "alias": [
-    "Bern"
-   ],
+   "alias": [],
    "domaine": "ville",
    "pays": "Suisse",
    "paysCode": "CHE",
@@ -2513,8 +2505,7 @@
    "code": "c-TCD",
    "nom": "N'Djaména",
    "alias": [
-    "Ndjamena",
-    "N'Djamena"
+    "Ndjamena"
    ],
    "domaine": "ville",
    "pays": "Tchad",
@@ -2754,9 +2745,7 @@
   {
    "code": "c-VNM",
    "nom": "Hanoï",
-   "alias": [
-    "Hanoi"
-   ],
+   "alias": [],
    "domaine": "ville",
    "pays": "Viêt Nam",
    "paysCode": "VNM",

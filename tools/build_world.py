@@ -108,6 +108,11 @@ if not any(q["NAME"] == "Ramallah" for q, _ in by_country["PSX"]):
             break
 
 
+def plain(s):
+    import unicodedata
+    return "".join(ch for ch in unicodedata.normalize("NFD", s.lower()) if unicodedata.category(ch) != "Mn")
+
+
 def capital(code):
     if code in EXTRA:
         return EXTRA[code][0], EXTRA[code][1]
@@ -137,7 +142,9 @@ for c in SOV:
                       "geo": [round(lx, 3), round(ly, 3)], "capitale": cap, "detail": f"{cont} · capitale : {cap}"})
     cap_en = next((q["NAME"] for q, _ in by_country.get(c, []) if (CAP_FR.get(c) or q["NAME_FR"]) == cap), None)
     calias = list(CAP_ALIAS.get(c, []))
-    if cap_en and cap_en != cap and cap_en not in calias and "," not in cap_en:
+    # Nom anglais accepté en plus, sauf s'il n'est que le début du nom français (Lisbon / Lisbonne, Bern / Berne) :
+    # il validerait la réponse avant la fin de la frappe.
+    if cap_en and cap_en != cap and cap_en not in calias and "," not in cap_en and not plain(cap).startswith(plain(cap_en)):
         calias.append(cap_en)
     caps.append({"code": f"c-{c}", "nom": cap, "alias": calias, "domaine": "ville", "pays": nom, "paysCode": c,
                  "continent": cont, "geo": [round(cxy[0], 4), round(cxy[1], 4)], "detail": f"Capitale · {nom}"})

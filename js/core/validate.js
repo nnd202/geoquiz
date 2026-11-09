@@ -38,12 +38,14 @@ export function judgeName(raw, candidates, { all, found, last = null, notes = tr
   if (!ins.length) return null;
   const hit = d => d.keys.some(x => ins.includes(x));
 
-  // 1. Correspondance exacte ; attente si c'est aussi le début d'une autre réponse (Loire / Loiret).
+  // 1. Correspondance exacte ; attente si c'est aussi le début d'une réponse plus longue (Loire / Loiret),
+  //    y compris le nom principal du même élément, pour laisser finir la frappe.
   const exact = candidates.filter(hit);
   if (exact.length) {
     const item = pickHomonym(exact, last);
-    const longer = candidates.some(d => !exact.includes(d) &&
-      d.keys.some(x => ins.some(i => x.length > i.length && x.startsWith(i))));
+    const starts = x => ins.some(i => x.length > i.length && x.startsWith(i));
+    const own = keysOf(item.nom); // nom principal du même élément (Lisbon → Lisbonne), pas ses autres alias
+    const longer = candidates.some(d => d !== item && d.keys.some(starts)) || [own.full, own.lite].some(x => x && starts(x));
     return { item, when: longer ? 'wait' : 'now' };
   }
 

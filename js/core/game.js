@@ -1,13 +1,14 @@
 // Noyau d'une partie : plateau, chrono, pause, saisie différée, fin, bilan, mode étude.
 import { $, el, fmt, shuffle } from './dom.js';
 import { buildGrid, buildMap } from './boards.js';
-import { store, addAttempt, attemptsOf, bestOf } from './store.js';
+import { store, addAttempt, addCancelled, attemptsOf, bestOf } from './store.js';
 import { writeToFolder } from './backup.js';
 import { keysOf } from './text.js';
 import { MECHANICS } from '../mechanics/index.js';
 
 export const END = { time: 'Chrono écoulé', all: 'Tout trouvé', list: 'Liste terminée', stop: 'Terminer' };
 export const fmtLong = ms => { const s = Math.round(ms / 1000); return s >= 3600 ? `${Math.floor(s / 3600)} h ${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}` : fmt(ms); };
+const KEEP_TIME_FROM = 5; // partie annulée : son temps compte à partir de 5 réponses trouvées
 const WAIT_MS = 700; // pause de frappe avant de valider un préfixe ambigu ou une faute
 const CONFIRM_FROM = 10; // éléments trouvés au-delà desquels Annuler demande confirmation
 
@@ -204,19 +205,27 @@ export class Game {
   }
   /* --- Annuler : quitter sans rien enregistrer ---
    * Sans question tant que moins de 10 éléments sont trouvés ; au-delà, une confirmation dans la page. */
+  // Sortie sans score : le temps de saisie est quand même compté dès 5 réponses trouvées.
+  quitKeepingTime() {
+    if (!this.over && !this.study && this.found.size >= KEEP_TIME_FROM) {
+      addCancelled({ at: new Date().toISOString(), quiz: this.id, ms: Math.round(this.elapsed()), found: this.found.size });
+    }
+    this.over = true;
+    goHome();
+  }
   cancel() {
     if (this.over || this.study) return goHome();
     if ($('confirm')) return this.closeConfirm();
-    if (this.found.size < CONFIRM_FROM) return goHome();
+    if (this.found.size < CONFIRM_FROM) return this.quitKeepingTime();
     this.wasPaused = this.paused;
     if (!this.paused) { this.paused = true; this.acc = this.elapsed(); this.resumeAt = null; }
     clearTimeout(this.waitTimer);
     $('answer').blur();
     const box = el('div', 'confirm'); box.id = 'confirm';
     const card = el('div', 'confirm-card');
-    card.append(el('h3', null, 'Annuler la partie ?'), el('p', null, `${this.found.size} trouvés. Rien ne sera enregistré.`));
+    card.append(el('h3', null, 'Annuler la partie ?'), el('p', null, `${this.found.size} trouvés. Le score n'est pas enregistré, mais le temps passé compte.`));
     const r = el('div', 'row');
-    const yes = el('button', 'btn', 'Annuler la partie'); yes.addEventListener('click', () => goHome());
+    const yes = el('button', 'btn', 'Annuler la partie'); yes.addEventListener('click', () => this.quitKeepingTime());
     const no = el('button', 'btn ghost', 'Continuer'); no.addEventListener('click', () => this.closeConfirm());
     r.append(yes, no); card.append(r); box.append(card);
     $('board').append(box);

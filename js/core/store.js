@@ -7,6 +7,7 @@ function load() {
   let s = {};
   try { s = JSON.parse(localStorage.getItem(KEY)) || {}; } catch { s = {}; }
   s.attempts ||= [];
+  s.sessions ||= [];        // parties annulées après au moins 5 réponses : seul le temps passé compte
   s.pauses ??= 3;
   s.reminderDays ??= 7;     // rappel de sauvegarde tous les N jours (0 = jamais)
   s.lastExport ??= null;    // date ISO de la dernière sauvegarde
@@ -22,6 +23,8 @@ export function save() {
 }
 
 export function addAttempt(a) { store.attempts.push(a); save(); }
+// Partie annulée : ni score ni tentative, mais le temps de saisie compte dans le temps cumulé.
+export function addCancelled(s) { store.sessions.push(s); save(); }
 
 /* Identifiant de variante : jeu | support | mécanique | tirage (0 = tout).
  * Les anciens identifiants (prototype et première version) sont ramenés à ce format quand c'est possible :
@@ -65,14 +68,14 @@ export function globalStats(now = new Date()) {
     current: cur, longest, playedToday: days.has(today),
     today: store.attempts.filter(a => dayKey(a.at) === today).length,
     total: store.attempts.length,
-    totalMs: store.attempts.reduce((s, a) => s + (a.ms || 0), 0),
+    totalMs: [...store.attempts, ...store.sessions].reduce((s, a) => s + (a.ms || 0), 0),
   };
 }
 
 /* ---------- Sauvegarde ---------- */
 export function exportText() {
   return JSON.stringify({ app: 'geoquiz', version: 1, exportedAt: new Date().toISOString(),
-    attempts: store.attempts, pauses: store.pauses, reminderDays: store.reminderDays }, null, 1);
+    attempts: store.attempts, sessions: store.sessions, pauses: store.pauses, reminderDays: store.reminderDays }, null, 1);
 }
 
 export function markExported() { store.lastExport = new Date().toISOString(); store.snoozeUntil = null; save(); }
@@ -86,6 +89,10 @@ export function importText(text) {
     if (a && a.at && a.quiz && !seen.has(a.at + a.quiz)) { store.attempts.push(a); seen.add(a.at + a.quiz); added++; }
   }
   store.attempts.sort((a, b) => a.at.localeCompare(b.at));
+  const seenS = new Set(store.sessions.map(a => a.at + a.quiz));
+  for (const a of Array.isArray(d.sessions) ? d.sessions : []) {
+    if (a && a.at && a.quiz && !seenS.has(a.at + a.quiz)) { store.sessions.push(a); seenS.add(a.at + a.quiz); }
+  }
   save();
   return added;
 }
