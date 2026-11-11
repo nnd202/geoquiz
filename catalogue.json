@@ -517,23 +517,6 @@
    "prefixe": "brl",
    "case": "signe"
   },
-  "braille-toucher": {
-   "fichier": "data/braille.json",
-   "etiquette": "nom",
-   "nb": 26,
-   "melange": true,
-   "style": "braille",
-   "sens": [
-    {
-     "demande": "code",
-     "reponse": "nom",
-     "label": "Signe → lettre"
-    }
-   ],
-   "titre": "Braille : toucher",
-   "prefixe": "brt",
-   "masque": "⠿"
-  },
   "braille-ecrire": {
    "fichier": "data/braille.json",
    "etiquette": "nom",
@@ -708,12 +691,6 @@
      "jeu": "braille-lire",
      "support": "grid",
      "curseur": true
-    },
-    {
-     "nom": "Braille : toucher",
-     "jeu": "braille-toucher",
-     "support": "grid",
-     "mecanique": "feel"
     },
     {
      "nom": "Braille : écrire",

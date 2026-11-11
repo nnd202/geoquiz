@@ -3,7 +3,6 @@ import { $, el } from './core/dom.js';
 import { prepare } from './core/text.js';
 import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, snooze, variantOf } from './core/store.js';
 import { morseCfg, setMorse } from './core/morse.js';
-import { feedback, setFeedback, vibrate, playTick } from './core/braille.js';
 import { Game, END, fmtLong, onHome, wireGameControls, backRequest } from './core/game.js';
 import { saveNow, folderSupported, folderState, chooseFolder, forgetFolder, writeToFolder } from './core/backup.js';
 
@@ -36,7 +35,7 @@ function cfgOf(q, o = optsOf(q)) {
   return { jeu: q.jeu, support: q.support || 'map', mech: q.mecanique || (o.click ? 'tap' : o.cursor ? 'cur' : 'all'), n: o.random ? CAT.options.hasard : 0 };
 }
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
-const MECH_LABEL = { key: 'manipulateur', ear: 'à l’oreille', feel: 'au toucher', bwrite: 'écriture' };
+const MECH_LABEL = { key: 'manipulateur', ear: 'à l’oreille', bwrite: 'écriture' };
 const optsLabel = (o, q = {}) => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
 
 async function play(q, study = false) {
@@ -70,7 +69,6 @@ function renderHome() {
   const mc = morseCfg();
   $('mw-val').textContent = mc.wpm;
   $('ma-on').setAttribute('aria-pressed', String(mc.aide)); $('ma-off').setAttribute('aria-pressed', String(!mc.aide));
-  for (const v of ['vibe', 'sound', 'both']) $(`bf-${v}`).setAttribute('aria-pressed', String(feedback() === v));
   $('r-val').textContent = store.reminderDays ? `${store.reminderDays} j` : 'jamais';
   $('last-save').textContent = store.lastExport
     ? `Dernière sauvegarde : ${new Date(store.lastExport).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })} à ${new Date(store.lastExport).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', ' h ')}.`
@@ -273,16 +271,6 @@ function wireSettings() {
   step('mw-plus', () => setMorse({ wpm: Math.min(30, morseCfg().wpm + 1) }));
   step('ma-on', () => setMorse({ aide: true }));
   step('ma-off', () => setMorse({ aide: false }));
-  for (const v of ['vibe', 'sound', 'both']) step(`bf-${v}`, () => setFeedback(v));
-  // Test : une vibration de 300 ms ; le message dit si le navigateur l'a acceptée.
-  $('bf-test').addEventListener('click', () => {
-    const ok = vibrate(300);
-    playTick();
-    $('bf-msg').textContent = !('vibrate' in navigator)
-      ? 'Ce navigateur ne sait pas faire vibrer le téléphone. Essayez dans Chrome, ou choisissez « Son ».'
-      : ok ? 'Vibration demandée au téléphone. Si rien ne vibre, regardez Réglages Android › Sons et vibrations › Intensité des vibrations (retour tactile et notifications), et le mode économie d’énergie.'
-        : 'Le navigateur a refusé la vibration. Essayez dans Chrome, ou choisissez « Son ».';
-  });
   $('exp').addEventListener('click', async () => { flash(await saveNow()); renderHome(); });
   const doImport = text => {
     try {
