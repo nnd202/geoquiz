@@ -43,6 +43,8 @@ Liste les homonymes et les préfixes ambigus (réponses qui commencent comme une
 
 ## Régénérer les cartes
 
+Toutes les sources sont rangées dans la branche `sources` du dépôt (voir son README) : `git clone --branch sources --depth 1 <dépôt> src-data && cd src-data && sh restore.sh`, puis `python3 -I tools/build_….py ../src-data .`. Régénérer depuis cette branche redonne exactement les cartes et données de `main` (vérifié le 11 novembre 2026).
+
 Outils : [mapshaper](https://github.com/mbloch/mapshaper), Python 3 et [shapely](https://pypi.org/project/shapely/) pour le ciel. Les scripts sont dans `tools/` ; `mapkit.py` contient la projection, les encarts, les marqueurs et l'écriture des SVG. Après une régénération, mettre à jour le nombre d'éléments (`nb`) dans `catalogue.json` et lancer `node tools/check.mjs`.
 
 **Monde** (`maps/monde.svg`, `maps/mers.svg`) · `tools/build_world.py`
