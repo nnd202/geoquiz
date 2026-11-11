@@ -16,5 +16,32 @@ export function setCell(dots, pts) {
   for (const [n, d] of Object.entries(dots)) d.classList.toggle('on', pts.includes(n));
 }
 
-// Petite vibration (Android, Chrome) ; sans effet ailleurs.
-export const buzz = (ms = 14) => { try { navigator.vibrate?.(ms); } catch { /* indisponible */ } };
+import { store, save } from './store.js';
+
+// Retour au passage du doigt sur un point : vibration, petit son, ou les deux (réglage).
+export const feedback = () => store.braille?.retour || 'both';
+export function setFeedback(v) { store.braille = { ...(store.braille || {}), retour: v }; save(); }
+
+let ctx = null;
+function tick() {
+  try {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    ctx ||= new AC();
+    if (ctx.state === 'suspended') ctx.resume();
+    const t = ctx.currentTime, o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'sine'; o.frequency.value = 1400;
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(0.18, t + 0.004); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.045);
+    o.connect(g).connect(ctx.destination); o.start(t); o.stop(t + 0.05);
+  } catch { /* son indisponible */ }
+}
+// Renvoie true si le navigateur a accepté la vibration.
+export function vibrate(ms) {
+  try { return !!navigator.vibrate?.(ms); } catch { return false; }
+}
+export function buzz(ms = 14) {
+  const m = feedback();
+  if (m !== 'sound') vibrate(ms);
+  if (m !== 'vibe') tick();
+}
+export const playTick = tick;
