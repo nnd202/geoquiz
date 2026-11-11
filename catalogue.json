@@ -363,6 +363,27 @@
    ],
    "nb": 60,
    "reveler": true
+  },
+  "etoiles-nav": {
+   "titre": "Étoiles de navigation",
+   "fichier": "data/etoiles-nav.json",
+   "carte": "maps/ciel.svg",
+   "prefixe": "nav",
+   "etiquette": "nom",
+   "style": "ciel",
+   "calques": [
+    "cadre",
+    "traces",
+    "etoiles"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Point → nom"
+    }
+   ],
+   "nb": 57
   }
  },
  "sections": [
@@ -416,6 +437,10 @@
     {
      "nom": "Étoiles",
      "jeu": "etoiles"
+    },
+    {
+     "nom": "Étoiles de navigation",
+     "jeu": "etoiles-nav"
     }
    ]
   },

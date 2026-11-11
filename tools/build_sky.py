@@ -78,6 +78,7 @@ STAR_FR = {
     "Spica": ("Spica", ["L'Épi"]), "Capella": ("Capella", ["La Chèvre"]), "Labr": ("Labrum", []),
     "Rigil Kentaurus": ("Rigil Kentaurus", ["Alpha du Centaure", "Alpha Centauri"]), "Navi": ("Navi", ["Tiansi"]),
     "Kaus Australis": ("Kaus Australis", []), "Deneb Algedi": ("Deneb Algedi", []),
+    "Betelgeuse": ("Bételgeuse", []), "Shedar": ("Schedar", ["Shedar"]),
 }
 # Noms sans usage reconnu (absents du catalogue de l'UAI) : l'étoile reste affichée, sans être à trouver.
 STAR_DROP = {"Men", "Persian", "Mizan"}
@@ -119,7 +120,34 @@ for con, hip in best.items():
                   "geo": [round(c, 3) for c in pos[hip]], "mag": mag[hip],
                   "detail": f"{cons[con]['nom']} · magnitude {mag[hip]:.2f}"})
 stars.sort(key=lambda s: s["mag"])
-named = {s["code"][2:] for s in stars}
+
+# ---------- Les 57 étoiles de navigation (éphémérides nautiques) ----------
+# Liste officielle utilisée pour faire le point au sextant ; l'Étoile polaire, traitée à part, n'en fait pas partie.
+NAV = ["Acamar", "Achernar", "Acrux", "Adhara", "Aldebaran", "Alioth", "Alkaid", "Alnair", "Alnilam", "Alphard",
+       "Alphecca", "Alpheratz", "Altair", "Ankaa", "Antares", "Arcturus", "Atria", "Avior", "Bellatrix", "Betelgeuse",
+       "Canopus", "Capella", "Deneb", "Denebola", "Diphda", "Dubhe", "Elnath", "Eltanin", "Enif", "Fomalhaut",
+       "Gacrux", "Gienah", "Hadar", "Hamal", "Kaus Australis", "Kochab", "Markab", "Menkar", "Menkent",
+       "Miaplacidus", "Mirfak", "Nunki", "Peacock", "Pollux", "Procyon", "Rasalhague", "Regulus", "Rigel",
+       "Rigil Kentaurus", "Sabik", "Shedar", "Shaula", "Sirius", "Spica", "Suhail", "Vega", "Zubenelgenubi"]
+# Noms portés par plusieurs étoiles dans le fichier source : celle de la liste nautique (numéro Hipparcos).
+NAV_HIP = {"Alnair": "109268", "Markab": "113963", "Menkar": "14135", "Zubenelgenubi": "72622"}
+by_name = {}
+for hip, v in names.items():
+    if v.get("name"):
+        by_name.setdefault(v["name"], []).append(hip)
+nav = []
+for en in NAV:
+    hip = NAV_HIP.get(en) or by_name[en][0]
+    assert en in NAV_HIP or len(by_name[en]) == 1, en
+    v = names[hip]
+    nom, alias = STAR_FR.get(en, (en, []))
+    alias = [a for a in [en, *alias] if a != nom]
+    nav.append({"code": f"s-{hip}", "nom": nom, "alias": alias, "domaine": "ciel", "con": v["c"],
+                "geo": [round(c, 3) for c in pos[hip]], "mag": mag[hip],
+                "detail": f"{cons[v['c']]['nom']} · magnitude {mag[hip]:.2f} · étoile de navigation"})
+assert len(nav) == 57
+nav.sort(key=lambda s: s["mag"])
+named = {s["code"][2:] for s in stars} | {s["code"][2:] for s in nav}
 
 # ---------- Frontières des constellations, découpées par hémisphère ----------
 body = []
@@ -195,5 +223,6 @@ for c in sorted(cons.values(), key=lambda c: c["nom"]):
     con_items.append({k: c[k] for k in ("code", "nom", "alias", "domaine", "detail")})
 dump("constellations", "Les 88 constellations", con_items)
 dump("etoiles", "Étoiles les plus brillantes de chaque constellation", stars)
-print(len(con_items), "constellations ·", len(stars), "étoiles nommées ·",
+dump("etoiles-nav", "Les 57 étoiles de navigation", nav)
+print(len(con_items), "constellations ·", len(stars), "étoiles nommées ·", len(nav), "étoiles de navigation ·",
       os.path.getsize(f"{root}/maps/ciel.svg"), "octets")

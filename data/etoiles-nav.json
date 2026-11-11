@@ -1,0 +1,771 @@
+{
+ "id": "etoiles-nav",
+ "titre": "Les 57 étoiles de navigation",
+ "items": [
+  {
+   "code": "s-32349",
+   "nom": "Sirius",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CMa",
+   "geo": [
+    101.287,
+    -16.716
+   ],
+   "mag": -1.44,
+   "detail": "Grand Chien · magnitude -1.44 · étoile de navigation"
+  },
+  {
+   "code": "s-30438",
+   "nom": "Canopus",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Car",
+   "geo": [
+    95.988,
+    -52.696
+   ],
+   "mag": -0.62,
+   "detail": "Carène · magnitude -0.62 · étoile de navigation"
+  },
+  {
+   "code": "s-69673",
+   "nom": "Arcturus",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Boo",
+   "geo": [
+    -146.085,
+    19.182
+   ],
+   "mag": -0.05,
+   "detail": "Bouvier · magnitude -0.05 · étoile de navigation"
+  },
+  {
+   "code": "s-71683",
+   "nom": "Rigil Kentaurus",
+   "alias": [
+    "Alpha du Centaure",
+    "Alpha Centauri"
+   ],
+   "domaine": "ciel",
+   "con": "Cen",
+   "geo": [
+    -140.098,
+    -60.834
+   ],
+   "mag": -0.01,
+   "detail": "Centaure · magnitude -0.01 · étoile de navigation"
+  },
+  {
+   "code": "s-91262",
+   "nom": "Véga",
+   "alias": [
+    "Vega"
+   ],
+   "domaine": "ciel",
+   "con": "Lyr",
+   "geo": [
+    -80.765,
+    38.784
+   ],
+   "mag": 0.03,
+   "detail": "Lyre · magnitude 0.03 · étoile de navigation"
+  },
+  {
+   "code": "s-24608",
+   "nom": "Capella",
+   "alias": [
+    "La Chèvre"
+   ],
+   "domaine": "ciel",
+   "con": "Aur",
+   "geo": [
+    79.172,
+    45.998
+   ],
+   "mag": 0.08,
+   "detail": "Cocher · magnitude 0.08 · étoile de navigation"
+  },
+  {
+   "code": "s-24436",
+   "nom": "Rigel",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Ori",
+   "geo": [
+    78.635,
+    -8.202
+   ],
+   "mag": 0.18,
+   "detail": "Orion · magnitude 0.18 · étoile de navigation"
+  },
+  {
+   "code": "s-37279",
+   "nom": "Procyon",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CMi",
+   "geo": [
+    114.826,
+    5.225
+   ],
+   "mag": 0.4,
+   "detail": "Petit Chien · magnitude 0.40 · étoile de navigation"
+  },
+  {
+   "code": "s-7588",
+   "nom": "Achernar",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Eri",
+   "geo": [
+    24.428,
+    -57.237
+   ],
+   "mag": 0.45,
+   "detail": "Éridan · magnitude 0.45 · étoile de navigation"
+  },
+  {
+   "code": "s-27989",
+   "nom": "Bételgeuse",
+   "alias": [
+    "Betelgeuse"
+   ],
+   "domaine": "ciel",
+   "con": "Ori",
+   "geo": [
+    88.793,
+    7.407
+   ],
+   "mag": 0.45,
+   "detail": "Orion · magnitude 0.45 · étoile de navigation"
+  },
+  {
+   "code": "s-68702",
+   "nom": "Hadar",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cen",
+   "geo": [
+    -149.044,
+    -60.373
+   ],
+   "mag": 0.61,
+   "detail": "Centaure · magnitude 0.61 · étoile de navigation"
+  },
+  {
+   "code": "s-97649",
+   "nom": "Altaïr",
+   "alias": [
+    "Altair"
+   ],
+   "domaine": "ciel",
+   "con": "Aql",
+   "geo": [
+    -62.304,
+    8.868
+   ],
+   "mag": 0.76,
+   "detail": "Aigle · magnitude 0.76 · étoile de navigation"
+  },
+  {
+   "code": "s-60718",
+   "nom": "Acrux",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cru",
+   "geo": [
+    -173.35,
+    -63.099
+   ],
+   "mag": 0.77,
+   "detail": "Croix du Sud · magnitude 0.77 · étoile de navigation"
+  },
+  {
+   "code": "s-21421",
+   "nom": "Aldébaran",
+   "alias": [
+    "Aldebaran"
+   ],
+   "domaine": "ciel",
+   "con": "Tau",
+   "geo": [
+    68.98,
+    16.509
+   ],
+   "mag": 0.87,
+   "detail": "Taureau · magnitude 0.87 · étoile de navigation"
+  },
+  {
+   "code": "s-65474",
+   "nom": "Spica",
+   "alias": [
+    "L'Épi"
+   ],
+   "domaine": "ciel",
+   "con": "Vir",
+   "geo": [
+    -158.702,
+    -11.161
+   ],
+   "mag": 0.98,
+   "detail": "Vierge · magnitude 0.98 · étoile de navigation"
+  },
+  {
+   "code": "s-80763",
+   "nom": "Antarès",
+   "alias": [
+    "Antares"
+   ],
+   "domaine": "ciel",
+   "con": "Sco",
+   "geo": [
+    -112.648,
+    -26.432
+   ],
+   "mag": 1.06,
+   "detail": "Scorpion · magnitude 1.06 · étoile de navigation"
+  },
+  {
+   "code": "s-37826",
+   "nom": "Pollux",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Gem",
+   "geo": [
+    116.329,
+    28.026
+   ],
+   "mag": 1.16,
+   "detail": "Gémeaux · magnitude 1.16 · étoile de navigation"
+  },
+  {
+   "code": "s-113368",
+   "nom": "Fomalhaut",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "PsA",
+   "geo": [
+    -15.587,
+    -29.622
+   ],
+   "mag": 1.17,
+   "detail": "Poisson austral · magnitude 1.17 · étoile de navigation"
+  },
+  {
+   "code": "s-102098",
+   "nom": "Deneb",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cyg",
+   "geo": [
+    -49.642,
+    45.28
+   ],
+   "mag": 1.25,
+   "detail": "Cygne · magnitude 1.25 · étoile de navigation"
+  },
+  {
+   "code": "s-49669",
+   "nom": "Régulus",
+   "alias": [
+    "Regulus"
+   ],
+   "domaine": "ciel",
+   "con": "Leo",
+   "geo": [
+    152.093,
+    11.967
+   ],
+   "mag": 1.36,
+   "detail": "Lion · magnitude 1.36 · étoile de navigation"
+  },
+  {
+   "code": "s-33579",
+   "nom": "Adhara",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CMa",
+   "geo": [
+    104.656,
+    -28.972
+   ],
+   "mag": 1.5,
+   "detail": "Grand Chien · magnitude 1.50 · étoile de navigation"
+  },
+  {
+   "code": "s-61084",
+   "nom": "Gacrux",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cru",
+   "geo": [
+    -172.208,
+    -57.113
+   ],
+   "mag": 1.59,
+   "detail": "Croix du Sud · magnitude 1.59 · étoile de navigation"
+  },
+  {
+   "code": "s-85927",
+   "nom": "Shaula",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Sco",
+   "geo": [
+    -96.598,
+    -37.104
+   ],
+   "mag": 1.62,
+   "detail": "Scorpion · magnitude 1.62 · étoile de navigation"
+  },
+  {
+   "code": "s-25336",
+   "nom": "Bellatrix",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Ori",
+   "geo": [
+    81.283,
+    6.35
+   ],
+   "mag": 1.64,
+   "detail": "Orion · magnitude 1.64 · étoile de navigation"
+  },
+  {
+   "code": "s-25428",
+   "nom": "Elnath",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Tau",
+   "geo": [
+    81.573,
+    28.608
+   ],
+   "mag": 1.65,
+   "detail": "Taureau · magnitude 1.65 · étoile de navigation"
+  },
+  {
+   "code": "s-45238",
+   "nom": "Miaplacidus",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Car",
+   "geo": [
+    138.3,
+    -69.717
+   ],
+   "mag": 1.67,
+   "detail": "Carène · magnitude 1.67 · étoile de navigation"
+  },
+  {
+   "code": "s-26311",
+   "nom": "Alnilam",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Ori",
+   "geo": [
+    84.053,
+    -1.202
+   ],
+   "mag": 1.69,
+   "detail": "Orion · magnitude 1.69 · étoile de navigation"
+  },
+  {
+   "code": "s-109268",
+   "nom": "Alnaïr",
+   "alias": [
+    "Alnair"
+   ],
+   "domaine": "ciel",
+   "con": "Gru",
+   "geo": [
+    -27.942,
+    -46.961
+   ],
+   "mag": 1.73,
+   "detail": "Grue · magnitude 1.73 · étoile de navigation"
+  },
+  {
+   "code": "s-62956",
+   "nom": "Alioth",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "UMa",
+   "geo": [
+    -166.493,
+    55.96
+   ],
+   "mag": 1.76,
+   "detail": "Grande Ourse · magnitude 1.76 · étoile de navigation"
+  },
+  {
+   "code": "s-90185",
+   "nom": "Kaus Australis",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Sgr",
+   "geo": [
+    -83.957,
+    -34.385
+   ],
+   "mag": 1.79,
+   "detail": "Sagittaire · magnitude 1.79 · étoile de navigation"
+  },
+  {
+   "code": "s-15863",
+   "nom": "Mirfak",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Per",
+   "geo": [
+    51.081,
+    49.861
+   ],
+   "mag": 1.79,
+   "detail": "Persée · magnitude 1.79 · étoile de navigation"
+  },
+  {
+   "code": "s-54061",
+   "nom": "Dubhe",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "UMa",
+   "geo": [
+    165.932,
+    61.751
+   ],
+   "mag": 1.81,
+   "detail": "Grande Ourse · magnitude 1.81 · étoile de navigation"
+  },
+  {
+   "code": "s-67301",
+   "nom": "Alkaid",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "UMa",
+   "geo": [
+    -153.115,
+    49.313
+   ],
+   "mag": 1.85,
+   "detail": "Grande Ourse · magnitude 1.85 · étoile de navigation"
+  },
+  {
+   "code": "s-41037",
+   "nom": "Avior",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Car",
+   "geo": [
+    125.629,
+    -59.51
+   ],
+   "mag": 1.86,
+   "detail": "Carène · magnitude 1.86 · étoile de navigation"
+  },
+  {
+   "code": "s-82273",
+   "nom": "Atria",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "TrA",
+   "geo": [
+    -107.834,
+    -69.028
+   ],
+   "mag": 1.91,
+   "detail": "Triangle austral · magnitude 1.91 · étoile de navigation"
+  },
+  {
+   "code": "s-100751",
+   "nom": "Peacock",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Pav",
+   "geo": [
+    -53.588,
+    -56.735
+   ],
+   "mag": 1.94,
+   "detail": "Paon · magnitude 1.94 · étoile de navigation"
+  },
+  {
+   "code": "s-46390",
+   "nom": "Alphard",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Hya",
+   "geo": [
+    141.897,
+    -8.659
+   ],
+   "mag": 1.99,
+   "detail": "Hydre · magnitude 1.99 · étoile de navigation"
+  },
+  {
+   "code": "s-9884",
+   "nom": "Hamal",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Ari",
+   "geo": [
+    31.793,
+    23.462
+   ],
+   "mag": 2.01,
+   "detail": "Bélier · magnitude 2.01 · étoile de navigation"
+  },
+  {
+   "code": "s-3419",
+   "nom": "Diphda",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cet",
+   "geo": [
+    10.897,
+    -17.987
+   ],
+   "mag": 2.04,
+   "detail": "Baleine · magnitude 2.04 · étoile de navigation"
+  },
+  {
+   "code": "s-92855",
+   "nom": "Nunki",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Sgr",
+   "geo": [
+    -76.184,
+    -26.297
+   ],
+   "mag": 2.05,
+   "detail": "Sagittaire · magnitude 2.05 · étoile de navigation"
+  },
+  {
+   "code": "s-68933",
+   "nom": "Menkent",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cen",
+   "geo": [
+    -148.329,
+    -36.37
+   ],
+   "mag": 2.06,
+   "detail": "Centaure · magnitude 2.06 · étoile de navigation"
+  },
+  {
+   "code": "s-677",
+   "nom": "Alpheratz",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "And",
+   "geo": [
+    2.097,
+    29.09
+   ],
+   "mag": 2.07,
+   "detail": "Andromède · magnitude 2.07 · étoile de navigation"
+  },
+  {
+   "code": "s-72607",
+   "nom": "Kochab",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "UMi",
+   "geo": [
+    -137.324,
+    74.156
+   ],
+   "mag": 2.07,
+   "detail": "Petite Ourse · magnitude 2.07 · étoile de navigation"
+  },
+  {
+   "code": "s-86032",
+   "nom": "Rasalhague",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Oph",
+   "geo": [
+    -96.266,
+    12.56
+   ],
+   "mag": 2.08,
+   "detail": "Ophiuchus · magnitude 2.08 · étoile de navigation"
+  },
+  {
+   "code": "s-57632",
+   "nom": "Denebola",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Leo",
+   "geo": [
+    177.265,
+    14.572
+   ],
+   "mag": 2.14,
+   "detail": "Lion · magnitude 2.14 · étoile de navigation"
+  },
+  {
+   "code": "s-76267",
+   "nom": "Alphecca",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "CrB",
+   "geo": [
+    -126.328,
+    26.715
+   ],
+   "mag": 2.22,
+   "detail": "Couronne boréale · magnitude 2.22 · étoile de navigation"
+  },
+  {
+   "code": "s-44816",
+   "nom": "Suhail",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Vel",
+   "geo": [
+    136.999,
+    -43.433
+   ],
+   "mag": 2.23,
+   "detail": "Voiles · magnitude 2.23 · étoile de navigation"
+  },
+  {
+   "code": "s-87833",
+   "nom": "Eltanin",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Dra",
+   "geo": [
+    -90.849,
+    51.489
+   ],
+   "mag": 2.24,
+   "detail": "Dragon · magnitude 2.24 · étoile de navigation"
+  },
+  {
+   "code": "s-3179",
+   "nom": "Schedar",
+   "alias": [
+    "Shedar",
+    "Shedar"
+   ],
+   "domaine": "ciel",
+   "con": "Cas",
+   "geo": [
+    10.127,
+    56.537
+   ],
+   "mag": 2.24,
+   "detail": "Cassiopée · magnitude 2.24 · étoile de navigation"
+  },
+  {
+   "code": "s-107315",
+   "nom": "Enif",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Peg",
+   "geo": [
+    -33.953,
+    9.875
+   ],
+   "mag": 2.38,
+   "detail": "Pégase · magnitude 2.38 · étoile de navigation"
+  },
+  {
+   "code": "s-2081",
+   "nom": "Ankaa",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Phe",
+   "geo": [
+    6.571,
+    -42.306
+   ],
+   "mag": 2.4,
+   "detail": "Phénix · magnitude 2.40 · étoile de navigation"
+  },
+  {
+   "code": "s-84012",
+   "nom": "Sabik",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Oph",
+   "geo": [
+    -102.406,
+    -15.725
+   ],
+   "mag": 2.43,
+   "detail": "Ophiuchus · magnitude 2.43 · étoile de navigation"
+  },
+  {
+   "code": "s-113963",
+   "nom": "Markab",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Peg",
+   "geo": [
+    -13.81,
+    15.205
+   ],
+   "mag": 2.49,
+   "detail": "Pégase · magnitude 2.49 · étoile de navigation"
+  },
+  {
+   "code": "s-14135",
+   "nom": "Menkar",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Cet",
+   "geo": [
+    45.57,
+    4.09
+   ],
+   "mag": 2.54,
+   "detail": "Baleine · magnitude 2.54 · étoile de navigation"
+  },
+  {
+   "code": "s-59803",
+   "nom": "Gienah",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Crv",
+   "geo": [
+    -176.048,
+    -17.542
+   ],
+   "mag": 2.58,
+   "detail": "Corbeau · magnitude 2.58 · étoile de navigation"
+  },
+  {
+   "code": "s-72622",
+   "nom": "Zubenelgenubi",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Lib",
+   "geo": [
+    -137.28,
+    -16.042
+   ],
+   "mag": 2.75,
+   "detail": "Balance · magnitude 2.75 · étoile de navigation"
+  },
+  {
+   "code": "s-13847",
+   "nom": "Acamar",
+   "alias": [],
+   "domaine": "ciel",
+   "con": "Eri",
+   "geo": [
+    44.565,
+    -40.305
+   ],
+   "mag": 2.88,
+   "detail": "Éridan · magnitude 2.88 · étoile de navigation"
+  }
+ ]
+}
