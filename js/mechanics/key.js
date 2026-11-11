@@ -10,14 +10,33 @@ const BY_PATTERN = {}; // motif → lettre, pour dire ce qui a été reçu
 function ui(g) {
   const box = el('div', 'keyer'); box.id = 'g-key';
   const sig = el('div', 'key-sig num', '');
-  const help = el('div', 'key-help num', '');
+  // Aide au rythme : deux encarts à place fixe, l'appui à gauche, le silence à droite.
+  // Chacun garde sa dernière valeur, pour que l'œil la retrouve toujours au même endroit.
+  const help = el('div', 'key-help');
+  const box1 = el('div', 'key-u'), box2 = el('div', 'key-u');
+  const press = el('b', 'num', '–'), pressK = el('span', null, 'Appui');
+  const gap = el('b', 'num', '–'), gapK = el('span', null, 'Silence');
+  box1.append(pressK, press); box2.append(gapK, gap);
+  help.append(box1, box2);
   help.hidden = !morseCfg().aide;
   const btn = el('button', 'key-btn', 'Appuyer');
   btn.type = 'button';
   btn.setAttribute('aria-label', 'Manipulateur morse : appui court pour un point, long pour un trait');
   box.append(sig, help, btn);
   document.getElementById('game').insertBefore(box, document.getElementById('g-input'));
-  return { box, sig, help, btn };
+  return { box, sig, help, btn, press, pressK, gap, gapK, box1, box2 };
+}
+
+// Encart « Appui » : durée en unités et ce qu'elle donne (point, trait, trop long).
+function showPress(k, u) {
+  k.press.textContent = fmtU(u);
+  k.pressK.textContent = u < DOT_MAX ? 'Appui · point' : u <= DASH_MAX ? 'Appui · trait' : 'Appui · trop long';
+  k.box1.dataset.s = u < DOT_MAX ? 'dot' : u <= DASH_MAX ? 'dash' : 'over';
+}
+// Encart « Silence » : entre deux signes (cible 1 unité) ou fin de lettre (3 unités).
+function showGap(k, u, between) {
+  k.gap.textContent = fmtU(Math.min(u, LETTER_GAP));
+  k.gapK.textContent = between ? 'Silence · entre signes' : u >= LETTER_GAP ? 'Silence · fin de lettre' : 'Silence';
 }
 
 function reset(g) {
@@ -41,13 +60,15 @@ function down(g, e) {
   const k = g.k;
   if (g.over || g.paused || k.isDown) return;
   clearTimeout(k.gapTimer); cancelAnimationFrame(k.raf);
+  // Silence qui vient de finir (entre deux signes d'une même lettre)
+  if (k.t1 && k.pattern && !k.help.hidden) showGap(k, units(performance.now() - k.t1), true);
   k.isDown = true; k.t0 = performance.now();
   k.btn.classList.add('on');
   toneOn();
   const live = () => {
     if (!k.isDown) return;
     const u = units(performance.now() - k.t0);
-    if (!k.help.hidden) k.help.textContent = `Appui ${fmtU(u)} · ${u < DOT_MAX ? 'point' : u <= DASH_MAX ? 'trait' : 'trop long'}`;
+    if (!k.help.hidden) showPress(k, u);
     k.btn.classList.toggle('long', u >= DOT_MAX && u <= DASH_MAX);
     k.btn.classList.toggle('over', u > DASH_MAX);
     k.raf = requestAnimationFrame(live);
@@ -64,8 +85,8 @@ function up(g) {
   const ms = performance.now() - k.t0;
   if (ms < 15) return; // rebond
   const u = units(ms);
+  if (!k.help.hidden) showPress(k, u);
   if (u > DASH_MAX) {
-    if (!k.help.hidden) k.help.textContent = `Appui ${fmtU(u)} · trop long, lettre effacée`;
     g.toast(`Appui trop long (${fmtU(u)}) : lettre effacée`);
     return reset(g);
   }
@@ -74,7 +95,7 @@ function up(g) {
   k.t1 = performance.now();
   const gapLive = () => {
     if (k.isDown || !k.pattern) return;
-    if (!k.help.hidden) k.help.textContent = `Appui ${fmtU(u)} · ${u < DOT_MAX ? 'point' : 'trait'} — silence ${fmtU(units(performance.now() - k.t1))}`;
+    if (!k.help.hidden) showGap(k, units(performance.now() - k.t1), false);
     k.raf = requestAnimationFrame(gapLive);
   };
   gapLive();
