@@ -14,7 +14,7 @@ cd ../geoquiz && python3 -I tools/build_world.py ../src-data .   # etc., voir RE
 
 | Chemin | Origine | Licence |
 | --- | --- | --- |
-| `ne/` | Natural Earth (10m, 50m) | domaine public |
+| `ne/`, `regions/` | Natural Earth (10m, 50m ; régions géographiques : déserts, reliefs) | domaine public |
 | `world-*.geojson`, `breakaway.geojson` | dérivés de Natural Earth par mapshaper (commandes dans le README de main) | domaine public |
 | `world-seas.geojson`, `seas/oceans-seas.geojson` | zones maritimes OHI, Marine Regions, paquet npm oceans-seas | CC-BY 4.0 |
 | `communes-arr.geojson`, `arr*.geojson`, `dep.geojson`, `reg.geojson`, `idf-*.geojson` | france-geojson + recalculs (build_france) | Licence ouverte Etalab |
