@@ -98,7 +98,7 @@ out geom;
 
 79 chaînes de `ne_10m_geography_regions_polys` (Natural Earth) : les ensembles (Atlas, Carpates, Cordillère australienne) sont le reste hors de leurs sous-chaînes, avec un liseré ; les Andes regroupent les cordillères de la source. 39 sommets de `ne_10m_geography_regions_elevation_points`, six placés à la main. Même projection que les déserts (`tools/worldproj_full.py`, jusqu'au pôle Sud).
 
-**Codes et signaux** · `tools/build_morse.py` : code morse international (UIT-R M.1677-1), 26 lettres et 10 chiffres ; sons générés par le navigateur.
+**Codes et signaux** · `tools/build_morse.py`, `tools/build_braille.py` : code morse international (UIT-R M.1677-1), 26 lettres et 10 chiffres, sons générés par le navigateur ; braille à 6 points, 26 lettres, vibration au toucher (Android).
 
 **Ciel** (`maps/ciel.svg`) · `tools/build_sky.py`
 

@@ -499,6 +499,58 @@
    "nb": 39,
    "reveler": true,
    "zoomMax": 400
+  },
+  "braille-lire": {
+   "fichier": "data/braille.json",
+   "etiquette": "nom",
+   "nb": 26,
+   "melange": true,
+   "style": "braille",
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Signe → lettre"
+    }
+   ],
+   "titre": "Braille : lire",
+   "prefixe": "brl",
+   "case": "signe"
+  },
+  "braille-toucher": {
+   "fichier": "data/braille.json",
+   "etiquette": "nom",
+   "nb": 26,
+   "melange": true,
+   "style": "braille",
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Signe → lettre"
+    }
+   ],
+   "titre": "Braille : toucher",
+   "prefixe": "brt",
+   "masque": "⠿"
+  },
+  "braille-ecrire": {
+   "fichier": "data/braille.json",
+   "etiquette": "nom",
+   "nb": 26,
+   "melange": true,
+   "style": "braille",
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Signe → lettre"
+    }
+   ],
+   "titre": "Braille : écrire",
+   "prefixe": "bre",
+   "case": "nom",
+   "revele": "signe"
   }
  },
  "sections": [
@@ -650,6 +702,24 @@
      "jeu": "morse-ecouter",
      "support": "grid",
      "mecanique": "ear"
+    },
+    {
+     "nom": "Braille : lire",
+     "jeu": "braille-lire",
+     "support": "grid",
+     "curseur": true
+    },
+    {
+     "nom": "Braille : toucher",
+     "jeu": "braille-toucher",
+     "support": "grid",
+     "mecanique": "feel"
+    },
+    {
+     "nom": "Braille : écrire",
+     "jeu": "braille-ecrire",
+     "support": "grid",
+     "mecanique": "bwrite"
     }
    ]
   }

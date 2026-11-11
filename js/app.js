@@ -35,7 +35,7 @@ function cfgOf(q, o = optsOf(q)) {
   return { jeu: q.jeu, support: q.support || 'map', mech: q.mecanique || (o.click ? 'tap' : o.cursor ? 'cur' : 'all'), n: o.random ? CAT.options.hasard : 0 };
 }
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
-const MECH_LABEL = { key: 'manipulateur', ear: 'à l’oreille' };
+const MECH_LABEL = { key: 'manipulateur', ear: 'à l’oreille', feel: 'au toucher', bwrite: 'écriture' };
 const optsLabel = (o, q = {}) => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
 
 async function play(q, study = false) {

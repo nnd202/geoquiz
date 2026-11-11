@@ -5,6 +5,7 @@ import { store, addAttempt, addCancelled, attemptsOf, bestOf } from './store.js'
 import { writeToFolder } from './backup.js';
 import { keysOf } from './text.js';
 import { MECHANICS } from '../mechanics/index.js';
+import { brailleCell, setCell } from './braille.js';
 
 export const END = { time: 'Chrono écoulé', all: 'Tout trouvé', list: 'Liste terminée', stop: 'Terminer' };
 export const fmtLong = ms => { const s = Math.round(ms / 1000); return s >= 3600 ? `${Math.floor(s / 3600)} h ${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}` : fmt(ms); };
@@ -115,6 +116,16 @@ export class Game {
         onTap: tap, label: this.def.titre, style: this.def.style, zoomMax: this.def.zoomMax || 60,
         tapNeedsSingle: () => this.cfg.mech === 'tap' && !this.over && !this.study,
       });
+    // Braille à lire : chaque case montre une petite case à 6 points (vides compris), plus lisible qu'un caractère.
+    if (this.cfg.support === 'grid' && this.def.style === 'braille' && this.def.case === 'signe') {
+      for (const it of this.all) {
+        const n = host.querySelector(`.cell[data-code="${it.code}"] .n`);
+        if (!n) continue;
+        const { cell, dots } = brailleCell('mini');
+        setCell(dots, it.points);
+        n.textContent = ''; n.append(cell);
+      }
+    }
     this.toastEl = el('div', 'toast');
     host.append(this.toastEl);
   }

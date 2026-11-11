@@ -447,4 +447,24 @@ html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden;
 .reliefs.reveal .zone.rng.todo, .reveal .zone.rng.todo { stroke: var(--missed); }
 .reliefs .zone.rng.off { stroke: var(--land); }
 .sub.group-line { fill: none; stroke: var(--abyss); stroke-width: 1.2; stroke-dasharray: 4 4; stroke-opacity: .35; opacity: 1; pointer-events: none; }
-.pt.rng-pt { --r: 5.5; }
+.pt.rng-pt { --r: 5; }
+
+/* ---------- Braille ---------- */
+.grid.braille .n { font-size: 40px; line-height: 1; color: var(--abyss); }
+.grid.braille .cell.found .n, .grid.braille .cell.found .nm { color: #fff; }
+.grid.braille .nm { font-size: 14px; font-weight: 600; }
+.braillebox { display: grid; gap: 10px; justify-items: center; padding: 12px 14px 6px; background: var(--panel); border-top: 1px solid color-mix(in srgb, var(--abyss) 10%, transparent); }
+.bcell { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 22px; padding: 16px 24px; border-radius: 18px; background: color-mix(in srgb, var(--abyss) 6%, var(--panel)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--abyss) 14%, transparent); touch-action: none; user-select: none; -webkit-user-select: none; }
+.bdot { width: 34px; height: 34px; border-radius: 50%; background: transparent; box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--abyss) 18%, transparent); transition: background .12s, transform .12s; }
+.bdot.on { background: var(--abyss); box-shadow: none; }
+.bcell.blind .bdot.on { background: transparent; box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--abyss) 18%, transparent); }
+.bdot.felt { transform: scale(1.15); }
+.bcell.blind .bdot.felt { background: color-mix(in srgb, var(--lagoon) 35%, transparent); }
+.bcell.write .bdot { cursor: pointer; box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--abyss) 30%, transparent); }
+.bcell.write .bdot.on { background: var(--lagoon); box-shadow: none; }
+.bcell.mini { gap: 4px 6px; padding: 4px 6px; border-radius: 6px; background: none; box-shadow: none; touch-action: auto; }
+.bcell.mini .bdot { width: 9px; height: 9px; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--abyss) 22%, transparent); }
+.bcell.mini .bdot.on { background: var(--abyss); box-shadow: none; }
+.grid.braille .cell.found .bcell.mini .bdot.on { background: #fff; }
+.grid.braille .cell.found .bcell.mini .bdot:not(.on) { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
+.grid.braille .n:has(.bcell) { font-size: 0; }

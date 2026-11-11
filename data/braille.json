@@ -1,0 +1,292 @@
+{
+ "id": "braille",
+ "titre": "Braille",
+ "items": [
+  {
+   "code": "b-A",
+   "nom": "A",
+   "alias": [
+    "a"
+   ],
+   "domaine": "code",
+   "points": "1",
+   "signe": "⠁",
+   "detail": "Lettre A · points 1"
+  },
+  {
+   "code": "b-B",
+   "nom": "B",
+   "alias": [
+    "b"
+   ],
+   "domaine": "code",
+   "points": "12",
+   "signe": "⠃",
+   "detail": "Lettre B · points 1-2"
+  },
+  {
+   "code": "b-C",
+   "nom": "C",
+   "alias": [
+    "c"
+   ],
+   "domaine": "code",
+   "points": "14",
+   "signe": "⠉",
+   "detail": "Lettre C · points 1-4"
+  },
+  {
+   "code": "b-D",
+   "nom": "D",
+   "alias": [
+    "d"
+   ],
+   "domaine": "code",
+   "points": "145",
+   "signe": "⠙",
+   "detail": "Lettre D · points 1-4-5"
+  },
+  {
+   "code": "b-E",
+   "nom": "E",
+   "alias": [
+    "e"
+   ],
+   "domaine": "code",
+   "points": "15",
+   "signe": "⠑",
+   "detail": "Lettre E · points 1-5"
+  },
+  {
+   "code": "b-F",
+   "nom": "F",
+   "alias": [
+    "f"
+   ],
+   "domaine": "code",
+   "points": "124",
+   "signe": "⠋",
+   "detail": "Lettre F · points 1-2-4"
+  },
+  {
+   "code": "b-G",
+   "nom": "G",
+   "alias": [
+    "g"
+   ],
+   "domaine": "code",
+   "points": "1245",
+   "signe": "⠛",
+   "detail": "Lettre G · points 1-2-4-5"
+  },
+  {
+   "code": "b-H",
+   "nom": "H",
+   "alias": [
+    "h"
+   ],
+   "domaine": "code",
+   "points": "125",
+   "signe": "⠓",
+   "detail": "Lettre H · points 1-2-5"
+  },
+  {
+   "code": "b-I",
+   "nom": "I",
+   "alias": [
+    "i"
+   ],
+   "domaine": "code",
+   "points": "24",
+   "signe": "⠊",
+   "detail": "Lettre I · points 2-4"
+  },
+  {
+   "code": "b-J",
+   "nom": "J",
+   "alias": [
+    "j"
+   ],
+   "domaine": "code",
+   "points": "245",
+   "signe": "⠚",
+   "detail": "Lettre J · points 2-4-5"
+  },
+  {
+   "code": "b-K",
+   "nom": "K",
+   "alias": [
+    "k"
+   ],
+   "domaine": "code",
+   "points": "13",
+   "signe": "⠅",
+   "detail": "Lettre K · points 1-3"
+  },
+  {
+   "code": "b-L",
+   "nom": "L",
+   "alias": [
+    "l"
+   ],
+   "domaine": "code",
+   "points": "123",
+   "signe": "⠇",
+   "detail": "Lettre L · points 1-2-3"
+  },
+  {
+   "code": "b-M",
+   "nom": "M",
+   "alias": [
+    "m"
+   ],
+   "domaine": "code",
+   "points": "134",
+   "signe": "⠍",
+   "detail": "Lettre M · points 1-3-4"
+  },
+  {
+   "code": "b-N",
+   "nom": "N",
+   "alias": [
+    "n"
+   ],
+   "domaine": "code",
+   "points": "1345",
+   "signe": "⠝",
+   "detail": "Lettre N · points 1-3-4-5"
+  },
+  {
+   "code": "b-O",
+   "nom": "O",
+   "alias": [
+    "o"
+   ],
+   "domaine": "code",
+   "points": "135",
+   "signe": "⠕",
+   "detail": "Lettre O · points 1-3-5"
+  },
+  {
+   "code": "b-P",
+   "nom": "P",
+   "alias": [
+    "p"
+   ],
+   "domaine": "code",
+   "points": "1234",
+   "signe": "⠏",
+   "detail": "Lettre P · points 1-2-3-4"
+  },
+  {
+   "code": "b-Q",
+   "nom": "Q",
+   "alias": [
+    "q"
+   ],
+   "domaine": "code",
+   "points": "12345",
+   "signe": "⠟",
+   "detail": "Lettre Q · points 1-2-3-4-5"
+  },
+  {
+   "code": "b-R",
+   "nom": "R",
+   "alias": [
+    "r"
+   ],
+   "domaine": "code",
+   "points": "1235",
+   "signe": "⠗",
+   "detail": "Lettre R · points 1-2-3-5"
+  },
+  {
+   "code": "b-S",
+   "nom": "S",
+   "alias": [
+    "s"
+   ],
+   "domaine": "code",
+   "points": "234",
+   "signe": "⠎",
+   "detail": "Lettre S · points 2-3-4"
+  },
+  {
+   "code": "b-T",
+   "nom": "T",
+   "alias": [
+    "t"
+   ],
+   "domaine": "code",
+   "points": "2345",
+   "signe": "⠞",
+   "detail": "Lettre T · points 2-3-4-5"
+  },
+  {
+   "code": "b-U",
+   "nom": "U",
+   "alias": [
+    "u"
+   ],
+   "domaine": "code",
+   "points": "136",
+   "signe": "⠥",
+   "detail": "Lettre U · points 1-3-6"
+  },
+  {
+   "code": "b-V",
+   "nom": "V",
+   "alias": [
+    "v"
+   ],
+   "domaine": "code",
+   "points": "1236",
+   "signe": "⠧",
+   "detail": "Lettre V · points 1-2-3-6"
+  },
+  {
+   "code": "b-W",
+   "nom": "W",
+   "alias": [
+    "w"
+   ],
+   "domaine": "code",
+   "points": "2456",
+   "signe": "⠺",
+   "detail": "Lettre W · points 2-4-5-6"
+  },
+  {
+   "code": "b-X",
+   "nom": "X",
+   "alias": [
+    "x"
+   ],
+   "domaine": "code",
+   "points": "1346",
+   "signe": "⠭",
+   "detail": "Lettre X · points 1-3-4-6"
+  },
+  {
+   "code": "b-Y",
+   "nom": "Y",
+   "alias": [
+    "y"
+   ],
+   "domaine": "code",
+   "points": "13456",
+   "signe": "⠽",
+   "detail": "Lettre Y · points 1-3-4-5-6"
+  },
+  {
+   "code": "b-Z",
+   "nom": "Z",
+   "alias": [
+    "z"
+   ],
+   "domaine": "code",
+   "points": "1356",
+   "signe": "⠵",
+   "detail": "Lettre Z · points 1-3-5-6"
+  }
+ ]
+}

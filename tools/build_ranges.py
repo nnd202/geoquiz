@@ -15,7 +15,7 @@ from shapely.geometry import shape, mapping
 from shapely.ops import unary_union
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mapkit import path_d, svg_doc, marker, anchor, is_tiny  # noqa: E402
+from mapkit import path_d, svg_doc, marker, anchor  # noqa: E402
 from worldproj_full import tf, W, H  # noqa: E402
 
 src, root = sys.argv[1:3]
@@ -157,9 +157,8 @@ for code, nom, alias, cont, _, parent in RANGES:
         it["pays"] = PAYS[code]
     items.append(it)
     zones.append(f'<path class="zone rng" data-code="{code}"{anchor(mapping(g), tf)} d="{path_d(mapping(g.simplify(0.02)), tf, 0.05)}"/>')
-    # Triangle de repère pour les chaînes trop petites pour être vues sans zoomer.
-    if is_tiny(mapping(g), tf, area_max=3, small_max=8, extent_max=5):
-        pts.append(marker(*tf(c.x, c.y), "triangle", "rng-pt", code))
+    # Triangle de repère au cœur de chaque chaîne (taille fixe à l'écran), vert avec sa zone.
+    pts.append(marker(*tf(c.x, c.y), "triangle", "rng-pt", code))
 for u in sorted(umbrellas):
     rings.append(f'<path class="sub group-line" d="{path_d(mapping(umbrella_full[u].simplify(0.02)), tf, 0.05)}"/>')
 
