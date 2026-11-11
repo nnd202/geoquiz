@@ -10,33 +10,37 @@ const BY_PATTERN = {}; // motif → lettre, pour dire ce qui a été reçu
 function ui(g) {
   const box = el('div', 'keyer'); box.id = 'g-key';
   const sig = el('div', 'key-sig num', '');
-  // Aide au rythme : deux encarts à place fixe, l'appui à gauche, le silence à droite.
-  // Chacun garde sa dernière valeur, pour que l'œil la retrouve toujours au même endroit.
+  // Aide au rythme : une jauge en miroir, sans chiffres. Au centre, zéro ; à droite l'appui, à gauche le
+  // silence, chacun gradué à 1 et 3 unités, puis une zone de débordement (de 3 à 5 unités) en rouge.
+  // Pendant l'appui, la droite se remplit ; au relâchement elle retombe d'un coup et la gauche se remplit.
   const help = el('div', 'key-help');
-  const box1 = el('div', 'key-u'), box2 = el('div', 'key-u');
-  const press = el('b', 'num', '–'), pressK = el('span', null, 'Appui');
-  const gap = el('b', 'num', '–'), gapK = el('span', null, 'Silence');
-  box1.append(pressK, press); box2.append(gapK, gap);
-  help.append(box1, box2);
+  const track = el('div', 'gauge');
+  for (const cls of ['g-over l', 'g-over r', 'tick l1', 'tick l3', 'tick r1', 'tick r3', 'tick c']) track.append(el('i', cls));
+  const press = el('b', 'g-fill r'), gap = el('b', 'g-fill l');
+  track.append(press, gap);
+  const legend = el('div', 'gauge-k');
+  legend.append(el('span', null, 'Silence'), el('span', null, 'Appui'));
+  help.append(track, legend);
   help.hidden = !morseCfg().aide;
   const btn = el('button', 'key-btn', 'Appuyer');
   btn.type = 'button';
   btn.setAttribute('aria-label', 'Manipulateur morse : appui court pour un point, long pour un trait');
   box.append(sig, help, btn);
   document.getElementById('game').insertBefore(box, document.getElementById('g-input'));
-  return { box, sig, help, btn, press, pressK, gap, gapK, box1, box2 };
+  return { box, sig, help, btn, press, gap };
 }
 
-// Encart « Appui » : durée en unités et ce qu'elle donne (point, trait, trop long).
+// Jauge : 1 unité = 10 % de la largeur ; chaque côté va jusqu'à 5 unités.
+const W = u => `${Math.min(u, 5) * 10}%`;
 function showPress(k, u) {
-  k.press.textContent = fmtU(u);
-  k.pressK.textContent = u < DOT_MAX ? 'Appui · point' : u <= DASH_MAX ? 'Appui · trait' : 'Appui · trop long';
-  k.box1.dataset.s = u < DOT_MAX ? 'dot' : u <= DASH_MAX ? 'dash' : 'over';
+  k.gap.style.width = '0%';
+  k.press.style.width = W(u);
+  k.press.dataset.s = u < DOT_MAX ? 'dot' : u <= DASH_MAX ? 'dash' : 'over';
 }
-// Encart « Silence » : entre deux signes (cible 1 unité) ou fin de lettre (3 unités).
-function showGap(k, u, between) {
-  k.gap.textContent = fmtU(Math.min(u, LETTER_GAP));
-  k.gapK.textContent = between ? 'Silence · entre signes' : u >= LETTER_GAP ? 'Silence · fin de lettre' : 'Silence';
+function showGap(k, u) {
+  k.press.style.width = '0%';
+  k.gap.style.width = W(u);
+  k.gap.dataset.s = u < LETTER_GAP ? 'ok' : 'end';
 }
 
 function reset(g) {
@@ -61,7 +65,6 @@ function down(g, e) {
   if (g.over || g.paused || k.isDown) return;
   clearTimeout(k.gapTimer); cancelAnimationFrame(k.raf);
   // Silence qui vient de finir (entre deux signes d'une même lettre)
-  if (k.t1 && k.pattern && !k.help.hidden) showGap(k, units(performance.now() - k.t1), true);
   k.isDown = true; k.t0 = performance.now();
   k.btn.classList.add('on');
   toneOn();
@@ -95,7 +98,7 @@ function up(g) {
   k.t1 = performance.now();
   const gapLive = () => {
     if (k.isDown || !k.pattern) return;
-    if (!k.help.hidden) showGap(k, units(performance.now() - k.t1), false);
+    if (!k.help.hidden) showGap(k, units(performance.now() - k.t1));
     k.raf = requestAnimationFrame(gapLive);
   };
   gapLive();

@@ -413,17 +413,27 @@ html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden;
 .grid.morse .n { font-family: var(--f-num); font-size: 17px; letter-spacing: 0; white-space: nowrap; color: var(--abyss); }
 .grid.morse .cell.found .n, .grid.morse .cell.found .nm { color: #fff; }
 .grid.morse .nm { font-size: 13px; font-weight: 600; letter-spacing: .06em; }
-.key-help { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; max-width: 420px; }
+.key-help { display: grid; gap: 4px; width: 100%; max-width: 420px; }
 .key-help[hidden] { display: none; }
-.key-u { display: grid; gap: 1px; justify-items: center; padding: 6px 8px; border-radius: 12px; background: color-mix(in srgb, var(--abyss) 6%, var(--panel)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--abyss) 10%, transparent); }
-.key-u span { font-size: 11.5px; color: var(--ink-soft); }
-.key-u b { font-size: 20px; font-weight: 500; color: var(--abyss); }
-.key-u[data-s="dash"] b { color: #2f7f9e; }
-.key-u[data-s="over"] b { color: var(--wrong); }
+/* Jauge en miroir : centre = 0 ; 1 unité = 10 % ; graduations à 1 et 3 unités ; débordement de 3 à 5 unités. */
+.gauge { position: relative; height: 26px; border-radius: 8px; overflow: hidden; background: color-mix(in srgb, var(--abyss) 8%, var(--panel)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--abyss) 14%, transparent); }
+.gauge .g-over { position: absolute; top: 0; bottom: 0; width: 20%; background: color-mix(in srgb, var(--wrong) 20%, transparent); }
+.gauge .g-over.l { left: 0; } .gauge .g-over.r { right: 0; }
+.gauge .tick { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: color-mix(in srgb, var(--abyss) 35%, transparent); z-index: 2; }
+.gauge .tick.c { left: 50%; width: 2px; background: var(--abyss); opacity: .6; }
+.gauge .tick.l1 { left: 40%; } .gauge .tick.l3 { left: 20%; height: 100%; width: 3px; }
+.gauge .tick.r1 { left: 60%; } .gauge .tick.r3 { left: 80%; width: 3px; }
+.gauge .g-fill { position: absolute; top: 3px; bottom: 3px; width: 0; z-index: 1; }
+.gauge .g-fill.r { left: 50%; border-radius: 0 5px 5px 0; background: var(--lagoon); }
+.gauge .g-fill.l { right: 50%; border-radius: 5px 0 0 5px; background: color-mix(in srgb, var(--ink-soft) 70%, var(--panel)); }
+.gauge .g-fill.r[data-s="dash"] { background: #2f9fb5; }
+.gauge .g-fill.r[data-s="over"], .gauge .g-fill.l[data-s="end"] { background: var(--wrong); }
+.gauge-k { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--ink-soft); padding: 0 2px; }
 
 /* ---------- Déserts : terres en décor, déserts en zones ; liseré du Sahara par-dessus ses parties ---------- */
 .deserts .land { fill: var(--land-off); stroke: var(--border-land); stroke-width: .5; vector-effect: non-scaling-stroke; pointer-events: none; }
 .deserts .zone.des { stroke: var(--panel); stroke-width: .8; }
 .deserts .zone.part { stroke-width: 1.2; }
-.sub.sahara-line { fill: none; stroke: var(--abyss); stroke-width: 1.6; stroke-dasharray: 5 3; stroke-opacity: .55; opacity: 1; pointer-events: none; }
+.sub.sahara-line { fill: none; stroke: var(--abyss); stroke-width: 1.2; stroke-dasharray: 4 4; stroke-opacity: .35; opacity: 1; pointer-events: none; }
+.pt.des-pt { --r: 5; }
 .deserts .zone.todo { fill: color-mix(in srgb, var(--lagoon) 38%, var(--land)); }

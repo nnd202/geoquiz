@@ -16,7 +16,7 @@ from shapely.geometry import shape, mapping, Polygon, box
 from shapely.ops import unary_union
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from mapkit import path_d, svg_doc, marker, is_tiny, anchor  # noqa: E402
+from mapkit import path_d, svg_doc, marker, anchor  # noqa: E402
 
 src, root = sys.argv[1:3]
 J = lambda name: json.load(open(os.path.join(src, name)))
@@ -108,26 +108,44 @@ DESERTS = [
 ]
 assert len(DESERTS) == 40
 
-items, zones, tops, minis = [], [], [], []
+# Partition sans chevauchement : chaque désert perd ce que recouvrent les plus petits que lui
+# (le Grand Bassin ne cache plus le Mojave). Les parties du Sahara sont rognées à son contour,
+# et la zone « Sahara » est ce qui reste une fois ses parties retirées.
+geoms = {}
 for code, nom, alias, cont, g in DESERTS:
-    g = g.intersection(land.buffer(0.05)).buffer(0) if code != "d-anta" else g
-    c = g.representative_point()
+    geoms[code] = g.intersection(land.buffer(0.05)).buffer(0) if code != "d-anta" else g
+sahara_all = geoms["d-saha"]
+for code in SAHARA_PARTS:
+    geoms[code] = geoms[code].intersection(sahara_all).buffer(0)
+taken = None
+for code in sorted(geoms, key=lambda c: geoms[c].area):
+    if code == "d-saha":
+        continue
+    if taken is not None:
+        geoms[code] = geoms[code].difference(taken).buffer(0)
+    taken = geoms[code] if taken is None else taken.union(geoms[code])
+geoms["d-saha"] = sahara_all.difference(unary_union([geoms[c] for c in SAHARA_PARTS])).buffer(0)
+
+items, zones, pts = [], [], []
+for code, nom, alias, cont, _ in DESERTS:
+    g = geoms[code]
+    big = max(getattr(g, "geoms", [g]), key=lambda p: p.area)
+    c = big.representative_point()
     part = code in SAHARA_PARTS
     detail = f"{cont} · {'partie du Sahara' if part else 'désert'}"
     items.append({"code": code, "nom": nom, "alias": [a for a in alias if a != nom], "domaine": "physique",
                   "categorie": "désert", "continent": cont, "geo": [round(c.x, 3), round(c.y, 3)], "detail": detail})
-    d = f'<path class="zone des{" part" if part else ""}" data-code="{code}"{anchor(mapping(g), tf)} d="{path_d(mapping(g.simplify(0.03)), tf, 0.05)}"/>'
-    (tops if part else zones).append(d)
-    if is_tiny(mapping(g), tf, area_max=4, small_max=10, extent_max=5):
-        minis.append(marker(*tf(c.x, c.y), "rond", "mini", code))
+    zones.append(f'<path class="zone des{" part" if part else ""}" data-code="{code}"{anchor(mapping(g), tf)} d="{path_d(mapping(g.simplify(0.03)), tf, 0.05)}"/>')
+    # Losange de repère au cœur de chaque désert (taille fixe à l'écran), vert avec sa zone.
+    pts.append(marker(*tf(c.x, c.y), "losange", "des-pt", code))
 
-sahara = next(g for code, *_, g in DESERTS if code == "d-saha")
+sahara = sahara_all
 body = ['<g data-layer="terres"><path class="land" d="' + "".join(path_d(mapping(g), tf, 0.05) for g in countries.values()) + '"/></g>',
-        '<g data-layer="deserts">', *zones, *tops, '</g>',
+        '<g data-layer="deserts">', *zones, '</g>',
         # Liseré du Sahara : rappelle, par-dessus ses parties, qu'elles en font partie.
         f'<g data-layer="contour-sahara"><path class="sub sahara-line" d="{path_d(mapping(sahara.simplify(0.03)), tf, 0.05)}"/></g>',
-        '<g data-layer="petits-deserts">', *minis, '</g>']
+        '<g data-layer="reperes">', *pts, '</g>']
 open(f"{root}/maps/deserts.svg", "w").write(svg_doc(f"0 0 {W} {H}", [], body))
 json.dump({"id": "deserts", "titre": "Déserts du monde", "items": items},
           open(f"{root}/data/deserts.json", "w"), ensure_ascii=False, indent=1)
-print(len(items), "déserts ·", len(minis), "avec un rond ·", os.path.getsize(f"{root}/maps/deserts.svg") // 1024, "Ko")
+print(len(items), "déserts ·", os.path.getsize(f"{root}/maps/deserts.svg") // 1024, "Ko")

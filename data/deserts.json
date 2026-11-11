@@ -12,8 +12,8 @@
    "categorie": "désert",
    "continent": "Afrique",
    "geo": [
-    10.089,
-    21.883
+    3.215,
+    22.314
    ],
    "detail": "Afrique · désert"
   },
@@ -42,8 +42,8 @@
    "categorie": "désert",
    "continent": "Afrique",
    "geo": [
-    25.095,
-    21.161
+    24.958,
+    19.944
    ],
    "detail": "Afrique · partie du Sahara"
   },
@@ -503,8 +503,8 @@
    "categorie": "désert",
    "continent": "Amérique du Nord",
    "geo": [
-    -116.098,
-    38.968
+    -116.227,
+    39.994
    ],
    "detail": "Amérique du Nord · désert"
   },

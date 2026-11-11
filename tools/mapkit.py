@@ -162,6 +162,7 @@ SHAPES = {
     "carre": "M-.82-.82h1.64v1.64h-1.64z",
     "etoile": _star(),
     "triangle": "M0-1.1L1.05.75H-1.05z",
+    "losange": "M0-1.15L.85 0 0 1.15-.85 0z",
 }
 
 
