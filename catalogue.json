@@ -384,6 +384,58 @@
     }
    ],
    "nb": 57
+  },
+  "morse-lire": {
+   "fichier": "data/morse.json",
+   "etiquette": "nom",
+   "nb": 36,
+   "melange": true,
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Signe → lettre"
+    }
+   ],
+   "titre": "Morse : lire",
+   "prefixe": "mol",
+   "case": "signe",
+   "style": "morse"
+  },
+  "morse-emettre": {
+   "fichier": "data/morse.json",
+   "etiquette": "nom",
+   "nb": 36,
+   "melange": true,
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Signe → lettre"
+    }
+   ],
+   "titre": "Morse : émettre",
+   "prefixe": "moe",
+   "case": "nom",
+   "revele": "signe",
+   "style": "morse"
+  },
+  "morse-ecouter": {
+   "fichier": "data/morse.json",
+   "etiquette": "nom",
+   "nb": 36,
+   "melange": true,
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Signe → lettre"
+    }
+   ],
+   "titre": "Morse : écouter",
+   "prefixe": "moc",
+   "masque": "♪",
+   "style": "morse"
   }
  },
  "sections": [
@@ -500,6 +552,29 @@
     {
      "nom": "100 villes américaines",
      "jeu": "villes-etats-unis"
+    }
+   ]
+  },
+  {
+   "titre": "Codes et signaux",
+   "quiz": [
+    {
+     "nom": "Morse : lire",
+     "jeu": "morse-lire",
+     "support": "grid",
+     "curseur": true
+    },
+    {
+     "nom": "Morse : émettre",
+     "jeu": "morse-emettre",
+     "support": "grid",
+     "mecanique": "key"
+    },
+    {
+     "nom": "Morse : écouter",
+     "jeu": "morse-ecouter",
+     "support": "grid",
+     "mecanique": "ear"
     }
    ]
   }

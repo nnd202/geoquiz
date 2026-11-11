@@ -40,9 +40,9 @@ function common(nodes, root) {
 }
 
 /* ---------- Grille ---------- */
-export function buildGrid(container, items, inPlay, onTap, { images = false, head = null } = {}) {
+export function buildGrid(container, items, inPlay, onTap, { images = false, head = null, mask = null, style = '' } = {}) {
   const wrap = el('div', 'gridwrap');
-  const grid = el('div', 'grid' + (images ? ' images' : head ? ' words' : ''));
+  const grid = el('div', 'grid' + (images ? ' images' : head || mask ? ' words' : '') + (style ? ` ${style}` : ''));
   const nodes = {};
   for (const it of items) {
     const c = el('button', 'cell');
@@ -52,7 +52,7 @@ export function buildGrid(container, items, inPlay, onTap, { images = false, hea
       const img = el('img');
       img.src = it.image; img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
       c.append(img, el('span', 'nm', ''));
-    } else c.append(el('span', 'n', head ? it[head] : it.code), el('span', 'nm', ''));
+    } else c.append(el('span', 'n', mask || (head ? it[head] : it.code)), el('span', 'nm', ''));
     c.classList.add(inPlay.has(it.code) ? 'todo' : 'off');
     c.addEventListener('click', () => onTap(it.code));
     grid.append(c);

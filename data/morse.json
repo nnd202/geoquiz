@@ -1,0 +1,382 @@
+{
+ "id": "morse",
+ "titre": "Code morse",
+ "items": [
+  {
+   "code": "m-A",
+   "nom": "A",
+   "alias": [
+    "a"
+   ],
+   "domaine": "code",
+   "morse": ".-",
+   "signe": "· −",
+   "detail": "Lettre A · · −"
+  },
+  {
+   "code": "m-B",
+   "nom": "B",
+   "alias": [
+    "b"
+   ],
+   "domaine": "code",
+   "morse": "-...",
+   "signe": "− · · ·",
+   "detail": "Lettre B · − · · ·"
+  },
+  {
+   "code": "m-C",
+   "nom": "C",
+   "alias": [
+    "c"
+   ],
+   "domaine": "code",
+   "morse": "-.-.",
+   "signe": "− · − ·",
+   "detail": "Lettre C · − · − ·"
+  },
+  {
+   "code": "m-D",
+   "nom": "D",
+   "alias": [
+    "d"
+   ],
+   "domaine": "code",
+   "morse": "-..",
+   "signe": "− · ·",
+   "detail": "Lettre D · − · ·"
+  },
+  {
+   "code": "m-E",
+   "nom": "E",
+   "alias": [
+    "e"
+   ],
+   "domaine": "code",
+   "morse": ".",
+   "signe": "·",
+   "detail": "Lettre E · ·"
+  },
+  {
+   "code": "m-F",
+   "nom": "F",
+   "alias": [
+    "f"
+   ],
+   "domaine": "code",
+   "morse": "..-.",
+   "signe": "· · − ·",
+   "detail": "Lettre F · · · − ·"
+  },
+  {
+   "code": "m-G",
+   "nom": "G",
+   "alias": [
+    "g"
+   ],
+   "domaine": "code",
+   "morse": "--.",
+   "signe": "− − ·",
+   "detail": "Lettre G · − − ·"
+  },
+  {
+   "code": "m-H",
+   "nom": "H",
+   "alias": [
+    "h"
+   ],
+   "domaine": "code",
+   "morse": "....",
+   "signe": "· · · ·",
+   "detail": "Lettre H · · · · ·"
+  },
+  {
+   "code": "m-I",
+   "nom": "I",
+   "alias": [
+    "i"
+   ],
+   "domaine": "code",
+   "morse": "..",
+   "signe": "· ·",
+   "detail": "Lettre I · · ·"
+  },
+  {
+   "code": "m-J",
+   "nom": "J",
+   "alias": [
+    "j"
+   ],
+   "domaine": "code",
+   "morse": ".---",
+   "signe": "· − − −",
+   "detail": "Lettre J · · − − −"
+  },
+  {
+   "code": "m-K",
+   "nom": "K",
+   "alias": [
+    "k"
+   ],
+   "domaine": "code",
+   "morse": "-.-",
+   "signe": "− · −",
+   "detail": "Lettre K · − · −"
+  },
+  {
+   "code": "m-L",
+   "nom": "L",
+   "alias": [
+    "l"
+   ],
+   "domaine": "code",
+   "morse": ".-..",
+   "signe": "· − · ·",
+   "detail": "Lettre L · · − · ·"
+  },
+  {
+   "code": "m-M",
+   "nom": "M",
+   "alias": [
+    "m"
+   ],
+   "domaine": "code",
+   "morse": "--",
+   "signe": "− −",
+   "detail": "Lettre M · − −"
+  },
+  {
+   "code": "m-N",
+   "nom": "N",
+   "alias": [
+    "n"
+   ],
+   "domaine": "code",
+   "morse": "-.",
+   "signe": "− ·",
+   "detail": "Lettre N · − ·"
+  },
+  {
+   "code": "m-O",
+   "nom": "O",
+   "alias": [
+    "o"
+   ],
+   "domaine": "code",
+   "morse": "---",
+   "signe": "− − −",
+   "detail": "Lettre O · − − −"
+  },
+  {
+   "code": "m-P",
+   "nom": "P",
+   "alias": [
+    "p"
+   ],
+   "domaine": "code",
+   "morse": ".--.",
+   "signe": "· − − ·",
+   "detail": "Lettre P · · − − ·"
+  },
+  {
+   "code": "m-Q",
+   "nom": "Q",
+   "alias": [
+    "q"
+   ],
+   "domaine": "code",
+   "morse": "--.-",
+   "signe": "− − · −",
+   "detail": "Lettre Q · − − · −"
+  },
+  {
+   "code": "m-R",
+   "nom": "R",
+   "alias": [
+    "r"
+   ],
+   "domaine": "code",
+   "morse": ".-.",
+   "signe": "· − ·",
+   "detail": "Lettre R · · − ·"
+  },
+  {
+   "code": "m-S",
+   "nom": "S",
+   "alias": [
+    "s"
+   ],
+   "domaine": "code",
+   "morse": "...",
+   "signe": "· · ·",
+   "detail": "Lettre S · · · ·"
+  },
+  {
+   "code": "m-T",
+   "nom": "T",
+   "alias": [
+    "t"
+   ],
+   "domaine": "code",
+   "morse": "-",
+   "signe": "−",
+   "detail": "Lettre T · −"
+  },
+  {
+   "code": "m-U",
+   "nom": "U",
+   "alias": [
+    "u"
+   ],
+   "domaine": "code",
+   "morse": "..-",
+   "signe": "· · −",
+   "detail": "Lettre U · · · −"
+  },
+  {
+   "code": "m-V",
+   "nom": "V",
+   "alias": [
+    "v"
+   ],
+   "domaine": "code",
+   "morse": "...-",
+   "signe": "· · · −",
+   "detail": "Lettre V · · · · −"
+  },
+  {
+   "code": "m-W",
+   "nom": "W",
+   "alias": [
+    "w"
+   ],
+   "domaine": "code",
+   "morse": ".--",
+   "signe": "· − −",
+   "detail": "Lettre W · · − −"
+  },
+  {
+   "code": "m-X",
+   "nom": "X",
+   "alias": [
+    "x"
+   ],
+   "domaine": "code",
+   "morse": "-..-",
+   "signe": "− · · −",
+   "detail": "Lettre X · − · · −"
+  },
+  {
+   "code": "m-Y",
+   "nom": "Y",
+   "alias": [
+    "y"
+   ],
+   "domaine": "code",
+   "morse": "-.--",
+   "signe": "− · − −",
+   "detail": "Lettre Y · − · − −"
+  },
+  {
+   "code": "m-Z",
+   "nom": "Z",
+   "alias": [
+    "z"
+   ],
+   "domaine": "code",
+   "morse": "--..",
+   "signe": "− − · ·",
+   "detail": "Lettre Z · − − · ·"
+  },
+  {
+   "code": "m-1",
+   "nom": "1",
+   "alias": [],
+   "domaine": "code",
+   "morse": ".----",
+   "signe": "· − − − −",
+   "detail": "Chiffre 1 · · − − − −"
+  },
+  {
+   "code": "m-2",
+   "nom": "2",
+   "alias": [],
+   "domaine": "code",
+   "morse": "..---",
+   "signe": "· · − − −",
+   "detail": "Chiffre 2 · · · − − −"
+  },
+  {
+   "code": "m-3",
+   "nom": "3",
+   "alias": [],
+   "domaine": "code",
+   "morse": "...--",
+   "signe": "· · · − −",
+   "detail": "Chiffre 3 · · · · − −"
+  },
+  {
+   "code": "m-4",
+   "nom": "4",
+   "alias": [],
+   "domaine": "code",
+   "morse": "....-",
+   "signe": "· · · · −",
+   "detail": "Chiffre 4 · · · · · −"
+  },
+  {
+   "code": "m-5",
+   "nom": "5",
+   "alias": [],
+   "domaine": "code",
+   "morse": ".....",
+   "signe": "· · · · ·",
+   "detail": "Chiffre 5 · · · · · ·"
+  },
+  {
+   "code": "m-6",
+   "nom": "6",
+   "alias": [],
+   "domaine": "code",
+   "morse": "-....",
+   "signe": "− · · · ·",
+   "detail": "Chiffre 6 · − · · · ·"
+  },
+  {
+   "code": "m-7",
+   "nom": "7",
+   "alias": [],
+   "domaine": "code",
+   "morse": "--...",
+   "signe": "− − · · ·",
+   "detail": "Chiffre 7 · − − · · ·"
+  },
+  {
+   "code": "m-8",
+   "nom": "8",
+   "alias": [],
+   "domaine": "code",
+   "morse": "---..",
+   "signe": "− − − · ·",
+   "detail": "Chiffre 8 · − − − · ·"
+  },
+  {
+   "code": "m-9",
+   "nom": "9",
+   "alias": [],
+   "domaine": "code",
+   "morse": "----.",
+   "signe": "− − − − ·",
+   "detail": "Chiffre 9 · − − − − ·"
+  },
+  {
+   "code": "m-0",
+   "nom": "0",
+   "alias": [],
+   "domaine": "code",
+   "morse": "-----",
+   "signe": "− − − − −",
+   "detail": "Chiffre 0 · − − − − −"
+  }
+ ]
+}

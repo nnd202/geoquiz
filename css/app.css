@@ -399,3 +399,17 @@ html:has(.veil), body:has(.veil) { overflow: hidden; }
 .qsheet { overscroll-behavior: contain; }
 html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden; }
 #game { top: var(--vv-top, 0px); height: var(--vv-h, 100%); }
+
+/* ---------- Morse : manipulateur ---------- */
+.keyer { display: grid; gap: 8px; justify-items: center; padding: 10px 14px 4px; background: var(--panel); border-top: 1px solid color-mix(in srgb, var(--abyss) 10%, transparent); }
+.key-sig { min-height: 30px; font-size: 26px; letter-spacing: .12em; color: var(--abyss); }
+.key-help { min-height: 18px; font-size: 13px; color: var(--ink-soft); }
+.key-btn { width: 100%; max-width: 420px; height: 112px; border: 0; border-radius: 22px; background: var(--abyss); color: var(--panel);
+  font: 600 18px var(--f-body); letter-spacing: .04em; touch-action: none; user-select: none; -webkit-user-select: none;
+  -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; transition: transform .05s, background .1s; cursor: pointer; }
+.key-btn.on { background: var(--lagoon); transform: scale(.985); }
+.key-btn.on.long { background: #2f7f9e; }
+.key-btn.on.over { background: var(--wrong); }
+.grid.morse .n { font-family: var(--f-num); font-size: 17px; letter-spacing: 0; white-space: nowrap; color: var(--abyss); }
+.grid.morse .cell.found .n, .grid.morse .cell.found .nm { color: #fff; }
+.grid.morse .nm { font-size: 13px; font-weight: 600; letter-spacing: .06em; }

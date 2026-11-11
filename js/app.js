@@ -2,6 +2,7 @@
 import { $, el } from './core/dom.js';
 import { prepare } from './core/text.js';
 import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, snooze, variantOf } from './core/store.js';
+import { morseCfg, setMorse } from './core/morse.js';
 import { Game, END, fmtLong, onHome, wireGameControls, backRequest } from './core/game.js';
 import { saveNow, folderSupported, folderState, chooseFolder, forgetFolder, writeToFolder } from './core/backup.js';
 
@@ -30,10 +31,12 @@ function optsOf(q) {
   return { random: !!o.random && canRandom(q), click: !!o.click, cursor: q.support === 'grid' && !!(o.cursor ?? q.curseur) };
 }
 function cfgOf(q, o = optsOf(q)) {
-  return { jeu: q.jeu, support: q.support || 'map', mech: o.click ? 'tap' : o.cursor ? 'cur' : 'all', n: o.random ? CAT.options.hasard : 0 };
+  // Un quiz peut imposer sa mécanique (morse : manipulateur, écoute).
+  return { jeu: q.jeu, support: q.support || 'map', mech: q.mecanique || (o.click ? 'tap' : o.cursor ? 'cur' : 'all'), n: o.random ? CAT.options.hasard : 0 };
 }
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
-const optsLabel = o => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie'].join(' · ');
+const MECH_LABEL = { key: 'manipulateur', ear: 'à l’oreille' };
+const optsLabel = (o, q = {}) => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
 
 async function play(q, study = false) {
   const cfg = cfgOf(q);
@@ -63,6 +66,9 @@ function renderHome() {
   }
   renderSections();
   $('p-val').textContent = store.pauses;
+  const mc = morseCfg();
+  $('mw-val').textContent = mc.wpm;
+  $('ma-on').setAttribute('aria-pressed', String(mc.aide)); $('ma-off').setAttribute('aria-pressed', String(!mc.aide));
   $('r-val').textContent = store.reminderDays ? `${store.reminderDays} j` : 'jamais';
   $('last-save').textContent = store.lastExport
     ? `Dernière sauvegarde : ${new Date(store.lastExport).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })} à ${new Date(store.lastExport).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', ' h ')}.`
@@ -112,7 +118,7 @@ function quizRow(q) {
   const o = optsOf(q);
   const row = el('div', 'qrow');
   const main = el('button', 'qmain');
-  const meta = [`${def.nb}`, q.support === 'grid' ? 'grille' : 'carte', optsLabel(o)].join(' · ');
+  const meta = [`${def.nb}`, q.support === 'grid' ? 'grille' : 'carte', optsLabel(o, q)].join(' · ');
   main.append(el('span', 'qname', q.nom), el('span', 'qmeta', meta));
   main.addEventListener('click', () => openSheet(q));
   const best = bestOf(variantId(cfgOf(q, o)));
@@ -163,8 +169,10 @@ function openSheet(q) {
       s.append(f);
     };
     if (canRandom(q)) seg('Sélection', 'random', [[false, `Tous (${def.nb})`], [true, `${CAT.options.hasard} au hasard`]]);
-    seg('Réponse', 'click', [[false, 'Je tape les noms'], [true, q.support === 'grid' ? 'Je touche la case' : 'Je touche la carte']]);
-    if (q.support === 'grid' && !o.click) seg('Grille', 'cursor', [[false, 'Libre'], [true, 'Curseur']]);
+    if (!q.mecanique) {
+      seg('Réponse', 'click', [[false, 'Je tape les noms'], [true, q.support === 'grid' ? 'Je touche la case' : 'Je touche la carte']]);
+      if (q.support === 'grid' && !o.click) seg('Grille', 'cursor', [[false, 'Libre'], [true, 'Curseur']]);
+    }
 
     const id = variantId(cfgOf(q, o));
     const b = bestOf(id);
@@ -181,7 +189,7 @@ function openSheet(q) {
     r.append(go, st, x);
     s.append(r);
     if (hist.length) {
-      s.append(el('h2', null, `Historique · ${optsLabel(o)}`));
+      s.append(el('h2', null, `Historique · ${optsLabel(o, q)}`));
       const tw = el('div', 'tablewrap'), tb = el('table', 'hist');
       tb.innerHTML = '<thead><tr><th>Date</th><th>Heure</th><th>Score</th><th>Durée</th><th>Fin</th><th>Pauses</th></tr></thead>';
       const body = el('tbody');
@@ -258,6 +266,11 @@ function wireSettings() {
   step('p-plus', () => { store.pauses = Math.min(9, store.pauses + 1); });
   step('r-minus', () => { store.reminderDays = Math.max(0, store.reminderDays - 1); });
   step('r-plus', () => { store.reminderDays = Math.min(60, store.reminderDays + 1); });
+  // Morse : de 5 à 30 mots par minute (12 par défaut : point 100 ms, trait 300 ms).
+  step('mw-minus', () => setMorse({ wpm: Math.max(5, morseCfg().wpm - 1) }));
+  step('mw-plus', () => setMorse({ wpm: Math.min(30, morseCfg().wpm + 1) }));
+  step('ma-on', () => setMorse({ aide: true }));
+  step('ma-off', () => setMorse({ aide: false }));
   $('exp').addEventListener('click', async () => { flash(await saveNow()); renderHome(); });
   const doImport = text => {
     try {

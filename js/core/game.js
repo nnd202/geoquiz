@@ -21,8 +21,11 @@ export class Game {
     this.cfg = cfg; this.name = name; this.id = id; this.study = study; this.def = def;
     this.last = null; // réponse précédente (départage des homonymes)
     this.all = data.items;
+    // Grille mélangée à chaque partie (morse : l'ordre ne doit pas souffler la réponse) ; ordre des données en étude.
+    if (def.melange) this.all = study ? this.all.slice() : shuffle(this.all.slice());
     // Grille de mots (capitales : le pays dans la case) : ordre alphabétique français de la case.
-    if (def.case) this.all = this.all.slice().sort((a, b) => a[def.case].localeCompare(b[def.case], 'fr'));
+    else if (def.case) this.all = this.all.slice().sort((a, b) => a[def.case].localeCompare(b[def.case], 'fr'));
+    this.rev = def.revele || 'nom'; // ce qui s'inscrit dans la case une fois trouvée
     // En mode étude, tout est montré, même pour un quiz « N au hasard ».
     this.items = cfg.n && !study ? shuffle(this.all.slice()).slice(0, cfg.n) : this.all.slice();
     this.inPlay = new Set(this.items.map(d => d.code));
@@ -71,10 +74,11 @@ export class Game {
     $('g-prompt').hidden = study || !mech.hasPrompt;
     $('g-prompt').style.visibility = '';
     $('g-skip').hidden = !mech.skip;
+    $('g-skip').textContent = mech.skipLabel || 'Passer';
     fitViewport();
     $('board').classList.toggle('study', !!study);
     if (study) {
-      this.board.showLabels(this.items, this.def.etiquette);
+      this.board.showLabels(this.rev === 'nom' ? this.items : this.items.map(it => ({ ...it, nom: it[this.rev] })), this.def.etiquette);
       if (this.def.legende && cfg.support !== 'grid') {
         // Légende repliée derrière un bouton : elle s'ouvre au toucher et se replie seule après 5 s.
         const lg = el('div', 'legend'); lg.hidden = true;
@@ -98,14 +102,14 @@ export class Game {
     if (typing) setTimeout(() => inp.focus(), 50);
   }
 
-  dispose() { this.over = true; clearTimeout(this.waitTimer); }
+  dispose() { this.over = true; clearTimeout(this.waitTimer); this.mech.stop?.(this); }
 
   buildBoard() {
     const host = $('board');
     host.textContent = '';
     const tap = code => this.onTap(code);
     this.board = this.cfg.support === 'grid'
-      ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images, head: this.def.case || null })
+      ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images, head: this.def.case || null, mask: this.def.masque || null, style: this.def.style || '' })
       : buildMap(host, this.mapSvg, {
         codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
         onTap: tap, label: this.def.titre, style: this.def.style,
@@ -164,7 +168,7 @@ export class Game {
     this.board.mark(item.code, 'found');
     this.board.relate(item.code, 'rel');
     this.board.pulse(item.code);
-    this.board.reveal(item.code, item.nom);
+    this.board.reveal(item.code, item[this.rev]);
     const inp = $('answer');
     inp.value = ''; inp.classList.remove('pending');
     $('g-score').textContent = `${this.found.size}/${this.items.length}`;
@@ -245,6 +249,7 @@ export class Game {
     this.paused = true; this.pausesLeft--; this.pausesUsed++;
     this.acc = this.elapsed(); this.resumeAt = null;
     clearTimeout(this.waitTimer);
+    this.mech.pause?.(this);
     const inp = $('answer');
     inp.disabled = true; inp.blur();
     $('g-prompt').style.visibility = 'hidden';
@@ -274,11 +279,12 @@ export class Game {
     if (this.over) return;
     this.over = true;
     clearTimeout(this.waitTimer);
+    this.mech.stop?.(this);
     this.board.setReveal(false);
     $('g-reveal').hidden = true;
     const ms = this.elapsed();
     for (const d of this.items) {
-      if (!this.found.has(d.code)) { this.missed.add(d.code); this.board.mark(d.code, 'todo', false); this.board.mark(d.code, 'missed'); this.board.reveal(d.code, d.nom); }
+      if (!this.found.has(d.code)) { this.missed.add(d.code); this.board.mark(d.code, 'todo', false); this.board.mark(d.code, 'missed'); this.board.reveal(d.code, d[this.rev]); }
     }
     const att = {
       quiz: this.id, label: this.name, at: this.at, ms: Math.round(ms),

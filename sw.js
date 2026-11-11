@@ -1,6 +1,6 @@
 // Hors ligne : réseau d'abord (l'app est toujours à jour quand le téléphone est connecté),
 // cache en secours (l'app marche sans réseau). Changer VERSION force un nettoyage du cache.
-const VERSION = 'geoquiz-22';
+const VERSION = 'geoquiz-23';
 const CORE = [
   './',
   'index.html',
@@ -22,6 +22,10 @@ const CORE = [
   'js/mechanics/tap.js',
   'js/mechanics/queue.js',
   'js/mechanics/cursor.js',
+  'js/mechanics/key.js',
+  'js/mechanics/ear.js',
+  'js/core/morse.js',
+  'data/morse.json',
   'data/pays.json',
   'data/capitales.json',
   'data/mers.json',

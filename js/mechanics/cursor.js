@@ -3,7 +3,7 @@
 import { judgeName } from '../core/validate.js';
 
 // Prochaine case à faire après la position pos (en bouclant), ou null s'il n'en reste aucune.
-function nextOpen(g, pos) {
+export function nextOpen(g, pos) {
   const n = g.order.length;
   for (let k = 1; k <= n; k++) {
     const it = g.order[(pos + k) % n];
@@ -12,7 +12,7 @@ function nextOpen(g, pos) {
   return null;
 }
 
-function moveTo(g, pos) {
+export function moveTo(g, pos) {
   g.pos = pos;
   g.cur = g.order[pos];
   g.board.setCursor(g.cur.code);
