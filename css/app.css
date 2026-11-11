@@ -420,3 +420,10 @@ html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden;
 .key-u b { font-size: 20px; font-weight: 500; color: var(--abyss); }
 .key-u[data-s="dash"] b { color: #2f7f9e; }
 .key-u[data-s="over"] b { color: var(--wrong); }
+
+/* ---------- Déserts : terres en décor, déserts en zones ; liseré du Sahara par-dessus ses parties ---------- */
+.deserts .land { fill: var(--land-off); stroke: var(--border-land); stroke-width: .5; vector-effect: non-scaling-stroke; pointer-events: none; }
+.deserts .zone.des { stroke: var(--panel); stroke-width: .8; }
+.deserts .zone.part { stroke-width: 1.2; }
+.sub.sahara-line { fill: none; stroke: var(--abyss); stroke-width: 1.6; stroke-dasharray: 5 3; stroke-opacity: .55; opacity: 1; pointer-events: none; }
+.deserts .zone.todo { fill: color-mix(in srgb, var(--lagoon) 38%, var(--land)); }

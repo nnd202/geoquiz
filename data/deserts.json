@@ -1,0 +1,618 @@
+{
+ "id": "deserts",
+ "titre": "Déserts du monde",
+ "items": [
+  {
+   "code": "d-saha",
+   "nom": "Sahara",
+   "alias": [
+    "Désert du Sahara"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    10.089,
+    21.883
+   ],
+   "detail": "Afrique · désert"
+  },
+  {
+   "code": "d-tene",
+   "nom": "Ténéré",
+   "alias": [
+    "Désert du Ténéré"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    12.86,
+    19.384
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-liby",
+   "nom": "Désert Libyque",
+   "alias": [
+    "Libyque"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    25.095,
+    21.161
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-nubi",
+   "nom": "Désert de Nubie",
+   "alias": [
+    "Nubie"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    33.779,
+    20.05
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-arab",
+   "nom": "Désert Arabique",
+   "alias": [
+    "Désert oriental"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    33.049,
+    26.373
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-ergo",
+   "nom": "Grand Erg occidental",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    0.787,
+    30.792
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-erge",
+   "nom": "Grand Erg oriental",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    7.921,
+    30.713
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-chec",
+   "nom": "Erg Chech",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    -2.359,
+    25.375
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-djou",
+   "nom": "El Djouf",
+   "alias": [
+    "Majâbat al-Koubrâ"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    -6.828,
+    21.413
+   ],
+   "detail": "Afrique · partie du Sahara"
+  },
+  {
+   "code": "d-kala",
+   "nom": "Désert du Kalahari",
+   "alias": [
+    "Kalahari"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    20.588,
+    -22.656
+   ],
+   "detail": "Afrique · désert"
+  },
+  {
+   "code": "d-nami",
+   "nom": "Désert du Namib",
+   "alias": [
+    "Namib"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    13.281,
+    -19.68
+   ],
+   "detail": "Afrique · désert"
+  },
+  {
+   "code": "d-dana",
+   "nom": "Désert Danakil",
+   "alias": [
+    "Danakil",
+    "Désert du Danakil"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    41.784,
+    12.741
+   ],
+   "detail": "Afrique · désert"
+  },
+  {
+   "code": "d-karo",
+   "nom": "Karoo",
+   "alias": [
+    "Grand Karoo"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Afrique",
+   "geo": [
+    22.769,
+    -30.977
+   ],
+   "detail": "Afrique · désert"
+  },
+  {
+   "code": "d-rubk",
+   "nom": "Rub al-Khali",
+   "alias": [
+    "Rub al Khali",
+    "Quart Vide"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    51.272,
+    20.619
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-nefo",
+   "nom": "Désert du Néfoud",
+   "alias": [
+    "Néfoud",
+    "Nefoud",
+    "Nafoud"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    42.643,
+    28.76
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-syri",
+   "nom": "Désert de Syrie",
+   "alias": [
+    "Désert syrien"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    40.199,
+    32.354
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-negu",
+   "nom": "Néguev",
+   "alias": [
+    "Désert du Néguev",
+    "Negev"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    34.891,
+    30.417
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-kavi",
+   "nom": "Dacht-e Kavir",
+   "alias": [
+    "Dasht-e Kavir",
+    "Grand désert salé",
+    "Kavir"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    55.018,
+    34.526
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-lout",
+   "nom": "Dacht-e Lout",
+   "alias": [
+    "Dasht-e Lut",
+    "Lout",
+    "Lut"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    57.801,
+    31.709
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-kara",
+   "nom": "Karakoum",
+   "alias": [
+    "Désert du Karakoum",
+    "Garagum"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    58.937,
+    40.825
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-kyzy",
+   "nom": "Kyzylkoum",
+   "alias": [
+    "Désert du Kyzylkoum",
+    "Qizilqum"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    63.945,
+    43.303
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-takl",
+   "nom": "Taklamakan",
+   "alias": [
+    "Désert du Taklamakan",
+    "Taklimakan"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    82.772,
+    38.909
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-gobi",
+   "nom": "Gobi",
+   "alias": [
+    "Désert de Gobi"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    106.056,
+    42.76
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-ordo",
+   "nom": "Désert d'Ordos",
+   "alias": [
+    "Ordos",
+    "Mu Us",
+    "Désert de Mu Us"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    108.032,
+    39.044
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-thar",
+   "nom": "Désert du Thar",
+   "alias": [
+    "Thar",
+    "Grand désert indien"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    71.615,
+    27.46
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-regi",
+   "nom": "Registan",
+   "alias": [
+    "Désert du Registan"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    65.125,
+    30.921
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-betp",
+   "nom": "Betpak-Dala",
+   "alias": [
+    "Steppe de la Faim"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Asie",
+   "geo": [
+    70.367,
+    44.808
+   ],
+   "detail": "Asie · désert"
+  },
+  {
+   "code": "d-atac",
+   "nom": "Désert d'Atacama",
+   "alias": [
+    "Atacama"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -69.142,
+    -22.868
+   ],
+   "detail": "Amérique du Sud · désert"
+  },
+  {
+   "code": "d-pata",
+   "nom": "Désert de Patagonie",
+   "alias": [
+    "Patagonie",
+    "Désert patagonien"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -67.131,
+    -42.474
+   ],
+   "detail": "Amérique du Sud · désert"
+  },
+  {
+   "code": "d-sono",
+   "nom": "Désert de Sonora",
+   "alias": [
+    "Sonora"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -112.217,
+    31.274
+   ],
+   "detail": "Amérique du Nord · désert"
+  },
+  {
+   "code": "d-chih",
+   "nom": "Désert de Chihuahua",
+   "alias": [
+    "Chihuahua"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -104.641,
+    29.279
+   ],
+   "detail": "Amérique du Nord · désert"
+  },
+  {
+   "code": "d-moja",
+   "nom": "Désert de Mojave",
+   "alias": [
+    "Mojave",
+    "Mojave Desert"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -116.035,
+    35.6
+   ],
+   "detail": "Amérique du Nord · désert"
+  },
+  {
+   "code": "d-gbas",
+   "nom": "Désert du Grand Bassin",
+   "alias": [
+    "Grand Bassin"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -116.098,
+    38.968
+   ],
+   "detail": "Amérique du Nord · désert"
+  },
+  {
+   "code": "d-vict",
+   "nom": "Grand désert de Victoria",
+   "alias": [
+    "Désert de Victoria"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Océanie",
+   "geo": [
+    128.054,
+    -28.2
+   ],
+   "detail": "Océanie · désert"
+  },
+  {
+   "code": "d-sabl",
+   "nom": "Grand désert de Sable",
+   "alias": [
+    "Grand désert de sable"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Océanie",
+   "geo": [
+    124.907,
+    -20.622
+   ],
+   "detail": "Océanie · désert"
+  },
+  {
+   "code": "d-gibs",
+   "nom": "Désert de Gibson",
+   "alias": [
+    "Gibson"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Océanie",
+   "geo": [
+    125.022,
+    -24.36
+   ],
+   "detail": "Océanie · désert"
+  },
+  {
+   "code": "d-simp",
+   "nom": "Désert de Simpson",
+   "alias": [
+    "Simpson"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Océanie",
+   "geo": [
+    137.324,
+    -25.518
+   ],
+   "detail": "Océanie · désert"
+  },
+  {
+   "code": "d-tana",
+   "nom": "Désert de Tanami",
+   "alias": [
+    "Tanami"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Océanie",
+   "geo": [
+    131.655,
+    -19.713
+   ],
+   "detail": "Océanie · désert"
+  },
+  {
+   "code": "d-strz",
+   "nom": "Désert de Strzelecki",
+   "alias": [
+    "Strzelecki"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Océanie",
+   "geo": [
+    141.619,
+    -29.779
+   ],
+   "detail": "Océanie · désert"
+  },
+  {
+   "code": "d-anta",
+   "nom": "Antarctique",
+   "alias": [
+    "Désert antarctique",
+    "Antarctica"
+   ],
+   "domaine": "physique",
+   "categorie": "désert",
+   "continent": "Antarctique",
+   "geo": [
+    66.396,
+    -76.606
+   ],
+   "detail": "Antarctique · désert"
+  }
+ ]
+}

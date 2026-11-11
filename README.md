@@ -90,6 +90,12 @@ area["ref:INSEE"="34"]["boundary"="administrative"]["admin_level"="6"]->.h;
 out geom;
 ```
 
+**Déserts** (`maps/deserts.svg`) · `tools/build_deserts.py`
+
+40 déserts de `ne_10m_geography_regions_polys` (Natural Earth, rangé dans `regions/` de la branche `sources`), noms français vérifiés sur Wikipédia. Carte du monde prolongée jusqu'au pôle Sud (Antarctique). Le Mojave est un contour simplifié tracé à la main ; la Patagonie est la région Patagonie sans les Andes. Les parties du Sahara sont dessinées par-dessus lui, et un liseré rappelle son contour.
+
+**Codes et signaux** · `tools/build_morse.py` : code morse international (UIT-R M.1677-1), 26 lettres et 10 chiffres ; sons générés par le navigateur.
+
 **Ciel** (`maps/ciel.svg`) · `tools/build_sky.py`
 
 Source : [d3-celestial](https://github.com/ofrohn/d3-celestial) (BSD) : frontières officielles des 88 constellations, tracés, étoiles jusqu'à la magnitude 6, noms. Deux hémisphères côte à côte, projection azimutale équidistante centrée sur chaque pôle. L'étoile la plus brillante de chaque constellation est à trouver quand elle a un nom d'usage (55 sur 88, vérifiés contre le catalogue de l'UAI).

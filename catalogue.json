@@ -436,6 +436,27 @@
    "prefixe": "moc",
    "masque": "♪",
    "style": "morse"
+  },
+  "deserts": {
+   "titre": "Déserts du monde",
+   "fichier": "data/deserts.json",
+   "carte": "maps/deserts.svg",
+   "prefixe": "des",
+   "etiquette": "nom",
+   "style": "deserts",
+   "calques": [
+    "terres",
+    "contour-sahara"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 40,
+   "reveler": true
   }
  },
  "sections": [
@@ -476,6 +497,10 @@
     {
      "nom": "Fleuves",
      "jeu": "fleuves"
+    },
+    {
+     "nom": "Déserts",
+     "jeu": "deserts"
     }
    ]
   },
