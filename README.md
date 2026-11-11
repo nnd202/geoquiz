@@ -94,6 +94,10 @@ out geom;
 
 40 déserts de `ne_10m_geography_regions_polys` (Natural Earth, rangé dans `regions/` de la branche `sources`), noms français vérifiés sur Wikipédia. Carte du monde prolongée jusqu'au pôle Sud (Antarctique). Le Mojave est un contour simplifié tracé à la main ; la Patagonie est la région Patagonie sans les Andes. Les parties du Sahara sont dessinées par-dessus lui, et un liseré rappelle son contour.
 
+**Chaînes de montagnes et sommets** (`maps/chaines.svg`, `maps/sommets.svg`) · `tools/build_ranges.py`, `tools/build_summits.py`
+
+79 chaînes de `ne_10m_geography_regions_polys` (Natural Earth) : les ensembles (Atlas, Carpates, Cordillère australienne) sont le reste hors de leurs sous-chaînes, avec un liseré ; les Andes regroupent les cordillères de la source. 39 sommets de `ne_10m_geography_regions_elevation_points`, six placés à la main. Même projection que les déserts (`tools/worldproj_full.py`, jusqu'au pôle Sud).
+
 **Codes et signaux** · `tools/build_morse.py` : code morse international (UIT-R M.1677-1), 26 lettres et 10 chiffres ; sons générés par le navigateur.
 
 **Ciel** (`maps/ciel.svg`) · `tools/build_sky.py`

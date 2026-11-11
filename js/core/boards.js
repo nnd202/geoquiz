@@ -84,7 +84,7 @@ export function buildGrid(container, items, inPlay, onTap, { images = false, hea
  * - zones hors jeu : décor ; traits : affichés si le calque est demandé ;
  * - points hors jeu : repères si leur calque est demandé, sinon masqués.
  */
-export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap, label, tapNeedsSingle, style }) {
+export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap, label, tapNeedsSingle, style, zoomMax = 60 }) {
   const wrap = el('div', 'mapwrap' + (style ? ` ${style}` : ''));
   const parsed = new DOMParser().parseFromString(svgText, 'image/svg+xml').documentElement;
   const map = document.importNode(parsed, true);
@@ -133,7 +133,7 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     return document.elementFromPoint(cx, cy)?.closest?.('[data-code]')?.dataset.code || null;
   };
   let placeLabels = () => {};
-  const pz = panZoom(map, pick, onTap, tapNeedsSingle, (v, k) => placeLabels(v, k));
+  const pz = panZoom(map, pick, onTap, tapNeedsSingle, (v, k) => placeLabels(v, k), zoomMax);
   const z = el('div', 'zoom');
   [['+', 'Zoomer', () => pz.zoomBy(1.6)], ['−', 'Dézoomer', () => pz.zoomBy(1 / 1.6)], ['⤢', "Vue d'ensemble", pz.reset]]
     .forEach(([t, a, f]) => { const bt = el('button', null, t); bt.setAttribute('aria-label', a); bt.addEventListener('click', f); z.append(bt); });
@@ -222,7 +222,7 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
 }
 
 // Pincer pour zoomer, glisser à un doigt, double toucher, molette sur PC. Le zoom agit sur la carte seule.
-function panZoom(svg, pick, onTap, tapNeedsSingle, onView = () => {}) {
+function panZoom(svg, pick, onTap, tapNeedsSingle, onView = () => {}, zoomMax = 60) {
   const BASE = svg.getAttribute('viewBox').split(/[\s,]+/).map(Number);
   let view, raf = 0;
   // --k = unités SVG par pixel d'écran : marqueurs et étiquettes gardent la même taille à l'écran
@@ -251,7 +251,7 @@ function panZoom(svg, pick, onTap, tapNeedsSingle, onView = () => {}) {
     view.y = Math.min(Math.max(view.y, BASE[1] - view.h / 2), BASE[1] + BASE[3] - view.h / 2);
   };
   const zoomAt = (px, py, f) => {
-    const nw = Math.min(BASE[2], Math.max(BASE[2] / 60, view.w / f));
+    const nw = Math.min(BASE[2], Math.max(BASE[2] / zoomMax, view.w / f));
     const k = nw / view.w;
     view.x = px - (px - view.x) * k; view.y = py - (py - view.y) * k;
     view.w = nw; view.h *= k;

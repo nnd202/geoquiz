@@ -1,0 +1,582 @@
+{
+ "id": "sommets",
+ "titre": "Grands sommets",
+ "items": [
+  {
+   "code": "p-ever",
+   "nom": "Everest",
+   "alias": [
+    "Mont Everest",
+    "Chomolungma",
+    "Sagarmatha"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    86.8806,
+    27.9805
+   ],
+   "detail": "Asie · Himalaya · 8 849 m"
+  },
+  {
+   "code": "p-k2",
+   "nom": "K2",
+   "alias": [
+    "Chogori",
+    "Mont Godwin-Austen"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    76.5132,
+    35.8824
+   ],
+   "detail": "Asie · Karakoram · 8 611 m"
+  },
+  {
+   "code": "p-kang",
+   "nom": "Kangchenjunga",
+   "alias": [
+    "Kanchenjunga"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    88.1475,
+    27.7025
+   ],
+   "detail": "Asie · Himalaya · 8 586 m"
+  },
+  {
+   "code": "p-lhot",
+   "nom": "Lhotse",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    86.9333,
+    27.9617
+   ],
+   "detail": "Asie · Himalaya · 8 516 m"
+  },
+  {
+   "code": "p-maka",
+   "nom": "Makalu",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    87.0889,
+    27.8897
+   ],
+   "detail": "Asie · Himalaya · 8 485 m"
+  },
+  {
+   "code": "p-anna",
+   "nom": "Annapurna",
+   "alias": [
+    "Annapurna I"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    83.8203,
+    28.5961
+   ],
+   "detail": "Asie · Himalaya · 8 091 m"
+  },
+  {
+   "code": "p-nang",
+   "nom": "Nanga Parbat",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    74.59,
+    35.24
+   ],
+   "detail": "Asie · Himalaya · 8 126 m"
+  },
+  {
+   "code": "p-acon",
+   "nom": "Aconcagua",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -70.0158,
+    -32.6557
+   ],
+   "detail": "Amérique du Sud · Andes · 6 961 m"
+  },
+  {
+   "code": "p-ojos",
+   "nom": "Ojos del Salado",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -68.5422,
+    -27.1096
+   ],
+   "detail": "Amérique du Sud · Andes · 6 893 m"
+  },
+  {
+   "code": "p-huas",
+   "nom": "Huascarán",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -77.609,
+    -9.1214
+   ],
+   "detail": "Amérique du Sud · Andes · 6 768 m"
+  },
+  {
+   "code": "p-chim",
+   "nom": "Chimborazo",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -78.8175,
+    -1.4693
+   ],
+   "detail": "Amérique du Sud · Andes · 6 263 m"
+  },
+  {
+   "code": "p-coto",
+   "nom": "Cotopaxi",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -78.4378,
+    -0.6838
+   ],
+   "detail": "Amérique du Sud · Andes · 5 897 m"
+  },
+  {
+   "code": "p-dena",
+   "nom": "Denali",
+   "alias": [
+    "Mont McKinley",
+    "McKinley"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -151.0073,
+    63.0694
+   ],
+   "detail": "Amérique du Nord · Chaîne d'Alaska · 6 190 m"
+  },
+  {
+   "code": "p-loga",
+   "nom": "Mont Logan",
+   "alias": [
+    "Logan"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -140.412,
+    60.5798
+   ],
+   "detail": "Amérique du Nord · Monts Saint-Élie · 5 959 m"
+  },
+  {
+   "code": "p-oriz",
+   "nom": "Pic d'Orizaba",
+   "alias": [
+    "Orizaba",
+    "Citlaltépetl"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -97.2783,
+    19.034
+   ],
+   "detail": "Amérique du Nord · Cordillère néovolcanique · 5 636 m"
+  },
+  {
+   "code": "p-popo",
+   "nom": "Popocatépetl",
+   "alias": [
+    "Popo"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -98.6226,
+    19.0342
+   ],
+   "detail": "Amérique du Nord · Cordillère néovolcanique · 5 426 m"
+  },
+  {
+   "code": "p-whit",
+   "nom": "Mont Whitney",
+   "alias": [
+    "Whitney"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -118.2922,
+    36.5827
+   ],
+   "detail": "Amérique du Nord · Sierra Nevada · 4 421 m"
+  },
+  {
+   "code": "p-rain",
+   "nom": "Mont Rainier",
+   "alias": [
+    "Rainier",
+    "Tahoma"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -121.76,
+    46.85
+   ],
+   "detail": "Amérique du Nord · Chaîne des Cascades · 4 392 m"
+  },
+  {
+   "code": "p-kili",
+   "nom": "Kilimandjaro",
+   "alias": [
+    "Kibo",
+    "Uhuru Peak"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Afrique",
+   "geo": [
+    37.3533,
+    -3.0757
+   ],
+   "detail": "Afrique · volcan isolé · 5 895 m"
+  },
+  {
+   "code": "p-keny",
+   "nom": "Mont Kenya",
+   "alias": [
+    "Kirinyaga"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Afrique",
+   "geo": [
+    37.2999,
+    -0.1501
+   ],
+   "detail": "Afrique · volcan isolé · 5 199 m"
+  },
+  {
+   "code": "p-rasd",
+   "nom": "Ras Dashen",
+   "alias": [
+    "Ras Dejen"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Afrique",
+   "geo": [
+    38.3722,
+    13.2364
+   ],
+   "detail": "Afrique · Hauts plateaux d'Éthiopie · 4 550 m"
+  },
+  {
+   "code": "p-toub",
+   "nom": "Toubkal",
+   "alias": [
+    "Jbel Toubkal",
+    "Djebel Toubkal"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Afrique",
+   "geo": [
+    -7.9161,
+    31.0621
+   ],
+   "detail": "Afrique · Haut Atlas · 4 167 m"
+  },
+  {
+   "code": "p-emik",
+   "nom": "Emi Koussi",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Afrique",
+   "geo": [
+    18.5518,
+    19.7934
+   ],
+   "detail": "Afrique · Tibesti · 3 415 m"
+  },
+  {
+   "code": "p-elbr",
+   "nom": "Elbrouz",
+   "alias": [
+    "Elbrus"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Europe",
+   "geo": [
+    42.4392,
+    43.3552
+   ],
+   "detail": "Europe · Caucase · 5 642 m"
+  },
+  {
+   "code": "p-blan",
+   "nom": "Mont Blanc",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Europe",
+   "geo": [
+    6.865,
+    45.8337
+   ],
+   "detail": "Europe · Alpes · 4 806 m"
+  },
+  {
+   "code": "p-cerv",
+   "nom": "Cervin",
+   "alias": [
+    "Matterhorn"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Europe",
+   "geo": [
+    7.7296,
+    45.9382
+   ],
+   "detail": "Europe · Alpes · 4 478 m"
+  },
+  {
+   "code": "p-olym",
+   "nom": "Mont Olympe",
+   "alias": [
+    "Olympe"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Europe",
+   "geo": [
+    22.3583,
+    40.0856
+   ],
+   "detail": "Europe · Grèce · 2 917 m"
+  },
+  {
+   "code": "p-etna",
+   "nom": "Etna",
+   "alias": [
+    "Mont Etna"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Europe",
+   "geo": [
+    14.9951,
+    37.7551
+   ],
+   "detail": "Europe · Sicile · 3 357 m"
+  },
+  {
+   "code": "p-vesu",
+   "nom": "Vésuve",
+   "alias": [
+    "Mont Vésuve"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Europe",
+   "geo": [
+    14.4334,
+    40.8167
+   ],
+   "detail": "Europe · Campanie · 1 281 m"
+  },
+  {
+   "code": "p-teid",
+   "nom": "Teide",
+   "alias": [
+    "Pic du Teide"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Europe",
+   "geo": [
+    -16.6391,
+    28.2708
+   ],
+   "detail": "Europe · Canaries · 3 715 m"
+  },
+  {
+   "code": "p-arar",
+   "nom": "Mont Ararat",
+   "alias": [
+    "Ararat"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    44.3,
+    39.7001
+   ],
+   "detail": "Asie · Haut-plateau arménien · 5 137 m"
+  },
+  {
+   "code": "p-dama",
+   "nom": "Damavand",
+   "alias": [
+    "Mont Damavand"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    52.109,
+    35.9552
+   ],
+   "detail": "Asie · Elbourz · 5 610 m"
+  },
+  {
+   "code": "p-fuji",
+   "nom": "Mont Fuji",
+   "alias": [
+    "Fuji",
+    "Fuji-san",
+    "Fujiyama"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    138.7309,
+    35.3579
+   ],
+   "detail": "Asie · Honshū · 3 776 m"
+  },
+  {
+   "code": "p-kina",
+   "nom": "Kinabalu",
+   "alias": [
+    "Mont Kinabalu"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Asie",
+   "geo": [
+    116.55,
+    6.0834
+   ],
+   "detail": "Asie · Bornéo · 4 095 m"
+  },
+  {
+   "code": "p-vins",
+   "nom": "Massif Vinson",
+   "alias": [
+    "Mont Vinson",
+    "Vinson"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Antarctique",
+   "geo": [
+    -85.6337,
+    -78.5294
+   ],
+   "detail": "Antarctique · Monts Ellsworth · 4 892 m"
+  },
+  {
+   "code": "p-jaya",
+   "nom": "Puncak Jaya",
+   "alias": [
+    "Pyramide Carstensz",
+    "Carstensz"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Océanie",
+   "geo": [
+    137.1663,
+    -4.0777
+   ],
+   "detail": "Océanie · Nouvelle-Guinée · 4 884 m"
+  },
+  {
+   "code": "p-kosc",
+   "nom": "Mont Kosciuszko",
+   "alias": [
+    "Kosciuszko"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Océanie",
+   "geo": [
+    148.2632,
+    -36.4559
+   ],
+   "detail": "Océanie · Alpes australiennes · 2 228 m"
+  },
+  {
+   "code": "p-maun",
+   "nom": "Mauna Kea",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Océanie",
+   "geo": [
+    -155.4681,
+    19.8205
+   ],
+   "detail": "Océanie · Hawaï · 4 207 m"
+  },
+  {
+   "code": "p-cook",
+   "nom": "Aoraki / Mont Cook",
+   "alias": [
+    "Mont Cook",
+    "Aoraki"
+   ],
+   "domaine": "physique",
+   "categorie": "sommet",
+   "continent": "Océanie",
+   "geo": [
+    170.1411,
+    -43.5957
+   ],
+   "detail": "Océanie · Alpes du Sud · 3 724 m"
+  }
+ ]
+}

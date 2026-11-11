@@ -437,3 +437,14 @@ html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden;
 .sub.sahara-line { fill: none; stroke: var(--abyss); stroke-width: 1.2; stroke-dasharray: 4 4; stroke-opacity: .35; opacity: 1; pointer-events: none; }
 .pt.des-pt { --r: 5; }
 .deserts .zone.todo { fill: color-mix(in srgb, var(--lagoon) 38%, var(--land)); }
+
+/* ---------- Chaînes de montagnes : comme les déserts, avec un contour épais qui garde les chaînes fines visibles ---------- */
+.reliefs .land { fill: var(--land-off); stroke: var(--border-land); stroke-width: .5; vector-effect: non-scaling-stroke; pointer-events: none; }
+.reliefs .zone.rng { stroke-width: 2.5; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.reliefs .zone.rng.todo { fill: color-mix(in srgb, var(--lagoon) 38%, var(--land)); stroke: color-mix(in srgb, var(--lagoon) 38%, var(--land)); }
+.reliefs .zone.rng.found { stroke: var(--found); }
+.reliefs .zone.rng.missed { stroke: var(--missed); }
+.reliefs.reveal .zone.rng.todo, .reveal .zone.rng.todo { stroke: var(--missed); }
+.reliefs .zone.rng.off { stroke: var(--land); }
+.sub.group-line { fill: none; stroke: var(--abyss); stroke-width: 1.2; stroke-dasharray: 4 4; stroke-opacity: .35; opacity: 1; pointer-events: none; }
+.pt.rng-pt { --r: 5.5; }

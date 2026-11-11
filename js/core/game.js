@@ -112,7 +112,7 @@ export class Game {
       ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images, head: this.def.case || null, mask: this.def.masque || null, style: this.def.style || '' })
       : buildMap(host, this.mapSvg, {
         codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
-        onTap: tap, label: this.def.titre, style: this.def.style,
+        onTap: tap, label: this.def.titre, style: this.def.style, zoomMax: this.def.zoomMax || 60,
         tapNeedsSingle: () => this.cfg.mech === 'tap' && !this.over && !this.study,
       });
     this.toastEl = el('div', 'toast');

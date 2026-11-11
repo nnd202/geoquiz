@@ -1,0 +1,1150 @@
+{
+ "id": "chaines",
+ "titre": "Chaînes de montagnes",
+ "items": [
+  {
+   "code": "r-alpe",
+   "nom": "Alpes",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    7.26,
+    45.89
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-pyre",
+   "nom": "Pyrénées",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    0.746,
+    42.729
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-apen",
+   "nom": "Apennins",
+   "alias": [
+    "Apennin"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    13.159,
+    42.576
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-carp",
+   "nom": "Carpates",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    24.54,
+    47.404
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-tatr",
+   "nom": "Tatras",
+   "alias": [
+    "Monts Tatras",
+    "Tatra"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    20.355,
+    49.441
+   ],
+   "detail": "Europe · fait partie : Carpates"
+  },
+  {
+   "code": "r-tran",
+   "nom": "Alpes de Transylvanie",
+   "alias": [
+    "Carpates méridionales"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    24.132,
+    45.249
+   ],
+   "detail": "Europe · fait partie : Carpates"
+  },
+  {
+   "code": "r-scan",
+   "nom": "Alpes scandinaves",
+   "alias": [
+    "Monts scandinaves",
+    "Kjølen"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    13.014,
+    64.567
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-cauc",
+   "nom": "Caucase",
+   "alias": [
+    "Grand Caucase"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    44.334,
+    42.718
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-pcau",
+   "nom": "Petit Caucase",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    45.252,
+    40.658
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-oura",
+   "nom": "Oural",
+   "alias": [
+    "Monts Oural"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    58.637,
+    59.893
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-balk",
+   "nom": "Balkan",
+   "alias": [
+    "Grand Balkan",
+    "Monts Balkan",
+    "Stara Planina"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    25.008,
+    43.216
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-dina",
+   "nom": "Alpes dinariques",
+   "alias": [
+    "Dinarides"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    18.318,
+    44.019
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-pind",
+   "nom": "Pinde",
+   "alias": [
+    "Massif du Pinde"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    20.713,
+    39.934
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-cant",
+   "nom": "Cordillère Cantabrique",
+   "alias": [
+    "Monts Cantabriques"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    -4.666,
+    43.053
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-snes",
+   "nom": "Sierra Nevada",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    -3.311,
+    37.328
+   ],
+   "detail": "Europe · chaîne de montagnes",
+   "pays": "Espagne"
+  },
+  {
+   "code": "r-jura",
+   "nom": "Jura",
+   "alias": [
+    "Massif du Jura"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    6.279,
+    46.857
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-vosg",
+   "nom": "Vosges",
+   "alias": [
+    "Massif des Vosges"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    7.169,
+    48.8
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-mcen",
+   "nom": "Massif central",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    3.187,
+    44.854
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-arde",
+   "nom": "Ardenne",
+   "alias": [
+    "Ardennes"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    5.147,
+    50.002
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-sude",
+   "nom": "Sudètes",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    16.4,
+    50.642
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-gram",
+   "nom": "Monts Grampians",
+   "alias": [
+    "Grampians"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Europe",
+   "geo": [
+    -4.318,
+    56.529
+   ],
+   "detail": "Europe · chaîne de montagnes"
+  },
+  {
+   "code": "r-atla",
+   "nom": "Atlas",
+   "alias": [
+    "Monts de l'Atlas"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    -6.576,
+    32.8
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-hatl",
+   "nom": "Haut Atlas",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    -6.017,
+    31.847
+   ],
+   "detail": "Afrique · fait partie : Atlas"
+  },
+  {
+   "code": "r-matl",
+   "nom": "Moyen Atlas",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    -4.564,
+    33.464
+   ],
+   "detail": "Afrique · fait partie : Atlas"
+  },
+  {
+   "code": "r-aatl",
+   "nom": "Anti-Atlas",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    -7.552,
+    30.08
+   ],
+   "detail": "Afrique · fait partie : Atlas"
+  },
+  {
+   "code": "r-satl",
+   "nom": "Atlas saharien",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    1.68,
+    33.768
+   ],
+   "detail": "Afrique · fait partie : Atlas"
+  },
+  {
+   "code": "r-tatl",
+   "nom": "Atlas tellien",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    0.022,
+    35.326
+   ],
+   "detail": "Afrique · fait partie : Atlas"
+  },
+  {
+   "code": "r-rif",
+   "nom": "Rif",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    -4.229,
+    35.006
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-hogg",
+   "nom": "Hoggar",
+   "alias": [
+    "Ahaggar"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    5.369,
+    24.323
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-tibe",
+   "nom": "Tibesti",
+   "alias": [
+    "Massif du Tibesti"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    17.684,
+    21.777
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-air",
+   "nom": "Aïr",
+   "alias": [
+    "Massif de l'Aïr"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    8.761,
+    18.893
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-drak",
+   "nom": "Drakensberg",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    30.681,
+    -28.031
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-rwen",
+   "nom": "Rwenzori",
+   "alias": [
+    "Ruwenzori",
+    "Monts de la Lune"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    30.015,
+    0.554
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-ethi",
+   "nom": "Hauts plateaux d'Éthiopie",
+   "alias": [
+    "Plateau éthiopien",
+    "Massif éthiopien"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Afrique",
+   "geo": [
+    37.342,
+    10.895
+   ],
+   "detail": "Afrique · chaîne de montagnes"
+  },
+  {
+   "code": "r-hima",
+   "nom": "Himalaya",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    80.47,
+    30.543
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-kara",
+   "nom": "Karakoram",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    77.632,
+    35.523
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-hind",
+   "nom": "Hindou Kouch",
+   "alias": [
+    "Hindu Kush"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    71.201,
+    35.838
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-pami",
+   "nom": "Pamir",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    74.071,
+    38.293
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-tian",
+   "nom": "Tian Shan",
+   "alias": [
+    "Tianshan"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    78.764,
+    41.956
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-kunl",
+   "nom": "Kunlun",
+   "alias": [
+    "Monts Kunlun",
+    "Cordillère du Kunlun"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    86.281,
+    36.399
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-alta",
+   "nom": "Altaï",
+   "alias": [
+    "Monts Altaï"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    90.104,
+    47.831
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-saia",
+   "nom": "Monts Saïan",
+   "alias": [
+    "Saïan"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    97.147,
+    53.508
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-khan",
+   "nom": "Khangaï",
+   "alias": [
+    "Monts Khangaï"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    99.811,
+    47.136
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-zagr",
+   "nom": "Zagros",
+   "alias": [
+    "Monts Zagros"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    50.496,
+    31.458
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-elbo",
+   "nom": "Elbourz",
+   "alias": [
+    "Alborz"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    53.861,
+    36.609
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-taur",
+   "nom": "Taurus",
+   "alias": [
+    "Monts Taurus"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    33.073,
+    36.957
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-pont",
+   "nom": "Chaîne pontique",
+   "alias": [
+    "Monts Pontiques",
+    "Alpes pontiques"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    36.383,
+    41.027
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-kope",
+   "nom": "Kopet-Dag",
+   "alias": [
+    "Kopet Dag"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    57.987,
+    37.794
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-liba",
+   "nom": "Mont-Liban",
+   "alias": [
+    "Mont Liban",
+    "Monts du Liban"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    35.838,
+    33.886
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-asir",
+   "nom": "Monts Asir",
+   "alias": [
+    "Asir"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    42.644,
+    18.94
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-gocc",
+   "nom": "Ghâts occidentaux",
+   "alias": [
+    "Ghats occidentaux"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    74.385,
+    15.81
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-gori",
+   "nom": "Ghâts orientaux",
+   "alias": [
+    "Ghats orientaux"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    79.343,
+    15.964
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-arak",
+   "nom": "Arakan Yoma",
+   "alias": [
+    "Chaîne de l'Arakan",
+    "Arakan"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    94.593,
+    19.211
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-anna",
+   "nom": "Cordillère annamitique",
+   "alias": [
+    "Chaîne annamitique",
+    "Truong Son"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    106.728,
+    16.116
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-qinl",
+   "nom": "Qinling",
+   "alias": [
+    "Monts Qinling"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    109.267,
+    33.724
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-khin",
+   "nom": "Grand Khingan",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    121.308,
+    48.535
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-stan",
+   "nom": "Monts Stanovoï",
+   "alias": [
+    "Stanovoï"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    130.142,
+    55.602
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-verk",
+   "nom": "Monts de Verkhoïansk",
+   "alias": [
+    "Verkhoïansk"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    128.234,
+    66.749
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-tche",
+   "nom": "Monts Tcherski",
+   "alias": [
+    "Tcherski"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    140.239,
+    66.594
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-sikh",
+   "nom": "Sikhote-Aline",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Asie",
+   "geo": [
+    137.644,
+    47.577
+   ],
+   "detail": "Asie · chaîne de montagnes"
+  },
+  {
+   "code": "r-rock",
+   "nom": "Rocheuses",
+   "alias": [
+    "Montagnes Rocheuses"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -114.468,
+    47.476
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-appa",
+   "nom": "Appalaches",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -76.792,
+    40.952
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-casc",
+   "nom": "Chaîne des Cascades",
+   "alias": [
+    "Cascades"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -121.793,
+    45.555
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-snca",
+   "nom": "Sierra Nevada",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -119.612,
+    37.733
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes",
+   "pays": "États-Unis"
+  },
+  {
+   "code": "r-cote",
+   "nom": "Chaîne Côtière",
+   "alias": [
+    "Coast Mountains"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -128.857,
+    55.004
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-alas",
+   "nom": "Chaîne d'Alaska",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -151.952,
+    62.608
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-broo",
+   "nom": "Chaîne Brooks",
+   "alias": [
+    "Brooks"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -150.767,
+    69.065
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-mack",
+   "nom": "Monts Mackenzie",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -128.284,
+    62.811
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-smoc",
+   "nom": "Sierra Madre occidentale",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -106.979,
+    25.97
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-smor",
+   "nom": "Sierra Madre orientale",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -100.619,
+    25.031
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-smsu",
+   "nom": "Sierra Madre du Sud",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Nord",
+   "geo": [
+    -99.999,
+    18.327
+   ],
+   "detail": "Amérique du Nord · chaîne de montagnes"
+  },
+  {
+   "code": "r-ande",
+   "nom": "Andes",
+   "alias": [
+    "Cordillère des Andes"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -66.717,
+    -21.028
+   ],
+   "detail": "Amérique du Sud · chaîne de montagnes"
+  },
+  {
+   "code": "r-guya",
+   "nom": "Massif des Guyanes",
+   "alias": [
+    "Plateau des Guyanes",
+    "Bouclier guyanais"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Amérique du Sud",
+   "geo": [
+    -63.083,
+    5.453
+   ],
+   "detail": "Amérique du Sud · chaîne de montagnes"
+  },
+  {
+   "code": "r-aust",
+   "nom": "Cordillère australienne",
+   "alias": [
+    "Great Dividing Range"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Océanie",
+   "geo": [
+    149.711,
+    -25.242
+   ],
+   "detail": "Océanie · chaîne de montagnes"
+  },
+  {
+   "code": "r-aalp",
+   "nom": "Alpes australiennes",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Océanie",
+   "geo": [
+    148.306,
+    -36.551
+   ],
+   "detail": "Océanie · fait partie : Cordillère australienne"
+  },
+  {
+   "code": "r-asud",
+   "nom": "Alpes du Sud",
+   "alias": [],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Océanie",
+   "geo": [
+    170.072,
+    -43.71
+   ],
+   "detail": "Océanie · chaîne de montagnes"
+  },
+  {
+   "code": "r-ngui",
+   "nom": "Chaîne centrale de Nouvelle-Guinée",
+   "alias": [
+    "Cordillère centrale",
+    "Chaîne centrale"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Océanie",
+   "geo": [
+    144.826,
+    -6.406
+   ],
+   "detail": "Océanie · chaîne de montagnes"
+  },
+  {
+   "code": "r-tant",
+   "nom": "Chaîne Transantarctique",
+   "alias": [
+    "Monts Transantarctiques"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Antarctique",
+   "geo": [
+    -73.233,
+    -84.76
+   ],
+   "detail": "Antarctique · chaîne de montagnes"
+  },
+  {
+   "code": "r-ells",
+   "nom": "Monts Ellsworth",
+   "alias": [
+    "Ellsworth"
+   ],
+   "domaine": "physique",
+   "categorie": "relief",
+   "continent": "Antarctique",
+   "geo": [
+    -83.813,
+    -79.23
+   ],
+   "detail": "Antarctique · chaîne de montagnes"
+  }
+ ]
+}

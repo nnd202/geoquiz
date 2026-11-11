@@ -457,6 +457,48 @@
    ],
    "nb": 40,
    "reveler": true
+  },
+  "chaines": {
+   "titre": "Chaînes de montagnes",
+   "fichier": "data/chaines.json",
+   "carte": "maps/chaines.svg",
+   "prefixe": "chn",
+   "etiquette": "nom",
+   "style": "reliefs",
+   "calques": [
+    "terres",
+    "contours-ensembles"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Zone → nom"
+    }
+   ],
+   "nb": 79,
+   "reveler": true
+  },
+  "sommets": {
+   "titre": "Grands sommets",
+   "fichier": "data/sommets.json",
+   "carte": "maps/sommets.svg",
+   "prefixe": "som",
+   "etiquette": "nom",
+   "style": "reliefs",
+   "calques": [
+    "terres"
+   ],
+   "sens": [
+    {
+     "demande": "zone",
+     "reponse": "nom",
+     "label": "Point → nom"
+    }
+   ],
+   "nb": 39,
+   "reveler": true,
+   "zoomMax": 400
   }
  },
  "sections": [
@@ -501,6 +543,14 @@
     {
      "nom": "Déserts",
      "jeu": "deserts"
+    },
+    {
+     "nom": "Chaînes de montagnes",
+     "jeu": "chaines"
+    },
+    {
+     "nom": "Sommets",
+     "jeu": "sommets"
     }
    ]
   },
