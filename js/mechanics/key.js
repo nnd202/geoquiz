@@ -53,6 +53,16 @@ function judgeLetter(g) {
   const p = k.pattern;
   reset(g);
   if (!p || g.over || g.paused) return;
+  if (g.practice) {
+    // Entraînement : juste → petite onde verte et case suivante (en boucle), sans rien compter.
+    if (p === g.cur.morse) {
+      g.board.pulse(g.cur.code);
+      g.toast(`${g.cur.nom} ✓`);
+      return moveTo(g, (g.pos + 1) % g.order.length);
+    }
+    const got = BY_PATTERN[p];
+    return g.toast(`Reçu ${pretty(p)}${got ? ` (${got})` : ''}`);
+  }
   if (p === g.cur.morse) return g.validate(g.cur);
   g.errors++;
   const got = BY_PATTERN[p];
@@ -110,6 +120,7 @@ export default {
   typing: false,
   hasPrompt: false,
   keyer: true,
+  practice: true, // aussi actif en mode étude
   start(g) {
     for (const d of g.all) BY_PATTERN[d.morse] = d.nom;
     g.order = g.all.filter(d => g.inPlay.has(d.code));
@@ -145,6 +156,6 @@ export default {
   },
   tap(g, code) {
     const p = g.order.findIndex(d => d.code === code);
-    if (p >= 0 && !g.found.has(code)) { reset(g); moveTo(g, p); }
+    if (p >= 0 && (g.practice || !g.found.has(code))) { reset(g); moveTo(g, p); }
   },
 };

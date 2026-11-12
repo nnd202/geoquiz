@@ -80,6 +80,8 @@ export class Game {
     $('board').classList.toggle('study', !!study);
     if (study) {
       this.board.showLabels(this.rev === 'nom' ? this.items : this.items.map(it => ({ ...it, nom: it[this.rev] })), this.def.etiquette);
+      // Entraînement libre (morse : émettre) : manipulateur et curseur actifs, sans score ni temps.
+      if (mech.practice) { this.practice = true; this.inPlay = new Set(this.all.map(d => d.code)); mech.start(this); }
       if (this.def.legende && cfg.support !== 'grid') {
         // Légende repliée derrière un bouton : elle s'ouvre au toucher et se replie seule après 5 s.
         const lg = el('div', 'legend'); lg.hidden = true;
@@ -188,6 +190,7 @@ export class Game {
 
   onTap(code) {
     if (this.paused) return;
+    if (this.practice) return this.mech.tap(this, code);
     if (this.study || this.over) return this.showInfo(code);
     // Pendant la partie, toucher un élément déjà trouvé rappelle discrètement son nom.
     if (this.found.has(code)) {
