@@ -23,7 +23,7 @@ export class Game {
     this.last = null; // réponse précédente (départage des homonymes)
     this.all = data.items;
     // Grille mélangée à chaque partie (morse : l'ordre ne doit pas souffler la réponse) ; ordre des données en étude.
-    if (def.melange) this.all = study ? this.all.slice() : shuffle(this.all.slice());
+    if (def.melange) this.all = study || cfg.alpha ? this.all.slice() : shuffle(this.all.slice()); // A→Z puis 1→0 en ordre alphabétique
     // Grille de mots (capitales : le pays dans la case) : ordre alphabétique français de la case.
     else if (def.case) this.all = this.all.slice().sort((a, b) => a[def.case].localeCompare(b[def.case], 'fr'));
     this.rev = def.revele || 'nom'; // ce qui s'inscrit dans la case une fois trouvée

@@ -28,11 +28,13 @@ const canRandom = q => CAT.jeux[q.jeu].nb > CAT.options.seuilHasard;
 function optsOf(q) {
   const o = store.ui.opts[quizKey(q)] || {};
   // Curseur : choix mémorisé, sinon réglage par défaut du quiz (« curseur » dans le catalogue).
-  return { random: !!o.random && canRandom(q), click: !!o.click, cursor: q.support === 'grid' && !!(o.cursor ?? q.curseur) };
+  return { random: !!o.random && canRandom(q), click: !!o.click, cursor: q.support === 'grid' && !!(o.cursor ?? q.curseur), alpha: !!q.ordre && !!o.alpha };
 }
 function cfgOf(q, o = optsOf(q)) {
   // Un quiz peut imposer sa mécanique (morse : manipulateur, écoute).
-  return { jeu: q.jeu, support: q.support || 'map', mech: q.mecanique || (o.click ? 'tap' : o.cursor ? 'cur' : 'all'), n: o.random ? CAT.options.hasard : 0 };
+  return { jeu: q.jeu, support: q.support || 'map', mech: q.mecanique || (o.click ? 'tap' : o.cursor ? 'cur' : 'all'), n: o.random ? CAT.options.hasard : 0,
+    // Ordre de la grille (hors identifiant de variante : même historique) : alphabétique seulement en « Tous ».
+    alpha: o.alpha && !o.random };
 }
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
 const MECH_LABEL = { key: 'manipulateur', ear: 'à l’oreille', bwrite: 'écriture' };
@@ -173,6 +175,7 @@ function openSheet(q) {
       seg('Réponse', 'click', [[false, 'Je tape les noms'], [true, q.support === 'grid' ? 'Je touche la case' : 'Je touche la carte']]);
       if (q.support === 'grid' && !o.click) seg('Grille', 'cursor', [[false, 'Libre'], [true, 'Curseur']]);
     }
+    if (q.ordre && !o.random) seg('Ordre', 'alpha', [[false, 'Au hasard'], [true, 'Alphabétique']]);
 
     const id = variantId(cfgOf(q, o));
     const b = bestOf(id);

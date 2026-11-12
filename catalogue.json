@@ -678,7 +678,8 @@
      "nom": "Morse : émettre",
      "jeu": "morse-emettre",
      "support": "grid",
-     "mecanique": "key"
+     "mecanique": "key",
+     "ordre": true
     },
     {
      "nom": "Morse : écouter",
