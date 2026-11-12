@@ -534,6 +534,20 @@
    "prefixe": "bre",
    "case": "nom",
    "revele": "signe"
+  },
+  "morse-libre": {
+   "titre": "Morse : transmettre",
+   "fichier": "data/morse-signes.json",
+   "prefixe": "mtr",
+   "etiquette": "nom",
+   "nb": 50,
+   "sens": [
+    {
+     "demande": "code",
+     "reponse": "nom",
+     "label": "Signe → texte"
+    }
+   ]
   }
  },
  "sections": [
@@ -680,6 +694,13 @@
      "support": "grid",
      "mecanique": "key",
      "ordre": true
+    },
+    {
+     "nom": "Morse : transmettre",
+     "jeu": "morse-libre",
+     "support": "free",
+     "mecanique": "key",
+     "libre": true
     },
     {
      "nom": "Morse : écouter",

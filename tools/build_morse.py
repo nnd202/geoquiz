@@ -21,4 +21,14 @@ for ch, m in MORSE.items():
                   "morse": m, "signe": pretty(m), "detail": f"{kind} {ch} · {pretty(m)}"})
 json.dump({"id": "morse", "titre": "Code morse", "items": items},
           open(f"{root}/data/morse.json", "w"), ensure_ascii=False, indent=1)
-print(len(items), "signes")
+
+# Transmission libre : les 36 signes plus la ponctuation et le « é » de la recommandation UIT.
+PONCT = {
+    ".": ".-.-.-", ",": "--..--", ":": "---...", "?": "..--..", "'": ".----.", "-": "-....-", "/": "-..-.",
+    "(": "-.--.", ")": "-.--.-", '"': ".-..-.", "=": "-...-", "+": ".-.-.", "@": ".--.-.", "É": "..-..",
+}
+signes = items + [{"code": f"m-p{i}", "nom": ch, "alias": [], "domaine": "code", "morse": m, "signe": pretty(m),
+                   "detail": f"{ch} · {pretty(m)}"} for i, (ch, m) in enumerate(PONCT.items())]
+json.dump({"id": "morse-signes", "titre": "Code morse (signes complets)", "items": signes},
+          open(f"{root}/data/morse-signes.json", "w"), ensure_ascii=False, indent=1)
+print(len(items), "signes pour les quiz ·", len(signes), "pour la transmission libre")

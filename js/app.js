@@ -24,7 +24,7 @@ async function loadJeu(key) {
  * Un quiz du catalogue = un jeu + un support. Ses options (tirage, mode clic) donnent la variante jouée,
  * et chaque variante a ses propres stats et records. */
 const quizKey = q => `${q.jeu}|${q.support || 'map'}`;
-const canRandom = q => CAT.jeux[q.jeu].nb > CAT.options.seuilHasard;
+const canRandom = q => !q.libre && CAT.jeux[q.jeu].nb > CAT.options.seuilHasard;
 function optsOf(q) {
   const o = store.ui.opts[quizKey(q)] || {};
   // Curseur : choix mémorisé, sinon réglage par défaut du quiz (« curseur » dans le catalogue).
@@ -37,8 +37,8 @@ function cfgOf(q, o = optsOf(q)) {
     alpha: o.alpha && !o.random };
 }
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
-const MECH_LABEL = { key: 'manipulateur', ear: 'à l’oreille', bwrite: 'écriture' };
-const optsLabel = (o, q = {}) => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
+const MECH_LABEL = { free: 'transmission libre', key: 'manipulateur', ear: 'à l’oreille', bwrite: 'écriture' };
+const optsLabel = (o, q = {}) => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.libre ? 'free' : q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
 
 async function play(q, study = false) {
   const cfg = cfgOf(q);
@@ -189,7 +189,7 @@ function openSheet(q) {
     const go = el('button', 'btn', 'Jouer'); go.addEventListener('click', () => play(q));
     const st = el('button', 'btn ghost', 'Étudier'); st.addEventListener('click', () => play(q, true));
     const x = el('button', 'btn ghost', 'Fermer'); x.addEventListener('click', () => closeSheet());
-    r.append(go, st, x);
+    if (q.libre) { go.textContent = 'Commencer'; r.append(go, x); } else r.append(go, st, x);
     s.append(r);
     if (hist.length) {
       s.append(el('h2', null, `Historique · ${optsLabel(o, q)}`));

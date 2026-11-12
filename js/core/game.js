@@ -69,8 +69,8 @@ export class Game {
     this.revealOn = false; this.revealUsed = false;
     $('g-reveal').hidden = study || !this.def.reveler;
     $('g-reveal').setAttribute('aria-pressed', 'false');
-    $('g-clock').hidden = study; $('g-score').hidden = study;
-    $('g-pause').hidden = study; $('g-stop').hidden = study;
+    $('g-clock').hidden = study; $('g-score').hidden = study || !!this.free;
+    $('g-pause').hidden = study || !!this.free; $('g-stop').hidden = study;
     this.updatePauseBtn();
     $('g-prompt').hidden = study || !mech.hasPrompt;
     $('g-prompt').style.visibility = '';
@@ -111,6 +111,7 @@ export class Game {
     const host = $('board');
     host.textContent = '';
     const tap = code => this.onTap(code);
+    if (this.cfg.support === 'free') return this.buildFree(host);
     this.board = this.cfg.support === 'grid'
       ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images, head: this.def.case || null, mask: this.def.masque || null, style: this.def.style || '' })
       : buildMap(host, this.mapSvg, {
@@ -128,6 +129,33 @@ export class Game {
         n.textContent = ''; n.append(cell);
       }
     }
+    this.toastEl = el('div', 'toast');
+    host.append(this.toastEl);
+  }
+
+  // Transmission libre (morse) : une zone de texte où s'écrit ce qui est transmis, sans réponse attendue.
+  buildFree(host) {
+    const box = el('div', 'freebox');
+    const out = el('div', 'free-out');
+    out.setAttribute('aria-live', 'polite');
+    const ph = el('span', 'free-ph', 'Transmettez : le texte s’écrit ici.');
+    out.append(ph);
+    const row = el('div', 'row');
+    const back = el('button', 'btn small ghost', 'Effacer'), wipe = el('button', 'btn small ghost', 'Tout effacer');
+    back.type = wipe.type = 'button';
+    row.append(back, wipe);
+    box.append(out, row);
+    host.append(box);
+    let text = '';
+    const render = () => { out.textContent = ''; if (text) out.append(el('span', null, text), el('i', 'caret')); else out.append(ph); };
+    this.free = {
+      write: ch => { text += ch; render(); },
+      space: () => { if (text && !text.endsWith(' ')) { text += ' '; render(); } },
+    };
+    back.addEventListener('click', () => { text = text.replace(/\s*.$/u, ''); render(); });
+    wipe.addEventListener('click', () => { text = ''; render(); });
+    const noop = () => {};
+    this.board = { mark: noop, pulse: noop, flash: noop, reveal: noop, relate: noop, setReveal: noop, setCursor: noop, select: noop, showLabels: noop };
     this.toastEl = el('div', 'toast');
     host.append(this.toastEl);
   }
@@ -225,13 +253,17 @@ export class Game {
    * Sans question tant que moins de 10 éléments sont trouvés ; au-delà, une confirmation dans la page. */
   // Sortie sans score : le temps de saisie est quand même compté dès 5 réponses trouvées.
   quitKeepingTime() {
-    if (!this.over && !this.study && this.found.size >= KEEP_TIME_FROM) {
+    // Transmission libre : tout le temps passé compte (à partir de 10 s).
+    if (this.free && !this.over && this.elapsed() >= 10000) {
+      addCancelled({ at: new Date().toISOString(), quiz: this.id, ms: Math.round(this.elapsed()), found: 0, libre: true });
+    } else if (!this.over && !this.study && this.found.size >= KEEP_TIME_FROM) {
       addCancelled({ at: new Date().toISOString(), quiz: this.id, ms: Math.round(this.elapsed()), found: this.found.size });
     }
     this.over = true;
     goHome();
   }
   cancel() {
+    if (this.free) return this.quitKeepingTime();
     if (this.over || this.study) return goHome();
     if ($('confirm')) return this.closeConfirm();
     if (this.found.size < CONFIRM_FROM) return this.quitKeepingTime();
@@ -290,6 +322,7 @@ export class Game {
 
   /* --- Fin --- */
   finish(reason) {
+    if (this.free) return this.quitKeepingTime();
     if (this.over) return;
     this.over = true;
     clearTimeout(this.waitTimer);

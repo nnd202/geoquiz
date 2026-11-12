@@ -3,7 +3,9 @@
 // après 3 unités de silence, la lettre est terminée et jugée.
 import { el } from '../core/dom.js';
 import { nextOpen, moveTo } from './cursor.js';
-import { toneOn, toneOff, unitMs, units, fmtU, pretty, morseCfg, DOT_MAX, DASH_MAX, LETTER_GAP } from '../core/morse.js';
+import { warmAudio, toneOn, toneOff, unitMs, units, fmtU, pretty, morseCfg, DOT_MAX, DASH_MAX, LETTER_GAP } from '../core/morse.js';
+
+const WORD_GAP = 7; // silence qui termine un mot (transmission libre)
 
 const BY_PATTERN = {}; // motif → lettre, pour dire ce qui a été reçu
 
@@ -53,6 +55,12 @@ function judgeLetter(g) {
   const p = k.pattern;
   reset(g);
   if (!p || g.over || g.paused) return;
+  if (g.free) {
+    // Transmission libre : le signe reçu s'écrit (ou un carré s'il est inconnu) ; après 7 unités de silence, une espace.
+    g.free.write(BY_PATTERN[p] || '□'); // signe inconnu : un carré, le « ? » étant lui-même un signe
+    k.wordTimer = setTimeout(() => g.free.space(), (WORD_GAP - LETTER_GAP) * unitMs());
+    return;
+  }
   if (g.practice) {
     // Entraînement : juste → petite onde verte et case suivante (en boucle), sans rien compter.
     if (p === g.cur.morse) {
@@ -73,8 +81,7 @@ function down(g, e) {
   e?.preventDefault?.();
   const k = g.k;
   if (g.over || g.paused || k.isDown) return;
-  clearTimeout(k.gapTimer); cancelAnimationFrame(k.raf);
-  // Silence qui vient de finir (entre deux signes d'une même lettre)
+  clearTimeout(k.gapTimer); clearTimeout(k.wordTimer); cancelAnimationFrame(k.raf);
   k.isDown = true; k.t0 = performance.now();
   k.btn.classList.add('on');
   toneOn();
@@ -124,6 +131,7 @@ export default {
   start(g) {
     for (const d of g.all) BY_PATTERN[d.morse] = d.nom;
     g.order = g.all.filter(d => g.inPlay.has(d.code));
+    warmAudio();
     g.k = { pattern: '', isDown: false, ...ui(g) };
     const b = g.k.btn;
     b.addEventListener('pointerdown', e => { b.setPointerCapture?.(e.pointerId); down(g, e); });
@@ -138,11 +146,11 @@ export default {
     };
     document.addEventListener('keydown', g.k.onKey);
     document.addEventListener('keyup', g.k.onKey);
-    moveTo(g, 0);
+    if (!g.free) moveTo(g, 0);
   },
   stop(g) {
     if (!g.k) return;
-    clearTimeout(g.k.gapTimer); cancelAnimationFrame(g.k.raf); toneOff();
+    clearTimeout(g.k.gapTimer); clearTimeout(g.k.wordTimer); cancelAnimationFrame(g.k.raf); toneOff();
     document.removeEventListener('keydown', g.k.onKey);
     document.removeEventListener('keyup', g.k.onKey);
     g.k.box.remove();

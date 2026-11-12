@@ -28,6 +28,9 @@ function audio() {
   return ctx;
 }
 
+// Prépare le son dès l'ouverture : sinon sa création, au premier appui, allonge ce premier appui.
+export function warmAudio() { audio(); }
+
 // Bip du manipulateur : tant que le bouton est appuyé.
 export function toneOn() {
   const c = audio(); if (!c) return;

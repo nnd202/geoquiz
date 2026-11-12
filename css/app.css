@@ -468,3 +468,11 @@ html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden;
 .grid.braille .cell.found .bcell.mini .bdot.on { background: #fff; }
 .grid.braille .cell.found .bcell.mini .bdot:not(.on) { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .35); }
 .grid.braille .n:has(.bcell) { font-size: 0; }
+
+/* ---------- Morse : transmission libre ---------- */
+.freebox { display: grid; align-content: start; gap: 10px; padding: 16px; height: 100%; box-sizing: border-box; }
+.free-out { min-height: 120px; padding: 16px; border-radius: 16px; background: var(--panel); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--abyss) 12%, transparent);
+  font: 500 30px/1.35 var(--f-num); letter-spacing: .06em; color: var(--abyss); overflow-wrap: anywhere; white-space: pre-wrap; }
+.free-ph { font: 400 15px var(--f-body); letter-spacing: 0; color: var(--ink-soft); }
+.free-out .caret { display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -.12em; background: var(--lagoon); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
