@@ -106,3 +106,11 @@ export function homonyms(items) {
 }
 
 export { toks };
+
+// Signes (morse) : comparaison caractère pour caractère, majuscules ignorées (« é » ≠ « e », « ? » compte).
+export function judgeExact(raw, candidates) {
+  const t = raw.trim().toLocaleUpperCase('fr');
+  if (!t) return null;
+  const item = candidates.find(d => d.nom.toLocaleUpperCase('fr') === t);
+  return item ? { item, when: 'now' } : { wrong: t };
+}

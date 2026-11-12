@@ -377,6 +377,132 @@
    "morse": "-----",
    "signe": "− − − − −",
    "detail": "Chiffre 0 · − − − − −"
+  },
+  {
+   "code": "m-p0",
+   "nom": ".",
+   "alias": [],
+   "domaine": "code",
+   "morse": ".-.-.-",
+   "signe": "· − · − · −",
+   "detail": "Point · · − · − · −"
+  },
+  {
+   "code": "m-p1",
+   "nom": ",",
+   "alias": [],
+   "domaine": "code",
+   "morse": "--..--",
+   "signe": "− − · · − −",
+   "detail": "Virgule · − − · · − −"
+  },
+  {
+   "code": "m-p2",
+   "nom": ":",
+   "alias": [],
+   "domaine": "code",
+   "morse": "---...",
+   "signe": "− − − · · ·",
+   "detail": "Deux-points · − − − · · ·"
+  },
+  {
+   "code": "m-p3",
+   "nom": "?",
+   "alias": [],
+   "domaine": "code",
+   "morse": "..--..",
+   "signe": "· · − − · ·",
+   "detail": "Point d'interrogation · · · − − · ·"
+  },
+  {
+   "code": "m-p4",
+   "nom": "'",
+   "alias": [],
+   "domaine": "code",
+   "morse": ".----.",
+   "signe": "· − − − − ·",
+   "detail": "Apostrophe · · − − − − ·"
+  },
+  {
+   "code": "m-p5",
+   "nom": "-",
+   "alias": [],
+   "domaine": "code",
+   "morse": "-....-",
+   "signe": "− · · · · −",
+   "detail": "Trait d'union · − · · · · −"
+  },
+  {
+   "code": "m-p6",
+   "nom": "/",
+   "alias": [],
+   "domaine": "code",
+   "morse": "-..-.",
+   "signe": "− · · − ·",
+   "detail": "Barre oblique · − · · − ·"
+  },
+  {
+   "code": "m-p7",
+   "nom": "(",
+   "alias": [],
+   "domaine": "code",
+   "morse": "-.--.",
+   "signe": "− · − − ·",
+   "detail": "Parenthèse ouvrante · − · − − ·"
+  },
+  {
+   "code": "m-p8",
+   "nom": ")",
+   "alias": [],
+   "domaine": "code",
+   "morse": "-.--.-",
+   "signe": "− · − − · −",
+   "detail": "Parenthèse fermante · − · − − · −"
+  },
+  {
+   "code": "m-p9",
+   "nom": "\"",
+   "alias": [],
+   "domaine": "code",
+   "morse": ".-..-.",
+   "signe": "· − · · − ·",
+   "detail": "Guillemets · · − · · − ·"
+  },
+  {
+   "code": "m-p10",
+   "nom": "=",
+   "alias": [],
+   "domaine": "code",
+   "morse": "-...-",
+   "signe": "− · · · −",
+   "detail": "Signe égal · − · · · −"
+  },
+  {
+   "code": "m-p11",
+   "nom": "+",
+   "alias": [],
+   "domaine": "code",
+   "morse": ".-.-.",
+   "signe": "· − · − ·",
+   "detail": "Signe plus · · − · − ·"
+  },
+  {
+   "code": "m-p12",
+   "nom": "@",
+   "alias": [],
+   "domaine": "code",
+   "morse": ".--.-.",
+   "signe": "· − − · − ·",
+   "detail": "Arobase · · − − · − ·"
+  },
+  {
+   "code": "m-p13",
+   "nom": "É",
+   "alias": [],
+   "domaine": "code",
+   "morse": "..-..",
+   "signe": "· · − · ·",
+   "detail": "E accent aigu · · · − · ·"
   }
  ]
 }

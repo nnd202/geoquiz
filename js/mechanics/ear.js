@@ -1,5 +1,5 @@
 // Morse, écouter : l'app joue la lettre de la case en surbrillance, on tape la lettre entendue.
-import { judgeName } from '../core/validate.js';
+import { judgeName, judgeExact } from '../core/validate.js';
 import { nextOpen, moveTo } from './cursor.js';
 import { playPattern } from '../core/morse.js';
 
@@ -22,7 +22,7 @@ export default {
   },
   stop() { clearTimeout(timer); },
   judge(g, raw) {
-    const r = judgeName(raw.trim(), [g.cur], { all: g.all, found: g.found, notes: false });
+    const r = g.def.exact ? judgeExact(raw, [g.cur]) : judgeName(raw.trim(), [g.cur], { all: g.all, found: g.found, notes: false });
     if (r?.item) return { item: r.item, when: 'now' };
     // Un seul caractère attendu : une autre réponse est une erreur, effacée pour réessayer.
     if (raw.trim()) {

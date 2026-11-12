@@ -388,7 +388,7 @@
   "morse-lire": {
    "fichier": "data/morse.json",
    "etiquette": "nom",
-   "nb": 36,
+   "nb": 50,
    "melange": true,
    "sens": [
     {
@@ -400,12 +400,13 @@
    "titre": "Morse : lire",
    "prefixe": "mol",
    "case": "signe",
-   "style": "morse"
+   "style": "morse",
+   "exact": true
   },
   "morse-emettre": {
    "fichier": "data/morse.json",
    "etiquette": "nom",
-   "nb": 36,
+   "nb": 50,
    "melange": true,
    "sens": [
     {
@@ -418,12 +419,13 @@
    "prefixe": "moe",
    "case": "nom",
    "revele": "signe",
-   "style": "morse"
+   "style": "morse",
+   "exact": true
   },
   "morse-ecouter": {
    "fichier": "data/morse.json",
    "etiquette": "nom",
-   "nb": 36,
+   "nb": 50,
    "melange": true,
    "sens": [
     {
@@ -435,7 +437,8 @@
    "titre": "Morse : écouter",
    "prefixe": "moc",
    "masque": "♪",
-   "style": "morse"
+   "style": "morse",
+   "exact": true
   },
   "deserts": {
    "titre": "Déserts du monde",
@@ -537,7 +540,7 @@
   },
   "morse-libre": {
    "titre": "Morse : transmettre",
-   "fichier": "data/morse-signes.json",
+   "fichier": "data/morse.json",
    "prefixe": "mtr",
    "etiquette": "nom",
    "nb": 50,
@@ -547,7 +550,8 @@
      "reponse": "nom",
      "label": "Signe → texte"
     }
-   ]
+   ],
+   "exact": true
   }
  },
  "sections": [

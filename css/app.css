@@ -476,3 +476,14 @@ html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden;
 .free-ph { font: 400 15px var(--f-body); letter-spacing: 0; color: var(--ink-soft); }
 .free-out .caret { display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -.12em; background: var(--lagoon); animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
+/* Jauge des mots (transmission libre) : 0 à 8 unités, repères à 3 (lettre) et 7 (espace) */
+.wgauge { position: relative; height: 14px; border-radius: 7px; overflow: hidden; background: color-mix(in srgb, var(--abyss) 8%, var(--panel)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--abyss) 14%, transparent); }
+.wgauge .w-fill { position: absolute; left: 0; top: 2px; bottom: 2px; width: 0; border-radius: 0 5px 5px 0; background: color-mix(in srgb, var(--ink-soft) 70%, var(--panel)); }
+.wgauge .w-fill[data-s="letter"] { background: var(--lagoon); }
+.wgauge .w-fill[data-s="word"] { background: var(--found); }
+.wgauge .w-tick { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: color-mix(in srgb, var(--abyss) 40%, transparent); z-index: 1; }
+.wgauge .t3 { left: 37.5%; } .wgauge .t7 { left: 87.5%; }
+.wgauge-k { position: relative; height: 14px; font-size: 11px; color: var(--ink-soft); margin-bottom: 4px; }
+.wgauge-k span { position: absolute; transform: translateX(-50%); }
+.wgauge-k .k3 { left: 37.5%; } .wgauge-k .k7 { left: 87.5%; }
+.grid.morse .n { font-size: 15px; }

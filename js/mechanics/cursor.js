@@ -1,6 +1,6 @@
 // Grille en curseur : une seule case attend la réponse. Juste → case suivante non trouvée ;
 // toucher une autre case y déplace le curseur ; au bout de la grille, retour aux cases restantes.
-import { judgeName } from '../core/validate.js';
+import { judgeName, judgeExact } from '../core/validate.js';
 
 // Prochaine case à faire après la position pos (en bouclant), ou null s'il n'en reste aucune.
 export function nextOpen(g, pos) {
@@ -27,6 +27,13 @@ export default {
     moveTo(g, 0);
   },
   judge(g, raw) {
+    if (g.def.exact) {
+      // Un seul signe attendu : un autre est une erreur, effacée pour réessayer.
+      const r = judgeExact(raw, [g.cur]);
+      if (!r || r.item) return r;
+      g.errors++; $answer().value = '';
+      return { note: `Pas ${r.wrong}` };
+    }
     return judgeName(raw, [g.cur], { all: g.all, found: g.found, notes: false });
   },
   validated(g) {

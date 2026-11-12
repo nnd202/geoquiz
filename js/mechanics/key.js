@@ -23,13 +23,24 @@ function ui(g) {
   const legend = el('div', 'gauge-k');
   legend.append(el('span', null, 'Silence'), el('span', null, 'Appui'));
   help.append(track, legend);
+  // Transmission libre : une seconde jauge, au-dessus, pour le silence entre lettres et mots :
+  // de 0 à 8 unités, repère à 3 (fin de lettre) et à 7 (fin de mot : espace).
+  let word = null;
+  if (g.free) {
+    const wt = el('div', 'wgauge');
+    word = el('b', 'w-fill');
+    wt.append(el('i', 'w-tick t3'), el('i', 'w-tick t7'), word);
+    const wk = el('div', 'wgauge-k');
+    wk.append(el('span', 'k3', 'lettre'), el('span', 'k7', 'espace'));
+    help.prepend(wt, wk);
+  }
   help.hidden = !morseCfg().aide;
   const btn = el('button', 'key-btn', 'Appuyer');
   btn.type = 'button';
   btn.setAttribute('aria-label', 'Manipulateur morse : appui court pour un point, long pour un trait');
   box.append(sig, help, btn);
   document.getElementById('game').insertBefore(box, document.getElementById('g-input'));
-  return { box, sig, help, btn, press, gap };
+  return { box, sig, help, btn, press, gap, word };
 }
 
 // Jauge : 1 unité = 10 % de la largeur ; chaque côté va jusqu'à 5 unités.
@@ -83,6 +94,8 @@ function down(g, e) {
   if (g.over || g.paused || k.isDown) return;
   clearTimeout(k.gapTimer); clearTimeout(k.wordTimer); cancelAnimationFrame(k.raf);
   k.isDown = true; k.t0 = performance.now();
+  cancelAnimationFrame(k.wraf);
+  if (k.word) { k.word.style.width = '0%'; k.word.dataset.s = ''; }
   k.btn.classList.add('on');
   toneOn();
   const live = () => {
@@ -119,6 +132,16 @@ function up(g) {
     k.raf = requestAnimationFrame(gapLive);
   };
   gapLive();
+  if (k.word) {
+    const wordLive = () => {
+      if (k.isDown) return;
+      const w = units(performance.now() - k.t1);
+      k.word.style.width = `${Math.min(w, 8) / 8 * 100}%`;
+      k.word.dataset.s = w >= WORD_GAP ? 'word' : w >= LETTER_GAP ? 'letter' : '';
+      if (w < 8) k.wraf = requestAnimationFrame(wordLive);
+    };
+    cancelAnimationFrame(k.wraf); wordLive();
+  }
   k.gapTimer = setTimeout(() => { cancelAnimationFrame(k.raf); judgeLetter(g); }, LETTER_GAP * unitMs());
 }
 
@@ -150,7 +173,7 @@ export default {
   },
   stop(g) {
     if (!g.k) return;
-    clearTimeout(g.k.gapTimer); clearTimeout(g.k.wordTimer); cancelAnimationFrame(g.k.raf); toneOff();
+    clearTimeout(g.k.gapTimer); clearTimeout(g.k.wordTimer); cancelAnimationFrame(g.k.raf); cancelAnimationFrame(g.k.wraf); toneOff();
     document.removeEventListener('keydown', g.k.onKey);
     document.removeEventListener('keyup', g.k.onKey);
     g.k.box.remove();
