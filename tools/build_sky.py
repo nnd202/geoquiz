@@ -4,8 +4,9 @@ Usage : python3 -I tools/build_sky.py <dossier des sources> <racine du dépôt>
 Sources (dossier sky/, projet d3-celestial, licence BSD) :
   constellations.json, constellations.bounds.json, constellations.lines.json, starnames.json, stars.6.json
 Projection : azimutale équidistante centrée sur chaque pôle céleste, de l'horizon de l'équateur au pôle.
-Vu du sol : ascension droite croissante dans le sens inverse des aiguilles d'une montre au nord, dans le sens
-des aiguilles au sud.
+Vu du sol (carte tenue au-dessus de la tête) : ascension droite croissante dans le sens des aiguilles d'une
+montre autour du pôle Nord céleste, dans le sens inverse autour du pôle Sud (le ciel tourne en sens inverse).
+Corrigé le 15 novembre 2026 : la carte était auparavant vue de l'extérieur, comme un globe (en miroir).
 """
 import json
 import math
@@ -31,7 +32,7 @@ def proj(hemi, lon, lat):
     """Coordonnées relatives au centre du disque (y vers le bas)."""
     r = (90 - lat if hemi == "N" else 90 + lat) / 90 * R
     a = math.radians(lon)
-    return (r * math.sin(a), r * math.cos(a)) if hemi == "N" else (-r * math.sin(a), r * math.cos(a))
+    return (-r * math.sin(a), r * math.cos(a)) if hemi == "N" else (r * math.sin(a), r * math.cos(a))
 
 
 def densify(ring, step=1.0):

@@ -89,7 +89,7 @@ const throttle = f => { let q = 0; return () => { if (!q) q = requestAnimationFr
 const PC = { N: [255, 260], S: [745, 260] }, PR = 238; // centres et rayon des disques de maps/ciel.svg
 function polXY(ra, dec) {
   const n = dec >= 0, r = (n ? 90 - dec : 90 + dec) / 90 * PR, a = ra * rad, [cx, cy] = PC[n ? 'N' : 'S'];
-  return [cx + (n ? 1 : -1) * r * Math.sin(a), cy + r * Math.cos(a), n];
+  return [cx + (n ? -1 : 1) * r * Math.sin(a), cy + r * Math.cos(a), n];
 }
 const svgEl = (t, a, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); p?.append(e); return e; };
 
