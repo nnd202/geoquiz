@@ -15,6 +15,10 @@ function load() {
   s.ui ||= {};
   s.ui.closed ||= [];       // sections repliées
   s.ui.opts ||= {};         // options choisies par quiz
+  // Lieux du Ciel mobile (nom, latitude, longitude au dixième de degré) : quelques villes au départ,
+  // modifiables ; gardés seulement sur l'appareil et dans le fichier de sauvegarde.
+  s.places ||= [{ nom: 'Paris', lat: 48.9, lon: 2.4 }, { nom: 'Reykjavik', lat: 64.1, lon: -21.9 },
+    { nom: 'Quito', lat: -0.2, lon: -78.5 }, { nom: 'Sydney', lat: -33.9, lon: 151.2 }];
   return s;
 }
 
@@ -75,7 +79,7 @@ export function globalStats(now = new Date()) {
 /* ---------- Sauvegarde ---------- */
 export function exportText() {
   return JSON.stringify({ app: 'geoquiz', version: 1, exportedAt: new Date().toISOString(),
-    attempts: store.attempts, sessions: store.sessions, pauses: store.pauses, reminderDays: store.reminderDays }, null, 1);
+    attempts: store.attempts, sessions: store.sessions, places: store.places, pauses: store.pauses, reminderDays: store.reminderDays }, null, 1);
 }
 
 export function markExported() { store.lastExport = new Date().toISOString(); store.snoozeUntil = null; save(); }
@@ -92,6 +96,13 @@ export function importText(text) {
   const seenS = new Set(store.sessions.map(a => a.at + a.quiz));
   for (const a of Array.isArray(d.sessions) ? d.sessions : []) {
     if (a && a.at && a.quiz && !seenS.has(a.at + a.quiz)) { store.sessions.push(a); seenS.add(a.at + a.quiz); }
+  }
+  // Lieux du Ciel mobile : ceux qui manquent sont ajoutés (un lieu du même nom reste tel quel).
+  const names = new Set(store.places.map(p => p.nom.toLocaleLowerCase('fr')));
+  for (const p of Array.isArray(d.places) ? d.places : []) {
+    if (p && typeof p.nom === 'string' && Number.isFinite(p.lat) && Number.isFinite(p.lon) && !names.has(p.nom.toLocaleLowerCase('fr'))) {
+      store.places.push({ nom: p.nom, lat: p.lat, lon: p.lon }); names.add(p.nom.toLocaleLowerCase('fr'));
+    }
   }
   save();
   return added;

@@ -6,6 +6,7 @@ import { writeToFolder } from './backup.js';
 import { keysOf } from './text.js';
 import { MECHANICS } from '../mechanics/index.js';
 import { brailleCell, setCell } from './braille.js';
+import { mountSky } from './sky.js';
 
 export const END = { time: 'Chrono écoulé', all: 'Tout trouvé', list: 'Liste terminée', stop: 'Terminer' };
 export const fmtLong = ms => { const s = Math.round(ms / 1000); return s >= 3600 ? `${Math.floor(s / 3600)} h ${String(Math.floor(s % 3600 / 60)).padStart(2, '0')}` : fmt(ms); };
@@ -18,8 +19,9 @@ let onLeave = () => {};
 export function onHome(f) { onLeave = f; }
 
 export class Game {
-  constructor({ cfg, name, id, def, data, mapSvg, study }) {
+  constructor({ cfg, name, id, def, data, mapSvg, study, sky = null }) {
     this.cfg = cfg; this.name = name; this.id = id; this.study = study; this.def = def;
+    this.sky = sky; // Ciel mobile : lieu, date, heure, carte (voir sky.js)
     this.last = null; // réponse précédente (départage des homonymes)
     this.all = data.items;
     // Grille mélangée à chaque partie (morse : l'ordre ne doit pas souffler la réponse) ; ordre des données en étude.
@@ -28,7 +30,9 @@ export class Game {
     else if (def.case) this.all = this.all.slice().sort((a, b) => a[def.case].localeCompare(b[def.case], 'fr'));
     this.rev = def.revele || 'nom'; // ce qui s'inscrit dans la case une fois trouvée
     // En mode étude, tout est montré, même pour un quiz « N au hasard ».
-    this.items = cfg.n && !study ? shuffle(this.all.slice()).slice(0, cfg.n) : this.all.slice();
+    // Ciel mobile : seuls les éléments qui se lèvent au moins une fois depuis le lieu choisi sont à trouver.
+    const pool = sky?.visible ? this.all.filter(d => sky.visible.has(d.code)) : this.all;
+    this.items = cfg.n && !study ? shuffle(pool.slice()).slice(0, cfg.n) : pool.slice();
     this.inPlay = new Set(this.items.map(d => d.code));
     this.found = new Set(); this.missed = new Set();
     this.queue = shuffle(this.items.slice());
@@ -105,20 +109,23 @@ export class Game {
     if (typing) setTimeout(() => inp.focus(), 50);
   }
 
-  dispose() { this.over = true; clearTimeout(this.waitTimer); this.mech.stop?.(this); }
+  dispose() { this.over = true; clearTimeout(this.waitTimer); this.mech.stop?.(this); this.board?.stop?.(); }
 
   buildBoard() {
     const host = $('board');
     host.textContent = '';
+    host.classList.remove('has-sky');
     const tap = code => this.onTap(code);
     if (this.cfg.support === 'free') return this.buildFree(host);
-    this.board = this.cfg.support === 'grid'
+    const mapOpts = {
+      codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
+      onTap: tap, label: this.def.titre, style: this.def.style, zoomMax: this.def.zoomMax || 60,
+      tapNeedsSingle: () => this.cfg.mech === 'tap' && !this.over && !this.study,
+    };
+    this.board = this.sky ? mountSky(host, { st: this.sky, geo: this.sky.geo, mapSvg: this.mapSvg, map: mapOpts })
+      : this.cfg.support === 'grid'
       ? buildGrid(host, this.all, this.inPlay, tap, { images: !!this.def.images, head: this.def.case || null, mask: this.def.masque || null, style: this.def.style || '' })
-      : buildMap(host, this.mapSvg, {
-        codes: new Set(this.all.map(d => d.code)), inPlay: this.inPlay, layers: this.def.calques || [],
-        onTap: tap, label: this.def.titre, style: this.def.style, zoomMax: this.def.zoomMax || 60,
-        tapNeedsSingle: () => this.cfg.mech === 'tap' && !this.over && !this.study,
-      });
+      : buildMap(host, this.mapSvg, mapOpts);
     // Braille à lire : chaque case montre une petite case à 6 points (vides compris), plus lisible qu'un caractère.
     if (this.cfg.support === 'grid' && this.def.style === 'braille' && this.def.case === 'signe') {
       for (const it of this.all) {
@@ -337,6 +344,7 @@ export class Game {
       quiz: this.id, label: this.name, at: this.at, ms: Math.round(ms),
       found: this.found.size - this.late.size, total: this.items.length, end: reason,
       pauses: this.pausesUsed, missed: [...this.missed], errors: this.errors,
+      ...(this.sky ? { lieu: this.sky.nom } : {}),
       ...(this.revealUsed ? { revealed: true } : {}),
       ...(this.late.size ? { late: [...this.late] } : {}),
     };
@@ -419,7 +427,7 @@ export class Game {
   }
 
   replay() {
-    new Game({ cfg: this.cfg, name: this.name, id: this.id, def: this.def, data: { items: this.all }, mapSvg: this.mapSvg, study: false }).start();
+    new Game({ cfg: this.cfg, name: this.name, id: this.id, def: this.def, data: { items: this.all }, mapSvg: this.mapSvg, study: false, sky: this.sky }).start();
   }
 
   /* --- Étude et bilan : toucher un élément affiche son code et son nom --- */

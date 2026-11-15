@@ -621,6 +621,12 @@
     {
      "nom": "Étoiles de navigation",
      "jeu": "etoiles-nav"
+    },
+    {
+     "nom": "Ciel mobile",
+     "id": "ciel-mobile",
+     "jeu": "etoiles-nav",
+     "ciel": ["constellations", "etoiles", "etoiles-nav"]
     }
    ]
   },

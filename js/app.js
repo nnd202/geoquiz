@@ -5,6 +5,7 @@ import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, 
 import { morseCfg, setMorse } from './core/morse.js';
 import { Game, END, fmtLong, onHome, wireGameControls, backRequest } from './core/game.js';
 import { saveNow, folderSupported, folderState, chooseFolder, forgetFolder, writeToFolder } from './core/backup.js';
+import { visibleSet, today, fmtCoord } from './core/sky.js';
 
 const cache = {};
 let CAT = null;
@@ -23,29 +24,47 @@ async function loadJeu(key) {
 /* ---------- Quiz et options ----------
  * Un quiz du catalogue = un jeu + un support. Ses options (tirage, mode clic) donnent la variante jouée,
  * et chaque variante a ses propres stats et records. */
-const quizKey = q => `${q.jeu}|${q.support || 'map'}`;
-const canRandom = q => !q.libre && CAT.jeux[q.jeu].nb > CAT.options.seuilHasard;
+const quizKey = q => q.id || `${q.jeu}|${q.support || 'map'}`;
+// Ciel mobile : un seul quiz pour trois listes (q.ciel) ; la liste choisie donne le jeu joué.
+const jeuOf = (q, o = store.ui.opts[quizKey(q)] || {}) => q.ciel?.includes(o.liste) ? o.liste : q.jeu;
+const canRandom = (q, jeu = jeuOf(q)) => !q.libre && CAT.jeux[jeu].nb > CAT.options.seuilHasard;
+const CARTES = [['cfixe', 'Deux disques fixes'], ['cpol', 'Polaire au centre'], ['czen', 'Mon ciel']];
+const placeOf = o => store.places.find(p => p.nom === o.lieu) || store.places[0];
 function optsOf(q) {
   const o = store.ui.opts[quizKey(q)] || {};
+  const sky = q.ciel ? { liste: jeuOf(q, o), carte: CARTES.some(c => c[0] === o.carte) ? o.carte : 'czen', lieu: o.lieu || null, date: o.date || null, sun: !!o.sun } : {};
   // Curseur : choix mémorisé, sinon réglage par défaut du quiz (« curseur » dans le catalogue).
-  return { random: !!o.random && canRandom(q), click: !!o.click, cursor: q.support === 'grid' && !!(o.cursor ?? q.curseur), alpha: !!q.ordre && !!o.alpha };
+  return { random: !!o.random && canRandom(q), click: !!o.click, cursor: q.support === 'grid' && !!(o.cursor ?? q.curseur), alpha: !!q.ordre && !!o.alpha, ...sky };
 }
 function cfgOf(q, o = optsOf(q)) {
   // Un quiz peut imposer sa mécanique (morse : manipulateur, écoute).
-  return { jeu: q.jeu, support: q.support || 'map', mech: q.mecanique || (o.click ? 'tap' : o.cursor ? 'cur' : 'all'), n: o.random ? CAT.options.hasard : 0,
+  // Ciel mobile : la carte choisie tient lieu de support (variantes distinctes des quiz du ciel existants).
+  return { jeu: jeuOf(q), support: q.ciel ? o.carte : q.support || 'map', mech: q.mecanique || (o.click ? 'tap' : o.cursor ? 'cur' : 'all'), n: o.random ? CAT.options.hasard : 0,
     // Ordre de la grille (hors identifiant de variante : même historique) : alphabétique seulement en « Tous ».
     alpha: o.alpha && !o.random };
 }
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
 const MECH_LABEL = { free: 'transmission libre', key: 'manipulateur', ear: 'à l’oreille', bwrite: 'écriture' };
-const optsLabel = (o, q = {}) => [o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.libre ? 'free' : q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
+const optsLabel = (o, q = {}) => [
+  ...(q.ciel ? [CARTES.find(c => c[0] === o.carte)[1], ...(o.carte !== 'cfixe' && placeOf(o) ? [placeOf(o).nom] : [])] : []),
+  o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.libre ? 'free' : q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
+
+let skyGeo = null;
+const loadGeo = async () => (skyGeo ||= await fetch('data/ciel-geo.json').then(r => r.json()));
+// Ciel mobile : lieu, date et soleil choisis ; le ciel démarre à 22 h, heure solaire du lieu.
+async function skyState(q, o, items) {
+  if (!q.ciel || o.carte === 'cfixe') return null;
+  const geo = await loadGeo(), p = placeOf(o);
+  return { mode: o.carte, nom: p.nom, lat: p.lat, lon: p.lon, date: o.date || today(), sun: o.sun, h: 22, geo, visible: visibleSet(items, geo, p.lat) };
+}
 
 async function play(q, study = false) {
   const cfg = cfgOf(q);
-  const { def, data, mapSvg } = await loadJeu(q.jeu);
+  const { def, data, mapSvg } = await loadJeu(cfg.jeu);
+  const sky = await skyState(q, optsOf(q), data.items);
   closeSheet(true);
   pushGuard();
-  new Game({ cfg, name: q.nom, id: variantId(cfg), def, data, mapSvg, study }).start();
+  new Game({ cfg, name: q.nom, id: variantId(cfg), def, data, mapSvg, study, sky }).start();
 }
 
 /* ---------- Accueil ---------- */
@@ -89,9 +108,10 @@ function fmtTotal(ms) {
 
 // Nombre de parties terminées aujourd'hui pour un quiz, toutes options confondues.
 function todayCount(q) {
-  const pre = `${CAT.jeux[q.jeu].prefixe}|${q.support || 'map'}|`;
-  const today = new Date().toDateString();
-  return store.attempts.filter(a => variantOf(a.quiz).startsWith(pre) && new Date(a.at).toDateString() === today).length;
+  const pres = new Set((q.ciel || [q.jeu]).map(j => CAT.jeux[j].prefixe));
+  const sups = new Set(q.ciel ? CARTES.map(c => c[0]) : [q.support || 'map']);
+  const day = new Date().toDateString();
+  return store.attempts.filter(a => { const [p, s] = variantOf(a.quiz).split('|'); return pres.has(p) && sups.has(s) && new Date(a.at).toDateString() === day; }).length;
 }
 
 function renderSections() {
@@ -116,11 +136,11 @@ function renderSections() {
 }
 
 function quizRow(q) {
-  const def = CAT.jeux[q.jeu];
+  const def = CAT.jeux[jeuOf(q)];
   const o = optsOf(q);
   const row = el('div', 'qrow');
   const main = el('button', 'qmain');
-  const meta = [`${def.nb}`, q.support === 'grid' ? 'grille' : 'carte', optsLabel(o, q)].join(' · ');
+  const meta = [`${def.nb}`, ...(q.ciel ? [] : [q.support === 'grid' ? 'grille' : 'carte']), optsLabel(o, q)].join(' · ');
   main.append(el('span', 'qname', q.nom), el('span', 'qmeta', meta));
   main.addEventListener('click', () => openSheet(q));
   const best = bestOf(variantId(cfgOf(q, o)));
@@ -141,7 +161,6 @@ function quizRow(q) {
 /* ---------- Panneau d'un quiz : options, stats de la variante, historique ---------- */
 function openSheet(q) {
   closeSheet();
-  const def = CAT.jeux[q.jeu];
   const veil = el('div', 'veil'); veil.id = 'veil';
   veil.addEventListener('click', e => { if (e.target === veil) closeSheet(); });
   const s = el('section', 'qsheet');
@@ -154,8 +173,10 @@ function openSheet(q) {
   const draw = () => {
     s.textContent = '';
     const o = optsOf(q);
+    const def = CAT.jeux[jeuOf(q)];
     s.append(el('h3', null, q.nom));
-    s.append(el('p', 'note', `${def.nb} éléments · ${q.support === 'grid' ? 'grille' : 'carte'}`));
+    const note = el('p', 'note', `${def.nb} éléments · ${q.support === 'grid' ? 'grille' : 'carte'}`);
+    s.append(note);
     const setOpt = (k, v) => { store.ui.opts[quizKey(q)] = { ...optsOf(q), [k]: v }; save(); draw(); renderSections(); };
     const seg = (label, key, choices) => {
       const f = el('div', 'field');
@@ -170,6 +191,7 @@ function openSheet(q) {
       f.append(g);
       s.append(f);
     };
+    if (q.ciel) skyFields(q, o, s, seg, setOpt, note, def, draw);
     if (canRandom(q)) seg('Sélection', 'random', [[false, `Tous (${def.nb})`], [true, `${CAT.options.hasard} au hasard`]]);
     if (!q.mecanique) {
       seg('Réponse', 'click', [[false, 'Je tape les noms'], [true, q.support === 'grid' ? 'Je touche la case' : 'Je touche la carte']]);
@@ -207,6 +229,78 @@ function openSheet(q) {
     go.focus();
   };
   draw();
+}
+/* ---------- Ciel mobile : liste, carte, lieu, date, soleil ---------- */
+let placeForm = false; // formulaire « Ajouter un lieu » ouvert
+function skyFields(q, o, s, seg, setOpt, note, def, redraw) {
+  seg('Liste', 'liste', q.ciel.map(j => [j, CAT.jeux[j].titre]));
+  seg('Carte', 'carte', CARTES);
+  if (o.carte === 'cfixe') { placeForm = false; return; }
+  const p = placeOf(o);
+  // Nombre d'éléments qui se lèvent depuis ce lieu (chargé à part : la géométrie du ciel n'est lue qu'ici et en jeu).
+  Promise.all([loadGeo(), loadJeu(jeuOf(q))]).then(([geo, { data }]) => {
+    const n = visibleSet(data.items, geo, p.lat).size;
+    note.textContent = `${n} sur ${def.nb} se lèvent depuis ${p.nom} · heure solaire du lieu`;
+  }).catch(() => {});
+  const f = el('div', 'field');
+  f.append(el('span', null, 'Lieu'));
+  const g = el('div', 'seg');
+  for (const pl of store.places) {
+    const b = el('button', null, pl.nom);
+    b.setAttribute('aria-pressed', String(pl === p));
+    b.addEventListener('click', () => setOpt('lieu', pl.nom));
+    g.append(b);
+  }
+  const add = el('button', 'add', '+ Ajouter');
+  add.setAttribute('aria-pressed', String(placeForm));
+  add.addEventListener('click', () => { placeForm = !placeForm; redraw(); });
+  g.append(add);
+  f.append(g);
+  const info = el('div', 'place-info');
+  info.append(el('span', 'num', fmtCoord(p.lat, p.lon)));
+  if (store.places.length > 1) {
+    const del = el('button', 'btn small ghost', 'Supprimer ce lieu');
+    del.addEventListener('click', () => { store.places = store.places.filter(x => x !== p); setOpt('lieu', null); });
+    info.append(del);
+  }
+  f.append(info);
+  if (placeForm) f.append(placeEditor(nom => { placeForm = false; setOpt('lieu', nom); }));
+  s.append(f);
+
+  const fd = el('div', 'field');
+  fd.append(el('span', null, 'Date'));
+  const row = el('div', 'seg');
+  const d = el('input', 'date'); d.type = 'date'; d.value = o.date || today();
+  d.addEventListener('change', () => { if (d.value) setOpt('date', d.value === today() ? null : d.value); });
+  const now = el('button', null, 'Aujourd’hui');
+  now.setAttribute('aria-pressed', String(!o.date));
+  now.addEventListener('click', () => setOpt('date', null));
+  row.append(d, now);
+  fd.append(row);
+  s.append(fd);
+  seg('Soleil', 'sun', [[false, 'Sans'], [true, 'Avec']]);
+}
+
+// Nouveau lieu : nom, latitude, longitude en degrés décimaux, arrondies au dixième (environ 10 km).
+function placeEditor(done) {
+  const box = el('div', 'placeform');
+  const mk = (ph, mode) => { const i = el('input'); i.placeholder = ph; i.autocomplete = 'off'; if (mode) i.inputMode = mode; return i; };
+  const nom = mk('Nom (ex. Faro)'), lat = mk('Latitude (ex. 37,0)', 'decimal'), lon = mk('Longitude (ex. -7,9)', 'decimal');
+  const msg = el('div', 'note', 'Degrés décimaux : latitude négative au sud, longitude négative à l’ouest. Arrondi au dixième de degré (environ 10 km).');
+  const ok = el('button', 'btn small', 'Enregistrer');
+  const num = i => { const v = i.value.trim().replace(',', '.'); return v && /^[-+]?\d+(\.\d+)?$/.test(v) ? Math.round(Number(v) * 10) / 10 : NaN; };
+  ok.addEventListener('click', () => {
+    const n = nom.value.trim(), a = num(lat), b = num(lon);
+    if (!n) return (msg.textContent = 'Donnez un nom au lieu.');
+    if (store.places.some(p => p.nom.toLocaleLowerCase('fr') === n.toLocaleLowerCase('fr'))) return (msg.textContent = 'Ce nom existe déjà.');
+    if (!(Math.abs(a) <= 90)) return (msg.textContent = 'Latitude : un nombre entre -90 et 90.');
+    if (!(Math.abs(b) <= 180)) return (msg.textContent = 'Longitude : un nombre entre -180 et 180.');
+    store.places.push({ nom: n, lat: a, lon: b });
+    save();
+    done(n);
+  });
+  box.append(nom, lat, lon, ok, msg);
+  return box;
 }
 function closeSheet(keepGuard = false) {
   if (!$('veil')) return;

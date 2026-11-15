@@ -124,7 +124,7 @@ export function buildMap(container, svgText, { codes, inPlay, layers = [], onTap
     if (points.length) {
       let best = null, bd = TAP_PX / scale;
       for (const p of points) {
-        if (p.classList.contains('off')) continue;
+        if (p.classList.contains('off') || p.classList.contains('below')) continue; // sous l'horizon (Ciel mobile)
         const d = Math.hypot(+p.dataset.x - svgXY[0], +p.dataset.y - svgXY[1]);
         if (d < bd) { bd = d; best = p; }
       }
