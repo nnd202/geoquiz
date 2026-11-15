@@ -28,7 +28,8 @@ const quizKey = q => q.id || `${q.jeu}|${q.support || 'map'}`;
 // Ciel mobile : un seul quiz pour trois listes (q.ciel) ; la liste choisie donne le jeu joué.
 const jeuOf = (q, o = store.ui.opts[quizKey(q)] || {}) => q.ciel?.includes(o.liste) ? o.liste : q.jeu;
 const canRandom = (q, jeu = jeuOf(q)) => !q.libre && CAT.jeux[jeu].nb > CAT.options.seuilHasard;
-const CARTES = [['cfixe', 'Deux disques fixes'], ['cpol', 'Polaire au centre'], ['czen', 'Mon ciel']];
+// (Les deux disques fixes restent dans les quiz du ciel d'origine : pas de doublon ici.)
+const CARTES = [['cpol', 'Polaire au centre'], ['czen', 'Mon ciel']];
 const placeOf = o => store.places.find(p => p.nom === o.lieu) || store.places[0];
 function optsOf(q) {
   const o = store.ui.opts[quizKey(q)] || {};
@@ -46,14 +47,14 @@ function cfgOf(q, o = optsOf(q)) {
 const variantId = c => [CAT.jeux[c.jeu].prefixe, c.support, c.mech, c.n].join('|');
 const MECH_LABEL = { free: 'transmission libre', key: 'manipulateur', ear: 'à l’oreille', bwrite: 'écriture' };
 const optsLabel = (o, q = {}) => [
-  ...(q.ciel ? [CARTES.find(c => c[0] === o.carte)[1], ...(o.carte !== 'cfixe' && placeOf(o) ? [placeOf(o).nom] : [])] : []),
+  ...(q.ciel ? [CARTES.find(c => c[0] === o.carte)[1], ...(placeOf(o) ? [placeOf(o).nom] : [])] : []),
   o.random ? `${CAT.options.hasard} au hasard` : 'Tous', MECH_LABEL[q.libre ? 'free' : q.mecanique] || (o.click ? 'clic' : o.cursor ? 'saisie · curseur' : 'saisie')].join(' · ');
 
 let skyGeo = null;
 const loadGeo = async () => (skyGeo ||= await fetch('data/ciel-geo.json').then(r => r.json()));
 // Ciel mobile : lieu, date et soleil choisis ; le ciel démarre à 22 h, heure solaire du lieu.
 async function skyState(q, o, items) {
-  if (!q.ciel || o.carte === 'cfixe') return null;
+  if (!q.ciel) return null;
   const geo = await loadGeo(), p = placeOf(o);
   return { mode: o.carte, nom: p.nom, lat: p.lat, lon: p.lon, date: o.date || today(), sun: o.sun, h: 22, geo, visible: visibleSet(items, geo, p.lat) };
 }
@@ -235,7 +236,6 @@ let placeForm = false; // formulaire « Ajouter un lieu » ouvert
 function skyFields(q, o, s, seg, setOpt, note, def, redraw) {
   seg('Liste', 'liste', q.ciel.map(j => [j, CAT.jeux[j].titre]));
   seg('Carte', 'carte', CARTES);
-  if (o.carte === 'cfixe') { placeForm = false; return; }
   const p = placeOf(o);
   // Nombre d'éléments qui se lèvent depuis ce lieu (chargé à part : la géométrie du ciel n'est lue qu'ici et en jeu).
   Promise.all([loadGeo(), loadJeu(jeuOf(q))]).then(([geo, { data }]) => {
