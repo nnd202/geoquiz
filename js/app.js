@@ -1,7 +1,7 @@
 // Accueil : stats globales, sections repliables, panneau d'options par quiz, réglages et sauvegarde.
 import { $, el } from './core/dom.js';
 import { prepare } from './core/text.js';
-import { store, save, bestOf, attemptsOf, importText, globalStats, reminderDue, snooze, variantOf } from './core/store.js';
+import { store, save, bestOf, attemptsOf, importText, globalStats, markExported, variantOf } from './core/store.js';
 import { morseCfg, setMorse } from './core/morse.js';
 import { Game, END, fmtLong, onHome, wireGameControls, backRequest } from './core/game.js';
 import { saveNow, folderSupported, folderState, chooseFolder, forgetFolder, writeToFolder } from './core/backup.js';
@@ -91,13 +91,18 @@ function renderHome() {
   const mc = morseCfg();
   $('mw-val').textContent = mc.wpm;
   $('ma-on').setAttribute('aria-pressed', String(mc.aide)); $('ma-off').setAttribute('aria-pressed', String(!mc.aide));
-  $('r-val').textContent = store.reminderDays ? `${store.reminderDays} j` : 'jamais';
-  $('last-save').textContent = store.lastExport
-    ? `Dernière sauvegarde : ${new Date(store.lastExport).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })} à ${new Date(store.lastExport).toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', ' h ')}.`
+  const at = store.lastExport && new Date(store.lastExport);
+  const hm = at && at.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', ' h ');
+  $('last-save').textContent = at
+    ? `Dernière sauvegarde : ${at.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long' })} à ${hm}.`
     : "Aucune sauvegarde pour l'instant.";
+  $('hdr-last').textContent = at ? `${at.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })} · ${hm}` : 'jamais';
   renderFolder();
-  maybeRemind();
 }
+// Sauvegarde (bouton de l'en-tête ou des réglages) : l'app ne sait pas si le partage a abouti,
+// alors la date retenue est celle du toucher sur le bouton.
+async function backupNow() { markExported(); renderHome(); flash(await saveNow()); renderHome(); }
+$('hdr-save').addEventListener('click', backupNow);
 
 // Temps cumulé : minutes, puis heures, puis jours au-delà de 48 h (« 6 j 22 h ») pour rester court.
 function fmtTotal(ms) {
@@ -317,31 +322,11 @@ function pushGuard() { if (!history.state?.gq) history.pushState({ gq: 1 }, '');
 function dropGuard() { if (history.state?.gq) { ignorePop = true; history.back(); } }
 window.addEventListener('popstate', () => {
   if (ignorePop) { ignorePop = false; return; }
-  if ($('remind')) { $('remind').remove(); snooze(); return; }
   if ($('veil')) { $('veil').remove(); return; }
   if (!$('game').hidden && backRequest()) pushGuard(); // la partie continue (confirmation affichée ou refusée)
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeSheet(); $('remind')?.remove(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
 
-/* ---------- Rappel de sauvegarde ---------- */
-function maybeRemind() {
-  const days = reminderDue();
-  if (!days || $('remind') || !$('game').hidden) return;
-  const veil = el('div', 'veil center'); veil.id = 'remind';
-  const box = el('section', 'qsheet small');
-  box.setAttribute('role', 'dialog');
-  box.append(el('h3', null, 'Sauvegarder vos stats ?'),
-    el('p', 'note', store.lastExport ? `Dernière sauvegarde il y a ${days} jours.` : 'Vous n’avez encore jamais sauvegardé vos stats.'));
-  const r = el('div', 'row');
-  const ok = el('button', 'btn', 'Sauvegarder');
-  ok.addEventListener('click', async () => { const m = await saveNow(); veil.remove(); renderHome(); flash(m); });
-  const later = el('button', 'btn ghost', 'Plus tard');
-  later.addEventListener('click', () => { snooze(); veil.remove(); });
-  r.append(ok, later);
-  box.append(r);
-  veil.append(box);
-  document.body.append(veil);
-}
 function flash(m) { $('io-msg').textContent = m; }
 
 /* ---------- Réglages et sauvegarde ---------- */
@@ -361,14 +346,12 @@ function wireSettings() {
   const step = (id, f) => $(id).addEventListener('click', () => { f(); save(); renderHome(); });
   step('p-minus', () => { store.pauses = Math.max(0, store.pauses - 1); });
   step('p-plus', () => { store.pauses = Math.min(9, store.pauses + 1); });
-  step('r-minus', () => { store.reminderDays = Math.max(0, store.reminderDays - 1); });
-  step('r-plus', () => { store.reminderDays = Math.min(60, store.reminderDays + 1); });
   // Morse : de 5 à 30 mots par minute (12 par défaut : point 100 ms, trait 300 ms).
   step('mw-minus', () => setMorse({ wpm: Math.max(5, morseCfg().wpm - 1) }));
   step('mw-plus', () => setMorse({ wpm: Math.min(30, morseCfg().wpm + 1) }));
   step('ma-on', () => setMorse({ aide: true }));
   step('ma-off', () => setMorse({ aide: false }));
-  $('exp').addEventListener('click', async () => { flash(await saveNow()); renderHome(); });
+  $('exp').addEventListener('click', backupNow);
   const doImport = text => {
     try {
       const n = importText(text);

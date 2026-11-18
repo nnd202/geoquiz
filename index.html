@@ -17,7 +17,13 @@
 <body>
 <main id="home">
   <header class="hero">
-    <h1>Geoquiz</h1>
+    <div class="hero-top">
+      <h1>Geoquiz</h1>
+      <button class="hdr-save" id="hdr-save" type="button" aria-describedby="hdr-last">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0-4-4m4 4 4-4M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"/></svg>
+        <span>Sauvegarder<small id="hdr-last"></small></span>
+      </button>
+    </div>
     <div class="stats" id="stats"></div>
   </header>
 
@@ -35,9 +41,6 @@
         </div>
         <div class="field"><span>Morse : aide au rythme (unités affichées)</span>
           <div class="seg" id="ma-seg"><button id="ma-on">Oui</button><button id="ma-off">Non</button></div>
-        </div>
-        <div class="field"><span>Rappel de sauvegarde tous les</span>
-          <div class="stepper"><button id="r-minus" aria-label="Un jour de moins">−</button><b class="num" id="r-val">7 j</b><button id="r-plus" aria-label="Un jour de plus">+</button></div>
         </div>
       </section>
       <section class="panel">
