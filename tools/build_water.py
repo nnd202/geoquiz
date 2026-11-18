@@ -101,7 +101,7 @@ for g in land_shapes:
                 casp = hole
 assert casp is not None
 
-lakes, body, minis = [], ['<g data-layer="lacs">'], ['<g data-layer="petits-lacs">']
+lakes, body, minis = [], ['<g data-layer="lacs">'], ['<g data-layer="reperes">']
 for i, (nom, ne_names, alias) in enumerate(LAKES):
     code = f"l{i + 1:02d}"
     if nom == "Mer Caspienne":
@@ -114,11 +114,17 @@ for i, (nom, ne_names, alias) in enumerate(LAKES):
     lakes.append({"code": code, "nom": nom, "alias": alias + short(nom), "domaine": "physique", "categorie": "lac",
                   "geo": [round(c.x, 3), round(c.y, 3)], "detail": "Lac"})
     body.append(f'<path class="zone lake-z" data-code="{code}"{anchor(mapping(g), tf)} d="{path_d(mapping(g.simplify(0.02)), tf, 0.0)}"/>')
-    if proj_area(g) < 4:
-        minis.append(marker(*tf(c.x, c.y), "rond", "mini", code))
+    # Goutte de repère sur chaque lac (taille fixe à l'écran), au cœur de son plus grand morceau, verte avec lui.
+    big = max(getattr(g, "geoms", [g]), key=lambda p: p.area).representative_point()
+    minis.append(marker(*tf(big.x, big.y), "goutte", "lac-pt", code))
 body.append('</g>')
 minis.append('</g>')
-base = ['<g data-layer="terres"><path class="land" d="' + land_d + '"/></g>']
+# Frontières des pays (lacs et fleuves) : contours des pays, sans le trait de côte.
+countries = [shape(f["geometry"]).buffer(0) for f in J("world-countries.geojson")["features"]]
+coast = unary_union(land_shapes).boundary.buffer(0.08)
+borders = unary_union([c.boundary for c in countries]).difference(coast).simplify(0.02)
+base = ['<g data-layer="terres"><path class="land" d="' + land_d + '"/></g>',
+        '<g data-layer="frontieres"><path class="sub border" d="' + line_d(mapping(borders), tf) + '"/></g>']
 open(f"{root}/maps/lacs.svg", "w").write(svg_doc(VIEW, [], base + body + minis))
 dump("lacs", "Lacs du monde", lakes)
 

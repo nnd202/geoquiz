@@ -257,7 +257,8 @@
    "etiquette": "nom",
    "style": "eau",
    "calques": [
-    "terres"
+    "terres",
+    "frontieres"
    ],
    "sens": [
     {
@@ -277,7 +278,8 @@
    "etiquette": "nom",
    "style": "eau",
    "calques": [
-    "terres"
+    "terres",
+    "frontieres"
    ],
    "sens": [
     {

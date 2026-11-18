@@ -295,7 +295,7 @@ for piece in getattr(gaps, "geoms", [gaps]):
         extra[names[best]].append(piece)
 fitted = {n: unary_union([c, *extra[n]]) for n, c in zip(names, cores)}
 print("interstices rattachés :", sum(len(v) for v in extra.values()), "· étendues fermées hors quiz :", len(lakes))
-seas, body = [], ['<g data-layer="mers">']
+seas, body, marks = [], ['<g data-layer="mers">'], ['<g data-layer="reperes">']
 # Un élément par nom français : les zones regroupées partagent un code et sont dessinées en plusieurs morceaux.
 groups = {}
 for f in sorted(sea_feats, key=lambda f: f["properties"]["NAME"]):
@@ -311,10 +311,13 @@ for i, (nom, feats) in enumerate(sorted(groups.items(), key=lambda kv: kv[0])):
                  "geo": [round(v, 2) for v in centroid(big["geometry"])],
                  "detail": "OHI : " + " + ".join(f["properties"]["NAME"] for f in feats)})
     body.append(f'<path class="zone sea" data-code="{code}" d="{path_d(mapping(fitted[nom]), tf, 0.02)}"/>')
+    # Rond de repère au cœur du plus grand morceau de chaque mer (taille fixe à l'écran), vert avec elle.
+    big = max(getattr(fitted[nom], "geoms", [fitted[nom]]), key=lambda p: p.area).representative_point()
+    marks.append(marker(*tf(big.x, big.y), "rond", "mer-pt", code))
 # Terres par-dessus (trait de côte net), et étendues fermées (Caspienne…) en décor.
 lake_d = "".join(path_d(mapping(l), tf, 0.02) for l in lakes)
 body.append('</g><g data-layer="terres"><path class="lake" d="' + lake_d + '"/><path class="land" d="' + land_d + '"/></g>')
-open(f"{root}/maps/mers.svg", "w").write(svg_doc(VIEW, [], body))
+open(f"{root}/maps/mers.svg", "w").write(svg_doc(VIEW, [], body + marks + ['</g>']))
 dump("mers", "Mers et océans (OHI)", seas)
 for n in ("monde", "mers"):
     print(n, os.path.getsize(f"{root}/maps/{n}.svg"), "octets")

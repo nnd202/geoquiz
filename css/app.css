@@ -508,3 +508,16 @@ html:has(#game:not([hidden])), body:has(#game:not([hidden])) { overflow: hidden;
 .placeform { display: grid; gap: 6px; padding: 10px; border: 1px solid var(--sky); border-radius: 12px; }
 .placeform input, .field input.date { font: inherit; font-size: 15px; border: 1.5px solid var(--sky); border-radius: 10px; padding: 7px 10px; background: var(--mist); color: var(--ink); min-width: 0; }
 .placeform .btn { justify-self: start; }
+
+/* Lacs, mers : symbole de repère sur chaque élément ; frontières des pays (lacs, fleuves) */
+.pt.lac-pt { --r: 6; }
+.pt.mer-pt { --r: 4.5; }
+.sub.border { stroke: var(--border-land); stroke-width: .7; stroke-dasharray: none; opacity: 1; pointer-events: none; }
+
+/* En-tête : bouton de sauvegarde, fondu dans le bleu, avec la date du dernier toucher */
+.hero-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.hdr-save { display: flex; align-items: center; gap: 8px; padding: 7px 12px 7px 10px; border-radius: 12px; border: 1px solid rgba(234, 243, 253, .22); background: rgba(234, 243, 253, .08); color: #eaf3fd; font: 500 14px var(--f-body); text-align: left; cursor: pointer; }
+.hdr-save:active { background: rgba(234, 243, 253, .18); }
+.hdr-save svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.hdr-save span { display: grid; line-height: 1.2; }
+.hdr-save small { font-size: 11px; font-weight: 400; color: #a9c6e5; font-variant-numeric: tabular-nums; }
