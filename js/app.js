@@ -91,6 +91,8 @@ function renderHome() {
   const mc = morseCfg();
   $('mw-val').textContent = mc.wpm;
   $('ma-on').setAttribute('aria-pressed', String(mc.aide)); $('ma-off').setAttribute('aria-pressed', String(!mc.aide));
+  const th = document.documentElement.dataset.theme || 'auto';
+  for (const t of ['auto', 'light', 'dark']) $(`th-${t}`).setAttribute('aria-pressed', String(th === t));
   const at = store.lastExport && new Date(store.lastExport);
   const hm = at && at.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', ' h ');
   $('last-save').textContent = at
@@ -351,6 +353,11 @@ function wireSettings() {
   step('mw-plus', () => setMorse({ wpm: Math.min(30, morseCfg().wpm + 1) }));
   step('ma-on', () => setMorse({ aide: true }));
   step('ma-off', () => setMorse({ aide: false }));
+  // Thème : Auto suit le navigateur ; Clair et Sombre l'imposent (gardé sur l'appareil, lu avant l'affichage dans index.html).
+  for (const t of ['auto', 'light', 'dark']) step(`th-${t}`, () => {
+    try { if (t === 'auto') localStorage.removeItem('geoquiz.theme'); else localStorage.setItem('geoquiz.theme', t); } catch {}
+    if (t === 'auto') delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = t;
+  });
   $('exp').addEventListener('click', backupNow);
   const doImport = text => {
     try {

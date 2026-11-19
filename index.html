@@ -13,6 +13,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Figtree:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/app.css">
+<!-- Thème choisi dans les réglages (clair ou sombre), appliqué avant l'affichage ; sinon celui du navigateur. -->
+<script>try { const t = localStorage.getItem('geoquiz.theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}</script>
 </head>
 <body>
 <main id="home">
@@ -33,6 +35,9 @@
     <summary><span class="sec-title">Réglages et sauvegarde</span></summary>
     <div class="settings">
       <section class="panel">
+        <div class="field"><span>Thème</span>
+          <div class="seg" id="th-seg"><button id="th-auto">Auto</button><button id="th-light">Clair</button><button id="th-dark">Sombre</button></div>
+        </div>
         <div class="field"><span>Pauses par partie</span>
           <div class="stepper"><button id="p-minus" aria-label="Une pause de moins">−</button><b class="num" id="p-val">3</b><button id="p-plus" aria-label="Une pause de plus">+</button></div>
         </div>
